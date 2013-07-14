@@ -1,0 +1,9 @@
+* PostgreSQL
+** 创建用户
+createuser scene -h localhost
+** 创建数据库
+createdb -h localhost scene_development -O scene
+此命令会将数据库scene_development的所有权赋给用户scene
+
+** 连接数据库
+psql -h localhost -U scene -d scene_development
