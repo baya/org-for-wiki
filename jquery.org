@@ -1,0 +1,8 @@
+* jQuery
+** 图片上传工具
+- jQuery-File-Upload https://github.com/blueimp/jQuery-File-Upload
+** 图片编辑
+- Jcrop http://deepliquid.com/content/Jcrop.html
+
+** 上传图片前，对图片进行预览
+- http://zurb.com/playground/ajax_upload
