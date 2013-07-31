@@ -1,0 +1,9 @@
+* Rails
+** 构造联合查询
+def self.search(title, category_id, city_id)
+    rel = scoped
+    rel = rel.where('title    like ?', "%#{title}%") if(title)
+    rel = rel.where('category_id = ?', category_id)  if(category_id)
+    rel = rel.where('city_id     = ?', city_id)      if(city_id)
+    rel
+end

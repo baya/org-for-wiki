@@ -1,9 +1,23 @@
 * PostgreSQL
 ** 创建用户
-createuser scene -h localhost
+- createuser scene -h localhost
+- createuser pgsql -S -l -P -d 非超级用户，可登陆，需要密码，可创建数据库
 ** 创建数据库
 createdb -h localhost scene_development -O scene
 此命令会将数据库scene_development的所有权赋给用户scene
-
 ** 连接数据库
 psql -h localhost -U scene -d scene_development
+** 启动数据库
+sudo su postgres
+/etc/init.d/postgresql start
+** 连接数据库
+- sudo su postgres
+  psql
+** 重启数据库
+sudo su postgres
+/etc/init.d/postgresql restart
+** iptable with postgresql
+sudo iptables -A INPUT -p tcp -s 0/0 --sport 1024:65535 -d 10.61.0.103 --dport 5432 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp -s 10.61.0.103 --sport 5432 -d 0/0 --dport 1024:65535 -m state --state ESTABLISHED -j ACCEPT
+- 参考1 http://www.cyberciti.biz/tips/howto-iptables-postgresql-open-port.html
+- 参考2 http://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html

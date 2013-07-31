@@ -1,0 +1,7 @@
+* Ruby
+** md5
+require 'digest'
+Digest::MD5.hexdigest 'test'
+
+** fiber
+- http://www.rubyinside.com/ruby-fibers-8-useful-reads-on-rubys-new-concurrency-feature-1769.html

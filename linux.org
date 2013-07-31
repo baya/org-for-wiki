@@ -1,0 +1,10 @@
+* Linux
+** add a existing user to existing group
+- usermod -a -G ftp tony
+
+** chmod
+** 文件权限属性
+-rw-rw-r-- 1   hope 123   Feb 03 15:36   file.txt
+-	rw	rw-	r--	    1	hope	123	Feb 03 15:36	file.txt
+File  owner   group everyone else links	owner	size	mod date	file name
+
