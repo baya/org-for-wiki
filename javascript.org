@@ -1,0 +1,81 @@
+* JavaScript
+** underscore.js
+http://underscorejs.org
+
+** 图形
+jgraph: http://jsplumb.org
+orxy:  http://code.google.com/p/oryx-editor/
+sigma: http://sigmajs.org
+Envision.js: http://www.humblesoftware.com/
+Morris.js: https://github.com/oesmith/morris.js
+Paper.js http://paperjs.org
+Processing.js 
+Raphael.js http://raphaeljs.com
+** 业务处理
+BPMN
+bpmai.org: http://bpmai.org
+ProcessOn: http://www.processon.com
+** 3D
+*** three.js
+https://github.com/mrdoob/three.js
+http://learningthreejs.com
+
+*** cannon.js
+http://schteppe.github.com/cannon.js/
+https://github.com/schteppe/cannon.js
+** 图表
+** 数学
+MathBox.js: https://github.com/unconed/MathBox.js
+** Office
+spreadJS: http://wijmo.com/docs/spreadjs/webframe.html
+http://wijmo.com/demo/spreadjs/samples/
+http://wijmo.com/demo/spreadjs/samples/?widget=CellSpan&sample=CellSpan
+http://wijmo.com
+
+simple Spreadsheet: http://www.simple-groupware.de/cms/Spreadsheet/Home
+** MooTools
+MooTools: http://mootools.net
+** 流程图
+wireit: https://github.com/neyric/wireit
+
+LearnGitBranching: https://github.com/pcottle/learnGitBranching
+
+** YUI
+http://yuilibrary.com/yui/quick-start/
+** 技术社区
+- 葡萄城: http://gcdn.grapecity.com
+- jsdo.it: http://jsdo.it
+- 学习jQuery: http://learn.jquery.com/
+- angularjs.cn http://www.angularjs.cn/
+** knockoutjs
+http://knockoutjs.com
+** Data
+d3.js: http://d3js.org
+
+** 动画
+collie: http://jindo.dev.naver.com/collie/
+
+http://datacommunitydc.org
+
+** 基础知识
+*** 布尔值为false的类型
+- null
+- undefined
+- 0, NaN
+- ""
+- false
+
+*** Prototypes
+** 书籍
+- http://www.ppurl.com/2012/06/javascript-fifth-edition.html
+** 技术文章
+A Plain English Guide to JavaScript Prototypes
+http://sporto.github.com/blog/2013/02/22/a-plain-english-guide-to-javascript-prototypes/?utm_source=javascriptweekly&utm_medium=email
+
+** 流程图
+- https://github.com/bramp/js-sequence-diagrams
+** angularjs.cn
+- http://www.angularjs.cn/
+- http://cnodejs.org/
+** 即时编辑插件
+- http://www.appelsiini.net/projects/jeditable

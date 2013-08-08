@@ -1,0 +1,42 @@
+* Mysql
+** 本地配置
+- 初始化mysql
+mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+
+- /usr/local/opt/mysql/my.cnf
+/usr/local/opt/mysql/bin/mysqladmin -u root password 'new-password'
+/usr/local/opt/mysql/bin/mysqladmin -u root -h shensen.magus-soft.com password 'new-password'
+/usr/local/opt/mysql/bin/mysql_secure_installation
+
+Set up databases to run AS YOUR USER ACCOUNT with:
+    unset TMPDIR
+    mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+
+To set up base tables in another folder, or use a different user to run
+mysqld, view the help for mysqld_install_db:
+    mysql_install_db --help
+
+and view the MySQL documentation:
+  * http://dev.mysql.com/doc/refman/5.5/en/mysql-install-db.html
+  * http://dev.mysql.com/doc/refman/5.5/en/default-privileges.html
+
+To run as, for instance, user "mysql", you may need to `sudo`:
+    sudo mysql_install_db ...options...
+
+Start mysqld manually with:
+    mysql.server start
+
+    Note: if this fails, you probably forgot to run the first two steps up above
+
+** 创建user
+CREATE USER fchk@localhost IDENTIFIED BY '123456'
+DROP USER fchk@localhost
+GRANT ALL ON fchk_development.* TO 'fchk@localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'fchk'@'localhost' WITH GRANT OPTION;
+CREATE DATABASE fchk_development;
+** mysql导入数据
+** 查看表结构
+desc table_name
+show columns from table_name
+** command
+netstat -ln | grep mysql

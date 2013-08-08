@@ -1,0 +1,32 @@
+* Redis
+** 基本命令
+使用redis-cli                 进入交互端
+keys *                       显示所有的key
+type custom_orders  #=>hash  获得custom_orders的类型为hash
+
+** 数据结构
+String
+List
+Set
+Sorted Set, 也称作ZSets
+Hashe
+Key
+参考资料:
+http://redis.io/topics/data-types-intro
+
+** Hash
+type custom_orders  #=>hash                     获取类型为hash
+hgetall custom_orders                           取所有域和值
+hget custom_orders magus:120912105329-0085246   取值
+hdel custom_orders magus:120912105329-0085246   删除
+hexists custom_orders magus                     存在否
+hlen custom_orders                              长度
+hkeys custom_orders                             取全部域
+hmget custom_orders field1 field2               取多值
+hset custom_orders field1 value1                赋值
+hmset custom_orders field1 value1 field2 value2 多域赋值
+hsetnx key field value                          无域时赋值
+hvals key                                       取全部值
+参考:
+http://redis.io/commands#hash
+

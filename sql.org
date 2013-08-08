@@ -1,0 +1,105 @@
+* SQL
+** delete
+DELETE FROM table_name WHERE some_column=some_value
+** update
+UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
+update pa_prebets set termid = 289048 where prebetid = 15676;
+update pa_pre_terms set status = 0, depoted = false where id = 1545
+
+** 索引
+http://blog.51cto.com/zt/376
+http://www.sqlservercentral.com
+
+** 追号测试
+查看追号表   
+select lotterytypeid, prebetid, status, wager, uid, userbank, payid, termeds, terms from pa_prebets where termid = -1 and lotterytypeid = 45 order by prebetid desc limit 10;
+select count(*) from pa_prebets where termid = -1 and lotterytypeid = 45 and termeds > 0 and createtime > '2012-11-06 00:00:00';
+
+select termid, createtime, lotterytypeid, prebetid, status, wager, uid, userbank, payid, termeds, terms from pa_prebets where termid = -1 and lotterytypeid = 45 and  createtime > '2012-11-06 15:50:00';
+
+查看彩期表
+select * from pa_terms where lotterytypeid = 3 order by createtime desc limit 10;
+select * from pa_terms where lotterytypeid = 45 order by termid desc limit 10;
+
+查看下注临时表
+select * from pa_prebets_bets where prebetid = 1041;
+select prebetid, ordersn, depoted, status, winmoney, winclass, winlevel, respond_code, respond_note, channel_code from pa_prebets_bets where prebetid = 1073 order by pbid desc;
+
+查看下注表
+select * from pa_bets where prebetid = 1041;
+select prebetid, status, winmoney, winclass, winlevel, ordersn from pa_bets where prebetid = 1041;
+
+恢复彩期
+update pa_terms set used = 0 where termid = 110509;
+
+清除其他彩期
+update pa_terms set used = 1 where termid != 110509 and used = 0;
+
+查看jobs
+select * from pa_bb_jobs;
+
+清除jobs
+delete from pa_bb_jobs;
+delete from pa_bb_jobs where lotno='F47104';
+
+查看投注临时表
+select status, statusnote, paystatusnote, termid, ordersn, prebetid, createtime from pa_prebets_bets where createtime > '2012-11-06 15:50:00';
+
+查看投注入库表
+select status, statusnote, paystatusnote, termid, ordersn, prebetid, createtime from pa_bets where createtime > '2012-11-06 15:50:00' and prebetid is not null;
+
+生成追号数据
+bin/rake staging:ready_zhuihao_data[重庆时时彩[五星],10]
+
+查看彩种表
+select lotterytypeid, name, lotno from pa_lotterytype order by lotterytypeid desc;
+
+查看投注表(验证投注码)
+select ordersn, wager from pa_bets where lotterytypeid = 43 and pla is not null limit 100;
+select status, statusnote, ordersn, wager from pa_bets where lotterytypeid =21 and pla is not null and status = '1' limit 100;
+
+更新追号彩期id
+update pa_prebets set termid = 153376 where termid = 153377 and mobile = '138';
+
+彩期查询
+福彩3D,排列三,双色球
+
+** 子查询
+select prebetid from pa_prebets where prebetid in (select prebetid from pa_prebets limit 10);
+update pa_prebets set status = 0, termeds = 0, terms = 100 where prebetid in (select prebetid from pa_prebets where lotterytypeid = 45 order by prebetid desc limit 100);
+
+** 处理订单号
+select count(betid) from pa_bets where lotterytypeid = 25 and createtime >= '2013-02-06 22:00:00' and createtime <= '2013-02-06 22:10:00' and status = '0' and dealtersign = 'hc';
+** 返奖
+select dealtersign, bettype, issue, pa_bets.lotterytypeid, pa_bets.termid, betid, pa_bets.status, statusnote, ordersn, winmoney, winclass, winlevel from pa_bets left join pa_terms on pa_bets.termid = pa_terms.termid where dealtersign = 'hc' and pa_bets.lotterytypeid in (40, 41, 42, 43, 45) and pa_bets.createtime >= '2013-01-31 18:00:00' and pa_bets.createtime <= '2013-02-01 23:20:00' and prebetid is not null and prebetid > 0 order by pa_bets.lotterytypeid desc limit 100;
+** 追号QA测试实际用例
+查询追号记录: select createtime, prebetid, terms, termeds, last_issue, termid, tickets_info, lotterytypeid from pa_prebets where lotterytypeid in (21,20,19) and createtime >= '2013-03-01 00:00:00' and createtime <= '2013-03-01 23:59:00' order by createtime desc limit 10;
+查询预期彩期: select * from pa_pre_terms where issue = '2013057' order by issue desc limit 10;
+更新预期彩期: update pa_pre_terms set status = 0, depoted = false where id = 18671;
+插入新期:INSERT INTO pa_terms (lotterytypeid, issue, starttime, endtime, winnumber, status, createtime, updatetime) VALUES (18, '2013057', '2013-03-04 20:10:00', '2013-03-05 20:10:00', -1, '1', '2013-03-05 13:42:10', '2013-03-05 13:42:10' );
+** 多表join
+select *
+from
+    tableA a
+        inner join
+    tableB b
+        on a.common = b.common
+        inner join 
+    TableC c
+        on b.common = c.common
+
+-- 实际例子
+sql = <<-EOF
+  select contests.* from contests join votes on contests.id = votes.contest_id
+  join users on votes.user_id = users.id
+  order by votes.created_at desc
+EOF
+
+SELECT contests.*, count(entities.id) AS friend_upimg_count
+FROM contests
+JOIN entities ON contests.id = entities.contest_id
+JOIN users ON entities.user_id = users.id
+WHERE users.id in (#{user.friends.map(&:id).join(',')})
+GROUP BY contests.id
+ORDER BY friend_upimg_count
+

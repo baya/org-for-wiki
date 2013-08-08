@@ -7,3 +7,362 @@ def self.search(title, category_id, city_id)
     rel = rel.where('city_id     = ?', city_id)      if(city_id)
     rel
 end
+
+** 调用save方法时的callback顺序
+before_validation
+before_validation :on => :create
+after_validation
+after_validation  :on => :create
+before_save
+before_create
+after_create
+after_save
+
+** cucumber
+*** 搭建命令
+rails generate cucumber:install --help
+rails generate cucumber:install
+bin/cucumber --i18n zh-CN
+*** 关键词
+| feature          | "功能"                      |
+| background       | "背景"                      |
+| scenario         | "场景", "剧本"               |
+| scenario_outline | "场景大纲", "剧本大纲"        |
+| examples         | "例子"                      |
+| given            | "* ", "假如", "假设", "假定" |
+| when             | "* ", "当"                  |
+| then             | "* ", "那么"                |
+| and              | "* ", "而且", "并且", "同时" |
+| but              | "* ", "但是"                |
+| given (code)     | "假如", "假设", "假定"       |
+| when (code)      | "当"                        |
+| then (code)      | "那么"                      |
+| and (code)       | "而且", "并且", "同时"       |
+| but (code)       | "但是"                      |
+
+| feature          | "Feature", "Business Need", "Ability"   |
+| background       | "Background"                            |
+| scenario         | "Scenario"                              |
+| scenario_outline | "Scenario Outline", "Scenario Template" |
+| examples         | "Examples", "Scenarios"                 |
+| given            | "* ", "Given "                          |
+| when             | "* ", "When "                           |
+| then             | "* ", "Then "                           |
+| and              | "* ", "And "                            |
+| but              | "* ", "But "                            |
+| given (code)     | "Given"                                 |
+| when (code)      | "When"                                  |
+| then (code)      | "Then"                                  |
+| and (code)       | "And"                                   |
+| but (code)       | "But"                                   |
+
+*** 场景大纲
+Scenario Outline: eating
+  Given there are <start> cucumbers
+  When I eat <eat> cucumbers
+  Then I should have <left> cucumbers
+
+  Examples:
+    | start | eat | left |
+    |  12   |  5  |  7   |
+    |  20   |  5  |  15  |
+
+参考:
+https://github.com/cucumber/cucumber/wiki/Scenario-Outlines
+
+*** Tags
+cucumber --tags @debug
+参考:
+ohttps://github.com/cucumber/cucumber/wiki/Tags   
+
+*** 错误记录
+使用"功能"这个关键词会导致Gherkin::Lexer::LexingError错误
+~/.rvm/gems/ruby-1.9.3-p194/gems/cucumber-1.2.1/lib/cucumber/feature_file.rb:44:in `insert'
+这里有段代码e.message.insert(0, "#{@path}: ")可能会导致Encoding::CompatibilityError错误
+ruby1.9, @path包含中文
+需要在feature文件的头部加# language: zh-CN
+
+*** Testing API with cucumber
+资料:
+http://www.anthonyeden.com/2010/11/testing-rest-apis-with-cucumber-and-rack-test/#comment-159
+http://stackoverflow.com/questions/1722153/http-post-xml-content-from-cucumber
+
+*** 文档资源
+    http://cukes.info/step-definitions.html
+** generator
+bin/rails g model pa/bet --migration=false --fixture-replacement=fabrication
+bin/rails g model pa/prebet --migration=false --fixture-replacement=fabrication
+bin/rails g controller pa/term_notices --no-assets
+bin/rails g controller SlsChannels --no-assets
+bin/rails g model LotFarm --no-fixture --no-migration
+bin/rails g model sls/activity_verify_charge --no-fixture --no-migration
+bin/rails g business sls/business_commit_charge --no-fixture --no-migration
+bin/rails g activity sls/activity_verify_charge --no-fixture --no-migration
+zeus generate model pa/bb_job --fixture-replacement=fabrication 
+** Building APIs With Rails
+参考:
+http://code.alexreisner.com/articles/building-apis-with-rails.html
+
+** 资源
+https://speakerdeck.com/u/j3/p/adventures-on-the-golden-path
+** 参与rails的开发
+*** 简化orm模型
+1.业务逻辑和持久化分开
+2.对开发api有更好的支持(默认没有js,css,html等)
+
+** where
+scope :fresh, lambda { where(['status not in (?)', '-3, 0, 1, 9'])}
+** 自定义config
+# config/initializers/load_config.rb
+APP_CONFIG = YAML.load_file("#{Rails.root}/config/config.yml")[Rails.env]
+
+# application.rb
+if APP_CONFIG['perform_authentication']
+  # Do stuff
+end
+
+参考:
+http://stackoverflow.com/questions/1450285/how-to-define-custom-configuration-variables-in-rails
+
+** rails初始化
+参考: http://guides.rubyonrails.org/initialization.html
+
+** delayed job
+*** delayed_job
+Set Delayed::Worker.delay_jobs = false to execute all jobs realtime.
+项目地址:https://github.com/collectiveidea/delayed_job
+# Start a single worker
+RAILS_ENV=staging script/delayed_job start
+# Start multiple workers, each in a separate process
+RAILS_ENV=production script/delayed_job -n 4 start
+# Stop all workers
+RAILS_ENV=staging script/delayed_job stop
+
+** zeus
+zeus init
+zeus start
+zeus commands
+
+zeus console
+zeus server
+zeus testrb test/unit/widget_test.rb
+zeus rspec spec/widget_spec.rb
+zeus generate model omg
+zeus rake -T
+zeus runner omg.rb
+
+** Tabel.column
+change_table :table do |t|
+  t.column
+  t.index
+  t.timestamps
+  t.change
+  t.change_default
+  t.rename
+  t.references
+  t.belongs_to
+  t.string
+  t.text
+  t.integer
+  t.float
+  t.decimal
+  t.datetime
+  t.timestamp
+  t.time
+  t.date
+  t.binary
+  t.boolean
+  t.remove
+  t.remove_references
+  t.remove_belongs_to
+  t.remove_index
+  t.remove_timestamps
+end
+
+** ActiveModel::Dirty
+参考:http://stackoverflow.com/questions/5501334/how-to-properly-handle-changed-attributes-in-a-rails-before-save-hook
+
+person = Person.find_by_name('Uncle Bob')
+person.changed?       # => false
+person.name = 'Bob'
+person.changed?       # => true
+person.name_changed?  # => true
+person.name_was       # => 'Uncle Bob'
+person.name_change    # => ['Uncle Bob', 'Bob']
+
+** whenever
+whenever --set environment=development -i
+whenever --set environment=staging -i
+
+** rest-client
+*** set timeout
+req = RestClient::Resource.new(CONFIG['batch_url'], :timeout => TT, :open_timeout => OP_TT)
+req.post
+
+** Untangle Domain and Persistence Logic with Curator
+参考:https://www.braintreepayments.com/braintrust/untangle-domain-and-persistence-logic-with-curator
+
+** DSL
+http://martinfowler.com
+
+** 业务逻辑层和持久程层分离
+https://gist.github.com/2838490
+
+** Bundle
+bundle install --without test
+If you want a dependency to be loaded only in a certain Rails environment,
+place it in a group named after that Rails environment
+*** group
+
+** rvm gemset
+rvm gemset create ruby1.9.3@rails328
+rvm use ruby1.9.3@rails328
+
+** 部署脚本
+*** nginx + passenger
+#!/bin/tcsh
+
+set app_dir = "/srv/rorapps/lot_zhuihao";
+set socket = "${app_dir}/tmp/sockets/rails.socket";
+set pid_file = "${app_dir}/tmp/pids/passenger.pid";
+set user = "www";
+set passenger_exe = "passenger";
+set opts=" --max-pool-size 10 --user ${user} -S ${socket} -e ${RAILS_ENV} --pid-file ${pid_file} -d";
+
+cd $app_dir
+
+switch($1)
+case "init"
+  rm -f $pid_file
+  $0 start
+breaksw
+
+case "stop":
+  $passenger_exe $1  --pid-file $pid_file
+breaksw
+
+case "start":
+  $passenger_exe $1 $opts
+breaksw
+
+
+case "restart":
+  $0 stop && $0 start
+breaksw
+
+
+case "reload":
+  touch $app_dir/tmp/restart.txt
+breaksw
+
+case "status":
+  $passenger_exe $1 --pid-file $pid_file
+breaksw
+
+default:
+  echo "$0 [init|stop|start|status|reload]"
+endsw
+** 时区
+rake time:zones:all
+config.time_zone = 'Beijing'
+config.active_record.default_timezone = :local
+Rails stores at +0000 Time zone by default
+
+** HTML标签辅助方法
+*** select
+select '', 'lot_name', ['重庆时时彩', '双色球'], include_blank: false
+select '', 'terminal_no', [['任意', nil]\]
+
+*** radio button
+radio_button '', 'u_depoted', true, checked: @pre_term.depoted
+
+** API设计
+*** Versioned Controller
+Applications.routes.draw do
+  namespace :v1 do
+    resources :orders # V1::OrdersController, /v1/orders
+  end
+  namespace :v2 do
+    resources :orders # V2::OrdersController, /v2/orders
+  end
+end
+
+Application.router.draw do
+  constraints(:version => 1) do # namespace V1
+    resources :orders # V1::OrdersController, /orders
+  end
+  constraints(:version => 2)  do # namespace V2
+    resources :orders # V2::OrdersController, /orders
+  end
+end
+
+** 日志
+清空日志: rake log:clear
+
+** 移动web
+http://aulara.cn/m/users/login/?next=/m/
+
+** cycle helper
+<tr class=<%= cycle('even', 'odd') %>>
+
+** http basic auth
+class Admin::ApplicationController < ApplicationController
+  
+  USER_NAME, PASSWORD = "zhou", "dashiyebushuo"
+  
+  before_filter :admin_authenticate
+
+
+  private
+
+  def admin_authenticate
+    authenticate_or_request_with_http_basic do |user_name, password|
+      user_name == USER_NAME && password == PASSWORD
+    end
+  end
+
+end
+
+** Asset Pipeline
+http://guides.rubyonrails.org/asset_pipeline.html
+** 图片验证码
+http://www.fmwconcepts.com/imagemagick/captcha/index.php
+** Clean Code
+*** Refactor Fat Models
+1. Extract Value Objects
+2. Extract Service Objects
+3. Extract Form Objects
+4. Extract Query Objects
+5. Introduce View Objects
+6. Extract Pollicy Objects
+7. Extract Decorators
+*** 技术文章
+- http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/
+- https://github.com/zlx/userful_article/blob/master/best_practices/7_patterns_to_refactor_fat_ActiveRecord_Models.md
+
+** WebSockets on Rails 4 and Ruby 2
+http://www.pogoapp.com/blog/posts/websockets-on-rails-4-and-ruby-2?utm_source=rubyweekly&utm_medium=email
+
+** 教程
+- http://about.ac/rails-tutorial-2nd-cn/
+
+** Rails项目重构
+- http://yedingding.com/2013/03/04/steps-to-refactor-controller-and-models-in-rails-projects.html
+
+** Rails学习网站
+- http://railsapps.github.com
+- http://railsapps.github.com/rails-javascript-include-external.html
+
+** 生成带namespace的controller
+** rake任务在生产环境输出日志
+Rails.logger.auto_flushing = true
+
+** rake常用任务
+- rake db:version 查看迁移版本
+*** 恢复迁移(我需要修改某个历史的migration文件的迁移逻辑，比如20080930121212)
+- rake db:migrate:down VERSION=20080930121212
+- rake db:migrate
+** remove turbolinks from rails4
+- Remove the gem 'turbolinks' line from your Gemfile.
+- Remove the //= require turbolinks from your app/assets/javascripts/application.js.
+- Remove the two "data-turbolinks-track" => true hash key/value pairs from your app/views/layouts/application.html.erb.

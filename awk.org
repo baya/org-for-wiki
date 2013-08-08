@@ -1,0 +1,36 @@
+* AWK
+** 基本结构
+pattern{action}
+$n 表示输入文件的第n个field
+$符号表示当前行的某个域或者列
+FS  输入文件分割变量，比如FS=":"或者awk -F:
+OFS 输出文件分割变量, 比如OFS=":"
+NF  域变量的数目
+NR  记录的号
+RS  记录分隔符
+ORS 输出记录分隔符
+FILENAME the current filename variable
+** 用例
+awk -F: '{if($2=="")print $1 ": no password!"}' < /etc/passwd   以冒号:分割
+*** 统计用户下文件数量
+find . -type f -print | xargs ls -l | awk '{username[$3]++;} END{for(i in username){print username[i], i;}}'
+find . -type f -print | xargs ls -l | awk '{print $3}' | sort | uniq -c | sort -nr
+find . -type f -print | xargs ls -l | awk '{if(NF > 7){username[$3]++;}} END{for(i in username){print username[i], i;}}'
+find . -type f -print | xargs ls -l | awk 'BEGIN{username[""]=0;}{if(NF > 7){username[$3]++;}}END{for(i in username){print username[i], i;}}'
+
+#!/bin/awk -f
+BEGIN {
+	username[""]=0;
+}
+{
+	username[$3]++;
+}
+END {
+	for (i in username) {
+		if (i != "") {
+			print username[i], i;
+		}
+	}
+}
+
+

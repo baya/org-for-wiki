@@ -21,3 +21,89 @@ sudo iptables -A INPUT -p tcp -s 0/0 --sport 1024:65535 -d 10.61.0.103 --dport 5
 sudo iptables -A OUTPUT -p tcp -s 10.61.0.103 --sport 5432 -d 0/0 --dport 1024:65535 -m state --state ESTABLISHED -j ACCEPT
 - 参考1 http://www.cyberciti.biz/tips/howto-iptables-postgresql-open-port.html
 - 参考2 http://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html
+
+** 创建一个可以登陆和创建数据库的非超级用户
+*** create role pg_user login createdb
+*** createuser -d -l -w -S -R pguser    创建一个可以创建数据库，可以登陆，无密码的非超级用户,不可以创建role
+** pd_dump
+*** 备份整个数据库
+pgdump -h qa.fun-guide.mobi -U pgsql huafei_development > huafeibak.out
+*** 只备份数据
+    pg_dump -h qa.fun-guide.mobi -U pgsql huafei_development -a > huafeibak-data-only.out   
+*** 导入数据
+psql -h localhost -U pgsql -d huafei_development < huafeibak-data-only.out
+
+*** 实际案例
+pg_dump -h qa.fun-guide.mobi -U pgsql palottery > palottery.out
+pg_dump -h qa.fun-guide.mobi -U pgsql -Fc palottery > palottery.out
+psql -h localhost -U pgsql -d lot_zhuihao_development < palottery.out
+
+# 只导出某个表的数据
+pg_dump -h qa.fun-guide.mobi -U pgsql palottery -a -t pa_pre_terms > palottery.out
+pg_dump -h 10.150.150.10 -U pgsql palottery -a > palottery.out
+pg_dump -h 10.150.150.10 -U pgsql palottery -a -t pa_prebets pa_terms > palottery.out
+
+# 从生产库导入数据到本地开发库
+dropdb lot_zhuihao_development
+createuser -d -l -w -S -R zhaohang #如果没有zhaohang这个用户
+createdb lot_zhuihao_development -O "zhaohang"
+pg_dump -h 10.150.150.10 -U pgsql palottery > palottery.dmp
+psql -h localhost -U pgsql -d lot_zhuihao_development < palottery.dmp
+bin/rake db:migrate
+
+# 导入话费2数据
+pg_dump -h qa.fun-guide.mobi -U pgsql huafei_development > huafei_dev.dump
+psql -h localhost -U pgsql huafei_development <  huafei_dev.dump
+
+# 导入第三方支付数据
+pg_dump -h qa.fun-guide.mobi -U pgsql cmbpaygw3_development  > ~/cmbpaygw3_development.dmp
+psql -h localhost -U pgsql cmbpaygw3_development  < ~/cmbpaygw3_development.dmp
+
+** dropdb
+dropdb lot_zhuihao_development
+** createdb
+createdb lot_zhuihao_development -O "zhaohang"
+** 显示表信息
+\d custom_orders
+
+** Shared Memory
+参考:
+http://www.postgresql.org/docs/current/static/kernel-resources.html#SYSVIPC
+http://willbryant.net/software/mac_os_x/postgres_initdb_fatal_shared_memory_error_on_leopard
+
+sudo sysctl -w kern.sysv.shmall=65536
+sudo sysctl -w kern.sysv.shmmax=16777216
+
+** 用socket连接，与rails项目结合
+mkdir /var/pgsql_socket
+sudo chmod go=xwr /var/pgsql_socket
+vi ~/pg_data/postgresql.conf
+设置
+unix_socket_directory = '/var/pgsql_socket'
+重启postgresql
+database.yml文件内容
+development:
+  adapter:  postgresql
+  encoding: unicode
+  database: lot_channels_development
+  pool:     5
+  username: lot_channels
+  password:
+
+创建数据库用户
+createuser -d -l -W -S lot_channels
+
+** 改变表的所有者
+ALTER TABLE schema_migrations OWNER TO pgsql
+
+** pg开发环境搭建
+*** create database
+initdb /usr/local/var/postgres -E utf8
+*** 启动database server
+postgres -D /usr/local/var/postgres
+pg_ctl -D /usr/local/var/postgres -l logfile start
+
+** 启动,重加载,停止
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log reload
+pg_ctl -D /usr/local/var/postgres stop
