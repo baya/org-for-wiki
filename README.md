@@ -9,4 +9,4 @@
 - [Linux](https://github.com/baya/note-org/blob/master/linux.org)
 - [Http](https://github.com/baya/note-org/blob/master/http.org)
 - [Awk](https://github.com/baya/note-org/blob/master/awk.org)
-- [sql](https://github.com/baya/note-org/blob/master/sql.org)
+- [SQL](https://github.com/baya/note-org/blob/master/sql.org)
