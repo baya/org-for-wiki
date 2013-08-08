@@ -1,5 +1,5 @@
 * APP
-** DONE 场景(Scene)
+** TODO 场景(Scene)
 - 帮助人们掌控对话
 - https://github.com/baya/SceneMaster
 ** TODO 远程(Remote)

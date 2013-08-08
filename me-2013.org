@@ -1358,6 +1358,10 @@ junMIN1984
 *** DONE 图片存储到10.61.0.104服务器上
 *** 整合后台UI
 *** DONE 查询相关比赛api
+** 08-08
+*** TODO 使用ground启动angular-phonecat
+*** DONE emacs配置ternjs
+    CLOSED: [2013-08-08 Thu 23:56]
 * Plan 
 ** DONE 
 *** DONE 买表
