@@ -5,3 +5,572 @@ Digest::MD5.hexdigest 'test'
 
 ** fiber
 - http://www.rubyinside.com/ruby-fibers-8-useful-reads-on-rubys-new-concurrency-feature-1769.html
+
+** 博客
+http://tonyarcieri.com
+http://clean-ruby.com
+** gem升级到特定版本
+gem update --system 1.3.7
+** Rspec cheat
+*** 断言
+blog_post.should_not be_published
+blog_post.should_not be_nil
+*** 初始化变量
+let(:mobile_no){'13910655615'}
+*** 资源
+http://pure-rspec-rubynation.heroku.com/
+*** describe和context
+alias :context :describe
+describe is for your methods
+context is for ... contexts
+
+** 并发编程
+file:///Users/kkjgm/Documents/Pragmatic%20Concurrency%20With%20Ruby%20-%20Paracode.html
+** Public, Protected, Private 方法
+file:///Users/kkjgm/Documents/protected-methods-and-ruby-2-0.html
+
+** 邮箱验证
+file:///Users/kkjgm/Documents/Stop%20Validating%20Email%20Addresses%20With%20Your%20Complex%20Regex%20-%20davidcelis.com.html
+class User < ActiveRecord::Base
+  validates_format_of :email, :with => /@/
+end
+
+** Gem
+*** piece_pipe
+code: https://github.com/atomicobject/piece_pipe
+file:///Users/kkjgm/Documents/PiecePipe%20Examples_%20Map,%20Aggregation,%20&%20Group-By%20|%20Atomic%20Spin.html
+*** SimpleForm
+*** rubysh
+*** schema_plus
+*** letsrate
+** Project
+*** hobo
+** bundle
+bundle install --binstubs
+*** 错误处理
+ERROR: Gem bundler is not installed, run `gem install bundler` first.
+如果已经安装了bundle
+那么试试rvm use defalut
+** 错误处理
+在mac mountian lion系统上 gem install json -v '1.7.5' 时报make: /usr/bin/gcc-4.2: No such file or directory的错误
+解决方法 sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2
+
+** Ruby Magic
+参考:https://speakerdeck.com/u/jeg2/p/10-things-you-didnt-know-ruby-could-do?utm_source=rubyweekly&utm_medium=email
+https://speakerdeck.com/u/jeg2/
+*** case on lambda
+require 'prime
+n = rand(1..10)
+p n
+
+case n
+when lambda(&:prime?)
+  puts "This number is prime"
+when lambda(&:even?)
+  puts "This number is even"
+else
+  puts "This number is odd"
+end
+
+*** case on ranges
+age = rand(1..100)
+p age
+
+case age
+when -Float::INFINITY
+  puts "You'r too young"
+when 21..64
+  puts "You are the right age"
+when 65..Float::INFINITY
+  puts "You're too old"
+end  
+
+*** inject() a Symbol
+   p (1..10).inject(:*)
+*** Symbol#to_proc Takes Arguments
+to_s_proc = :to_s.to_proc
+receiver = 255
+arg = 16
+puts to_s_proc[receiver, arg]
+
+*** Call Anything Syntax
+class Callable
+  def call
+    :my_own_class
+  end
+end
+
+p -> {:lambda}.()
+p [].method(:class).()
+p Callable.new.()
+
+*** Blocks Take Blocks
+var = :var
+object = Object.new
+
+object.define_singleton_method(:show_var_and_block) do |&block|
+  p [var, block]
+end
+
+object.show_var_and_block {:block}
+
+*** Lambda 语法
+minimal = -> {p :called}
+minimal.call
+
+loaded = ->(arg, default = :defaul, &block) { p [arg, default, block]}
+loaded.call(:arg) {:block}
+
+*** Pass No Block Up
+class Parent
+  def show_block(&block)
+    p block
+  end
+end
+
+class Children
+  def show_block
+    super(&nil)
+  end
+end
+
+Child.new.show_block {:block}
+
+*** Pass No Args Up
+class Parent
+  def show_args(*args)
+    p args
+  end
+end
+
+class Children
+  def show_args(a, b, c)
+    super()
+  end
+end
+
+Children.new.show_args(:a, :b, :c)
+
+*** A Formatted Output Syntax
+def debug(name, content)
+  puts "%s: %p" % [name, content]
+end
+
+debug "Num", 42
+debug "Objects", {"Grays" => %w[James Dana Summer]}
+
+
+*** Shortcut Variable Interpolation
+@instance = :instance
+@@class = :class
+$global = :global
+
+puts "#@instance, #@@class, and #$global variables don't need braces"
+
+*** Variables From a Regex
+if /\A(?<last>\w+, \s*(?<first>\w+))\z/ =~ "Gray, James"
+  puts "#{first} #{last}"
+end
+
+*** The Unused Variable
+{:a => 'b', :c => 'd'}.each {|k, _| p k}
+*** Objects Can Contain Themselves
+ring = [:one, [:tow, [:three]]]
+ring.last.last << ring
+
+ring = %w[one two three].cycle
+
+*** Autovivification
+deep = Hash.new {|hash, key| hash[key] = Hash.new(&hash.default_proc)}
+deep[:a][:b][:c] = 42
+
+*** Replace Ugly inject() calls
+object = (1..3).each_with_object({}) do |n, hash|
+  hash[n] = true
+end
+
+*** A Smarter loop()
+animals = %w[cat bat rat]
+enum = animals.to_enum
+loop do
+  puts "Processing #{enum.next}..."
+end
+
+*** Easiest Database
+require 'pstore'
+require 'yaml/store'
+
+** 好的博客
+http://patshaughnessy.net
+
+** yaml
+http://www.yaml.org/YAML_for_ruby.html#simple_sequence
+
+** rake
+*** run tasks from within rake tasks
+参考: http://stackoverflow.com/questions/577944/how-to-run-rake-tasks-from-within-rake-tasks
+实际应用
+  desc '统计所有追号状况'
+  task :stat_all_zhuihao, [:num] => [:environment] do |t, args|
+    Rake::Task['staging:stat_zhuihao'].reenable
+    Rake::Task['staging:stat_zhuihao'].invoke('排列三[组三]', args['num'])
+  end
+  
+** 用rvm升级ruby
+参考: http://stackoverflow.com/questions/3360277/how-do-i-update-ruby-interpreters-with-rvm
+rvm upgrade 1.9.2-preview1 1.9.2-rc1
+实例
+rvm upgrade 1.9.3-p286 1.9.3-p327 --verify-downloads 1
+** passenger
+passenger start --max-pool-size 10 -S /srv/rorapps/fgcc/tmp/sockets/rails.socket -e development --pid-file /srv/rorapps/fgcc/tmp/pids/passenger.pid -d
+passenger stop --pid-file /srv/rorapps/fgcc/tmp/pids/passenger.pid
+
+** refining
+代码示例:
+module Camelize
+  refine String do
+    def camelize
+      dup.gsub(/_([a-z])/) { $1.upcase }
+    end
+  end
+end
+
+class Foo
+  using Camelize
+
+  def camelize_string(str)
+    str.camelize
+  end
+end
+
+** 数字精确到几位小数
+1.234567.round(2)  #=> 1.23
+'%5.2f' % 123.593  #=> '123.59'
+
+** 大段字符串
+   <<-EOF
+     <?xml version="1.0" encoding="utf-8" ?>
+     <Response>
+      <UserID>magus-tester</UserID>
+      <OrderNo>abcde1234</OrderNo>
+      <Money>20</Money>
+      <Result>1</Result>
+      <ErrCode>000</ErrCode>
+   </Response>
+  EOF   
+
+** DSL
+treetop
+
+** DCI
+** 常用的文件加载技巧
+require File.expand_path(File.dirname(__FILE__) + '/spec_helper')   
+** 动态定义方法
+1. 支持1.9
+define_method :m do |a = false|
+end
+
+2. 1.8， 1.9
+class_eval <<-EVAL
+  def #{"m"}(a = false)
+  end
+EVAL
+
+3. 1.8， 1.9
+define_method :m do |*args|
+  a = args.first
+end
+
+** String Format
+"%02d" % 3 #=> '03'
+"%0.2f" % 2 #=> '2.00'
+** Hash
+name, nickname = details[:info].values_at(:name, :nickname)
+
+** Ruby 2.0
+*** install
+brew update
+brew install libyaml
+rvm install ruby-2.0.0-rc1
+rvm use ruby-2.0.0-rc1
+*** Changes
+1.Keyword Arguments
+def config(enabled: true, timeout: 30)
+  [enabled, timeout]
+end
+
+def config(value, enabled: true, timeout: 300, **other)
+  [value, enabled, timeout, **other]
+end
+
+2.prepend
+
+module Foo
+  def baz
+    'foo-baz'
+  end
+end
+
+class Bar
+  prepend Foo
+  def baz
+    'bar-baz'
+  end
+end
+
+Bar.new.baz
+#=> 'foo-baz'
+
+3.Enumerable#lazy
+arr = [1,2,3,4,5].select {|n| n > 2}
+#=> <#:select>
+arr.force
+
+4.use %i or %I for symbol list creation
+%i{this is a list of symbols}
+#=> [:this, :is, :a, :list, :of, :symbols]
+
+** 部署
+*** mina
+site: http://nadarei.co/mina/
+*** vlad
+site: http://rubyhitsquad.com/
+
+** Gem
+*** kaminari
+site: https://github.com/amatsuda/kaminari    
+
+** Proc
+Just a small addition to the standard library:
+
+class Regexp
+  def to_proc; lambda {|s| self =~ s} end
+end
+
+With that one can use a Regex everywhere a Proc is used as filtering criteria saving a bit of typing.  While we have Enumerable#grep already there may be other cases where you want to do something like
+
+irb(main):008:0> %w{foo bar baz}.select &/\Ab/
+=> ["bar", "baz"]
+irb(main):009:0> %w{foo bar baz}.reject &/\Ab/
+=> ["foo"]
+irb(main):010:0> %w{foo bar baz}.find &/\Ab/
+=> "bar"
+** Ruby Issue
+http://bugs.ruby-lang.org
+
+** 编码
+- http://blog.grayproductions.net/articles/understanding_m17n
+** 搭建blog的gem
+***  Middleman
+** Ruby2.0学习资料
+http://globaldev.co.uk/2013/03/ruby-2-0-0-in-detail/
+** and 和 &&的区别
+a = true && false 等价于 (a = (true && false))
+a = true and false 等价于 ((a = true) and false)
+
+** 生成随机字母
+('a'..'z').to_a.shuffle[0..7].join
+[*?a..?z].sample(8).join
+('a'..'z').to_a.sample(8).join
+[*('a'..'z')].sample(8).join
+
+** API
+- http://overapi.com/
+
+** Memoize Methods
+module Memoize
+
+  def memoize(method)
+    # Create an anonymous module
+    memoizer = Module.new do
+
+      # Define a method in the module with the same name
+      define_method method do
+        # Ensure we have a place to store the result in
+        # case we memoize multiple methods
+        @__memoized_results ||= {}
+
+        if @__memoized_results.include? method
+          # If we've already calculated the result of
+          # this function, return it
+          @__memoized_results[method]
+        else
+          # Otherwise calculate the result by calling
+          # the original implementation and store it for
+          # future calls
+          @__memoized_results[method] = super()
+        end
+      end
+
+    end
+
+    # Prepend the anonymous module to the class so that
+    # its method is called first
+    prepend memoizer
+  end
+
+end
+
+** 44行的测试框架
+module Kernel
+  def describe(description, &block)
+    tests = Dsl.new.parse(description, block)
+    tests.execute
+  end
+end
+class Object
+  def should
+    self
+  end
+end
+class Dsl
+  def initialize
+    @tests = {}
+  end
+  def parse(description, block)
+    self.instance_eval(&block)
+    Executor.new(description, @tests)
+  end
+  def it(description, &block)
+    @tests[description] = block
+  end
+end
+class Executor
+  def initialize(description, tests)
+    @description = description
+    @tests = tests
+    @success_count = 0
+    @failure_count = 0
+  end
+  def execute
+    puts "#{@description}"
+    @tests.each_pair do |name, block|
+      print " - #{name}"
+      result = self.instance_eval(&block)
+      result ? @success_count += 1 : @failure_count += 1
+      puts result ? " SUCCESS" : " FAILURE"
+    end
+    summary
+  end
+  def summary
+    puts "\n#{@tests.keys.size} tests, #{@success_count} success, #{@failure_count} failure"
+  end
+end
+
+** Proc, block and 匿名函数
+- http://augustl.com/blog/2008/procs_blocks_and_anonymous_functions/
+- proc和lambda的区别
+def foo
+  f = Proc.new { return "return from foo from inside proc" }
+  f.call # control leaves foo here
+  return "return from foo" 
+end
+
+def bar
+  f = lambda { return "return from lambda" }
+  f.call # control does not leave bar here
+  return "return from bar" 
+end
+- http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/
+
+** 调用外部接口的重试
+  # MsBt.try('调用支付宝接口', :max_times => 2, :on => [Net::HTTPBadResponse, Timeout::Error]) do
+  #   open(url)
+  # end
+  def try(title, options = { }, &p)
+    tried_times = 0
+    max_times = options[:max_times] || 3
+    exceptions = options[:on] || Exception
+    exceptions = [exceptions] if !exceptions.is_a?(Array)
+    rescue_text = <<-EOF
+      begin
+        # 此处不能用yield
+        p.call
+      rescue #{exceptions.join(',')} => e
+        log_exception(title, e)
+        retry if (tried_times += 1) < max_times
+        raise e
+      end
+    EOF
+    eval rescue_text
+  end
+
+** 发送邮件
+http://apidock.com/ruby/Net/SMTP
+** 数据库备份脚本
+#!/srv/ruby19/bin/ruby
+# encoding: UTF-8
+require 'rubygems'
+require 'active_record'
+require 'pg'
+require 'fileutils'
+
+=begin
+2012-09-19
+PostgreSQL 数据库备份脚本
+每次执行都备份到指定的目录下
+每个数据库一个文件，扩展名是 dump
+恢复需要先建立数据库，然后 pg_restore 进行恢复
+=end
+#配置开始
+ActiveRecord::Base.establish_connection(
+  :adapter=>"postgresql",
+  :database => 'template1',
+  :host => 'localhost',
+  :port => 5432,
+  :username => 'pgsql',
+  :password => 'none'
+)
+#不做备份处理的数据库
+SKIP_DATABASES = %w(template0 template1 sandbox fgpay2_test)
+#备份存放的目录
+BACKUP_BASE_DIR = "/srv/pg_backup/#{Time.now.to_s(:number)}"
+puts "备份目的路径: #{BACKUP_BASE_DIR}"
+FileUtils.mkdir_p(BACKUP_BASE_DIR) unless File.exists?(BACKUP_BASE_DIR)
+PG_BIN = "<pgsql bin路径>"
+
+#配置结束
+#获取所有的数据库列表
+class PgDatabase < ActiveRecord::Base
+  self.table_name = "pg_database"
+  def self.all_databases
+    select('datname').where(["datistemplate = false"]).map{|record|
+    record.try(:datname) unless SKIP_DATABASES.include?(record.try(:datname)) }.delete_if{|r| r.blank?}
+  end
+end
+
+pg_dump_bin = lambda{|db_name|
+  #c模式 --clean --create 无效
+  system("#{PG_BIN}/pg_dump -Upgsql --blobs  --format=c --compress=9 --file=#{BACKUP_BASE_DIR}/#{db_name}.dump #{db_name}")
+}
+
+puts PgDatabase.all_databases.each{|db_name|
+  puts "BEGIN BackUp #{db_name} "
+  pg_dump_bin.call(db_name)
+  puts "BackUp #{db_name} done.\n\n"
+}
+
+** 解决字符编码的异常
+menu.to_s.encode('UTF-8', {:invalid => :replace, :undef => :replace, :replace => '?'})
+
+** binding
+- http://onestepback.org/index.cgi/Tech/Ruby/RubyBindings.rdoc   
+def value_of_a(vars)
+  eval "a", vars
+end
+
+def my_scope
+  a = 33
+  value_of_a(binding)
+end
+
+a = 1
+def my_scope(b)
+  a = 33
+  value_of_a(b)
+end
+
+my_scope(binding)
+
+** new gem with bundle
+- http://asciicasts.com/episodes/245-new-gem-with-bundler
