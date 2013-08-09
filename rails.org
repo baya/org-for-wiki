@@ -275,7 +275,6 @@ select '', 'terminal_no', [['任意', nil]\]
 
 *** radio button
 radio_button '', 'u_depoted', true, checked: @pre_term.depoted
-
 ** API设计
 *** Versioned Controller
 Applications.routes.draw do

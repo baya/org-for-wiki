@@ -1,3 +1,30 @@
 * Gem
 ** lolcat
 ** cowsay
+** 分页查询
+- [kaminari](https://github.com/amatsuda/kaminari)
+- 用法
+rails g kaminari:config  
+@users = User.order(:name).page params[:page]
+<%= paginate @users %>
+- 实例
+控制器
+I18n.locale = :zh
+@contests = Contest.order('created_at DESC').page(params[:page]).per(20)
+
+本地化
+zh:
+  hello: "你好，世界"
+  views:
+    pagination:
+      first: "首页"
+      last: "最后一页"
+      previous: "&lsaquo; 上页"
+      next: "下页 &rsaquo;"
+      truncate: "..."
+
+路由
+get '/admin/contests/page/:page', to: 'admin/contests#index'
+
+视图
+<%= paginate @users %>

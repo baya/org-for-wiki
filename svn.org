@@ -1,0 +1,102 @@
+* SVN
+** 撤销改动
+*** svn revert changed.txt
+** 创建分支
+*** svn cp m_url b_url
+** 签下代码
+*** svn co b_url
+** 导入项目
+mkdir -p svntest/{trunk,branches,tags}
+svn import svntest https://localhost/test/svntest --message "Start project"
+** 最近提交变化
+svn diff --revision PREV:COMMITTED foo.c
+** 最近提交日志
+   svn log --revision HEAD
+   svn log --revision HEAD:BASE
+** 工作文件变化
+svn diff --revision HEAD
+** 本地commited文件之变化
+   svn diff --revision BASE:HEAD
+   svn diff --revision 10777:10861
+** rewinds the last change
+   svn update --revision PREV foo.c
+** 签下特定版本
+svn checkout --revision 3
+svn checkout --revision {2002-02-17}
+svn checkout --revision {15:30}
+svn checkout --revision {15:30:00.200000}
+svn checkout --revision {"2002-02-17 15:30"}
+svn checkout --revision {"2002-02-17 15:30 +0230"}
+svn checkout --revision {2002-02-17T15:30}
+svn checkout --revision {2002-02-17T15:30Z}
+svn checkout --revision {2002-02-17T15:30-04:00}
+svn checkout --revision {20020217T1530}
+svn checkout --revision {20020217T1530Z}
+svn checkout --revision {20020217T1530-0500}
+
+** 解决冲突
+svn resolved sandwich.txt 
+** 提交代码
+svn commit --message "Correct some fatal problems"
+** 检查日志
+svn log
+svn log --revision 5:19
+svn log foo.c
+svn log -r 8 -v
+** 清理
+svn cleanup 为失败的事务清场
+** 分支和合并
+*** 创建分支方法1,先checkout然后做拷贝,最后提交拷贝
+svn checkout http://svn.example.com/repos/calc bigwc
+cd bigwc
+svn copy trunk branches/my-calc-branch
+svn status
+svn commit -m "Creating a private branch of /calc/trunk."
+*** 方法2,直接远程拷贝
+svn copy http://svn.example.com/repos/calc/trunk
+建立分支后，你可以把分支checkout并继续你的开发。
+svn checkout http://svn.example.com/repos/calc/branches/my-calc-branch 
+假设你已经checkout了主干，现在想切换到某个分支开发，可做如下的操作：
+cd calc
+svn info | grep URL
+svn switch http://svn.example.com/repos/calc/branches/my-calc-branch 
+*** 创建分支实际用例
+svn copy http://svn.magus-soft.com:8080/svn/magus/2010/server/huafei2/branch/review http://svn.magus-soft.com:8080/svn/magus/2010/server/huafei2/branch/features/wlts_channel -m '创建沃伦特斯渠道分支'
+** 找出不在版本控制下的文件
+svn status | grep "^\?" | awk "{print \$2}"
+** 忽略文件
+svn propset svn:ignore "*.jpg" .
+或者
+svn propedit svn:ignore . (会打开一个编辑器)
+svn propedit svn:ignore log
+** find ignored files
+svn status -u -v --no-ignore |grep "^I"|awk "{print \$2}" 
+** remove
+svn rm log/test.log --keep-local
+
+** svn开发流程
+1.创建评审分支
+svn cp http://svn.magus-soft.com:8080/svn/pingan/server/pingan/lottery_zh/branches/lot_zhuihao http://svn.magus-soft.com:8080/svn/pingan/server/pingan/lottery_zh/branches/review -m "创建评审分支"
+2.创建开发分支
+svn cp http://svn.magus-soft.com:8080/svn/pingan/server/pingan/lottery_zh/branches/review http://svn.magus-soft.com:8080/svn/pingan/server/pingan/lottery_zh/branches/lot_jingcai -m "建立竞彩开发分支"
+3.签入开发分支
+svn co http://svn.magus-soft.com:8080/svn/pingan/server/pingan/lottery_zh/branches/lot_jingcai
+4. 合并流程
+svn co http://svn.magus-soft.com:8080/svn/pingan/server/pingan/lottery_zh/branches/review
+mv review zhuihao_review
+cd zhuihao_review
+svn merge http://svn.magus-soft.com:8080/svn/pingan/server/pingan/lottery_zh/branches/lot_zhuihao
+svn ci -m "合并分支lot_zhuihao"
+svn merge http://svn.magus-soft.com:8080/svn/pingan/server/pingan/lottery_zh/branches/lot_zhuihao -r 4223:4498
+
+** 查看版本
+svn log --stop-on-copy -l 30
+** Log
+svn log -l 4
+** 显示远程项目列表
+svn ls http://svn.magus-soft.com:8080/svn/2011/server/fgcc/branches/features/
+** 403Error解决方法
+svn up --username jiangguimin
+** 代码review
+svn log --stop-on-copy -l 9
+svn diff -r 5382:HEAD > diff.rb
