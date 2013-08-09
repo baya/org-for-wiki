@@ -1,3 +1,12 @@
-用org mode 管理日常知识
-- PostgreSQL
-- jQuery
+用org mode 管理每日工作计划和日常知识 
+- [2013年工作](https://github.com/baya/note-org/blob/master/me-2013.org)
+- [2012年工作](https://github.com/baya/note-org/blob/master/me-2012.org)
+- [PostgreSQL](https://github.com/baya/note-org/blob/master/pg.org)
+- [jQuery](https://github.com/baya/note-org/blob/master/jquery.org)
+- [Ruby](https://github.com/baya/note-org/blob/master/ruby.org)
+- [Rails](https://github.com/baya/note-org/blob/master/rails.org)
+- [Git](https://github.com/baya/note-org/blob/master/git.org)
+- [Linux](https://github.com/baya/note-org/blob/master/linux.org)
+- [Http](https://github.com/baya/note-org/blob/master/http.org)
+- [Awk](https://github.com/baya/note-org/blob/master/awk.org)
+- [SQL](https://github.com/baya/note-org/blob/master/sql.org)
