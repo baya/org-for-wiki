@@ -1358,6 +1358,13 @@ junMIN1984
 *** DONE 图片存储到10.61.0.104服务器上
 *** 整合后台UI
 *** DONE 查询相关比赛api
+** 08-08
+*** 非常好看项目
+**** TODO 整合后台UI
+**** DONE 手机客户端新浪微博登陆后，提供user_sn给客户端
+**** DONE api文档增加绑定qq,weibo用户的说明
+**** 通过fchk.funguide.com.cn这台服务器访问图片
+*** 跑步
 * Plan 
 ** DONE 
 *** DONE 买表
@@ -1415,7 +1422,6 @@ junMIN1984
 *** Ruby:研究sinatra
 *** Ruby:研究homebrew
 *** Prolog: 第一阶段Prolog学习，Learn Prolog Now!
-
 *** Reading: 软件测试
 *** Gem: 一周一gem，描述一些优秀的gem的架构，以及相关的ruby代码风格
 *** Gem: 学习Padrino
