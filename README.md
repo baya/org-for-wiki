@@ -10,4 +10,4 @@
 - [Http](https://github.com/baya/note-org/blob/master/http.org)
 - [Awk](https://github.com/baya/note-org/blob/master/awk.org)
 - [SQL](https://github.com/baya/note-org/blob/master/sql.org)
-- [JavaScript库](https://github.com/baya/note-org/blob/master/jslib.org))
+- [JavaScript库](https://github.com/baya/note-org/blob/master/jslib.org)
