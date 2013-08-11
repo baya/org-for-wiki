@@ -1382,6 +1382,9 @@ junMIN1984
 *** 卖hp笔记本电脑 							 :生活:
 **** DONE 装win7
 **** 在网上发布 	
+** 08-11
+*** TODO 游泳1500米
+*** 练习angular-phonecat两小时
 * Plan 
 ** DONE 
 *** DONE 买表
