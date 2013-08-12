@@ -1,0 +1,35 @@
+* AngularJS
+** 好的博客文章
+- Why Does Angular.js Rock? http://angular-tips.com/blog/2013/08/why-does-angular-dot-js-rock/?utm_source=javascriptweekly&utm_medium=email
+
+** directive
+*** hello
+app.directive('hello', function(){
+  return {
+   retstrict: 'E',
+   replace: true,
+   template: "<div>Hello readers, thank you for coming </div>"
+  }
+})
+
+- restrict: A directive can be placed in several places:
+-- Attribute, like: <div foo></div>
+-- Element, like: <foo></foo>
+-- Class, like: <div class="foo"></div>
+-- CoMment, like: <!-- directive: foo -->
+
+- replace: If we set this to true, our element will be replaced with our new template
+- templace: Here we put the template we want to append (or replace as we have seen) into the element.
+
+** filter
+*** capitalize
+app.filter('capitalize', function(){
+  return function(input, param){
+    return input.substring(0,1).toUpperCase() + input.substring(1);
+  }
+})
+
+<span>{{ "this is some text" | capitalize }}</span>
+
+** services
+- 
