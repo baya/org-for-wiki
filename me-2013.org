@@ -1383,8 +1383,8 @@ junMIN1984
 **** DONE 装win7
 **** 在网上发布 	
 ** 08-11
-*** TODO 练习angular-phonecat两小时
-*** 游泳1500米
+*** DONE 练习angular-phonecat两小时
+*** DONE 游泳1500米
 * Plan 
 ** DONE 
 *** DONE 买表

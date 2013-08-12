@@ -1,7 +1,12 @@
 * AngularJS
 ** 好的博客文章
 - Why Does Angular.js Rock? http://angular-tips.com/blog/2013/08/why-does-angular-dot-js-rock/?utm_source=javascriptweekly&utm_medium=email
-
+** controller
+*** MainCtrl
+var app = angular.module('app', []);
+app.controller('MainCtrl', function($scope){
+  $scope.message = 'World';
+});
 ** directive
 *** hello
 app.directive('hello', function(){
@@ -32,4 +37,4 @@ app.filter('capitalize', function(){
 <span>{{ "this is some text" | capitalize }}</span>
 
 ** services
-- 
+
