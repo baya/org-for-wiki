@@ -33,6 +33,10 @@ C-x C-+’ and ‘C-x C--
 Command+t
 
 ** org-mode
+*** 资源
+- 中文资料， http://www.cnblogs.com/holbrook/archive/2012/04/12/2444992.html
+- 主站, http://orgmode.org/
+- http://i.linuxtoy.org/docs/guide/ch32.html
 *** 导出成html格式
 C-c C-e h
 *** 文档
@@ -40,3 +44,26 @@ C-h i
 搜索org mode
 ** 社区
 http://emacser.com/about.htm
+
+** Revert Buffer
+- http://www.emacswiki.org/emacs/RevertBuffer
+1. C-x C-v RET
+2. M-x revert-buffer RET yes RET
+3. (global-set-key [(control c) r] 'revert-buffer)
+4. (global-auto-revert-mode 1)
+
+** ditaa
+- http://ditaa.sourceforge.net/
+
+** org babel
+- http://orgmode.org/worg/org-contrib/babel/intro.html
+
+** 表格
+- 输入表头 |Name|Pone|Age|, C-c RET
+| Name | Pone | Age |
+|------+------+-----|
+|      |      |     |
+|------+------+-----|
+|      |      |     |
+
+
