@@ -365,3 +365,21 @@ Rails.logger.auto_flushing = true
 - Remove the gem 'turbolinks' line from your Gemfile.
 - Remove the //= require turbolinks from your app/assets/javascripts/application.js.
 - Remove the two "data-turbolinks-track" => true hash key/value pairs from your app/views/layouts/application.html.erb.
+
+** form_tag
+- form_tag('/upload', multipart: true)
+
+** helper_method
+#application_controller.rb
+def current_user
+  @current_user ||= User.find_by_id!(session[:user_id])
+end
+helper_method :current_user
+
+** asset_path
+.css.erb   
+background-image:url(<%=asset_path "admin/logo.png"%>);
+- 实例
+首先将美工给的common.css文件改名为common.css.erb
+然后利用asset_path来引入image
+.header{width:960px;height:75px;background:url(<%= asset_path 'main_bg.png' %>) 0 0 repeat-x;overflow:hidden;}
