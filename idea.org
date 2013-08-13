@@ -1,0 +1,4 @@
+* Idea
+记录自己的一些想法和灵感
+** migration-doc
+- 从migration脚本中提取文档
