@@ -67,7 +67,6 @@ http://emacser.com/about.htm
 |      |      |     |
 
 
-
 ** Html
 - C-c C-f Forward Tag
 - C-c C-b Backward Tag

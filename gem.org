@@ -28,31 +28,12 @@ get '/admin/contests/page/:page', to: 'admin/contests#index'
 
 视图
 <%= paginate @users %>
-** make your own gem
-- http://guides.rubygems.org/make-your-own-gem/
-- 基本结构
-% tree
-.
-├── hola.gemspec
-└── lib
-    └── hola.rb
-- gemspec
-Gem::Specification.new do |s|
-  s.name        = 'hola'
-  s.version     = '0.0.0'
-  s.date        = '2010-04-28'
-  s.summary     = "Hola!"
-  s.description = "A simple hello world gem"
-  s.authors     = ["Nick Quaranto"]
-  s.email       = 'nick@quaran.to'
-  s.files       = ["lib/hola.rb"]
-  s.homepage    = 'http://rubygems.org/gems/hola'
-  s.license     = 'MIT'
-end
+** terminal-table
+Terminal Table is a fast and simple, yet feature rich ASCII table generator written in Ruby
+- https://github.com/visionmedia/terminal-table
 
-- build
-gem build hola.gemspec
+** sexp_path
+- https://github.com/adamsanderson/sexp_path
 
-- push to rubygems.org
-gem push hola-0.0.0.gem
-
+** ruby_parser
+- https://github.com/seattlerb/ruby_parser

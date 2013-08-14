@@ -2,3 +2,32 @@
 从migration文件中提取database schema文档
 ** DONE 建立description项目
 ** DONE 提交description 0.0.0 gem
+** ActiveRecord::Migration
+*** 解析create_table
+class CreateStartupPhotos < ActiveRecord::Migration
+  def change
+    create_table :startup_photos do |t|
+      t.string  :photo
+      t.integer :startup_id
+      t.timestamps
+    end
+
+    add_index :startup_photos, :startup_id
+  end
+end
+
+生成
+
+##startup_photos##
+| Column     | Type    | Modifiers | Comment |
+|------------+---------+-----------+---------|
+| id         | integer |           |         |
+|------------+---------+-----------+---------|
+| photo      | string  |           |         |
+|------------+---------+-----------+---------|
+| startup_id | integer |           |         |
+|------------+---------+-----------+---------|
+| created_at | date    |           |         |
+|------------+---------+-----------+---------|
+| updated_at | date    |           |         |
+|------------+---------+-----------+---------|

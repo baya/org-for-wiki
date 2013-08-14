@@ -574,3 +574,41 @@ my_scope(binding)
 
 ** new gem with bundle
 - http://asciicasts.com/episodes/245-new-gem-with-bundler
+** make your own gem
+- http://guides.rubygems.org/make-your-own-gem/
+- 基本结构
+% tree
+.
+├── hola.gemspec
+└── lib
+    └── hola.rb
+- gemspec
+Gem::Specification.new do |s|
+  s.name        = 'hola'
+  s.version     = '0.0.0'
+  s.date        = '2010-04-28'
+  s.summary     = "Hola!"
+  s.description = "A simple hello world gem"
+  s.authors     = ["Nick Quaranto"]
+  s.email       = 'nick@quaran.to'
+  s.files       = ["lib/hola.rb"]
+  s.homepage    = 'http://rubygems.org/gems/hola'
+  s.license     = 'MIT'
+end
+
+- build
+gem build hola.gemspec
+
+- push to rubygems.org
+gem push hola-0.0.0.gem
+
+** rake test
+require 'rake/testtask'
+Rake::TestTask.new do |t|
+  t.libs << 'test'
+  t.test_files = FileList['test/*_test.rb']
+  t.verbose = true
+end
+
+desc "Run tests"
+task :default => :test
