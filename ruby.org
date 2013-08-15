@@ -612,3 +612,16 @@ end
 
 desc "Run tests"
 task :default => :test
+
+** detect base64 encode image content type
+- http://stackoverflow.com/questions/6955950/retrieve-filename-and-content-type-from-base64-encoded-image-ruby-on-rails
+require 'rmagick'
+bytes = ActiveSupport::Base64.decode64(params[:image])
+img   = RMagick::Image.from_blob(bytes).first
+fmt   = img.format
+
+** How to add rmagick to Gemfile in ubuntu server?
+gem "rmagick", :require => 'RMagick'
+如果写成
+gem "rmagick"
+那么即使安装rmagick成功后，rails也会抱怨找不到rmagick

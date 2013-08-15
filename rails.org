@@ -383,3 +383,25 @@ background-image:url(<%=asset_path "admin/logo.png"%>);
 首先将美工给的common.css文件改名为common.css.erb
 然后利用asset_path来引入image
 .header{width:960px;height:75px;background:url(<%= asset_path 'main_bg.png' %>) 0 0 repeat-x;overflow:hidden;}
+
+** autoload_path
+- config.autoload_paths += Dir[Rails.root.join('app', 'lib')]
+** rename_column						  :migration:
+rename_column :table_name, :old_column, :new_column
+** Bug
+*** rails4.0好像无法加载有定义Protocol常量的文件
+比如文件upload.rb处于autoload_paths的下面，
+module Protocol
+  module Upload
+    def upload_image
+    end
+  end
+end
+但是无法加载upload.rb文件，当我把它改成
+module Upload
+  module Image
+    def upload_image
+    end
+  end
+end
+就能加载了

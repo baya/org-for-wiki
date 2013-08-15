@@ -157,3 +157,11 @@ scp -i ~/.ssh/magus_qa -P 6521 dev@qa.fun-guide.mobi:/srv/rorapps/lot_zhuihao/lo
 *** KVM
 http://www.linux-kvm.org
 
+
+** 查看操作系统版本
+- lsb_release -a
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.10
+Release:	12.10
+Codename:	quantal
+- uname -a

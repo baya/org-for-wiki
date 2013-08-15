@@ -2,3 +2,5 @@
 记录自己的一些想法和灵感
 ** migration-doc
 - 从migration脚本中提取文档
+** gitstars
+- 对github上标过星号的项目进行标签标记，以便于自己能够搜索到合适的代码
