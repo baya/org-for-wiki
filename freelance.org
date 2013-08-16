@@ -1,0 +1,14 @@
+* Freelance
+** 项目平台
+- freelancer.com http://www.freelancer.com/
+- oDesk https://www.odesk.com/
+- Elance https://www.elance.com
+- TopCoder http://www.topcoder.com/
+** Job Board
+- jobs.github.com
+- http://careers.stackoverflow.com/jobs
+- https://news.ycombinator.com/jobs
+- http://jobs.37signals.com/
+- http://gun.io/
+** 博客
+- http://terrytai.com/articles/2

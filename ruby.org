@@ -625,3 +625,68 @@ gem "rmagick", :require => 'RMagick'
 如果写成
 gem "rmagick"
 那么即使安装rmagick成功后，rails也会抱怨找不到rmagick
+
+** 构建自己的console
+- 参考 http://ruby-china.org/topics/13337
+require 'irb'
+require 'irb/completion'
+IRB.start
+
+** 漂亮打印 pp
+一段几乎不可读的s-expression表达式经过pp打印后就变得可读了
+s(:class,
+ :CreateContests,
+ s(:colon2, s(:const, :ActiveRecord), :Migration),
+ s(:defn,
+  :change,
+  s(:args),
+  s(:iter,
+   s(:call, nil, :create_table, s(:lit, :contests)),
+   s(:args, :t),
+   s(:block,
+    s(:call, s(:lvar, :t), :string, s(:lit, :sn)),
+    s(:call, s(:lvar, :t), :string, s(:lit, :title)),
+    s(:call, s(:lvar, :t), :text, s(:lit, :description)),
+    s(:call,
+     s(:lvar, :t),
+     :integer,
+     s(:lit, :itype),
+     s(:hash, s(:lit, :default), s(:lit, 0), s(:lit, :null), s(:false))),
+    s(:call,
+     s(:lvar, :t),
+     :integer,
+     s(:lit, :mode),
+     s(:hash, s(:lit, :default), s(:lit, 0), s(:lit, :null), s(:false))),
+    s(:call,
+     s(:lvar, :t),
+     :integer,
+     s(:lit, :format),
+     s(:hash, s(:lit, :default), s(:lit, 0), s(:lit, :null), s(:false))),
+    s(:call, s(:lvar, :t), :date, s(:lit, :start_day)),
+    s(:call, s(:lvar, :t), :integer, s(:lit, :length)),
+    s(:call, s(:lvar, :t), :integer, s(:lit, :vote_right)),
+    s(:call, s(:lvar, :t), :integer, s(:lit, :contestant_right)),
+    s(:call, s(:lvar, :t), :string, s(:lit, :logo)),
+    s(:call,
+     s(:lvar, :t),
+     :integer,
+     s(:lit, :prize_status),
+     s(:hash, s(:lit, :default), s(:lit, 0))),
+    s(:call, s(:lvar, :t), :integer, s(:lit, :user_id)),
+    s(:call, s(:lvar, :t), :string, s(:lit, :user_sn)),
+    s(:call,
+     s(:lvar, :t),
+     :integer,
+     s(:lit, :kind),
+     s(:hash, s(:lit, :default), s(:lit, 0))),
+    s(:call,
+     s(:lvar, :t),
+     :integer,
+     s(:lit, :view_count),
+     s(:hash, s(:lit, :default), s(:lit, 0))),
+    s(:call,
+     s(:lvar, :t),
+     :integer,
+     s(:lit, :join_count),
+     s(:hash, s(:lit, :default), s(:lit, 0))),
+    s(:call, s(:lvar, :t), :timestamps)))))
