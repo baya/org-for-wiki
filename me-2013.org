@@ -1422,10 +1422,14 @@ junMIN1984
 *** DONE 整理户外照片，给大家发照片
 *** DONE 洗澡睡觉
 ** 08-19
-*** TODO 后台UI权限管理
-*** 后台UI赞助管理
+*** DONE 后台UI权限管理
+*** DONE 后台UI用户信息审核
+*** DONE 后台UI赞助管理
+*** TODO 后台UI赞助商协议审核
 *** 分享api
 *** 邀请朋友api
+*** DONE 审核合并测试代码
+*** 下班后和mimosa聊聊, http://ruby-china.org/topics/13407
 * Plan 
 ** DONE 
 *** DONE 买表
