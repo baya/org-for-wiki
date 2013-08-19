@@ -690,3 +690,6 @@ s(:class,
      s(:lit, :join_count),
      s(:hash, s(:lit, :default), s(:lit, 0))),
     s(:call, s(:lvar, :t), :timestamps)))))
+
+** alias for restart unicorn
+- alias kill2='kill -USR2 `cat tmp/pids/unicorn.pid`'
