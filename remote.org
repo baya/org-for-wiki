@@ -1,7 +1,5 @@
-
 * Remote
 ** 工作机会
 - http://ruby-china.org/topics/12902
 - ywence:qq542426226
 - http://ruby-china.org/topics/12665
-- 

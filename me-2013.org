@@ -1436,6 +1436,7 @@ junMIN1984
 *** 开发description
 *** 买一些玉米棒子做早晚餐
 *** TODO 调试后台创建比赛流程
+*** DONE 后台UI创建赞助商
 * Todo
 ** 阅读dsl in action
 * Done
