@@ -1435,6 +1435,9 @@ junMIN1984
 *** 练习蝶泳
 *** 开发description
 *** 买一些玉米棒子做早晚餐
+* Todo
+** 阅读dsl in action
+* Done
 * Plan 
 ** DONE 
 *** DONE 买表
