@@ -11,7 +11,7 @@ class CreateStartupPhotos < ActiveRecord::Migration
       t.integer :startup_id
       t.timestamps
     end
-
+    
     add_index :startup_photos, :startup_id
   end
 end
@@ -34,5 +34,6 @@ end
 **** DONE 获取表名
 **** DONE 获取字段名
 **** DONE 获取字段属性
-**** TODO 获取字段modifiers
-**** 获取字段注释
+**** DONE 获取字段modifiers
+**** DONE 获取字段注释
+**** 生成markdown table
