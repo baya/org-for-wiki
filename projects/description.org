@@ -38,15 +38,12 @@ prize_status     | integer | default:0             | 是否开放赞助, 0 open 
 kind             | integer | default:0             | 0 用户发起的比赛，1 赞助商比赛                              
 view_count       | integer | default:0             | 浏览次数                                           
 join_count       | integer | default:0             | 参赛人数             
->>>>>>> 332a417b285aee3f7ec69f4ee9f7d9ff0cbed564
 **** DONE 获取表名
 **** DONE 获取字段名
 **** DONE 获取字段属性
 **** DONE 获取字段modifiers
 **** DONE 获取字段注释
-<<<<<<< HEAD
-**** 生成markdown table
-=======
+**** DONE 生成markdown table
 *** TODO 生成markdown文件
 *** 使用ground加载markdown table
 *** describle命令
