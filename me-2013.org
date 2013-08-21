@@ -1442,7 +1442,7 @@ junMIN1984
 *** 后台UI编辑比赛
 *** 练习蝶泳
 *** 开发description
-*** TODO 手机客户端找回密码
+*** DONE 手机客户端找回密码
 * Todo
 ** 阅读dsl in action
 * Done
