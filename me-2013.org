@@ -1432,11 +1432,17 @@ junMIN1984
 *** 下班后和mimosa聊聊, http://ruby-china.org/topics/13407
 *** 开发description
 ** 08-20
+*** DONE 练习蝶泳
+*** DONE 开发description
+*** DONE 买一些玉米棒子做早晚餐
+*** DONE 调试后台创建比赛流程
+*** DONE 后台UI创建赞助商
+** 08-21
+*** 调试后台创建比赛流程
+*** 后台UI编辑比赛
 *** 练习蝶泳
 *** 开发description
-*** 买一些玉米棒子做早晚餐
-*** TODO 调试后台创建比赛流程
-*** DONE 后台UI创建赞助商
+*** TODO 手机客户端找回密码
 * Todo
 ** 阅读dsl in action
 * Done
