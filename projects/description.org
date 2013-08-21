@@ -3,7 +3,7 @@
 ** DONE 建立description项目
 ** DONE 提交description 0.0.0 gem
 ** ActiveRecord::Migration
-*** 解析create_table
+*** DONE 解析create_table
 class CreateStartupPhotos < ActiveRecord::Migration
   def change
     create_table :startup_photos do |t|
@@ -19,13 +19,47 @@ end
 生成
 
 ##startup_photos##
-Column | Type    | Modifiers | Comment 
------- | ------- | --------- | -------
-id     | integer |           |   
-
+Column           | Type    | Modifiers             | Comment                                        
+---------------- | ------- | --------------------- | -----------------------------------------------
+sn               | string  |                       |                                                
+title            | string  |                       |                                                
+description      | text    |                       |                                                
+start_day        | date    |                       | 比赛开始日期                                         
+length           | integer |                       | 比赛时长以天为单位                                      
+vote_right       | integer |                       | 投票权, 0 public, 1 friends only, 2 specific      
+contestant_right | integer |                       | 参赛权, 0 public, 1 friedns only, 2 specific      
+logo             | string  |                       | 比赛logo,图片                                      
+user_id          | integer |                       | 创建者id                                          
+user_sn          | string  |                       | 创建者sn                                          
+itype            | integer | default:0, null:false | 比赛形式, 0 photo, 1 video, 2 word, 3 audio, 4 组合  
+mode             | integer | default:0, null:false | 是否可加入比赛, 0 pk, 1 调查, 2 多选                      
+format           | integer | default:0, null:false | 比赛方式, 1 pk, 0 binary(传统比赛)                     
+prize_status     | integer | default:0             | 是否开放赞助, 0 open to others, 1 do it myself 2 none
+kind             | integer | default:0             | 0 用户发起的比赛，1 赞助商比赛                              
+view_count       | integer | default:0             | 浏览次数                                           
+join_count       | integer | default:0             | 参赛人数             
+>>>>>>> 332a417b285aee3f7ec69f4ee9f7d9ff0cbed564
 **** DONE 获取表名
 **** DONE 获取字段名
 **** DONE 获取字段属性
 **** DONE 获取字段modifiers
 **** DONE 获取字段注释
+<<<<<<< HEAD
 **** 生成markdown table
+=======
+*** TODO 生成markdown文件
+*** 使用ground加载markdown table
+*** describle命令
+*** parse change_table
+*** parse add_column
+*** parse rename_column
+*** parse remove_column
+*** parse add_index
+*** parse create_join_table
+*** parse add_reference
+*** parse add_timestamps
+*** parse timestamps
+*** parse drop_table
+*** parse drop_join_table
+*** parse rename_index
+*** parse rename_table
