@@ -693,3 +693,6 @@ s(:class,
 
 ** alias for restart unicorn
 - alias kill2='kill -USR2 `cat tmp/pids/unicorn.pid`'
+
+** option parser
+- http://ruby.about.com/od/advancedruby/a/optionparser2.htm
