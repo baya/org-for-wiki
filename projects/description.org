@@ -44,8 +44,10 @@ join_count       | integer | default:0             | 参赛人数
 **** DONE 获取字段modifiers
 **** DONE 获取字段注释
 **** DONE 生成markdown table
-*** TODO 生成markdown文件
-*** 使用ground加载markdown table
+*** DONE 对migration files按照生成时间排序
+*** DONE 使用ground加载markdown table
+*** 用html渲染tables
+*** 提供markdown table文件的下载
 *** describle命令
 *** parse change_table
 *** parse add_column
