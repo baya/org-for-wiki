@@ -1,0 +1,6 @@
+* Vagrant
+** vagrant 搭建步骤
+- cd fchk-project
+- vagrant init fchk-vm /Volumes/tools/VM/rails.box 添加一台box
+- vagrant up   启动box
+- vagrant ssh  登录到box
