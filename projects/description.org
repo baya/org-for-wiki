@@ -46,7 +46,8 @@ join_count       | integer | default:0             | 参赛人数
 **** DONE 生成markdown table
 *** DONE 对migration files按照生成时间排序
 *** DONE 使用ground加载markdown table
-*** 用html渲染tables
+*** DONE 使用angularJs框架
+*** TODO 用html渲染tables
 *** 提供markdown table文件的下载
 *** describle命令
 *** parse change_table

@@ -1462,10 +1462,10 @@ junMIN1984
 *** DONE 后台创建带奖品的比赛用于手机客户端调试    
 *** 用户开始比赛后view count和join count没有增加
 *** 给前端安装一套vagrant调试环境
-*** 自由泳1000米
+*** DONE 自由泳1000米
 *** DONE 后台显示比赛详情
-*** TODO 后台编辑比赛
-*** 开发description
+*** 后台编辑比赛
+*** DONE 开发description
 *** 给dun增加文档
 *** 给ground增加文档
 * Todo
