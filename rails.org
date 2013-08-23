@@ -405,3 +405,5 @@ module Upload
   end
 end
 就能加载了
+** rails的开源项目
+- http://www.opensourcerails.com/

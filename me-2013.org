@@ -1455,6 +1455,19 @@ junMIN1984
 *** 分享链接
 *** 比赛赢积分
 *** DONE 开发description
+** 08-23
+*** DONE 提供更新用户感情状态，地区等入口
+*** DONE 进入比赛的api
+*** DONE 处理彩票追号格式错误的问题
+*** DONE 后台创建带奖品的比赛用于手机客户端调试    
+*** 用户开始比赛后view count和join count没有增加
+*** 给前端安装一套vagrant调试环境
+*** 自由泳1000米
+*** DONE 后台显示比赛详情
+*** TODO 后台编辑比赛
+*** 开发description
+*** 给dun增加文档
+*** 给ground增加文档
 * Todo
 ** 阅读dsl in action
 * Done
