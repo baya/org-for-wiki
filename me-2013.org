@@ -1468,6 +1468,10 @@ junMIN1984
 *** DONE 开发description
 *** 给dun增加文档
 *** 给ground增加文档
+** 08-24
+*** 开发description
+*** 游泳1000米
+*** 给hp笔记本增加内存
 * Todo
 ** 阅读dsl in action
 * Done

@@ -63,3 +63,4 @@ join_count       | integer | default:0             | 参赛人数
 *** parse drop_join_table
 *** parse rename_index
 *** parse rename_table
+*** 加入reveal.js特效
