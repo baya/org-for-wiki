@@ -4,9 +4,18 @@
 - 从migration脚本中提取数据库文档
 ** gStar
 - 对github上标过星号的项目进行标签标记，以便于自己能够搜索到合适的代码
+- github api http://developer.github.com/
 ** 写一篇介绍dsl的博客
 将你所面对的问题域抽象化为一个类
 
 ** magpie
 试着参考brew的代码
 - 用于快速搭建外部测试api
+
+** 学习python
+** 用ground + angularJs写一个论坛
+** 学习刮痧
+** 学习拔罐
+** 学习按摩
+** 学习针灸
+** 学习足疗

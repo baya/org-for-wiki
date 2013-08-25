@@ -1469,8 +1469,14 @@ junMIN1984
 *** 给dun增加文档
 *** 给ground增加文档
 ** 08-24
-*** 开发description
-*** 游泳1000米
+*** DONE 开发description
+*** DONE 游泳1000米
+*** 给hp笔记本增加内存
+** 08-25
+*** DONE 开发ground，支持.json, .xml之类的路由
+*** DONE 开发description
+*** 游泳500米
+*** 编写ground文档
 *** 给hp笔记本增加内存
 * Todo
 ** 阅读dsl in action
