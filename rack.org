@@ -1,0 +1,4 @@
+* Rack
+** Ruby服务器,Rack, Rack App三者是如何协同工作的
+- http://ruby-china.org/topics/13601
+- http://confreaks.com/videos/2455-railsconf2013-from-rails-to-the-web-server-to-the-browser
