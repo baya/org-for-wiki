@@ -1,3 +1,4 @@
 * Ground
 ** DONE 路由支持 get '/books.:format'
 ** DONE 类似format.json, format.xml, format.html的方法
+** 写一个测试工具Gournd::Dig, 模拟http请求, 比如Ground::Dig.get('/book/1')
