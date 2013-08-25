@@ -1475,8 +1475,8 @@ junMIN1984
 ** 08-25
 *** DONE 开发ground，支持.json, .xml之类的路由
 *** DONE 开发description
-*** 游泳500米
-*** 编写ground文档
+*** DONE 游泳500米
+*** TODO 编写ground文档
 *** 给hp笔记本增加内存
 * Todo
 ** 阅读dsl in action
