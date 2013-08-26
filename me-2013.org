@@ -1479,10 +1479,14 @@ junMIN1984
 *** DONE 编写ground文档
 *** DONE 给hp笔记本增加内存
 ** 08-26
+*** DONE 非常好看:用户登录后返回一个头像
+*** DONE 非常好看:绑定账号时,如果客户有传user_sn，那么就直接绑定user，否则创建新的user
+*** DONE 非常好看:搜索和热门比赛需要is_open参数来区分是否开放的比赛
+*** DONE 查看时时彩追号失败的原因
+*** DONE 非常好看:手机客户端webview页面
+*** 研究下vagrant
+*** TODO 给前端安装vagrant
 *** 非常好看:后台比赛编辑
-*** 非常好看:用户登录后返回一个头像
-*** 非常好看:绑定账号时,如果客户有传user_sn，那么就直接绑定user，否则创建新的user
-*** 给前端安装vagrant
 *** 开发description
 *** dun文档
 * Todo
