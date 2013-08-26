@@ -1476,8 +1476,15 @@ junMIN1984
 *** DONE 开发ground，支持.json, .xml之类的路由
 *** DONE 开发description
 *** DONE 游泳500米
-*** TODO 编写ground文档
-*** 给hp笔记本增加内存
+*** DONE 编写ground文档
+*** DONE 给hp笔记本增加内存
+** 08-26
+*** 非常好看:后台比赛编辑
+*** 非常好看:用户登录后返回一个头像
+*** 非常好看:绑定账号时,如果客户有传user_sn，那么就直接绑定user，否则创建新的user
+*** 给前端安装vagrant
+*** 开发description
+*** dun文档
 * Todo
 ** 阅读dsl in action
 * Done
