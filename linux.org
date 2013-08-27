@@ -165,3 +165,9 @@ Description:	Ubuntu 12.10
 Release:	12.10
 Codename:	quantal
 - uname -a
+
+** 查看locale
+- locale
+
+** 查看端口
+lsof -i | grep LISTEN 

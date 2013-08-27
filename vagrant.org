@@ -4,3 +4,13 @@
 - vagrant init fchk-vm /Volumes/tools/VM/rails.box 添加一台box
 - vagrant up   启动box
 - vagrant ssh  登录到box
+- 在box上装相应的库，比如postgresql等等
+- 能正常启动rails
+- 退出box
+- vagrant halt
+- 编辑Vagrantfile, 设置config.vm.network :forwarded_port, guest: 3000, host: 3000
+- vagrant up
+- 在host机器上通过浏览器访问http://localhost:3000, 应该能访问到box上的rails应用
+- 生成fchk.box文件，给前端人员使用 vagrant package --vagrantfile Vagrantfile --output fchk.box
+- 前端人员, vagrant box add fchk-vm /path/to/fchk.box
+- 将rails development环境的config.assets.debug设置为false，以提高box的访问速度

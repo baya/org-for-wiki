@@ -725,3 +725,6 @@ class ParseCommandOptions < Dun::Activity
   
 end
 - http://ruby.about.com/od/advancedruby/a/optionparser2.htm
+
+** ruby元编程学习资料
+- http://ruby-china.org/wiki/ruby-meta
