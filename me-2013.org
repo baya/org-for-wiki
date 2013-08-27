@@ -1485,9 +1485,10 @@ junMIN1984
 *** DONE 查看时时彩追号失败的原因
 *** DONE 非常好看:手机客户端webview页面
 *** 研究下vagrant
-*** TODO 给前端安装vagrant
+*** DONE 给前端安装vagrant
 *** 非常好看:后台比赛编辑
-*** 开发description
+*** TODO 开发description
+*** DONE 游泳500米
 *** dun文档
 * Todo
 ** 阅读dsl in action
