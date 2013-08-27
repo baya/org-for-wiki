@@ -1503,10 +1503,10 @@ junMIN1984
 - 举报管理，查询举报
 *** 后台:编辑比赛
 *** 后台:比赛状态 0草稿, 1发布
-*** 开发description
-*** 游泳500米
+*** TODO 开发description
+*** DONE 游泳500米
 *** 学习蝶泳
-*** 买一部西班牙语字典
+*** DONE 买一部西班牙语字典
 * Todo
 ** 阅读dsl in action
 * Done

@@ -52,11 +52,13 @@ join_count       | integer | default:0             | 参赛人数
 *** DONE table detail
 *** DONE parse add_column
 *** DONE 解析schema文件，获取所有的表结构
-*** TODO 解析所有migrations文件，获取所有字段的comment
+*** DONE 解析所有migrations文件，获取所有字段的comment
+*** DONE parse create_table for comment
+*** DONE parse add_column for comment
+*** parse rename_column for comment
 *** 提供markdown table文件的下载
 *** 获取所有model的验证信息
 *** 获取所有model之间的关系信息
-*** parse rename_column
 *** parse remove_column
 *** parse create_join_table
 *** parse add_reference
