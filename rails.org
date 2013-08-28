@@ -276,6 +276,8 @@ select '', 'terminal_no', [['任意', nil]\]
 options_for_contest_itype = [['photo', 0], ['video', 1], ['word', 2], ['audio', 4]]
 select 'contest', 'itype', options_for_contest_itype, selected: @contest.itype
 
+select '', 'contest[sponsoring[][sponsor]]', options_for_contest_sponsors, selected: sponsoring.sponsor.id
+
 *** radio button
 radio_button '', 'u_depoted', true, checked: @pre_term.depoted
 ** API设计
