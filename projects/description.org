@@ -56,10 +56,10 @@ join_count       | integer | default:0             | 参赛人数
 *** DONE parse create_table for comment
 *** DONE parse add_column for comment
 *** DONE parse add_column with modifiers for comment
-*** 在table detail页面增加一个字段过滤框
-*** parse rename_column for comment
-*** fix parse for comment出现的bug
-*** 提供markdown table文件的下载
+*** DONE 在table detail页面增加一个字段过滤框
+*** DONE parse rename_column for comment
+*** DONE fix parse for comment出现的bug
+*** TODO 提供markdown table文件的下载
 *** 发布可用版本0.1.x
 *** 获取所有model的验证信息
 *** 获取所有model之间的关系信息

@@ -1509,12 +1509,12 @@ junMIN1984
 *** DONE 买一部西班牙语字典
 ** 08-28
 *** DONE 非常好看: 提供一个判断用户之间关系的api
-*** TODO 后台:编辑比赛
+*** DONE 后台:编辑比赛
 *** 后台:比赛状态 0草稿, 1发布
 *** 非常好看，比赛赢积分
 *** 写一篇搭建vagrant的博客
-*** 开发description
-*** 游泳500米
+*** DONE 开发description
+*** DONE 游泳500米
 *** 学习西班牙语
 * Todo
 ** 阅读dsl in action
