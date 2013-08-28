@@ -273,6 +273,9 @@ Rails stores at +0000 Time zone by default
 select '', 'lot_name', ['重庆时时彩', '双色球'], include_blank: false
 select '', 'terminal_no', [['任意', nil]\]
 
+options_for_contest_itype = [['photo', 0], ['video', 1], ['word', 2], ['audio', 4]]
+select 'contest', 'itype', options_for_contest_itype, selected: @contest.itype
+
 *** radio button
 radio_button '', 'u_depoted', true, checked: @pre_term.depoted
 ** API设计

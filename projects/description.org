@@ -55,23 +55,17 @@ join_count       | integer | default:0             | 参赛人数
 *** DONE 解析所有migrations文件，获取所有字段的comment
 *** DONE parse create_table for comment
 *** DONE parse add_column for comment
-*** parse add_column with modifiers for comment
+*** DONE parse add_column with modifiers for comment
+*** 在table detail页面增加一个字段过滤框
 *** parse rename_column for comment
 *** fix parse for comment出现的bug
-*** 发布一个可用版本
 *** 提供markdown table文件的下载
+*** 发布可用版本0.1.x
 *** 获取所有model的验证信息
 *** 获取所有model之间的关系信息
-*** parse remove_column
-*** parse create_join_table
-*** parse add_reference
-*** parse add_timestamps
-*** parse timestamps
-*** parse drop_table
-*** parse drop_join_table
-*** parse rename_index
-*** parse rename_table
-*** parse change_table
-*** parse add_index
+*** 使用美观大方的图形界面显示所有model之间的关系
+*** 发布可用版本0.2.x
 *** 对mongoid支持
+*** 发布可用版本0.2.x
 *** 对datamapper支持
+*** 发布可用版本0.2.x
