@@ -55,7 +55,10 @@ join_count       | integer | default:0             | 参赛人数
 *** DONE 解析所有migrations文件，获取所有字段的comment
 *** DONE parse create_table for comment
 *** DONE parse add_column for comment
+*** parse add_column with modifiers for comment
 *** parse rename_column for comment
+*** fix parse for comment出现的bug
+*** 发布一个可用版本
 *** 提供markdown table文件的下载
 *** 获取所有model的验证信息
 *** 获取所有model之间的关系信息
