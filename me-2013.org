@@ -1516,6 +1516,14 @@ junMIN1984
 *** DONE 开发description
 *** DONE 游泳500米
 *** 学习西班牙语
+** 08-29
+*** 非常好看后台:比赛状态 0草稿, 1发布
+*** 非常好看后台:比赛奖品编辑
+*** 非常好看:web app页面嵌入
+*** 游泳500米
+*** 开发description
+*** 发布description-0.1.0版本
+*** 学习西班牙语
 * Todo
 ** 阅读dsl in action
 * Done
