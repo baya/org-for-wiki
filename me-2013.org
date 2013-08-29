@@ -1529,8 +1529,8 @@ junMIN1984
 **** 进入比赛
 - 比赛数据显示
 - 图片PK
-*** 游泳500米
-*** 开发description
+*** DONE 游泳500米
+*** DONE 开发description
 *** 发布description-0.1.0版本
 *** 学习西班牙语
 - 简单的问候 hola
