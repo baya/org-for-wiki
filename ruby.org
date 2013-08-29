@@ -728,3 +728,10 @@ end
 
 ** ruby元编程学习资料
 - http://ruby-china.org/wiki/ruby-meta
+
+** 判断文件是否存在
+- File.file? filname, 只能判断文件，不能判断文件夹
+- File.exists? filename
+
+** ruby vm学习资料
+- http://edwinmeyer.com/Integrated_RHG.html

@@ -2,3 +2,8 @@
 ** Ruby服务器,Rack, Rack App三者是如何协同工作的
 - http://ruby-china.org/topics/13601
 - http://confreaks.com/videos/2455-railsconf2013-from-rails-to-the-web-server-to-the-browser
+
+** 介绍rack的帖子和博客
+- http://ruby-china.org/topics/4840 有比较多的rack参考资料
+- http://guides.ruby-china.org/rails_on_rack.html
+- http://jasonseifer.com/2009/04/08/32-rack-resources-to-get-you-started

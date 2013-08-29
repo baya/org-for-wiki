@@ -1,0 +1,20 @@
+* Espanol
+** si 好的
+** no 
+** gracias 谢谢
+** muchas gracias
+** de nada 不客气
+** no, gracias
+** hola 打招呼，你好
+** adios, 再见
+** hasta luego 再见
+** buenas tardes
+** como esta usted hoy 今天怎么样?
+** todo lo mejor
+** buenas tardes 午安
+** buenas noches 晚安
+** Buneos 早
+** Hasta luego 晚点见
+** Hola
+** Me llamo guimin
+** Mucho gusto 很高兴认识你

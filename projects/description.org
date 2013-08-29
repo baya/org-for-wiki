@@ -59,8 +59,10 @@ join_count       | integer | default:0             | 参赛人数
 *** DONE 在table detail页面增加一个字段过滤框
 *** DONE parse rename_column for comment
 *** DONE fix parse for comment出现的bug
-*** TODO 提供markdown table文件的下载
-*** 发布可用版本0.1.x
+*** 解析setup文件，获取所有的表结构
+*** 支持老版本的migration file
+*** 提供markdown table文件的下载
+*** 发布可用版本0.1.0
 *** 获取所有model的验证信息
 *** 获取所有model之间的关系信息
 *** 使用美观大方的图形界面显示所有model之间的关系
