@@ -1,4 +1,6 @@
 * JavaScript
+** 学习网站
+- w3scholls: http://www.w3schools.com/js/default.asp
 ** underscore.js
 http://underscorejs.org
 
@@ -79,3 +81,10 @@ http://sporto.github.com/blog/2013/02/22/a-plain-english-guide-to-javascript-pro
 - http://cnodejs.org/
 ** 即时编辑插件
 - http://www.appelsiini.net/projects/jeditable
+
+** 自己写的js代码
+- 经常用
+- 不很长
+- 易移植
+*** 表单参数验证
+- https://gist.github.com/baya/6387182

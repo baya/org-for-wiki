@@ -6,3 +6,5 @@
 
 ** 上传图片前，对图片进行预览
 - http://zurb.com/playground/ajax_upload
+** 学习资料
+- learn jquery http://learn.jquery.com/
