@@ -1569,7 +1569,7 @@ junMIN1984
 ** 08-31
 *** DONE 游泳:500m
 *** DONE 取钱:1500
-*** 阅读:Rack编程
+*** DONE 阅读:Rack编程
 *** DONE 发布description-0.1.0
 *** 开始Gstar的设计与开发
 * Todo
