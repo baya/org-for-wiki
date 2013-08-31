@@ -1565,6 +1565,13 @@ junMIN1984
 *** description发布0.1.0版本
 *** 博客: 从龙虾开始，聊聊Rack应用的结构以及使用Rack搭建复杂web应用
 *** 阅读: Rack编程
+*** DONE 游泳500m
+** 08-31
+*** DONE 游泳:500m
+*** DONE 取钱:1500
+*** 阅读:Rack编程
+*** DONE 发布description-0.1.0
+*** 开始Gstar的设计与开发
 * Todo
 ** 阅读dsl in action
 * Done
