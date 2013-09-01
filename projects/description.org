@@ -60,7 +60,7 @@ join_count       | integer | default:0             | 参赛人数
 *** DONE parse rename_column for comment
 *** DONE fix parse for comment出现的bug
 *** DONE 提供markdown table文件的下载
-*** 发布可用版本0.1.0
+*** DONE 发布可用版本0.1.0
 *** 获取所有model的验证信息
 *** 获取所有model之间的关系信息
 *** 使用美观大方的图形界面显示所有model之间的关系
