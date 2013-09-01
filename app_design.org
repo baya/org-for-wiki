@@ -1,0 +1,6 @@
+* App Design
+** 不错的设计例子
+*** 文档类型
+- http://daux.io/Getting_Started
+- https://stripe.com/docs/api
+*** 阅读器类型
