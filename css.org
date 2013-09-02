@@ -1,0 +1,4 @@
+* CSS
+** 透明属性
+- 参考: http://paranimage.com/css-transparent-attribute/
+- 实例: input.btn-glass {width:30px;height:20px;margin:0;opacity:0;filter:alpha(opacity=0);cursor:pointer;}

@@ -1,0 +1,7 @@
+* Sed
+** 教程
+- http://www.grymoire.com/Unix/Sed.html
+** 实例
+*** 将(../images/pic_bg2.jpg) 替换成 (<%= asset_path "wba/pic_bg2.jpg"%>)
+- sed 's/(..\/images\/\(.*\))/(<%= asset_path "wba\/\1" %>)/' < common.css > common.css.erb
+  

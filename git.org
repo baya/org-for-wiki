@@ -14,3 +14,6 @@
 
 ** 基础教程
 - http://rogerdudler.github.io/git-guide/index.zh.html
+
+** 建立git服务
+- git init --bare
