@@ -37,4 +37,5 @@ app.filter('capitalize', function(){
 <span>{{ "this is some text" | capitalize }}</span>
 
 ** services
-
+** 学习网站
+- http://www.egghead.io
