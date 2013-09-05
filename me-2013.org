@@ -1627,8 +1627,19 @@ junMIN1984
 **** 赞助商管理，添加赞助商	增加赞助商--按钮无反应	无法添加赞助商，请协助解决
 **** 用户管理,  查询用户	只能按照用户全名精确搜索，无法按关键词搜索。用户名为“中国”，搜索中或国字，搜索不到
 **** 举报管理，查询举报
-
->>>>>>> b722d9bc1bd8d5bc6961729b8e85e9537670d380
+** 09-04
+*** Gstar: UI实现
+*** Dun: 加上licenses
+*** 游泳:  蝶泳800米
+*** 非常好看: 参赛图片显示算法
+*** 非常好看: weibo app 比赛页
+**** TODO 计算heat
+***** DONE 设计合适的数据结构, round, group, heat
+***** TODO 图片不超过448张时, 实现round, group, heat
+***** 图片超过448张时, 实现round, group, heat
+***** 获取heat的过程: contest -> round -> group -> heat
+**** pk
+**** 开奖日历
 * Todo
 ** 阅读dsl in action
 * Done

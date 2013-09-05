@@ -8,3 +8,6 @@
 - http://zurb.com/playground/ajax_upload
 ** 学习资料
 - learn jquery http://learn.jquery.com/
+** document ready
+$(document).ready(function(){
+})

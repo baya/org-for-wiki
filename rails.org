@@ -431,3 +431,35 @@ end
 "application/atom+xml"     => :atom  
 "application/json"         => :json 
 "text/x-json"              => :json
+** belongs_to
+*** 实例01
+class HeatEntity < ActiveRecord::Base
+  belongs_to :heat, class_name: 'ContestHeat'
+  belongs_to :entity
+end
+
+** has_many
+*** 实例01
+class ContestHeat < ActiveRecord::Base
+  has_many :entities, through: :heat_entities
+end
+*** 实例02
+class ContestRound < ActiveRecord::Base
+  has_many :groups, class_name: 'ContestGroup'
+  has_many :heats, class_name: 'ContestHeat'
+end
+
+class ContestGroup < ActiveRecord::Base
+  has_many :heats, class_name: 'ContestHeat'
+end
+   
+** many-to-many
+*** 实例
+class HeatEntity < ActiveRecord::Base
+  belongs_to :heat, class_name: 'ContestHeat'
+  belongs_to :entity
+end
+
+class ContestHeat < ActiveRecord::Base
+  has_many :entities, through: :heat_entities
+end
