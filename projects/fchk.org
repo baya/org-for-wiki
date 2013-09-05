@@ -1,0 +1,26 @@
+* 非常好看
+- 公司项目,图片比赛
+** fix bug
+*** 上传图片仅限于8张	增加“继续添加”或“继续上传”按钮
+*** 上传图片结束后，直接进入比赛详情展示	应继续进行“添加赞助商和奖品”的操作
+*** 创建赞助商比赛113,114，116等，在手机端UGC部分显示	赞助商比赛应在手机端赞助商栏显示
+*** 赞助管理，查询赞助	添加赞助--按钮无反应	无法添加赞助，请协助解决
+*** 赞助商管理，添加赞助商	增加赞助商--按钮无反应	无法添加赞助商，请协助解决
+*** 用户管理,  查询用户	只能按照用户全名精确搜索，无法按关键词搜索。用户名为“中国”，搜索中或国字，搜索不到
+*** 举报管理，查询举报
+** 计算heat
+*** 设计合适的数据结构, round, group, heat
+*** 图片不超过448张时, 实现round, group, heat
+*** 图片超过448张时, 实现round, group, heat
+*** heat live cycle: contest -> round -> group -> heat
+- contests = Find_Live_Contests()
+- contests.each do |contest|
+- round = Find_Or_Gen_A_Round contest: contest
+- group = Find_Or_Gen_A_Group contest: contest, round: round
+- heats = Gen_Heats contest: contest, round: round, group: group
+- expired_heats = Find_Expired_Heats()
+- Delete_Expired_Heats expired_heats: expired_heats
+- end
+** weibo app 比赛页
+*** 比赛pk
+*** 开奖日历
