@@ -1648,7 +1648,7 @@
 **** 计算heat
 **** pk
 **** 开奖日历
-*** Gstar: UI实现
+*** TODO Gstar: UI实现
 * Todo
 ** 阅读dsl in action
 * Done

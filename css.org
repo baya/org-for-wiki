@@ -2,3 +2,9 @@
 ** 透明属性
 - 参考: http://paranimage.com/css-transparent-attribute/
 - 实例: input.btn-glass {width:30px;height:20px;margin:0;opacity:0;filter:alpha(opacity=0);cursor:pointer;}
+
+** references
+- css reference 1
+- css reference 2 http://meyerweb.com/eric/css/references/css2ref.html
+** 好的博客
+- http://meyerweb.com/
