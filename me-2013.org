@@ -1643,12 +1643,12 @@
 *** DONE 非常好看: heat获取机制设计图
 *** DONE 非常好看: heat生成和获取的伪代码实现
 *** DONE 非常好看: 整理一篇heat的文档
+*** DONE 游泳: 自由泳500米, 蝶泳200米
 *** 非常好看: weibo app比赛页面
 **** 计算heat
 **** pk
 **** 开奖日历
 *** Gstar: UI实现
-*** 游泳: 自由泳500米, 蝶泳200米
 * Todo
 ** 阅读dsl in action
 * Done
