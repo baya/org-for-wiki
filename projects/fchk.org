@@ -21,3 +21,6 @@
 - expired_heats = Find_Expired_Heats()
 - Delete_Expired_Heats expired_heats: expired_heats
 - end
+** weibo app 比赛页
+*** 比赛pk
+*** 开奖日历

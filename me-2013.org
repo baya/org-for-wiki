@@ -1630,7 +1630,7 @@ junMIN1984
 ** 09-04
 *** Gstar: UI实现
 *** Dun: 加上licenses
-*** 游泳:  蝶泳800米
+*** DONE 游泳:  蝶泳800米
 *** 非常好看: 参赛图片显示算法
 *** 非常好看: weibo app 比赛页
 **** TODO 计算heat
@@ -1638,6 +1638,14 @@ junMIN1984
 ***** TODO 图片不超过448张时, 实现round, group, heat
 ***** 图片超过448张时, 实现round, group, heat
 ***** 获取heat的过程: contest -> round -> group -> heat
+**** pk
+**** 开奖日历
+** 09-05
+*** DONE Dun:  加上license
+*** Gstar: UI实现
+*** 游泳: 自由泳500米, 蝶泳300米
+*** 非常好看: weibo app比赛页面
+**** 计算heat
 **** pk
 **** 开奖日历
 * Todo
