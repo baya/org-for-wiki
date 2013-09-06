@@ -1291,9 +1291,6 @@
 **** DONE 用户登陆api
 **** DONE 用户信息更新api
 **** DONE 生成大乐透失败
-**** 注册looplog.me
-pin: 7380
-junMIN1984
 ** 07-19
 *** 非常好看
 **** DONE 比赛评论接口
@@ -1617,7 +1614,6 @@ junMIN1984
 *** 非常好看: 参赛图片显示算法
 *** 非常好看: weibo app 首页
 *** 非常好看: weibo app 比赛页
-*** Gstar:   UI实现
 *** DONE 游泳: 蝶泳800米
 *** 非常好看: fix bug
 **** 上传图片仅限于8张	增加“继续添加”或“继续上传”按钮
@@ -1647,13 +1643,12 @@ junMIN1984
 *** DONE 非常好看: heat获取机制设计图
 *** DONE 非常好看: heat生成和获取的伪代码实现
 *** DONE 非常好看: 整理一篇heat的文档
+*** DONE 游泳: 自由泳500米, 蝶泳200米
 *** 非常好看: weibo app比赛页面
 **** 计算heat
 **** pk
 **** 开奖日历
-*** Gstar: UI实现
-*** 游泳: 自由泳500米, 蝶泳200米
-
+*** TODO Gstar: UI实现
 * Todo
 ** 阅读dsl in action
 * Done
