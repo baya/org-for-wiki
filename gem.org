@@ -32,8 +32,11 @@ get '/admin/contests/page/:page', to: 'admin/contests#index'
 Terminal Table is a fast and simple, yet feature rich ASCII table generator written in Ruby
 - https://github.com/visionmedia/terminal-table
 
-** sexp_path
+** ruby代码分析器
+*** sexp_path
 - https://github.com/adamsanderson/sexp_path
 
-** ruby_parser
+*** ruby_parser
 - https://github.com/seattlerb/ruby_parser
+** 并发
+*** celluloid

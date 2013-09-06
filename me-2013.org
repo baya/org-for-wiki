@@ -1649,6 +1649,17 @@
 **** pk
 **** 开奖日历
 *** TODO Gstar: UI实现
+** 09-06
+*** TODO 非常好看: heat计算
+**** DONE 比赛图片分组
+**** DONE 测试图片分组是否正确
+**** 生成heat
+*** Gstar: UI实现
+*** 游泳: 500米自由泳
+*** 游泳: 300米蝶泳
+*** 博客: Rack编程
+*** Ground: 加入并发支持, celluloid
+*** Ground: 添加license
 * Todo
 ** 阅读dsl in action
 * Done

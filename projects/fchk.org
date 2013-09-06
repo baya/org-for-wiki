@@ -17,6 +17,7 @@
 - contests.each do |contest|
 - round = Find_Or_Gen_A_Round contest: contest
 - group = Find_Or_Gen_A_Group contest: contest, round: round
+- Add_Images_To_Group images: contest.images, group: group
 - heats = Gen_Heats contest: contest, round: round, group: group
 - expired_heats = Find_Expired_Heats()
 - Delete_Expired_Heats expired_heats: expired_heats
