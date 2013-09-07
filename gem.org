@@ -35,8 +35,9 @@ Terminal Table is a fast and simple, yet feature rich ASCII table generator writ
 ** ruby代码分析器
 *** sexp_path
 - https://github.com/adamsanderson/sexp_path
-
 *** ruby_parser
 - https://github.com/seattlerb/ruby_parser
+*** rubocop
+- http://batsov.com/rubocop
 ** 并发
 *** celluloid

@@ -735,3 +735,14 @@ end
 
 ** ruby vm学习资料
 - http://edwinmeyer.com/Integrated_RHG.html
+** gsub
+- 'John  Wayne'.gsub(/\w+\s+(\w+)/, 'Bruce \1')   # "Bruce Wayne"
+- 'Apollo 12'.gsub(/\d+/) { |num| num.to_i.next } # "Apollo 13"
+- 'Apollo 12'.gsub(/(\d+)/) { Regexp.last_match[1].to_i.next } # 'Apollo 13'
+- 'Apollo 12'.gsub(/(\w+) (\d+)/) { |name, number| puts name, number }
+
+
+** 可读性好的大数字
+- 10_000_000_000
+- 0.2_343_434_343
+- BIT_MASK = 0b1001_0101_0101
