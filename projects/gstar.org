@@ -1,9 +1,7 @@
 * Gstar
 - 管理github's start projects
 ** DONE 原型图设计
-** TODO 实现UI
+** DONE 实现UI
 ** 代码实现
-*** 抓取github标星的项目
-*** 按项目名搜索
-*** 按标签搜索
-*** 实现一个小型的搜索引擎
+*** TODO 抓取github标星的项目
+*** 全文检索

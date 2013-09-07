@@ -1661,7 +1661,9 @@
 *** Ground: 加入并发支持, celluloid
 *** Ground: 添加license
 ** 09-07
-*** Gstar: UI实现
+*** DONE Gstar: UI实现
+*** Gstar: 抓取github标星的项目
+*** Gstar: 为star设计合适的全文检索索引
 *** 游泳: 500米自由泳
 *** 游泳: 300米蝶泳
 *** 读书: Rack编程
