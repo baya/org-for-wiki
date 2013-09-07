@@ -1655,10 +1655,17 @@
 **** DONE 测试图片分组是否正确
 **** 生成heat
 *** Gstar: UI实现
-*** 游泳: 500米自由泳
-*** 游泳: 300米蝶泳
+*** DONE 游泳: 500米自由泳
+*** DONE 游泳: 300米蝶泳
 *** 博客: Rack编程
 *** Ground: 加入并发支持, celluloid
+*** Ground: 添加license
+** 09-07
+*** Gstar: UI实现
+*** 游泳: 500米自由泳
+*** 游泳: 300米蝶泳
+*** 读书: Rack编程
+*** 博客: Rack编程
 *** Ground: 添加license
 * Todo
 ** 阅读dsl in action
