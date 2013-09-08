@@ -1673,7 +1673,7 @@
 *** 读书: Rack编程
 *** Gstar: 抓取github项目
 *** Gstar: 全文搜索
-*** 游泳: 500米自由泳, 200米蝶泳
+*** DONE 游泳: 500米自由泳, 200米蝶泳
 * Todo
 ** 阅读dsl in action
 * Done
