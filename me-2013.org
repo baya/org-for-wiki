@@ -1674,6 +1674,15 @@
 *** Gstar: 抓取github项目
 *** Gstar: 全文搜索
 *** DONE 游泳: 500米自由泳, 200米蝶泳
+** 09-09
+*** 非常好看
+**** DONE 生成heat
+**** DONE round关闭算法
+**** DONE group关闭算法
+**** TODO 自动计算stop_up_entity_point和finals_point
+**** 定位heat
+*** 吃素
+*** 自由泳500米
 * Todo
 ** 阅读dsl in action
 * Done
