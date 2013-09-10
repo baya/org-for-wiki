@@ -5,3 +5,11 @@
 ** 代码实现
 *** TODO 抓取github标星的项目
 *** 全文检索
+** 参考资料
+*** full text search
+- http://sqlite.org/fts3.html
+- https://github.com/copiousfreetime/amalgalite
+- http://sqlite.org/rtree.html
+
+*** github api
+- list repositories being starred http://developer.github.com/v3/activity/starring/#list-repositories-being-starred

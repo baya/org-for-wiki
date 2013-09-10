@@ -1681,8 +1681,31 @@
 **** DONE group关闭算法
 **** TODO 自动计算stop_up_entity_point和finals_point
 **** 定位heat
-*** 吃素
+*** DONE 吃素
+*** DONE 自由泳500米
+**** TODO 自动计算stop_up_entity_point和finals_point
+** 09-10
 *** 自由泳500米
+*** 非常好看
+**** 增加一个获取首页比赛接口
+**** DONE 自动计算stop_up_entity_point和finals_point
+**** DONE 关闭一个组时应该淘汰75%的entities
+**** TODO fix bug
+***** DONE 已经结束的比赛不应该出现在首页
+***** 比赛浏览数不显示，一直为0
+***** 用户比赛无奖品
+***** 结果页和我的投票结果不符合
+***** 分享链接太长
+***** 找不到我刚刚创建的比赛
+***** bug工单上的bug
+****** DONE 注册--已经注册过的手机号 都能收到验证码 注册成功
+****** DONE 注册--输入错误的 验证码 输入错误时 也能注册成功
+****** 查看比赛--我 投票的 比赛 无任何数据
+**** 建立一套用于测试heat算法的rake任务
+**** 获取heat
+*** 彩票追号: 增加一个人工补漏追的链接
+*** Gstar: 从github拉项目
+*** Gstar: 按标题，描述搜索项目
 * Todo
 ** 阅读dsl in action
 * Done
