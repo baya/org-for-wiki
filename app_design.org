@@ -6,3 +6,6 @@
 *** 阅读器类型
 ** 学习网站
 - http://webdesign.tutsplus.com
+
+** 中文字体
+- http://ruby-china.org/topics/14005
