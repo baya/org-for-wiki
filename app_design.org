@@ -9,3 +9,5 @@
 
 ** 中文字体
 - http://ruby-china.org/topics/14005
+- http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/
+- http://www.google.com/fonts
