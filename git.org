@@ -17,3 +17,5 @@
 
 ** 建立git服务
 - git init --bare
+** git log
+- git log --reverse   shows commits from start
