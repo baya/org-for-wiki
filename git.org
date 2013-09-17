@@ -21,6 +21,6 @@
 - git log --reverse   shows commits from start
 
 ** code review
-- git log git log --until=2013-09-12  # 假设今天是2013-09-13，此命令可以找出昨天最后一次的commit号，假设是abcdef
-- git diff abcdef                                        # 此命令就可以查看今天一整天所做的修改
-- git diff abcdef > code-reveiw-20130913.diff            # 将diff后的结果输入到code-review-20130913.diff文件，方便review
+- git log --until=2013-09-12                    # 假设今天是2013-09-13，此命令可以找出昨天最后一次的commit号，假设是abcdef
+- git diff abcdef                               # 此命令就可以查看今天一整天所做的修改
+- git diff abcdef > code-reveiw-20130913.diff   # 将diff后的结果输入到code-review-20130913.diff文件，方便review
