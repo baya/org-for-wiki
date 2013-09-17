@@ -13,3 +13,5 @@
 
 *** github api
 - list repositories being starred http://developer.github.com/v3/activity/starring/#list-repositories-being-starred
+*** angular js search
+- https://github.com/daha/angularJS-github-contributors
