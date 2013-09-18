@@ -96,3 +96,21 @@
   --裁剪图片、功能完善  3天
 
   注：合计15天，排工期至10月23日。争取在10月18日（周五）完成开发工作
+
+** getContest
+- getContest接口需要返回contest下面的各个round的sn, level,status， 不需要返回entities，因为entities是
+  在heatCreate接口中拿到的，如果contest的live round为空，客户端需要提示用户比赛暂未开始
+
+** 获得heat
+将当前round sn 和user sn post给/heatCreate, 系统首先判断该user是否有资格玩此轮，
+可以的话则从round里生成一个新的heat，返回客户端一个heat sn和8张图片，否则告诉客户端用户没有资格玩此轮
+并且heat所在group的view_count自增1
+** heat重玩
+将当前heat sn 和 user sn post给/heatRery，heat所在group的view_count自增1，返回客户端0，表示可以重玩
+** heat下一轮
+将当前round sn get给/heatNextRound，如果有下一轮，则向客户端返回下一轮的sn
+** 决赛轮
+增加一个决赛轮，在所有普通轮结束后，选出100张图片进入决赛轮，决赛轮在比赛结束时结束。决赛轮和普通轮共用一套数据结构，
+决赛轮的itype为1，普通轮的itype为0，决赛轮里只有一个group
+在所有普通轮结束后，产生决赛轮，从剩下的图中选出100张进入决赛轮
+

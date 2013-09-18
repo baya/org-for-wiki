@@ -1804,6 +1804,17 @@
 *** Gstar: 详细描写Gstar的功能，用法
 *** Gstar: 从github拉项目
 *** Gstar: 按标题，描述搜索项目
+** 09-18
+*** 非常好看
+**** 使用whenever运行后台任务
+**** 获得heat接口
+**** heat重玩接口
+**** heat下一轮接口
+**** UGC赞助
+**** DIY比赛上传多张图片
+*** 自由泳500米
+*** 追号:   手动追号链接
+*** Gstar: SearchStars service
 * Todo
 ** 阅读dsl in action
 * Done
