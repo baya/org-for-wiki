@@ -48,3 +48,11 @@ app.filter('capitalize', function(){
 ** services
 ** 学习网站
 - http://www.egghead.io
+** 推荐的方式申明控制器
+someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope, dep1, dep2) {
+  ...
+  $scope.aMethod = function() {
+    ...
+  }
+  ...
+}]);
