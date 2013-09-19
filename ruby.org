@@ -741,8 +741,54 @@ end
 - 'Apollo 12'.gsub(/(\d+)/) { Regexp.last_match[1].to_i.next } # 'Apollo 13'
 - 'Apollo 12'.gsub(/(\w+) (\d+)/) { |name, number| puts name, number }
 
-
 ** 可读性好的大数字
 - 10_000_000_000
 - 0.2_343_434_343
 - BIT_MASK = 0b1001_0101_0101
+
+** sequel
+*** migration command
+- 参考: http://sequel.rubyforge.org/rdoc/files/doc/migration_rdoc.html
+- 参考: http://sequel.rubyforge.org/rdoc/classes/Sequel/Migrator.html
+sequel -m path/to/migrations postgres://host/database
+
+# Migrate all the way down
+sequel -m db/migrations -M 0 postgres://host/database
+# Migrate to version 10 (IntegerMigrator style migrations)
+sequel -m db/migrations -M 10 postgres://host/database
+
+# Migrate to version 20100510 (TimestampMigrator migrations using YYYYMMDD)
+sequel -m db/migrations -M 20100510 postgres://host/database
+
+Sequel::Migrator.run(DB, "migrations")
+Sequel::Migrator.run(DB, "migrations", :target=>15, :current=>10)
+Sequel::Migrator.run(DB, "app1/migrations", :column=> :app2_version)
+Sequel::Migrator.run(DB, "app2/migrations", :column => :app2_version, :table=>:schema_info2)
+
+*** column types
+- 参考: http://sequel.rubyforge.org/rdoc/files/doc/schema_modification_rdoc.html
+create_table(:columns_types) do       # common database type used
+  Integer :a0                         # integer
+  String :a1                          # varchar(255)
+  String :a2, :size=>50               # varchar(50)
+  String :a3, :fixed=>true            # char(255)
+  String :a4, :fixed=>true, :size=>50 # char(50)
+  String :a5, :text=>true             # text
+  File :b,                            # blob
+  Fixnum :c                           # integer
+  Bignum :d                           # bigint
+  Float :e                            # double precision
+  BigDecimal :f                       # numeric
+  BigDecimal :f2, :size=>10           # numeric(10)
+  BigDecimal :f3, :size=>[10, 2]      # numeric(10, 2)
+  Date :g                             # date
+  DateTime :h                         # timestamp
+  Time :i                             # timestamp
+  Time :i2, :only_time=>true          # time
+  Numeric :j                          # numeric
+  TrueClass :k                        # boolean
+  FalseClass :l                       # boolean
+end
+
+*** data set
+- 参考: http://sequel.rubyforge.org/rdoc/classes/Sequel/Dataset.html

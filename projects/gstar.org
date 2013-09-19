@@ -3,7 +3,7 @@
 ** DONE 原型图设计
 ** DONE 实现UI
 ** 代码实现
-*** TODO 抓取github标星的项目
+*** DONE 抓取github标星的项目
 *** 全文检索
 ** 参考资料
 *** full text search
@@ -15,3 +15,8 @@
 - list repositories being starred http://developer.github.com/v3/activity/starring/#list-repositories-being-starred
 *** angular js search
 - https://github.com/daha/angularJS-github-contributors
+
+** 获取全部的starred projects
+** 搜索结果分页
+** 可编辑description
+** 研究一下sqlite的全文检索技术

@@ -1813,9 +1813,14 @@
 **** heat下一轮接口
 **** UGC赞助
 **** DIY比赛上传多张图片
-*** 自由泳500米
+*** DONE 自由泳500米
 *** 追号:   手动追号链接
 *** Gstar: SearchStars service
+** 09-19
+*** DONE 开发GStar
+*** 搬家
+*** DONE 自由泳500米
+*** 阅读rack编程
 * Todo
 ** 阅读dsl in action
 * Done
