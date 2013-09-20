@@ -32,3 +32,6 @@
 
 ** 生成diff文件的脚本
 ** 使用ground + angularJS写一个通用的web后台
+** Charge
+- 帮助人们记帐
+- 集成自己的记帐语言
