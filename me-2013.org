@@ -1826,6 +1826,11 @@
 *** DONE 搬家
 *** DONE 拉宽带
 *** DONE 自由泳500米
+** 09-21
+*** 开发Gstar
+**** TODO 可编辑description
+**** 对name, description和readme进行全文检索
+*** DONE 自由泳1000米
 * Todo
 ** 阅读dsl in action
 * Done

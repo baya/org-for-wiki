@@ -18,5 +18,6 @@
 ** DONE 获取全部的starred projects
 ** 支持AND, OR 
 ** 搜索结果分页
-** 可编辑description
+** TODO 可编辑description
+** get the repo's README
 ** 研究一下sqlite的全文检索技术
