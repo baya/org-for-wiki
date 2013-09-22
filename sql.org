@@ -103,3 +103,12 @@ WHERE users.id in (#{user.friends.map(&:id).join(',')})
 GROUP BY contests.id
 ORDER BY friend_upimg_count
 
+dic = db[:dics].where(word: q).first || {}
+sql = <<-EOF
+  select stars.full_name, stars.description from stars
+  join dic_stars on stars.id = dic_stars.star_id
+  join dics on dic_stars.dic_id = dics.id
+  where dics.id = #{dic[:id]}
+  order by dic_stars.tf desc
+EOF
+

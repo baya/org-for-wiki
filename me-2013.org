@@ -1831,6 +1831,12 @@
 **** TODO 可编辑description
 **** 对name, description和readme进行全文检索
 *** DONE 自由泳1000米
+** 09-22
+*** 开发Gstar
+**** 对name, description和readme进行全文检索
+**** 可编辑description
+**** DONE 只同步最新的starred projects
+*** 自由泳500米
 * Todo
 ** 阅读dsl in action
 * Done
@@ -1907,3 +1913,4 @@
 *** 历史
 *** 健体: 俯卧撑，晒黑
 *** NotEasy
+

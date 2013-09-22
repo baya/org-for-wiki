@@ -21,3 +21,6 @@
 ** TODO 可编辑description
 ** get the repo's README
 ** 研究一下sqlite的全文检索技术
+** DONE 把没有同步过的starred projects同步到本地
+** 搜索时，将搜索的key word转换为标签，即将查询过程存储起来，方便以后使用
+** 匹配高亮
