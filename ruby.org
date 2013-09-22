@@ -792,3 +792,14 @@ end
 
 *** data set
 - 参考: http://sequel.rubyforge.org/rdoc/classes/Sequel/Dataset.html
+** scan
+*** 汉字
+"我们的生活".scan(/\w/mu) #=> %w(我 们 的 生 活)
+** 正则
+*** 匹配汉字
+- 参考: http://www.ruby-doc.org/core-1.9.3/Regexp.html 
+- 参考: http://ruby-china.org/topics/5680
+- "word cool 我们的生活".scan(/\p{Han}+|\w+/)
+- "word cool 我们的生活 走去".scan(/\p{Han}+|\w+/)
+** 生成ruby ri doc
+- rvm docs generate

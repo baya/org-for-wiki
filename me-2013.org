@@ -1833,10 +1833,13 @@
 *** DONE 自由泳1000米
 ** 09-22
 *** 开发Gstar
-**** 对name, description和readme进行全文检索
-**** 可编辑description
+**** DONE 对name, description和readme进行全文检索
 **** DONE 只同步最新的starred projects
-*** 自由泳500米
+**** DONE 优化搜索策略
+**** DONE 支持中文
+**** 搜索结果分页
+**** 可编辑description
+*** DONE 自由泳500米
 * Todo
 ** 阅读dsl in action
 * Done

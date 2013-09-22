@@ -24,3 +24,35 @@
 ** DONE 把没有同步过的starred projects同步到本地
 ** 搜索时，将搜索的key word转换为标签，即将查询过程存储起来，方便以后使用
 ** 匹配高亮
+** 搜索策略
+1.用小写字母搜索时，比如搜索ui，那么搜索的结果中可以包括ui, Ui, uI或者UI
+2.假设搜索 a b c d，有关系f, 其中f([a, b, c, d], doc) -> p, doc表示要检索的文档, p表示doc和[a, b, c, d]之间关系的分值
+p的值越高说明doc和[a, b, c, d]的关系越紧密，那么doc在搜索的结果中排名越靠前
+3. select * from docs order by f([a, b, c, d], docs.content) DESC limit 100
+4. 对a查询，找到doc1, doc2, doc3 并且doc1中a出现的次数是1, doc2中a出现的次数是2, doc3中a出现的次数是4，生成下面的映射
+### qd_assos
+| q       | doc  | p   |
+| a b c d | doc1 | 1/4 |
+| a b c d | doc2 | 2/4 |
+| a b c d | doc3 | 4/4 |
+
+对b查询，得到(b doc5 1), (b doc1 1), (b doc3 2)
+
+### qd_assos
+| q       | doc  | p         |
+| a b c d | doc1 | (1/4+1/4) * 2 |
+| b b c d | doc2 | 2/4       |
+| a b c d | doc3 | (4/4+2/4) * 2 |
+| a b c d | doc5 | 1/4 |
+
+对c查询, 得到(c doc1 1), (c doc2 4)
+
+| q       | doc  | p    |
+| a b c d | doc1 | ((1/4 + 1/4 ) * 2 + 1/4) * 2 |
+| a b c d | doc2 | (2/4 + 4/4) * 2 |
+| a b c d | doc3 | (4/4+2/4) * 2 |
+| a b c d | doc5 | 1/4 |
+
+
+** 支持中文
+** 搜索结果分页
