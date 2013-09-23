@@ -43,3 +43,18 @@
 ** 发型设计
 ** 研究搜索技术
 *** sphinx http://sphinxsearch.com/
+** 可以了解下的东西
+- 自然语言处理 Natural Language Processing
+- 机器翻译 Machine Translation
+- 信息提取 Information Extraction
+- 问答系统 Question Answering
+- 自动/机器学习 Machine Learning
+- 语音识别 Speech Recognition
+- 你独立构建或训练过一个NLP或机器学习相关的系统, 并基于此系统做过许多数据驱动的实验
+- max-entropy classifier
+- k-means clustering
+- EM algorithm
+- forward-backward algorithm
+- CYK parsing
+- Earley algorithm
+- Hiero
