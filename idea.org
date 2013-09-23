@@ -38,3 +38,8 @@
 - 集成自己的记帐语言
 
 ** 用ruby写一个 https://github.com/jdan/cleaver
+** 为ruby写一个中文分词系统
+** 做一个中小型网站的搜索解决方案
+** 发型设计
+** 研究搜索技术
+*** sphinx http://sphinxsearch.com/

@@ -55,6 +55,7 @@ p的值越高说明doc和[a, b, c, d]的关系越紧密，那么doc在搜索的�
 
 ** TODO 可编辑description
 ** 搜索时，将搜索的key word转换为标签，即将查询过程存储起来，方便以后使用
+- 考虑使用flat-ui, http://designmodo.com/demo/flat-ui/
 ** 匹配高亮
 ** 增量索引
 ** 动态索引

@@ -114,3 +114,10 @@
 决赛轮的itype为1，普通轮的itype为0，决赛轮里只有一个group
 在所有普通轮结束后，产生决赛轮，从剩下的图中选出100张进入决赛轮
 
+** 注意事项
+*** 数据库索引
+- heats
+- entities
+- contests
+- users
+- categories

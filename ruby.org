@@ -803,3 +803,30 @@ end
 - "word cool 我们的生活 走去".scan(/\p{Han}+|\w+/)
 ** 生成ruby ri doc
 - rvm docs generate
+
+** 后台任务 cron
+*** whenever http://github.com/javan/whenever
+- 实例
+every 1.minute do
+  rake "cron:heats"
+end
+
+whenever --set 'environment=development' --update-crontab
+
+不加--update-conrtab选项的话，仅仅查看生成的crontab语法
+whenever --set 'environment=development' 
+
+** tempfile
+- good practice
+require 'tempfile'
+
+file = Tempfile.new('foo')
+file.path      # => A unique filename in the OS's temp directory,
+               #    e.g.: "/tmp/foo.24722.0"
+               #    This filename contains 'foo' in its basename.
+file.write("hello world")
+file.rewind
+file.read      # => "hello world"
+file.close
+file.unlink    # deletes the temp file
+- 参考 http://www.ruby-doc.org/stdlib-1.9.3/libdoc/tempfile/rdoc/Tempfile.html#documentation
