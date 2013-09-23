@@ -766,7 +766,7 @@ Sequel::Migrator.run(DB, "app1/migrations", :column=> :app2_version)
 Sequel::Migrator.run(DB, "app2/migrations", :column => :app2_version, :table=>:schema_info2)
 
 *** column types
-- 参考: http://sequel.rubyforge.org/rdoc/files/doc/schema_modification_rdoc.html
+- 参考: bhttp://sequel.rubyforge.org/rdoc/files/doc/schema_modification_rdoc.html
 create_table(:columns_types) do       # common database type used
   Integer :a0                         # integer
   String :a1                          # varchar(255)

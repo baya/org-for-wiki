@@ -1840,6 +1840,20 @@
 **** 搜索结果分页
 **** 可编辑description
 *** DONE 自由泳500米
+** 09-23
+*** 非常好看
+**** 使用whenever运行后台任务
+**** 获得heat接口
+**** heat重玩接口
+**** heat下一轮接口
+**** UGC赞助
+**** DIY比赛上传多张图片
+*** 自由泳500米
+*** Gstar
+**** 增量索引
+**** 动态索引
+**** 定时更新starred projects
+**** 定时建立增量索引
 * Todo
 ** 阅读dsl in action
 * Done

@@ -2,9 +2,11 @@
 - 管理github's start projects
 ** DONE 原型图设计
 ** DONE 实现UI
-** 代码实现
-*** DONE 抓取github标星的项目
-*** 全文检索
+** DONE 获取全部的starred projects
+** DONE 研究一下sqlite的全文检索技术
+** DONE 把没有同步过的starred projects同步到本地
+** DONE 支持中文
+
 ** 参考资料
 *** full text search
 - http://sqlite.org/fts3.html
@@ -14,14 +16,14 @@
 - list repositories being starred http://developer.github.com/v3/activity/starring/#list-repositories-being-starred
 *** angular js search
 - https://github.com/daha/angularJS-github-contributors
-
-** 支持AND, OR 
-** DONE 获取全部的starred projects
-** TODO 可编辑description
-** DONE 研究一下sqlite的全文检索技术
-** DONE 把没有同步过的starred projects同步到本地
-** 搜索时，将搜索的key word转换为标签，即将查询过程存储起来，方便以后使用
-** 匹配高亮
+*** ruby正则匹配中文
+- http://www.ruby-doc.org/core-1.9.3/Regexp.html 
+- http://ruby-china.org/topics/5680
+*** sequel相关知识
+- http://sequel.rubyforge.org/rdoc/files/doc/migration_rdoc.html
+- http://sequel.rubyforge.org/rdoc/classes/Sequel/Migrator.html
+- http://sequel.rubyforge.org/rdoc/files/doc/schema_modification_rdoc.html
+- 参考书籍: 这就是搜索引擎
 ** 搜索策略
 1.用小写字母搜索时，比如搜索ui，那么搜索的结果中可以包括ui, Ui, uI或者UI
 2.假设搜索 a b c d，有关系f, 其中f([a, b, c, d], doc) -> p, doc表示要检索的文档, p表示doc和[a, b, c, d]之间关系的分值
@@ -51,7 +53,14 @@ p的值越高说明doc和[a, b, c, d]的关系越紧密，那么doc在搜索的�
 | a b c d | doc3 | (4/4+2/4) * 2 |
 | a b c d | doc5 | 1/4 |
 
-** DONE 支持中文
+** TODO 可编辑description
+** 搜索时，将搜索的key word转换为标签，即将查询过程存储起来，方便以后使用
+** 匹配高亮
 ** 增量索引
 ** 动态索引
 ** 搜索结果分页
+** 定时更新starred projects
+** 定时建立增量索引
+** 语言匹配给予交给的优先级
+** 添加自定义star
+** install and setup by one rake test
