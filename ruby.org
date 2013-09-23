@@ -830,3 +830,18 @@ file.read      # => "hello world"
 file.close
 file.unlink    # deletes the temp file
 - 参考 http://www.ruby-doc.org/stdlib-1.9.3/libdoc/tempfile/rdoc/Tempfile.html#documentation
+** whenever
+*** "\xE8" on US-ASCII 错误
+开始的配置
+every 1.minutes do
+  rake "cron:check_latest_stars --trace"
+end
+报"\xE8" on US-ASCII错误
+google到原因 http://www.logikdev.com/2010/02/02/locale-settings-for-your-cron-job/
+后改成,
+job_type :rake_utf8, "export LANG=zh_CN.UTF-8 && cd :path && :environment_variable=:environment bundle exec rake :task --silent :output"
+every 1.minutes do
+  rake_utf8 "cron:check_latest_stars --trace"
+end
+
+
