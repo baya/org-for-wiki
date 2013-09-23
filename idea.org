@@ -36,3 +36,5 @@
 ** Charge
 - 帮助人们记帐
 - 集成自己的记帐语言
+
+** 用ruby写一个 https://github.com/jdan/cleaver
