@@ -20,6 +20,7 @@
 ** 语言匹配给予交给的优先级
 ** 添加自定义star
 ** install and setup by one rake test
+** 对stars进行自动精准分类
 ** 参考资料
 *** full text search
 - http://sqlite.org/fts3.html
