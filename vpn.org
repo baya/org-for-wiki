@@ -1,0 +1,25 @@
+* VPN
+** vpn-clound domain
+云梯 VPN 服务器启用新域名 vpnxo.com，仅用于连接 VPN，服务器列表如下：
+美国
+
+us1.vpnxo.com
+us2.vpnxo.com
+us3.vpnxo.com
+us4.vpnxo.com
+us5.vpnxo.com
+日本
+
+jp1.vpnxo.com
+jp2.vpnxo.com
+jp3.vpnxo.com
+新加坡
+
+sg1.vpnxo.com
+香港
+
+hk1.vpnxo.com
+hk2.vpnxo.com
+英国
+
+uk1.vpnxo.com

@@ -807,6 +807,10 @@ end
 ** 后台任务 cron
 *** whenever http://github.com/javan/whenever
 - 实例
+
+set :output, File.join(File.expand_path(File.dirname(__FILE__)), '../', 'log', "cron_log.log")
+set :output, File.expand_path(File.join(File.dirname(__FILE__), '../', 'log', "cron_log.log"))
+
 every 1.minute do
   rake "cron:heats"
 end
@@ -844,4 +848,12 @@ every 1.minutes do
   rake_utf8 "cron:check_latest_stars --trace"
 end
 
+
+** delayed_job
+*** 实例1
+- gem 'delayed_job_active_record'
+- bin/rails generate delayed_job:active_record
+- RAILS_ENV=production bin/rake db:migrate
+- RAILS_ENV=production script/delayed_job start
+- RAILS_ENV=production script/delayed_job stop
 
