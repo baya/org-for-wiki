@@ -17,6 +17,7 @@ myApp.controller('GreetingCtrl', ['$scope', function($scope) {
 - 参考1: http://docs.angularjs.org/guide/dev_guide.mvc.understanding_controller
 
 ** directive
+- 参考01: http://docs.angularjs.org/guide/directive
 *** hello
 app.directive('hello', function(){
   return {

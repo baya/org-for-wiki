@@ -89,10 +89,11 @@ http://sporto.github.com/blog/2013/02/22/a-plain-english-guide-to-javascript-pro
 *** 表单参数验证
 - https://gist.github.com/baya/6387182
   
-
 ** 快捷var声明
 var addEvent = 'addEventListener',
   	    type = 'gesturestart',
   	    qsa = 'querySelectorAll',
   	    scales = [1, 1],
   	    meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+** 好玩的网站
+- http://codepen.io/

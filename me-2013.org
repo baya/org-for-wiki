@@ -1876,6 +1876,13 @@
 **** 定时建立增量索引
 **** 高亮匹配
 **** 动态索引
+** 09-25
+*** TODO Gstar: 可编辑description
+*** Gstar: 语言匹配给予高优先级
+*** Gstar: 表索引
+*** Gstar: 搜索结果分页
+*** DONE 自由泳1000米
+*** DONE 阅读: http://docs.angularjs.org/guide/directive
 * Todo
 ** 阅读dsl in action
 * Done
