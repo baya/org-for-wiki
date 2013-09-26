@@ -19,6 +19,8 @@
 *** 匹配高亮
 *** 搜索结果分页
 *** install and setup by one rake test
+*** bugs
+**** 使用image搜索不到包含Image的项目
 ** v2.0
 *** 添加自定义star
 *** 拉取项目的readme文件

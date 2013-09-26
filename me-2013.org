@@ -1883,6 +1883,21 @@
 *** Gstar: 搜索结果分页
 *** DONE 自由泳1000米
 *** DONE 阅读: http://docs.angularjs.org/guide/directive
+** 09-26
+*** 非常好看
+**** DONE 获得heat接口
+**** DONE heat重玩接口
+**** DONE 后台集成rails admin
+**** DONE 后台表记录的sn不可以修
+**** 删除过期heat的定时任务
+**** 后台DIY比赛创建流程
+**** 后台UGC比赛添加赞助
+**** 后台DIY比赛上传多张图片
+*** Gstar: 可编辑description
+*** Gstar: 语言匹配给予高优先级
+*** Gstar: 表索引
+*** Gstar: 搜索结果分页
+*** 自由泳1000米
 * Todo
 ** 阅读dsl in action
 * Done

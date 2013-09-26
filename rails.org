@@ -461,5 +461,7 @@ class HeatEntity < ActiveRecord::Base
 end
 
 class ContestHeat < ActiveRecord::Base
+  has_many :heat_entities, foreign_key: 'heat_id'
   has_many :entities, through: :heat_entities
+  belongs_to :round, class_name: 'ContestRound'
 end
