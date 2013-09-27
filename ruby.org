@@ -848,7 +848,6 @@ every 1.minutes do
   rake_utf8 "cron:check_latest_stars --trace"
 end
 
-
 ** delayed_job
 *** 实例1
 - gem 'delayed_job_active_record'
@@ -857,3 +856,209 @@ end
 - RAILS_ENV=production script/delayed_job start
 - RAILS_ENV=production script/delayed_job stop
 
+** lambda case
+***lambdas slash procs in case expressions:  http://batsov.com/articles/2013/09/24/lambdas-slash-procs-in-case-expressions/
+is_even = ->(n) { n.even? }
+
+is_even === 5 # => false
+
+# same as
+is_even.call(5)
+
+def even?
+  ->(n) { n.even? }
+end
+
+def odd?
+  ->(n) { n.odd? }
+end
+
+case x
+when even? then puts 'even'
+when odd? then puts 'odd'
+else puts 'zero'
+end
+
+case x
+when ->(n) { n.even? } then puts 'even'
+when ->(n) { n.odd? } then puts 'odd'
+else puts 'zero'
+end
+
+def response_code?(code)
+  ->(response) { response.code == code }
+end
+
+case response
+when response_code?(200) then 'OK'
+when response_code?(404) then 'Not found'
+else 'Unknown code'
+end
+
+** lambda invoke way
+- 参考: http://batsov.com/articles/2013/09/26/the-elements-of-style-in-ruby-number-11-invoking-lambdas-slash-procs/
+lambda.call(arg1, arg2)
+
+lambda[arg1, arg2]
+
+lambda.(arg1, arg2)
+
+# works only with one argument lambdas
+lambda === arg
+
+** sprintf
+- 参考:http://batsov.com/articles/2013/06/27/the-elements-of-style-in-ruby-number-2-favor-sprintf-format-over-string-number-percent/
+'%d %d' % [20, 10]
+# => '20 10'
+
+sprintf('%d %d', 20, 10)
+# => '20 10'
+
+'%d' % 20
+# => '20'
+
+'%d %d' % [20, 10]
+# => '20 10'
+
+sprintf('%d %d', 20)
+# => '20'
+
+sprintf('%d %d', 20, 10)
+
+# a and b are variables
+a % b
+** Special global variables
+- $:, $;, $!, $$, $\
+$:.unshift File.dirname(__FILE__)
+files = `git ls-files`.split($\)
+类似
+require 'English'
+$LOAD_PATH.unshift File.dirname(__FILE__)
+files = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
+
+/(regexp)/ =~ string
+...
+# this is Perl-style
+process $1
+# this is the same, but more clear and more object oriented
+process Regexp.last_match[1]
+
+
+** ruby 2.1 preview
+*** 参考
+- http://spin.atomicobject.com/2013/09/26/ruby-2-1-preview/
+- http://ruby-china.org/topics/14327
+- http://ruby-china.org/topics/14123
+- http://rkh.im/ruby-2.1
+1. 后缀语法
+r 有理数
+i 虚数
+f frozen string
+
+0.1r * 3 #=> (3/10)
+2. def返回symbol
+before_filter def require_login
+  ...
+end
+
+before_filter \
+def require_login
+  ...
+end
+
+attr_writer def foo
+  @foo ||= 'foo'
+end
+
+{
+  def foo
+  end => def bar
+          end
+}
+
+# only foo and bar will be private
+class Foo
+  private def foo
+  end
+
+  private \
+  def bar
+  end
+
+  def baz
+  end
+end
+
+# only foo will be private
+class Foo
+  def foo
+  end
+
+  private :foo
+
+  # bar is not affected
+  def bar
+  end
+end
+
+
+3. refine
+module Foo
+  refine String do
+    def foo
+      self + "foo"
+    end
+  end
+end
+
+using Foo
+puts "bar".foo
+
+module Foo
+  refine String do
+    def foo
+      self + "foo"
+    end
+  end
+end
+
+module Bar
+  using Foo
+  puts "bar".foo
+end
+
+4. Required Keyword Arguments
+
+def foo(a: 10)
+  puts a
+end
+
+foo(a: 20) # 20
+foo        # 10
+
+def foo(a:)
+  puts a
+end
+
+foo(a: 20) # 20
+foo        # ArgumentError: missing keyword: a
+
+
+5. Removing Garbage Bytes from Strings
+Ruby now comes with a handy method to remove garbage bytes from strings:
+some_string.scrub("")
+
+6. StringScanner supports Named Captures
+require 'strscan'
+s = StringScanner.new("foo")
+s.scan(/(?<bar>.*)/)
+puts s[:bar]
+
+7. Accessing Network Interfaces
+
+You can now access the network interfaces via Socket.getifaddrs:
+require 'socket'
+
+Socket.getifaddrs.each do |i|
+  puts "#{i.name}: #{i.addr.ip_address}" if i.addr.ip?
+end
