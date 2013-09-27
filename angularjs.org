@@ -57,3 +57,5 @@ someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope
   }
   ...
 }]);
+** scope
+- https://github.com/angular/angular.js/wiki/Understanding-Scopes

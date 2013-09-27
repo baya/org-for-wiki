@@ -1893,11 +1893,11 @@
 **** 后台DIY比赛创建流程
 **** 后台UGC比赛添加赞助
 **** 后台DIY比赛上传多张图片
-*** Gstar: 可编辑description
+*** TODO Gstar: 可编辑description
 *** Gstar: 语言匹配给予高优先级
 *** Gstar: 表索引
 *** Gstar: 搜索结果分页
-*** 自由泳1000米
+*** DONE 自由泳1000米
 * Todo
 ** 阅读dsl in action
 * Done
