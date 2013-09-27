@@ -2,8 +2,8 @@
 从migration文件中提取database schema文档
 ** DONE 建立description项目
 ** DONE 提交description 0.0.0 gem
-** ActiveRecord::Migration
-*** DONE 解析create_table
+*** DONE ActiveRecord::Migration
+**** DONE 解析create_table
 class CreateStartupPhotos < ActiveRecord::Migration
   def change
     create_table :startup_photos do |t|
@@ -63,6 +63,12 @@ join_count       | integer | default:0             | 参赛人数
 *** DONE 发布可用版本0.1.0
 *** 获取所有model的验证信息
 *** 获取所有model之间的关系信息
+*** 图形化model之间的关系
+**** 参考
+- https://github.com/melborne/Gviz
+- http://oodavid.com/gviz/
+- http://www.hokstad.com/inline-graphviz
+- http://www.graphviz.org  
 *** 使用美观大方的图形界面显示所有model之间的关系
 *** 发布可用版本0.2.x
 *** 对mongoid支持

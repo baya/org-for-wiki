@@ -47,6 +47,9 @@ app.filter('capitalize', function(){
 <span>{{ "this is some text" | capitalize }}</span>
 
 ** services
+** resources
+*** 参考
+1. http://docs.angularjs.org/api/ngResource.$resource
 ** 学习网站
 - http://www.egghead.io
 ** 推荐的方式申明控制器
@@ -59,3 +62,40 @@ someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope
 }]);
 ** scope
 - https://github.com/angular/angular.js/wiki/Understanding-Scopes
+
+** Injecting service to Directive
+*** 参考:
+1. http://stackoverflow.com/questions/15569168/injecting-service-to-directive
+var app = angular.module('app',[]);
+ app.factory('myData', function(){
+     return {
+        name : "myName"
+     }
+ });
+ 
+app.directive('changeIt', ['$compile', 'myData', function($compile, myData){
+    return {
+        restrict: 'C',
+        link: function (scope, element, attrs) {
+            scope.name = myData.name;
+        }
+    }
+ }]);
+
+*** 实例:
+** issue
+1. directive的scope好像无法支持类似starId, star-id, star_id的变量面名
+<div class='content'>
+  <ol id='stars'>
+    <li ng-repeat="star in stars" class='star'>
+      <article>
+	<header><a href='{{star.html_url}}'><h1>{{star.full_name}}</h1></a></header>
+	<edit-in-place description='{{star.description}}'
+		       star_id='{{star.id}}'>
+	</edit-in-place>
+      </article>
+    </li>
+  </ol>
+</div>
+
+scope: {description: "@", star_id: "@star_id"},无法从edit-in-place element获得star_id的1值
