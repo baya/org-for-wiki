@@ -13,9 +13,9 @@
 - 建立增量索引的task每1分钟轮询一次此表，在此表中删除已经重建索引的star记录
 ** v1.0
 *** DONE 可编辑description
+*** DONE 匹配高亮
 *** 搜索时，将搜索的key word转换为标签，即将查询过程存储起来，方便以后使用
 - 考虑使用flat-ui, http://designmodo.com/demo/flat-ui/
-*** 匹配高亮
 *** 搜索结果分页
 *** 写一篇文档，内容包括目的，怎么搭建，怎么使用，参考资料
 *** install and setup by one rake test

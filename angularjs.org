@@ -114,3 +114,6 @@ angular.module('gStar', ['ngSanitize', 'gStar.filters', 'gStar.services', 'gStar
 *** 参考
 - http://docs.angularjs.org/api/ngSanitize.$sanitize
 - http://docs.angularjs.org/api/ng.directive:ngBindHtml
+
+** angularjs learning list
+- https://github.com/jmcunningham/AngularJS-Learning
