@@ -99,3 +99,18 @@ app.directive('changeIt', ['$compile', 'myData', function($compile, myData){
 </div>
 
 scope: {description: "@", star_id: "@star_id"},无法从edit-in-place element获得star_id的1值
+
+** sanitize 显示合法的html
+首先需要引入angular-sanitize
+实例:
+angular.module('gStar', ['ngSanitize', 'gStar.filters', 'gStar.services', 'gStar.directives', 'gStar.controllers']).
+  config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/stars', {templateUrl: 'partials/stars.html', controller: 'StarsCtrl'});
+    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
+  }]);
+
+然后使用ng-bind-html显示你的合法html
+<header><a href='{{star.html_url}}'><h1 ng-bind-html="star.full_name.replace(re, hit)">></h1></a></header>
+*** 参考
+- http://docs.angularjs.org/api/ngSanitize.$sanitize
+- http://docs.angularjs.org/api/ng.directive:ngBindHtml

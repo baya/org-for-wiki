@@ -1915,6 +1915,11 @@
 *** Gstar: 语言匹配给予高优先级
 *** Gstar: 搜索结果分页
 *** 自由泳1000米
+** 09-28
+*** DONE Gstar: 匹配高亮
+*** Gstar: 搜索结果分页
+*** Gstar: 写使用文档
+*** DONE 自由泳1000米
 * Todo
 ** 阅读dsl in action
 * Done
