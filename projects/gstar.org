@@ -15,6 +15,7 @@
 *** bugs
 **** 使用support搜索不到brainspec/enumerize这个project，索引部分的代码有bug
 **** 使用Jekyll theme搜索不到muan/scribble这个项目
+**** 以rackup -D启动时，搜索不出结果
 **** DONE 使用image搜索不到包含Image的项目
 *** DONE 可编辑description
 *** DONE 匹配高亮
