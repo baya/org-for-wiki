@@ -12,17 +12,20 @@
 - 建立一个表,记录需要重建索引的star
 - 建立增量索引的task每1分钟轮询一次此表，在此表中删除已经重建索引的star记录
 ** v1.0
+*** bugs
+**** 使用support搜索不到brainspec/enumerize这个project，索引部分的代码有bug
+**** 使用Jekyll theme搜索不到muan/scribble这个项目
+**** DONE 使用image搜索不到包含Image的项目
 *** DONE 可编辑description
 *** DONE 匹配高亮
-*** 搜索时，将搜索的key word转换为标签，即将查询过程存储起来，方便以后使用
-- 考虑使用flat-ui, http://designmodo.com/demo/flat-ui/
+*** 显示项目的语言，如果有的话
+*** 项目语言如果和搜索关键字匹配，匹配分数应该高些
 *** 搜索结果分页
 *** 写一篇文档，内容包括目的，怎么搭建，怎么使用，参考资料
 *** install and setup by one rake test
-*** bugs
-**** 使用support搜索不到brainspec/enumerize这个project，索引部分的代码有bug
-**** DONE 使用image搜索不到包含Image的项目
 ** v2.0
+*** 搜索时，将搜索的key word转换为标签，即将查询过程存储起来，方便以后使用
+- 考虑使用flat-ui, http://designmodo.com/demo/flat-ui/
 *** 添加自定义star
 *** 拉取项目的readme文件
 *** 对readme文件建立索引
