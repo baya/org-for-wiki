@@ -21,6 +21,7 @@
 *** install and setup by one rake test
 *** bugs
 **** 使用image搜索不到包含Image的项目
+**** 使用support搜索不到brainspec/enumerize这个project，索引部分的代码有bug
 ** v2.0
 *** 添加自定义star
 *** 拉取项目的readme文件

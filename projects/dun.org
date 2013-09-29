@@ -10,4 +10,7 @@ def self.default attr, default
     send(orig_attr) || default
   end
 end
-
+** 增加一个need_implement方法
+need_implement :model, :name
+表示model, name方法需要在子类实现定义
+** 增加一个异常，当需要实现的方法没有实现时就抛出此异常

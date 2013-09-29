@@ -67,3 +67,4 @@
 - 中文分词
 ** rails amout 其他rack应用甚至本身
 ** ruby-china智能筛选帖子的工具
+** 研究brew的源代码
