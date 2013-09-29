@@ -112,3 +112,11 @@ sql = <<-EOF
   order by dic_stars.tf desc
 EOF
 
+** like语句是否会用到index
+- 参考: http://myitforum.com/cs2/blogs/jnelson/archive/2007/11/16/108354.aspx
+1. If your filter criteria uses equals = and the field is indexed, then most likely it will use an INDEX/CLUSTERED INDEX SEEK  
+2. If your filter criteria uses LIKE, with no wildcards (like if you had a parameter in a web report that COULD have a % but you instead use the full string), it is about as likely as #1 to use the index.  The increased cost is almost nothing.
+3. If your filter criteria uses LIKE, but with a wildcard at the beginning (as in Name0 LIKE '%UTER') it's much less likely to use the index, but it still may at least perform an INDEX SCAN on a full or partial range of the index.
+4. HOWEVER, if your filter criteria uses LIKE, but starts with a STRING FIRST and has wildcards somewhere AFTER that 
+(as in Name0 LIKE 'COMP%ER'), then SQL may just use an INDEX SEEK to quickly find rows that have the same first starting characters, and then look through those rows for an exact match
+一般来说like '%something%'会做index scan这个比较耗时间

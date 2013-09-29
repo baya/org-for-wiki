@@ -5,3 +5,4 @@
 ** 对于带.md, .json, .xml等后缀的uri，首先查找其对应的state, 如果找不到与之匹配的state, 则去掉后缀继续查找
 ** 写一个测试工具Gournd::Dig, 模拟http请求, 比如Ground::Dig.get('/book/1')
 ** 开发一个美观大方的后台管理系统
+** 增加对request_payload的支持

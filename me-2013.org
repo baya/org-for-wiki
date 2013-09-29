@@ -1893,22 +1893,40 @@
 **** 后台DIY比赛创建流程
 **** 后台UGC比赛添加赞助
 **** 后台DIY比赛上传多张图片
-*** Gstar: 可编辑description
+*** TODO Gstar: 可编辑description
 *** Gstar: 语言匹配给予高优先级
 *** Gstar: 表索引
 *** Gstar: 搜索结果分页
-*** 自由泳1000米
+*** DONE 自由泳1000米
 ** 09-27
 *** 非常好看
 **** 后台DIY比赛创建流程
 **** 后台UGC比赛添加赞助
 **** 后台DIY比赛上传多张图片
 **** 删除过期heat的定时任务
-*** Gstar: 可编辑description
+*** DONE Gstar: 表索引
+**** stars(:source_id, :name, :description)
+**** reindex_stars(:status)
+**** q_star_assocs(:q, :star_id, :score, [:q, :star_id])
+**** dic_stars(:star_id, :dic_id)
+**** dics(:word)
+*** DONE Gstar: fix bug, 使用image搜索不到包含Image的项目
+*** DONE Gstar: 可编辑description
 *** Gstar: 语言匹配给予高优先级
-*** Gstar: 表索引
 *** Gstar: 搜索结果分页
 *** 自由泳1000米
+** 09-28
+*** DONE Gstar: 匹配高亮
+*** Gstar: 搜索结果分页
+*** Gstar: 写使用文档
+*** DONE 自由泳1000米
+** 09-29
+*** 非常好看
+**** 后台:DIY创建比赛
+**** 后台:UGC添加赞助
+*** 自由泳1000米
+*** Gstar: 搜索结果分页
+*** Gstar: 写使用文档
 * Todo
 ** 阅读dsl in action
 * Done

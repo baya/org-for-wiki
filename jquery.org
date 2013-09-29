@@ -11,3 +11,33 @@
 ** document ready
 $(document).ready(function(){
 })
+** textarea
+*** Set value of textarea
+$(textareaElement).val()
+$(textareaElement).val('aaa')
+*** put cursor at end
+- 参考: http://stackoverflow.com/questions/511088/use-javascript-to-place-cursor-at-end-of-text-in-text-input-element
+input.focus(); //sets focus to element
+var val = this.input.value; //store the value of the element
+this.input.value = ''; //clear the value of the element
+this.input.value = val; //set that value back. 
+
+我的做法:
+inputElement.on('focus', function(){
+  var txt = $(this).val();
+  $(this).val('');
+  $(this).val(txt);
+})
+
+没有试验过:
+function moveCursorToEnd(el) {
+    if (typeof el.selectionStart == "number") {
+        el.selectionStart = el.selectionEnd = el.value.length;
+    } else if (typeof el.createTextRange != "undefined") {
+        el.focus();
+        var range = el.createTextRange();
+        range.collapse(false);
+        range.select();
+    }
+}
+

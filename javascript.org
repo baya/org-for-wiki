@@ -97,3 +97,74 @@ var addEvent = 'addEventListener',
   	    meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
 ** 好玩的网站
 - http://codepen.io/
+** Documentation
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript?redirectlocale=en-US&redirectslug=JavaScript
+
+** 前端框架
+- http://ruby-china.org/topics/14415
+- http://codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/
+1. Backbone.js
+2. SproutCore 1.x
+3. Sammy.js
+4. Spine.js
+5. Cappuccino
+6. Knockout.js
+7. Javascript MVC
+8. Google Web Toolkit
+9. Google Closure
+10. Ember.js
+11. Angular.js
+12. Batman.js
+
+** Pattern
+*** module pattern
+- http://yahooeng.tumblr.com/post/62383009835/javascript-modules-amd-and-the-road-ahead
+var SpriteFactory = (function () {
+    "use strict";
+    var index = 0,
+        sprites = {},
+        Sprite = function (config) {
+            return {
+                index: index++,
+                x: config.x || 0,
+                y: config.y || 0,
+                width: config.width || 0,
+                height: config.height || 0,
+                background: config.background || '#fff'
+            };
+        };
+
+    return {
+        generateSprite: function (config) {
+            config = config || {};
+            var s = new Sprite(config);
+            sprites['sprite_' + s.index] = s;
+        },
+        deleteSprite: function (index) {
+            var sprite = this.getSprite(index);
+            if (sprite) { sprite = null; }
+        },
+        getSprite: function (index) {
+            if (sprites.hasOwnProperty('sprite_' + index)) {
+                return sprites['sprite_' + index];
+            }
+        }
+    };
+}());
+
+SpriteFactory.generateSprite({});
+SpriteFactory.generateSprite({
+    x: 90,
+    y: 20
+});
+
+theSprite = SpriteFactory.getSprite(1);
+
+** unicode
+- http://www.2ality.com/2013/09/javascript-unicode.html
+** emoji
+- http://apps.timwhitlock.info/emoji/tables/unicode
+
+** Regular Exp
+- https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
