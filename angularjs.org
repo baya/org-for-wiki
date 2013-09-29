@@ -117,3 +117,23 @@ angular.module('gStar', ['ngSanitize', 'gStar.filters', 'gStar.services', 'gStar
 
 ** angularjs learning list
 - https://github.com/jmcunningham/AngularJS-Learning
+
+** share a controller
+app.controller( 'MyCtrl', function ( $scope ) {
+  // do stuff...
+});
+
+app.directive( 'directiveOne', function () {
+  return {
+    controller: 'MyCtrl'
+  };
+});
+
+app.directive( 'directiveTwo', function () {
+  return {
+    controller: 'MyCtrl'
+  };
+});
+当directive共享MyCtrl controller后，directive可以通过$scope访问MyCtrl里面的变量，比如MyCtrl里有定义$scope.hit，那么
+在directive里可以直接使用$scope.hit
+- 参考: http://stackoverflow.com/questions/15672709/how-to-require-a-controller-in-an-angularjs-directive

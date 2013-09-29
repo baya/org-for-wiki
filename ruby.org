@@ -1140,3 +1140,17 @@ def a(*names, opt=nil)
 end
 
 会报语法错误
+
+** daemons
+- 参考: https://github.com/rack/rack/blob/1.4.1/lib/rack/server.rb#L309
+- 参考: http://daemons.rubyforge.org/classes/Daemons.html
+db = <Sequel::SQLite::Database: {"adapter"=>"sqlite", "database"=>"db/development.sqlite3", "pool"=>5, "timeout"=>5000}>
+一个rack应用，以rackup启动时(非daemon形式), db可以正常访问
+以rackup -D (daemon形式)启动时，db访问出错，通过查看daemon的文档发现，创建一个daemon会做下面的六件事情，其中4是造成db访问错误的原因
+
+1.Forks a child (and exits the parent process, if needed)
+2.Becomes a session leader (which detaches the program from the controlling terminal).
+3.Forks another child process and exits first child. This prevents the potential of acquiring a controlling terminal.
+4.Changes the current working directory to "/".
+5.Clears the file creation mask (sets umask to 0000).
+6.Closes file descriptors (reopens STDOUT and STDERR to point to a logfile if possible).
