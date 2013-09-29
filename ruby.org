@@ -1127,4 +1127,16 @@ require 'socket'
 Socket.getifaddrs.each do |i|
   puts "#{i.name}: #{i.addr.ip_address}" if i.addr.ip?
 end
+** *args
+*** 
+def a(*names, opt)
+  puts names.inspect
+end
 
+a(1,2) #=> [1]
+
+def a(*names, opt=nil)
+  puts names.inspect
+end
+
+会报语法错误
