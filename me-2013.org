@@ -1928,6 +1928,13 @@
 *** DONE Gstar: fix bug 编辑description后没有立即显示更新后的内容
 *** TODO Gstar: 搜索结果分页
 *** Gstar: 写使用文档
+** 09-30
+*** 非常好看
+**** TODO 后台:DIY创建比赛
+**** 后台:UGC添加赞助
+*** 自由泳1000米
+*** Gstar: 搜索结果分页
+*** Gstar: 写使用手册
 * Todo
 ** 阅读dsl in action
 * Done

@@ -5,6 +5,15 @@
 ** gStar
 - 对github上标过星号的项目进行标签标记，以便于自己能够搜索到合适的代码
 - github api http://developer.github.com/
+** 将第三方登录写成一个rack中间件
+** 第三方支付是否可以写成一个rack中间件
+** 写一篇介绍rack的博客
+- 龙虾
+- Rack::Builder
+- rack应用的图解
+- 怎么使用rack构造大型复杂应用
+** 研究brew的源代码
+** 制作一款文档收集工具类似于dash
 ** 写一篇介绍dsl的博客
 将你所面对的问题域抽象化为一个类
 
@@ -14,19 +23,6 @@
 
 ** 学习python
 ** 用ground + angularJs写一个论坛
-** 学习刮痧
-** 学习拔罐
-** 学习按摩
-** 学习针灸
-** 学习足疗
-** 将第三方登录写成一个rack中间件
-** 第三方支付是否可以写成一个rack中间件
-** 写一篇介绍rack的博客
-- 龙虾
-- Rack::Builder
-- rack应用的图解
-- 怎么使用rack构造大型复杂应用
-
 ** log error
 - 人不能犯相同的错误
 - 记录你的错误 
@@ -40,9 +36,7 @@
 - 集成自己的记帐语言
 
 ** 用ruby写一个 https://github.com/jdan/cleaver
-** 为ruby写一个中文分词系统
 ** 做一个中小型网站的搜索解决方案
-** 发型设计
 ** 研究搜索技术
 *** sphinx http://sphinxsearch.com/
 ** 可以了解下的东西
@@ -61,7 +55,6 @@
 - Earley algorithm
 - Hiero
 
-** 制作一款文档收集工具类似于dash
 ** 内部搜索引擎
 - 内部爬虫
 - 倒排序
@@ -69,4 +62,9 @@
 - 中文分词
 ** rails amout 其他rack应用甚至本身
 ** ruby-china智能筛选帖子的工具
-** 研究brew的源代码
+** 研究eventmachine
+** 研究goliath
+** 研究celluloid
+** 学习刮痧
+** 学习拔罐
+** 学习按摩
