@@ -1929,17 +1929,19 @@
 *** TODO Gstar: 搜索结果分页
 *** Gstar: 写使用文档
 ** 09-30
-*** 非常好看
-**** TODO 后台:创建DIY比赛
-**** 通读一遍rails_admin的wiki
-**** 后台: 显示比赛图片
-**** 后台: 编辑DIY比赛
-**** 后台:UGC添加赞助
+**** 后台: UGC添加赞助
 *** DONE 自由泳1000米
-*** TODO Gstar: 搜索结果分页
-**** DONE 分页路由
-**** 告诉客户端一共有多少页, 每页有多少条数据
+*** Gstar: 搜索结果分页
 *** Gstar: 写使用手册
+** 10-01
+*** DONE 自由泳1000米
+*** DONE Gstar: 搜索结果分页
+**** DONE 告诉客户端一共有多少页, 每页有多少条数据
+**** DONE 是否是当前页
+**** DONE pre和next的link
+**** DONE 分页的样式
+*** Gstar: 写使用手册
+*** DONE 自由泳1500米
 * Todo
 ** 阅读dsl in action
 * Done

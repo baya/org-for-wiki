@@ -168,3 +168,9 @@ theSprite = SpriteFactory.getSprite(1);
 ** Regular Exp
 - https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+** convert float to an int
+- 参考: http://stackoverflow.com/questions/596467/how-do-i-convert-a-float-to-an-int-in-javascript
+var intvalue = Math.floor( floatvalue );
+var intvalue = Math.ceil( floatvalue ); 
+var intvalue = Math.round( floatvalue );
+~~2.9 #=> 2
