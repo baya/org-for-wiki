@@ -1154,3 +1154,7 @@ db = <Sequel::SQLite::Database: {"adapter"=>"sqlite", "database"=>"db/developmen
 4.Changes the current working directory to "/".
 5.Clears the file creation mask (sets umask to 0000).
 6.Closes file descriptors (reopens STDOUT and STDERR to point to a logfile if possible).
+** 构建epub
+bundle
+gem install eeepub
+ruby script/publish

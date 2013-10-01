@@ -20,7 +20,7 @@
 **** DONE 使用image搜索不到包含Image的项目
 *** DONE 可编辑description
 *** DONE 匹配高亮
-*** 搜索结果分页
+*** DONE 搜索结果分页
 - 参考: http://jsfiddle.net/SAWsA/11/
 - 参考: http://www.ivivelabs.com/blog/pagination-in-angularjs-for-typekit-api-show-more-pagination-in-angularjs/
 - 参考: http://jsfiddle.net/2NjN5/
@@ -33,6 +33,8 @@
 3. 是否是当前页
 4. pre和next的link
 5. 分页的样式
+*** 可显示的分页数为16个，超出的分页用...表示
+*** 搜索输入框弄大点
 *** 显示项目的语言，如果有的话
 *** 项目语言如果和搜索关键字匹配，匹配分数应该高些
 *** 写一篇文档，内容包括目的，怎么搭建，怎么使用，参考资料
