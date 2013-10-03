@@ -1946,8 +1946,10 @@
 *** DONE 自由泳1000米
 *** Gstar: 使用手册
 ** 10-03
-*** 自由泳1000米
-*** Gstar: 使用手册
+*** DONE 自由泳1000米
+*** DONE Gstar: 搜索输入框弄大点
+*** DONE Gstar: 使用手册
+*** Gstar: 发布v1.0
 * Todo
 ** 阅读dsl in action
 * Done

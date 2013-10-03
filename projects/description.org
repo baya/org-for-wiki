@@ -61,17 +61,17 @@ join_count       | integer | default:0             | 参赛人数
 *** DONE fix parse for comment出现的bug
 *** DONE 提供markdown table文件的下载
 *** DONE 发布可用版本0.1.0
-*** 获取所有model的验证信息
-*** 获取所有model之间的关系信息
-*** 图形化model之间的关系
+*** v2.0
+**** 获取所有model的验证信息
+**** 获取所有model之间的关系信息
+**** 图形化model之间的关系
 **** 参考
 - https://github.com/melborne/Gviz
 - http://oodavid.com/gviz/
 - http://www.hokstad.com/inline-graphviz
 - http://www.graphviz.org  
-*** 使用美观大方的图形界面显示所有model之间的关系
-*** 发布可用版本0.2.x
-*** 对mongoid支持
-*** 发布可用版本0.2.x
-*** 对datamapper支持
-*** 发布可用版本0.2.x
+**** 使用美观大方的图形界面显示所有model之间的关系
+*** v2.1
+**** 对mongoid支持
+*** v2.2
+**** 对datamapper支持
