@@ -1949,6 +1949,7 @@
 *** DONE 自由泳1000米
 *** DONE Gstar: 搜索输入框弄大点
 *** DONE Gstar: 使用手册
+*** Gstar: 在ubuntu下进行测试
 *** Gstar: 发布v1.0
 * Todo
 ** 阅读dsl in action
