@@ -465,3 +465,14 @@ class ContestHeat < ActiveRecord::Base
   has_many :entities, through: :heat_entities
   belongs_to :round, class_name: 'ContestRound'
 end
+** deploy
+*** http://blog.codeclimate.com/blog/2013/10/02/high-speed-rails-deploys-with-git
+deploy:update_code — Resets the Git working directory to the latest code we want to deploy.
+bundle:install:if_changed — Checks if either the Gemfile or Gemfile.lock were changed, and if so invokes the bundle:install task. Most deploys don’t include Gemfile changes so this saves some time.
+assets:precompile:if_changed — Similar to the above, this invokes the assets:precompile task if and only if there were changes that may necessitate asset updates. We look for changes to three paths: app/assets, Gemfile.lock, and config. Asset pre-compilation is notoriously slow, and this saves us a lot of time when pushing out changes that only touch Ruby code or configuration.
+deploy:tag — Creates a Git tag on the app server for the release. We never push these tags upstream to GitHub.
+deploy:restart — This part varies depending on your application server of choice. For us, we use God to send a USR2 signal to our Unicorn master process.
+deploy:verify — This is the most complex part. The simplest approach would have Capistrano wait until the Unicorn processes reboot (with a timeout). However, since Unicorn reboots take 30 seconds, I didn’t want to wait all that extra time just to confirm something that works 99% of the time. Using every ounce of Unix-fu I could muster, I cobbled together a solution using the at utility:
+echo 'curl -sS http://127.0.0.1:3000/system/revision | grep "c7fe01a813" > /dev/null || echo "Expected SHA: c7fe01a813" | mail -s "Unicorn restart failed" ops@example.com' | at now + 2 minutes
+
+
