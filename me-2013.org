@@ -1955,7 +1955,7 @@
 ** 10-04
 *** 游泳: 2000米
 *** DONE Gstar: ubuntu下定时任务有encode错误
-*** Gstar: 搜索结果莫名的不准确
+*** DONE Gstar: 搜索结果莫名的不准确
 * Todo
 ** 阅读dsl in action
 * Done
