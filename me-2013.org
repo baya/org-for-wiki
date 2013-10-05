@@ -1953,9 +1953,14 @@
 *** DONE Gstar: 介绍可以在哪里获得github的access_token
 *** Gstar: 发布v1.0
 ** 10-04
-*** 游泳: 2000米
+*** DONE 游泳: 2000米
 *** DONE Gstar: ubuntu下定时任务有encode错误
 *** DONE Gstar: 搜索结果莫名的不准确
+** 10-05
+*** 游泳2000米
+*** Description
+**** 图形化模型 
+**** 图形化模型之间的关系
 * Todo
 ** 阅读dsl in action
 * Done
