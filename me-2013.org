@@ -1957,7 +1957,7 @@
 *** DONE Gstar: ubuntu下定时任务有encode错误
 *** DONE Gstar: 搜索结果莫名的不准确
 ** 10-05
-*** 游泳2000米
+*** DONE 游泳2000米
 *** Description
 **** 图形化模型 
 **** 图形化模型之间的关系
