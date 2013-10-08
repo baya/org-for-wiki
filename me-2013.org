@@ -1970,8 +1970,8 @@
 **** 图形化模型之间的关系
 ** 10-08
 *** DONE 处理双色球漏追
-*** TODO 非常好看: weibo app jsonp 接口
-*** 游泳: 2000米
+*** DONE 非常好看: weibo app jsonp 接口
+*** DONE 游泳: 2000米
 * Todo
 ** 阅读dsl in action
 * Done

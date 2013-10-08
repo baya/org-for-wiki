@@ -6,7 +6,6 @@
 ** DONE 研究一下sqlite的全文检索技术
 ** DONE 把没有同步过的starred projects同步到本地
 ** DONE 支持中文
-
 ** DONE 定时更新starred projects
 ** DONE 定时建立增量索引
 - 建立一个表,记录需要重建索引的star
@@ -52,6 +51,7 @@
 - http://sqlite.org/fts3.html
 - https://github.com/copiousfreetime/amalgalite
 - http://sqlite.org/rtree.html
+- 参考书籍: 这就是搜索引擎
 *** github api
 - list repositories being starred http://developer.github.com/v3/activity/starring/#list-repositories-being-starred
 *** angular js search
@@ -63,7 +63,6 @@
 - http://sequel.rubyforge.org/rdoc/files/doc/migration_rdoc.html
 - http://sequel.rubyforge.org/rdoc/classes/Sequel/Migrator.html
 - http://sequel.rubyforge.org/rdoc/files/doc/schema_modification_rdoc.html
-- 参考书籍: 这就是搜索引擎
 ** 搜索策略
 1.用小写字母搜索时，比如搜索ui，那么搜索的结果中可以包括ui, Ui, uI或者UI
 2.假设搜索 a b c d，有关系f, 其中f([a, b, c, d], doc) -> p, doc表示要检索的文档, p表示doc和[a, b, c, d]之间关系的分值
