@@ -476,3 +476,7 @@ deploy:verify — This is the most complex part. The simplest approach would hav
 echo 'curl -sS http://127.0.0.1:3000/system/revision | grep "c7fe01a813" > /dev/null || echo "Expected SHA: c7fe01a813" | mail -s "Unicorn restart failed" ops@example.com' | at now + 2 minutes
 
 
+
+** jsonp
+*** 实例
+- render json: ContestsIndexJson << {cated_contests: cated_contests}, callback: params[:callback]
