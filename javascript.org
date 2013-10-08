@@ -174,3 +174,6 @@ var intvalue = Math.floor( floatvalue );
 var intvalue = Math.ceil( floatvalue ); 
 var intvalue = Math.round( floatvalue );
 ~~2.9 #=> 2
+** jsonp
+*** 资源
+- http://json-p.org/
