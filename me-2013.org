@@ -1968,6 +1968,9 @@
 *** Description
 **** 图形化模型 
 **** 图形化模型之间的关系
+** 10-08
+*** TODO 非常好看: weibo app jsonp 接口
+*** 游泳: 2000米
 * Todo
 ** 阅读dsl in action
 * Done
