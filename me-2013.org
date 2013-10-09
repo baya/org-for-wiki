@@ -1972,6 +1972,12 @@
 *** DONE 处理双色球漏追
 *** DONE 非常好看: weibo app jsonp 接口
 *** DONE 游泳: 2000米
+** 10-09
+*** TODO 非常好看: 给前端讲解weibo app api
+*** Gstar: 了解下Alfred插件
+- http://www.makeuseof.com/tag/how-to-create-workflow-system-alfred-2-0-mac/
+- http://www.boyvanamstel.nl/2013/08/creating-an-alfred-2-workflow-with-ruby/
+*** 游泳: 2000米
 * Todo
 ** 阅读dsl in action
 * Done
