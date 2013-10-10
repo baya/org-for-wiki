@@ -1986,8 +1986,15 @@
 *** DONE 游泳: 2000米
 ** 10-10
 *** 非常好看
-**** weibo-app: 获取比赛类别
+**** DONE weibo-app: 获取比赛类别
+**** DONE weibo-app: 调试获取heat接口
+**** DONE 新后台: FontAwesome无法显示
+- 解决方法是将无用的css文件删除，然后运行rake assets:precompile RAILS_ENV=staging，正常运行
+- 或者可以试试设置config.assets.compile = true,在staging.rb文件中默认config.assets.compile = false
+**** weibo-app: 比赛分享次数
 **** 新后台: 给UGC比赛添加赞助
 **** 新后台: DIY比赛上传图片
 **** 新后台: 用户权限管理
 *** 游泳: 1000米，练习打腿500次
+*** rails-guide复习: The Asset Pipeline
+- http://guides.rubyonrails.org/asset_pipeline.html
