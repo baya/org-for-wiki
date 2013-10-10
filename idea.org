@@ -1,10 +1,15 @@
 * Idea
 记录自己的一些想法和灵感
-** DONE migration-doc
+** DONE Description: migration-doc  
+- 项目地址: https://github.com/baya/description
 - 从migration脚本中提取数据库文档
-** gStar
+** DONE Gstar
+- 项目地址: https://github.com/baya/Gstar
 - 对github上标过星号的项目进行标签标记，以便于自己能够搜索到合适的代码
 - github api http://developer.github.com/
+** docX: 制作一款文档收集工具类似于dash
+- 基于浏览器
+- 用户可以自己写插件，收集管理相应的文档
 ** 将第三方登录写成一个rack中间件
 ** 第三方支付是否可以写成一个rack中间件
 ** 写一篇介绍rack的博客
@@ -13,7 +18,6 @@
 - rack应用的图解
 - 怎么使用rack构造大型复杂应用
 ** 研究brew的源代码
-** 制作一款文档收集工具类似于dash
 ** 写一篇介绍dsl的博客
 将你所面对的问题域抽象化为一个类
 
@@ -22,7 +26,6 @@
 - 用于快速搭建外部测试api
 
 ** 学习python
-** 用ground + angularJs写一个论坛
 ** log error
 - 人不能犯相同的错误
 - 记录你的错误 
