@@ -1995,6 +1995,6 @@
 **** 新后台: 给UGC比赛添加赞助
 **** 新后台: DIY比赛上传图片
 **** 新后台: 用户权限管理
-*** 游泳: 1000米，练习打腿500次
+*** DONE 游泳: 1000米，练习打腿500次
 *** rails-guide复习: The Asset Pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
