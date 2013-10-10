@@ -1984,80 +1984,11 @@
 - http://www.makeuseof.com/tag/how-to-create-workflow-system-alfred-2-0-mac/
 - http://www.boyvanamstel.nl/2013/08/creating-an-alfred-2-workflow-with-ruby/
 *** DONE 游泳: 2000米
-* Todo
-** 阅读dsl in action
-* Done
-* Plan 
-** DONE 
-*** DONE 买表
-*** DONE 用cucumber做自动化测试
-*** DONE QQ:2489106660
-*** DONE 乙肝疫苗
-北京市疾病预防控制中心地址：东城区和平里中街16号电话：64212447 
-
-  2 海淀区疾病预防控制中心地址：北京市海淀区甘家口小区12号电话：88364450 
-
-  3 西城区疾病预防控制中心地址：西城区阜外北大街201号电话：62033957 
-
-  4 东城区疾病预防控制中心地址：东城区北兵马司胡同5号电话：64045596 
-
-  5 崇文区疾病预防控制中心地址：崇文区西晓市16号电话：65114352 
-
-  6 宣武区疾病预防控制中心地址：宣武区长椿街34号电话：63033670 
-
-  7 朝阳区疾病预防控制中心地址：朝阳区华威里25号电话：87789733 
-
-  8 石景山区疾病预防控制中心地址：石景山区鲁谷路公汽六厂西侧电话：68662805 
-
-  9 丰台区疾病预防控制中心地址：丰台区丰台镇西安街3号电话：63811956 
-*** DONE 我的开发模式EAB(Executor-Activity-Business)
-0. 把项目或者功能分为较小的Business
-1. Business再分为更小的Activity
-2. Business的作用由它下面的各Activity组合实现
-3. Business和Activity只做属于自己的事情
-4. Business和Activity都应该容易测试
-5. Business和Activity的都应该短小精悍
-6. Activity由Executor执行
-*** DONE Thirdparty Platformock TpPm
-*** DONE Reading: 编写可读代码的艺术
-*** DONE 博客: 验证码
-*** DONE Reading: HTTP权威指南
-** TODO 
-*** Code:研究一些著名的Ruby开源项目，整理一篇有关他们代码风格的博客
-*** Rails:阅读rails antipatterns
-*** Office:公司相关业务的架构，流程等wiki
-*** Office:公司相关业务DSL
-*** Me:购买vps
-*** Me:架设vpn
-*** Me:架设博客
-*** Me:购买域名
-*** Work:自动化测试平台
-*** iOS:开发穴位(Hole Position)
-*** iOS:VS，工作，客户，公司，对象，商品,书籍等等
-*** iOS:记录你一天吃了什么东西，食物，营养数据库
-*** iOS:记帐app
-*** iOS:目标与奖励
-*** Ruby:整理元编程方面的知识
-*** Ruby:彩票DSL, BSL    
-*** Ruby:研究sequel
-*** Ruby:研究rack
-*** Ruby:研究sinatra
-*** Ruby:研究homebrew
-*** Prolog: 第一阶段Prolog学习，Learn Prolog Now!
-*** Reading: 软件测试
-*** Gem: 一周一gem，描述一些优秀的gem的架构，以及相关的ruby代码风格
-*** Gem: 学习Padrino
-*** Reading: 领域驱动设计
-*** 创业: 租房小工具
-*** 创业: 彩票机选
-*** 创业: 数学类的教学网站,父母是孩子最好的老师
-*** Gem之美: rack
-*** Step: 一周学习一个gem,一周出一篇博客
-*** Work: 支付平台的架构
-*** 占普: 塔罗，汉字
-*** 美食: 尝美食，烹饪
-*** 旅游: 宗教
-*** 历史
-*** 健体: 俯卧撑，晒黑
-*** NotEasy
+** 10-10
+*** 非常好看
+**** weibo-app: 获取比赛类别
+**** 新后台: 给UGC比赛添加赞助
+**** 新后台: DIY比赛上传图片
+**** 新后台: 用户权限管理
+*** 游泳: 1000米，练习打腿500次
 
