@@ -1158,3 +1158,28 @@ db = <Sequel::SQLite::Database: {"adapter"=>"sqlite", "database"=>"db/developmen
 bundle
 gem install eeepub
 ruby script/publish
+** 异常重试
+*** 根据特定的异常重试
+def net_try(title, options = { }, &p)
+ tried_times = 0
+ ee = '#{e}'
+ etried_times = '#{tried_times}'
+ max_times = options[:max_times] || 3
+ exceptions = options[:on] || Exception
+ exceptions = [exceptions] if not exceptions.is_a?(Array)
+ rescue_text = <<-EOF
+   begin
+     p.call
+   rescue #{exceptions.join(',')} => e
+    Rails.logger.info("#{title}发生异常#{ee}")
+     if (tried_times += 1) < max_times
+       Rails.logger.info("开始重试#{title}--第#{etried_times}次重试")
+       sleep 10
+       retry 
+     end
+     raise e
+   end
+ EOF
+ eval rescue_text
+end
+
