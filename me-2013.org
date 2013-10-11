@@ -2004,7 +2004,10 @@
 **** weibo-app: 调试比赛创建 14:00
 **** weibo-app: 个人中心
 **** 手机客户端: 调试heat create流程
-**** 新后台: 给UGC比赛添加赞助
+**** DONE 新后台: 给UGC比赛添加赞助
+**** TODO weibo-app: 给测试用比赛生成round
+**** weibo-app: 提供中奖名单以供测试
+**** 新后台: 添加奖品
 **** 新后台: DIY比赛上传图片
 **** 新后台: 用户权限管理
 *** rails-guide复习: The Asset Pipeline
