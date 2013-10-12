@@ -7,11 +7,13 @@
 - 项目地址: https://github.com/baya/Gstar
 - 对github上标过星号的项目进行标签标记，以便于自己能够搜索到合适的代码
 - github api http://developer.github.com/
+** Description升级: 图形化各模型之间的关系
 ** docX: 制作一款文档收集工具类似于dash
 - 基于浏览器
 - 用户可以自己写插件，收集管理相应的文档
 ** 将第三方登录写成一个rack中间件
 ** 第三方支付是否可以写成一个rack中间件
+** 打卡: 跑步打卡，游泳打卡等各种打卡，帮助你养成好习惯，需要收费的哦
 ** 写一篇介绍rack的博客
 - 龙虾
 - Rack::Builder
