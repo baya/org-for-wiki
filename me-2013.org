@@ -2020,7 +2020,13 @@
 ** 10-12
 *** 非常好看
 **** DONE weibo-app: 给测试用比赛生成round
-**** weibo-app: 调试比赛创建 14:00
+**** TODO weibo-app: 调试比赛流程
+**** weibo-app: 获取最近分享接口
+**** weibo-app: 记录分享接口
+**** weibo-app: 比赛流程创建奖品，让用户能够选择奖品
+**** weibo-app: 猜你喜欢的比赛(赞助商推荐比赛)
+**** weibo-app: 某个比赛中最近抽奖用户
+**** weibo-app: 调试比赛创建
 **** weibo-app: 个人中心
 **** weibo-app: 提供中奖名单以供测试
 **** weibo-app: create heat提供jsonp接口
