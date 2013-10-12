@@ -2017,3 +2017,16 @@
 **** DONE 对于timeout之类的异常，增加重试机制
 **** 投注错误的彩票，统一抛异常，造成追号漏追，而不是追号失败，这样所有异常彩票都可以通过补追手段弥补
 *** DONE 游泳: 2000米
+** 10-12
+*** 非常好看
+**** DONE weibo-app: 给测试用比赛生成round
+**** weibo-app: 调试比赛创建 14:00
+**** weibo-app: 个人中心
+**** weibo-app: 提供中奖名单以供测试
+**** weibo-app: create heat提供jsonp接口
+**** 新后台: 添加奖品
+**** 新后台: DIY比赛上传图片
+**** 新后台: 用户权限管理
+*** rails-guide复习: The Asset Pipeline
+- http://guides.rubyonrails.org/asset_pipeline.html
+*** 游泳: 2000米
