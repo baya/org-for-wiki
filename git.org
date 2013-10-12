@@ -20,9 +20,19 @@
 ** git log
 - git log --reverse   shows commits from start
 ** code review
-- git log --until=2013-09-12                    # 假设今天是2013-09-13，此命令可以找出昨天最后一次的commit号，假设是abcdef
+- git log --until=2013-09-13                    # 假设今天是2013-09-13，此命令可以找出昨天最后一次的commit号，假设是abcdef
 - git diff abcdef                               # 此命令就可以查看今天一整天所做的修改
 - git diff abcdef > code-reveiw-20130913.diff   # 将diff后的结果输入到code-review-20130913.diff文件，方便review
+- 写成了一个rake task
+namespace :git do
+  task :diff do
+    today = Time.now.strftime('%Y%m%d')
+    log = `git log --until=#{today} -1`
+    commit = log.split("\n")[0].split(' ')[1]
+    diff = `git diff #{commit} > code_review_#{today}.diff`
+  end
+end
+执行 rake git:diff就能对今天的代码进行review了
 ** 简明reference
 - http://gitref.org/
 ** 推荐的.gitignore
