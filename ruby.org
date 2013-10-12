@@ -1220,3 +1220,26 @@ end
 %GW%V%uT%H%M%z   => 2007W471T0837-0600        Week date and local time and difference from UTC (basic)
 %G-W%V-%uT%R%:z  => 2007-W47-1T08:37-06:00    Week date and local time and difference from UTC (extended)
 
+
+** proc魔法
+*** http://ruby-china.org/topics/14704
+def f
+  Module.new &Proc.new
+end
+
+M = f do
+  def self.x
+    'hello world'
+  end
+end
+
+M.x # => "Hello world"
+事实上这个案例可以直接简化成：
+
+def f
+  Proc.new
+end
+
+(f { |name| 'hello, ' + name }).call 'bachue'
+# => "hello, bachue"
+
