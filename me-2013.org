@@ -2038,8 +2038,9 @@
 - http://guides.rubyonrails.org/asset_pipeline.html
 *** DONE 游泳: 2000米
 ** 10-13
-*** 给家里寄钱
-*** 存钱
-*** 看房
+*** DONE 给家里寄钱
+*** DONE 存钱
+*** DONE 看房
+*** DONE 游泳2000米
 *** Description: 图形化模型之间的关系
-*** 游泳2000米
+
