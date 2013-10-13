@@ -2037,3 +2037,9 @@
 *** rails-guide复习: The Asset Pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
 *** DONE 游泳: 2000米
+** 10-13
+*** 给家里寄钱
+*** 存钱
+*** 看房
+*** Description: 图形化模型之间的关系
+*** 游泳2000米
