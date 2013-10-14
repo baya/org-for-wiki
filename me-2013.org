@@ -2045,15 +2045,18 @@
 *** Description: 图形化模型之间的关系
 ** 10-14
 *** 非常好看
-**** weibo-app: 调试比赛流程
+**** DONE weibo-app: 抽奖池100%出现，供前端测试
+**** DONE weibo-app: 比赛流程创建奖品，让用户能够选择奖品
+**** DONE weibo-app: 记录分享接口
+**** DONE weibo-app: 某个比赛中最近抽奖用户，用户去重
+**** TODO weibo-app: 幸运抽奖，返回用户的抽奖日期
 **** weibo-app: 获取最近分享接口
-**** weibo-app: 记录分享接口
-**** weibo-app: 比赛流程创建奖品，让用户能够选择奖品
+**** weibo-app: 调试比赛流程
 **** weibo-app: 提供中奖名单以供测试
 **** weibo-app: 猜你喜欢的比赛(赞助商推荐比赛)
-**** weibo-app: 某个比赛中最近抽奖用户
 **** weibo-app: 调试比赛创建
 **** weibo-app: 个人中心
+**** weibo-app: 比赛主排名(比如第一轮排名，第二轮排名，第三轮排名)
 **** 新后台: DIY比赛上传图片
 **** 新后台: 用户权限管理
 **** code review
