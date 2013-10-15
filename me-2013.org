@@ -2087,4 +2087,4 @@
 **** code review
 *** rails-guide复习: The Asset Pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
-*** 游泳: 2000米
+*** DONE 游泳: 2000米
