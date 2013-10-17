@@ -2125,7 +2125,7 @@
 **** DONE weibo-app: 后台任务计算图片排名
 **** DONE weibo-app: pk比赛投票后返回胜负两张图片的排名
 **** DONE weibo-app: 赞助logo, 赞助奖品，中奖名单
-**** 对进度
+**** DONE 对进度
 **** 新后台: DIY比赛上传图片
 **** 比赛QA测试脚本
 - 创建一个比赛
@@ -2158,4 +2158,4 @@
 **** 数据字段验证
 *** rails-guide复习: The Asset Pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
-*** 游泳: 自由泳2000米
+*** DONE 游泳: 自由泳2000米
