@@ -216,6 +216,23 @@ http://www.yaml.org/YAML_for_ruby.html#simple_sequence
     Rake::Task['staging:stat_zhuihao'].invoke('排列三[组三]', args['num'])
   end
   
+*** use argument in rake task
+- 参考: http://robots.thoughtbot.com/post/18129303042/how-to-use-arguments-in-a-rake-task
+- 参考: https://github.com/robbyrussell/oh-my-zsh/issues/433
+namespace :tweets do
+  desc 'Send some tweets to a user'
+  task :send, [:username] => [:environment] do |t, args|
+    Tweet.send(args[:username])
+  end
+end
+rake tweets:send[cpytel]
+使用zsh时会报zsh: no matches found: tweets:send[cpytel]的错误
+- 解决办法
+rake tweets:send\[cpytel\]
+or
+rake 'tweets:send[cpytel]'
+or 
+Add alias rake='noglob rake' in your .zshrc
 ** 用rvm升级ruby
 参考: http://stackoverflow.com/questions/3360277/how-do-i-update-ruby-interpreters-with-rvm
 rvm upgrade 1.9.2-preview1 1.9.2-rc1

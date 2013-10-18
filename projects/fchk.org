@@ -133,3 +133,15 @@
 ** 后台UGC比赛添加赞助
 ** 后台DIY比赛上传多张图片
 ** 新浪微博站内应用开发文档 http://open.weibo.com/wiki/站内应用
+** 2013-10-18 进度安排
+APIs for Weibo app 微博app接口开发 （5个）	10/25
+APIs for mobile  手机客户端接口调试	10/30
+"Test--Show pics by group and round 
+写脚本测试--分组、分轮展示图片"	11/1
+"Test--Generate weekly/monthly winner list； Show prizes & winner list；Show winner list in contest result page  
+写脚本测试--
+自动产生周冠军月冠军；
+展示奖品，产生中奖名单；
+比赛页面展示中奖名单（xx人 获得XX奖品）"	11/5
+"Bug--sponsor the UGC by category 
+改bug--按类别赞助用户自创比赛"	11/7
