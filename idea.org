@@ -91,3 +91,23 @@
 	一个番茄一个番茄地连续下去，就会成功。 
 	下一个番茄时间会做得更好。 
 •	番茄工作法不要用于假期和休息期间的活动，好好享受生活
+*** 扩展ruby的Number类
+1.tomato
+(1/2).tomato
+
+1.tomato do
+  work 25.minutes
+  break 5.minutes
+end
+
+Tomato('保存图片') do
+  work 25.minutes
+  break 5.minutes
+end
+
+$ tomato kick-on my.tt
+$ tomato kick-off  my.tt
+$ tomato server
+
+响铃
+echo -e '\a'

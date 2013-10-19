@@ -14,3 +14,9 @@ end
 need_implement :model, :name
 表示model, name方法需要在子类实现定义
 ** 增加一个异常，当需要实现的方法没有实现时就抛出此异常
+** 输入数据可以设定类型
+class A < Dun::Activity
+  data_reader :start_day, type: Date
+  data_reader :length, type: Integer
+  data_reader :images, type: Array
+end

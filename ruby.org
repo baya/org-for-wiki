@@ -1265,3 +1265,33 @@ hash = Hash.new
   hash[item] = index
 }
 hash
+** crop image
+*** mini-magick
+- 参考: http://stackoverflow.com/questions/8418973/undefined-method-crop-using-carrierwave-with-minimagick-on-rails-3-1-3
+def cropped_image(params)
+    image = MiniMagick::Image.open(self.image.path)
+    crop_params = "#{params[:w]}x#{params[:h]}+#{params[:x]}+#{params[:y]}"
+    image.crop(crop_params)
+
+    image
+end
+
+image = RestClient.get 'http://feichanghaokan.com/image/91kCMgQDEzUQNVBUSizYZg.jpg'
+
+class CropImage < Dun::Activity
+
+  data_reader :x, :y, :w, :h, :image
+
+  def call
+    image_data = MiniMagick::Image.read image
+    crop_params = "#{w}x#{h}+#{x}+#{y}"
+    image_data.crop crop_params
+
+    image_data
+  end
+
+
+end
+
+CropImage << {image: image, x: 0, y: 0, w: 100, h: 100}
+
