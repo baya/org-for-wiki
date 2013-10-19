@@ -2,6 +2,7 @@
 从migration文件中提取database schema文档
 ** DONE 建立description项目
 ** DONE 提交description 0.0.0 gem
+** version
 *** DONE ActiveRecord::Migration
 **** DONE 解析create_table
 class CreateStartupPhotos < ActiveRecord::Migration
