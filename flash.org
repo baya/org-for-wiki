@@ -1,0 +1,28 @@
+* Flash
+** 跨域请求
+- 参考: http://www.adobe.com/cn/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html
+1. allow-access-from：允许访问根域
+<?xml version="1.0"?>	
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+    <site-control permitted-cross-domain-policies="master-only"/>
+    <allow-access-from domain="*.example.com"/>
+    <allow-access-from domain="www.example.com"/>
+    <allow-http-request-headers-from domain="*.adobe.com" headers="SOAPAction"/>
+</cross-domain-policy>
+
+2. cross-domain-policy：最不宽松的策略
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+    <site-control permitted-cross-domain-policies="none"/>
+</cross-domain-policy>
+
+3. cross-domain-policy：受最少限制的策略
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+    <site-control permitted-cross-domain-policies="all"/>
+    <allow-access-from domain="*" secure="false"/>
+    <allow-http-request-headers-from domain="*" headers="*" secure="false"/>
+</cross-domain-policy>
