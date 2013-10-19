@@ -2215,7 +2215,7 @@
 **** DONE weibo-app: 用户创建比赛，设置比赛时间长度 kill@ @
 **** weibo-app: 用户创建比赛，上传图片
 ***** DONE 图片保存接口 kill@ kill@
-***** 图片剪裁接口 kill@ @
+***** DONE 图片剪裁接口 kill@ kill@
 **** 新后台: DIY比赛上传图片
 **** weibo-app: 调试比赛创建
 **** weibo-app: 个人中心
