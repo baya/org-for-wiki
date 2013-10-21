@@ -8,6 +8,9 @@
 - 对github上标过星号的项目进行标签标记，以便于自己能够搜索到合适的代码
 - github api http://developer.github.com/
 ** Description升级: 图形化各模型之间的关系
+** rails-guide复习: The Asset Pipeline
+- http://guides.rubyonrails.org/asset_pipeline.html
+
 ** docX: 制作一款文档收集工具类似于dash
 - 基于浏览器
 - 用户可以自己写插件，收集管理相应的文档
