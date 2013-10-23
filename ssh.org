@@ -5,3 +5,5 @@ HostName ip
 User jiangguimin
 ProxyCommand ssh -p port vostunnel@ip -W %h:%p
 #ProxyCommand ssh -p port vostunnel@ip nc %h %p
+
+** 远程登录

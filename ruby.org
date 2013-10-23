@@ -1295,3 +1295,6 @@ end
 
 CropImage << {image: image, x: 0, y: 0, w: 100, h: 100}
 
+** 获取文件扩展名
+File.extname(filename)
+filename.chomp(File.extname(filename))

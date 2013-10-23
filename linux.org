@@ -157,7 +157,6 @@ scp -i ~/.ssh/magus_qa -P 6521 dev@qa.fun-guide.mobi:/srv/rorapps/lot_zhuihao/lo
 *** KVM
 http://www.linux-kvm.org
 
-
 ** 查看操作系统版本
 - lsb_release -a
 Distributor ID:	Ubuntu
@@ -209,3 +208,27 @@ LC_ALL=
 LANG=en_US.UTF-8
 service cron restart
 
+** 创建用户 create user
+- 参考: http://www.cyberciti.biz/faq/howto-add-new-linux-user-account/
+$ sudo useradd wz
+$ sudo useradd -d /home/wz -m wz
+$ passwd wz
+** 删除用户 delete user
+- 参考 http://www.cyberciti.biz/faq/linux-remove-user-command/
+$ userdel wz
+$ userdel wz -r   # 连同user's home 一块删除
+- 实例
+$ passwd -l wz   # 冻结用户
+$ ps -fp $(pgrep -u wz)
+$ killall -KILL -u wz
+$ userdel -r wz
+** cat
+cat >> testcat.txt   # 从标准输入中追加内容到testcat.txt
+cat > testcat.txt    # 会覆盖testcat.txt原有的内容
+
+** 创建一个用户，并且此用户可以ssh登录
+*** ubuntu server
+$ useradd -d /home/jim -m jim  # jim有自己的home目录
+$ passwd jim
+$ vi /etc/ssh/sshd_config
+$ sudo service ssh reload
