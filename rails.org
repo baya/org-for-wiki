@@ -479,7 +479,46 @@ deploy:verify — This is the most complex part. The simplest approach would hav
 echo 'curl -sS http://127.0.0.1:3000/system/revision | grep "c7fe01a813" > /dev/null || echo "Expected SHA: c7fe01a813" | mail -s "Unicorn restart failed" ops@example.com' | at now + 2 minutes
 
 
-
 ** jsonp
 *** 实例
 - render json: ContestsIndexJson << {cated_contests: cated_contests}, callback: params[:callback]
+** validates
+- 参考: http://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html
+*** normal use
+validates :terms, acceptance: true
+validates :password, confirmation: true
+validates :username, exclusion: { in: %w(admin superuser) }
+validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
+validates :age, inclusion: { in: 0..9 }
+validates :first_name, length: { maximum: 30 }
+validates :age, numericality: true
+validates :username, presence: true
+validates :username, uniqueness: true
+
+validates :email, format: /@/
+validates :gender, inclusion: %w(male female)
+validates :password, length: 6..20
+
+*** custome validator
+class EmailValidator < ActiveModel::EachValidator
+  def validate_each(record, attribute, value)
+    record.errors.add attribute, (options[:message] || "is not an email") unless
+      value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/
+  end
+end
+
+class Person
+  include ActiveModel::Validations
+  attr_accessor :name, :email
+
+  validates :name, presence: true, uniqueness: true, length: { maximum: 100 }
+  validates :email, presence: true, email: true
+end
+
+*** 带条件的验证
+validates :password, presence: true, confirmation: true, if: :password_required?
+validates :token, uniqueness: true, strict: TokenGenerationException
+validates :password, presence: { if: :password_required?, message: 'is forgotten.' }, confirmation: true
+
+
+
