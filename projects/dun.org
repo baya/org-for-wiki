@@ -1,6 +1,43 @@
 * Dun
 帮助Ruby程序员以一种直接果断的态度面对问题
 ** 增加一个Validate验证器,包含测试和相应的文档说明
+module Dun
+  class Validate < Activity
+
+    attr_reader :errors, :validations
+
+    def initialize(data)
+      super
+      @errors = {}
+      @validations = []
+    end
+
+    def call
+      execute_validations
+    end
+    
+    private
+
+    def validates(attr, error_msg, &p)
+      validation = validations.detect {|validation|
+        validation[0] == attr and validation[1] == error_msg
+      } || [attr, error_msg, p]
+      validations << validation
+    end
+
+    def execute_validations
+      validations.each {|validation|
+        attr, error_msg, p = validation
+        if !p.call
+          errors[attr] ||= []
+          errors[attr] << error_msg if !errors[attr].include?(error_msg)
+        end
+      }
+      errors
+    end
+
+  end
+end
 ** 增加一个Test类，此类专用于解决测试方面的问题
 ** default
 def self.default attr, default
