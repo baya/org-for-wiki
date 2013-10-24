@@ -17,7 +17,10 @@ before_save
 before_create
 after_create
 after_save
-
+** callback方法之间的一些差别
+- 参考: http://stackoverflow.com/questions/6422199/what-is-the-difference-between-after-create-and-after-save-and-when-to-use-w
+- after_create only works once - just after the record is first created.
+- after_save works every time you save the object - even if you're just updating it many years later
 ** cucumber
 *** 搭建命令
 rails generate cucumber:install --help
