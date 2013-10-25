@@ -6,4 +6,6 @@
 ** 介绍rack的帖子和博客
 - http://ruby-china.org/topics/4840 有比较多的rack参考资料
 - http://guides.ruby-china.org/rails_on_rack.html
-- http://jasonseifer.com/2009/04/08/32-rack-resources-to-get-you-started
+- 32 Rack Resources to Get You Started http://jasonseifer.com/2009/04/08/32-rack-resources-to-get-you-started
+- A Quick Introduction to Rack http://rubylearning.com/blog/a-quick-introduction-to-rack/
+- wsgi http://blog.ez2learn.com/2010/01/27/introduction-to-wsgi/ 

@@ -478,7 +478,6 @@ deploy:restart — This part varies depending on your application server of choi
 deploy:verify — This is the most complex part. The simplest approach would have Capistrano wait until the Unicorn processes reboot (with a timeout). However, since Unicorn reboots take 30 seconds, I didn’t want to wait all that extra time just to confirm something that works 99% of the time. Using every ounce of Unix-fu I could muster, I cobbled together a solution using the at utility:
 echo 'curl -sS http://127.0.0.1:3000/system/revision | grep "c7fe01a813" > /dev/null || echo "Expected SHA: c7fe01a813" | mail -s "Unicorn restart failed" ops@example.com' | at now + 2 minutes
 
-
 ** jsonp
 *** 实例
 - render json: ContestsIndexJson << {cated_contests: cated_contests}, callback: params[:callback]
@@ -519,12 +518,23 @@ end
 validates :password, presence: true, confirmation: true, if: :password_required?
 validates :token, uniqueness: true, strict: TokenGenerationException
 validates :password, presence: { if: :password_required?, message: 'is forgotten.' }, confirmation: true
+
 *** 实例
 validates :name, presence: true, uniqueness: true
 validates :email, format: /@/, if: ->(sponsor) { sponsor.email.present? }
 
+validates :email, presence: {if: ->(user){ user.email.nil?} }, uniqueness: true
+validates :mobile, presence: {if: ->(user){ user.mobile.nil?} }, uniqueness: true  
 
-
+  validates :email,
+  presence: {if: ->(user){ user.mobile.nil?} },
+  uniqueness: {if: ->(user){user.email.present?}},
+  if: ->(user){ not user.created_ref == UserCreatedRef['后台赞助商'].code}
+      
+  validates :mobile,
+  presence: {if: ->(user){ user.email.nil?} },
+  uniqueness: {if: ->(user){user.mobile.present?}},
+  if: ->(user){ not user.created_ref == UserCreatedRef['后台赞助商'].code}
 
 ** associations
 - 参考: http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html
@@ -577,3 +587,71 @@ sponsor.create_user(name: name,
 		)
 sponsor.save
 
+** validate errors
+- ActiveRecord对象的错误模型类似下面:
+
+user.errors #=>
+#<ActiveModel::Errors:0x007f8fe8288370
+ @base=
+  #<User id: nil, name: nil, birthday: nil, gender: nil, mobile: nil, email: nil, avatar: nil, password_hash: nil, password_salt: nil, sn: nil, status: nil, level: 1, point_count: 0, vote_count: 0, created_at: nil, updated_at: nil, marry: 0, location: nil, role: "user", created_ref: 0>,
+ @messages=
+  {:email=>["can't be blank", "has already been taken"],
+   :mobile=>["can't be blank", "has already been taken"]}>
+
+
+user.errors.messages #=>
+{:email=>["can't be blank", "has already been taken"],
+ :mobile=>["can't be blank", "has already been taken"]}
+
+user.errors.sort  #=>
+[[:email, "can't be blank"],
+ [:email, "has already been taken"],
+ [:mobile, "can't be blank"],
+ [:mobile, "has already been taken"]]
+
+user.errors.to_a #=>
+["Email can't be blank",
+ "Email has already been taken",
+ "Mobile can't be blank",
+ "Mobile has already been taken"]
+ 
+user.errors.keys #=>
+[:email, :mobile]
+
+** 用户，关注，粉丝的三者关系的在activerecord中的快速实现
+*** 表结构
+follows
+Column       | Type     | Modifiers | Comment 
+------------ | -------- | --------- | --------
+following_id | integer  |           |  被关注者的id
+follower_id  | integer  |           |  关注者的id 
+created_at   | datetime |           |         
+updated_at   | datetime |           |         
+
+users
+Column        | Type     | Modifiers    | Comment                                                                                                
+------------- | -------- | ------------ |------------------
+id            | integer  |              |
+sn            | string   |              |                                                                                                        
+gender        | integer  |              |  性别, 0 女, 1 男 
+
+*** 模型
+class Follow < ActiveRecord::Base
+  belongs_to :following, class_name: 'User'
+  belongs_to :follower, class_name: 'User'
+end
+
+class User < ActivieRecord::Base
+
+  # 有许多偶像
+  has_many :following_relationships, class_name: 'Follow', foreign_key: 'follower_id'
+  has_many :followings, through: :following_relationships
+
+  # 有许多粉丝
+  has_many :follower_relationships, class_name: 'Follow', foreign_key: 'following_id'
+  has_many :followers, through: :follower_relationships
+
+end
+
+** save without validate
+user.save(validate: false)
