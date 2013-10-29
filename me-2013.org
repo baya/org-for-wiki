@@ -2527,7 +2527,7 @@
 **** DONE 客户端: 比赛搜索返回比赛结束时间
 **** DONE 后台: 用户奖品
 **** DONE 新后台: 按类别赞助比赛  kill@
-**** api: GetAds报500 @
+**** DONE api: GetAds报500 @
 **** 新后台: 图片预览和剪裁 kill@ kill@ @
 ***** 比赛logo
 ***** 赞助logo
