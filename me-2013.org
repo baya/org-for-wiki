@@ -2648,5 +2648,7 @@
 - 查看比赛结果
   发现问题: 有一个为零分的图片没有被淘汰，而分数比它高的图片反而被淘汰了
 **** 确定需要登录的controller和action
-*** 游泳: 自由泳1000米
-*** blog: rack理论和实践
+*** DONE 游泳: 自由泳1000米
+*** DONE 阅读: http://rubylearning.com/blog/a-quick-introduction-to-rack/
+*** DONE 博客: rack编程实践 kill@ kill@
+*** 充电: 学习ios开发
