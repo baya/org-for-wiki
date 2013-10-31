@@ -66,3 +66,8 @@ HTTP_STATUS_CODES = {
 ** http draft
 - http://tools.ietf.org/html/draft-ietf-httpbis-p2-semantics-14
 
+
+** 中文资料
+- http://www.cocoachina.com/bbs/simple/?t75080.html
+- http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html
+- http://www.cocoachina.com/bbs/simple/?t98532.html
