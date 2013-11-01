@@ -655,10 +655,14 @@ end
 
 ** save without validate
 user.save(validate: false)
-
 ** migration: rename table name
 class RenameTalbeEntityInviteLogsToHeatInviteLogs < ActiveRecord::Migration
   def change
     rename_table :entity_invite_logs, :heat_invite_logs
   end
 end
+
+
+** migration transformations
+*** change_column(table_name, column_name, type, options)
+- change_column :contests, :created_kind, :integer, default: 1  # 默认为赞助商创建
