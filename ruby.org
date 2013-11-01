@@ -1298,3 +1298,61 @@ CropImage << {image: image, x: 0, y: 0, w: 100, h: 100}
 ** 获取文件扩展名
 File.extname(filename)
 filename.chomp(File.extname(filename))
+** search constants
+- 参考: http://valve.github.io/blog/2013/10/26/constant-resolution-in-ruby/
+*** nesting
+module A
+  A_CONSTANT = 'I am defined in module A'
+  module B
+    module C
+      def self.inspect_nesting
+
+        puts Module.nesting.inspect
+        puts A_CONSTANT
+      end
+    end
+  end
+end
+
+A::B::C.inspect_nesting
+# => [A::B::C, A::B, A]
+# => I am defined in module A
+
+*** Inheritance
+
+class Person
+  DRIVING_LICENSE_AGE = 18
+end
+
+class BusDriver < Person
+  def can_drive_from
+    DRIVING_LICENSE_AGE
+  end
+end
+
+bus_driver = BusDriver.new
+puts bus_driver.can_drive_from
+
+*** Mixins
+
+module Insurable
+  LIFE_INSURANCE_AMOUNT = 150_000
+end
+
+class Person
+  DRIVING_LICENSE_AGE = 18
+end
+
+class BusDriver < Person
+  include Insurable
+  def can_drive_from
+    "Can drive from #{DRIVING_LICENSE_AGE}, with life insurance of $#{LIFE_INSURANCE_AMOUNT}"
+  end
+end
+
+puts BusDriver.ancestors.inspect
+puts BusDriver.new.can_drive_from
+
+*** Full search path
+# searching from left to right
+full_path = [Module.nesting + Module.ancestors].uniq
