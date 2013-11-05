@@ -115,3 +115,5 @@ $ tomato server
 响铃
 echo -e '\a'
 ** 对dun做一个并发性能测试
+** 用程序模拟下红眼，蓝眼问题
+- http://www.zhihu.com/question/21262930

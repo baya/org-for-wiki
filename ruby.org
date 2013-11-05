@@ -1356,3 +1356,50 @@ puts BusDriver.new.can_drive_from
 *** Full search path
 # searching from left to right
 full_path = [Module.nesting + Module.ancestors].uniq
+
+** dsl例子 
+- 积分规则
+class FchkCredits < Dun::Activity
+
+  data_reader :user
+
+  class << self
+
+    attr_reader :rules
+
+    def add(opts = {})
+      rule :add, opts
+    end
+
+    def rule(name, opts = {})
+      @rules ||= []
+      @rules << [name, opts]
+    end
+
+  end
+
+  def call
+    rules.each {|rule| send rule[0], rule[1] }
+    user.save
+  end
+
+  private
+
+  def rules
+    self.class.rules
+  end
+
+  def add(opts = {})
+    user.increment(:point_count, opts[:points])
+    user.increment(:vote_count, opts[:votes])
+  end
+
+end
+
+class FchkCredits
+  # 注册普通会员,成功奖励10分，50投票
+  class Signup < self
+    add points: 10, votes: 50
+  end
+  
+end
