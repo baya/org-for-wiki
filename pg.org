@@ -29,11 +29,52 @@ sudo iptables -A OUTPUT -p tcp -s 10.61.0.103 --sport 5432 -d 0/0 --dport 1024:6
 *** createuser -d -l -w -S -R pguser    创建一个可以创建数据库，可以登陆，无密码的非超级用户,不可以创建role
 ** pd_dump
 *** 备份整个数据库
-pgdump -h qa.fun-guide.mobi -U pgsql huafei_development > huafeibak.out
+pg_dump -h qa.fun-guide.mobi -U pgsql huafei_development > huafeibak.out
+pg_dump -h localhost -U pgsql fchk_staging -p 6543 > fchk_staging_20131108.sql
 *** 只备份数据
-    pg_dump -h qa.fun-guide.mobi -U pgsql huafei_development -a > huafeibak-data-only.out   
+pg_dump -h qa.fun-guide.mobi -U pgsql huafei_development -a > huafeibak-data-only.out   
 *** 导入数据
 psql -h localhost -U pgsql -d huafei_development < huafeibak-data-only.out
+*** man example
+To dump a database called mydb into a SQL-script file:
+
+           $ pg_dump mydb > db.sql
+
+       To reload such a script into a (freshly created) database named newdb:
+
+           $ psql -d newdb -f db.sql
+
+       To dump a database into a custom-format archive file:
+
+           $ pg_dump -Fc mydb > db.dump
+
+       To dump a database into a directory-format archive:
+
+           $ pg_dump -Fd mydb -f dumpdir
+
+       To reload an archive file into a (freshly created) database named newdb:
+
+           $ pg_restore -d newdb db.dump
+
+       To dump a single table named mytab:
+
+           $ pg_dump -t mytab mydb > db.sql
+
+       To dump all tables whose names start with emp in the detroit schema, except for the table named employee_log:
+
+           $ pg_dump -t 'detroit.emp*' -T detroit.employee_log mydb > db.sql
+
+       To dump all schemas whose names start with east or west and end in gsm, excluding any schemas whose names contain the word test:
+
+           $ pg_dump -n 'east*gsm' -n 'west*gsm' -N '*test*' mydb > db.sql
+
+       The same, using regular expression notation to consolidate the switches:
+
+           $ pg_dump -n '(east|west)*gsm' -N '*test*' mydb > db.sql
+
+       To dump all database objects except for tables whose names begin with ts_:
+
+           $ pg_dump -T 'ts_*' mydb > db.sql
 
 *** 实际案例
 pg_dump -h qa.fun-guide.mobi -U pgsql palottery > palottery.out

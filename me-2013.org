@@ -2904,7 +2904,9 @@
 
 ** 11-08
 *** 非常好看
-**** TODO 上线步骤
+**** DONE 禁止devise后台注册用户
+**** DONE 人工创建devise管理员账号
+**** DONE 上线步骤
 1. 保持原有域名
 2. dump staging database
 3. 清除用户数据

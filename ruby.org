@@ -1403,3 +1403,20 @@ class FchkCredits
   end
   
 end
+
+** devise
+*** 禁止注册后台用户
+class AdminAccount < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable, :registerable
+  # 不允许注册，去掉:registerable就可以了
+  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
+end
+*** 手动添加后台用户
+- 参考: http://stackoverflow.com/questions/4660565/how-to-manually-create-a-new-user-and-user-session-in-devise
+@user = User.new(:email => 'test@example.com', :password => 'password', :password_confirmation => 'password')
+@user.save
+- 实例:
+admin = AdminAccount.new(email: email, password: password, password_confirmation: password)
+admin.save
+
