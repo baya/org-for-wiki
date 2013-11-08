@@ -1,5 +1,5 @@
 * Description
-从migration文件中提取database schema文档
+  从migration文件中提取database schema文档
 ** DONE 建立description项目
 ** DONE 提交description 0.0.0 gem
 ** version
@@ -76,3 +76,4 @@ join_count       | integer | default:0             | 参赛人数
 **** 对mongoid支持
 *** v2.2
 **** 对datamapper支持
+     
