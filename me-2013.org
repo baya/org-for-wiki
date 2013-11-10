@@ -2913,6 +2913,7 @@
 **** DONE 后台: 查看比赛投票结果不正确
 **** DONE 后台: 重玩heat的时候，图片在此heat的投票计数清零
 **** DONE weibo-app: 显示目录logo
+**** DONE 后台: admin_accounts增加role, 暂时有admin, sponsor两种role
 **** 后台: 赞助商权限
 ***** TODO 后台登录模型由account改为user
 ***** user有三种角色 user, sponsor, admin，其中sponsor和admin可以访问rails_admin
@@ -2975,5 +2976,11 @@
 **** 后台: 我上传图片的比赛，我投票的比赛需要去掉重复
 **** 后台: 研究ios, android的push技术
 *** 游泳: 自由泳1000米
-*** 博客: rack编程实践 kill@ kill@ kill@ @ @ @ @ @ @ @ @ @ @ @
-    
+*** 博客: rack编程实践
+** 11-09
+*** DONE 配置emacs
+*** DONE 博客: rack编程实践
+*** 洗衣服
+*** 游泳: 1000米
+** 11-10
+*** 博客: 图解rack应用

@@ -76,3 +76,4 @@ join_count       | integer | default:0             | 参赛人数
 **** 对mongoid支持
 *** v2.2
 **** 对datamapper支持
+     
