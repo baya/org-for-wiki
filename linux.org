@@ -232,3 +232,5 @@ $ useradd -d /home/jim -m jim  # jim有自己的home目录
 $ passwd jim
 $ vi /etc/ssh/sshd_config
 $ sudo service ssh reload
+** link
+ln -s .emacs.d/emacs.profile .emacs

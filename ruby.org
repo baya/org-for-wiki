@@ -1420,3 +1420,6 @@ end
 admin = AdminAccount.new(email: email, password: password, password_confirmation: password)
 admin.save
 
+
+** 在mavericks上安装jeklly失败
+

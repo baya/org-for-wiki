@@ -73,3 +73,9 @@ http://emacser.com/about.htm
 - C-c C-a Insert Attribute
 ** Setting up Emacs as Ruby development environment on OSX
 http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx
+** Mac下Emacs中文显示字体设置
+- 参考: http://blog.csdn.net/junc74/article/details/7685783
+(set-fontset-font
+    (frame-parameter nil 'font)
+    'han
+    (font-spec :family "Hiragino Sans GB" ))
