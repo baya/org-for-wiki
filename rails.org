@@ -579,7 +579,6 @@ others.exists?                    |   X   |    X     |    X
 others.distinct                   |   X   |    X     |    X
 others.uniq                       |   X   |    X     |    X
 others.reset                      |   X   |    X     |    X
-
 *** 实际例子
 sponsor.create_user(name: name,
 		email: email,
@@ -662,7 +661,16 @@ class RenameTalbeEntityInviteLogsToHeatInviteLogs < ActiveRecord::Migration
   end
 end
 
-
 ** migration transformations
 *** change_column(table_name, column_name, type, options)
 - change_column :contests, :created_kind, :integer, default: 1  # 默认为赞助商创建
+** assert
+*** assert( test, [msg] ), Ensures that test is true
+*** assert_not( test, [msg] ), Ensures that test is false.
+*** assert_equal( expected, actual, [msg] ), Ensures that expected == actual is true.
+*** assert_raises( exception1, exception2, ... ) { block }, Ensures that the given block raises one of the given exceptions.
+- 实例
+    assert_raise NoEnoughVoteOrCreditError do
+      credit_log = FchkCredits::Vote << {user: user, entity: entity}
+    end
+

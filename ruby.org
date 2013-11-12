@@ -1420,6 +1420,68 @@ end
 admin = AdminAccount.new(email: email, password: password, password_confirmation: password)
 admin.save
 
-
 ** 在mavericks上安装jeklly失败
+** lambda的闭包现象
+1.
+ aa = 2
+ ff = -> {aa = 3}
+ puts ff.call  #=> 3
+ puts aa       #=> 3
+
+2.
+  ff = -> {aa = 3}
+  aa = 2
+  puts ff.call #=> 3
+  puts aa #=> 2
+
+3.
+
+  def ff &p
+    p.call
+  end
+
+  a = 2
+
+  ff do
+    a = 3
+  end
+
+  puts a  #=> 3
+
+*** 实例
+class PkVoteController < ServiceApiController
+
+  before_filter :find_user, :find_heat
+
+  Test = false
+
+  def create
+    voted_entity = Entity.where(sn: params[:voted_entity_sn]).first
+    lose_entity = Entity.where(sn: params[:lose_entity_sn]).first
+    vote = Vote.new
+    
+    begin
+      transaction do
+        vote = CreateVote << {user: @user, entity: voted_entity, heat: @heat}
+        RecordJoinContest << {user: @user, contest: voted_entity.contest}
+
+        KeepPkScore << {vote: vote, voted_entity: voted_entity, lose_entity: lose_entity}
+        FchkCredits::Vote << {user: @user, entity: voted_entity}
+      end
+
+      render json: VoteCreateJson << {
+        vote: vote,
+        voted_entity: voted_entity,
+        lose_entity: lose_entity
+      },
+      callback: params[:callback]
+
+    rescue FchkCredits::NoEnoughVoteOrCreditError => e
+      Rails.logger.info("--捕获异常:--#{e.inspect}--")
+      render json: RespJson << {code: -11}, callback: params[:callback]
+    end
+
+  end
+  
+end
 
