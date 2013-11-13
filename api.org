@@ -1,3 +1,14 @@
 * API
 ** 设计api最佳实践
 - http://www.startupcto.com/backend-tech/building-an-api-best-practices
+** doks.io
+- http://doks.io/#/api
+
+
+** 写api文档的工具
+- 参考: http://ruby-china.org/topics/14820
+API Doc: Gollum
+Web Deployment：Strano
+Code Review: Barkeep
+- https://github.com/tripit/slate
+- https://github.com/gollum/gollum
