@@ -12,3 +12,5 @@ Web Deployment：Strano
 Code Review: Barkeep
 - https://github.com/tripit/slate
 - https://github.com/gollum/gollum
+** api设计
+- http://ruby-china.org/topics/15173
