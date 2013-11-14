@@ -1485,3 +1485,18 @@ class PkVoteController < ServiceApiController
   
 end
 
+** 并行赋值
+- 参考: http://ruby-china.org/topics/15526
+
+CSV.foreach("csv_path") do |row|
+  title, desc, name ... = row
+  # handle title, desc, name
+end
+
+CSV.foreach("csv_path") do |(title, desc, name, *rest)|
+  # handle title, desc, name
+end
+
+_, date, urlname, _ = *filename.match(/\A#{tmp_path}\/_posts\/(\d+-\d+-\d+)-(.+)(\.[^.]+)\z/)
+
+a,b,c,d = *0...4
