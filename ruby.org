@@ -205,7 +205,8 @@ http://patshaughnessy.net
 
 ** yaml
 http://www.yaml.org/YAML_for_ruby.html#simple_sequence
-
+*** yaml加载配置文件
+YAML.load_file(config_file)[environment]
 ** rake
 *** run tasks from within rake tasks
 参考: http://stackoverflow.com/questions/577944/how-to-run-rake-tasks-from-within-rake-tasks
@@ -1500,3 +1501,9 @@ end
 _, date, urlname, _ = *filename.match(/\A#{tmp_path}\/_posts\/(\d+-\d+-\d+)-(.+)(\.[^.]+)\z/)
 
 a,b,c,d = *0...4
+
+** push ios and android notifications
+- 参考: http://blog.wellwith.me/how-to-send-ios-and-android-notifications-from-your-rails-backend
+*** gems
+- grocer https://github.com/grocer/grocer
+- GCM https://github.com/spacialdb/gcm
