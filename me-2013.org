@@ -3343,11 +3343,19 @@
 *** DONE 户外: 整理包裹 
 ** 11-18
 *** 非常好看:规范文档
+**** getContest
 **** 用户注册
 **** 注册短信验证
 **** heatCreate
 *** 非常好看
+**** DONE 后台: 如果图片数少于448张，关闭组的时候不进行淘汰
+**** DONE 后台: queryLottery报500
+**** DONE 后台: 创建heat失败时，返回失败原因
 **** TODO 后台: 研究ios的消息推送技术
+***** DONE 生成Apple Push Notification service SSL (Sandbox)
+***** DONE 生成pem文件
+***** 获取ios device token
+***** 将消息发送到ios device
 **** 后台: 研究android的消息推送技术
 **** 后台: 发送推送消息给中奖用户
 **** 后台: 与新空气的优惠券数据建立联系，发放优惠券
