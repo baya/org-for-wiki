@@ -1510,3 +1510,5 @@ penssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert certs/ios/pus
 *** gems
 - grocer https://github.com/grocer/grocer
 - GCM https://github.com/spacialdb/gcm
+
+*** String upcase, downcase

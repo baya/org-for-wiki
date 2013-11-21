@@ -3584,22 +3584,26 @@
 *** DONE 自由泳: 500米
 ** 11-21
 *** 非常好看:规范文档
+**** 创建图片分享 createEntityShare
 **** getContest
 **** 用户注册
 **** 注册短信验证
 **** heatCreate
+**** mainContestRank
 *** 非常好看
-**** 分享: contest_shares
-**** 分享: 创建图片分享记录，返回客户端图片分享链接
+**** DONE 分享: contest_shares
+**** DONE 分享: 比赛分享者获得相应的积分
+**** DONE 分享: 创建图片分享，返回客户端图片分享链接
+**** DONE 分享: entity_shares
+**** DONE 分享: shared entity for point
+**** DONE 分享: android share link
 **** 分享: 获取平台信息weibo-app
-**** 分享: 获取平台信息ios
-**** 分享: 根据平台生成对应的url链接和页面信息 ios
+**** DONE 分享: 获取平台信息ios
+**** DONE 分享: 根据平台生成对应的url链接和页面信息 ios
 **** 分享: 根据平台生成对应的url链接和页面信息 weibo-app
-**** 分享: entity_shares
-**** TODO 分享: 比赛分享者获得相应的积分
-**** 分享: 图片分享者获得相应的积分
-**** 分享: 比赛分享
-**** 分享: 图片分享
+**** DONE 分享: 图片分享者获得相应的积分
+**** DONE 分享: 比赛分享
+**** DONE 分享: 图片分享
 **** 后台: 研究ios的消息推送技术
 ***** DONE 生成Apple Push Notification service SSL (Sandbox)
 ***** DONE 生成pem文件
