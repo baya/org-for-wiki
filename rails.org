@@ -673,8 +673,16 @@ end
     assert_raise NoEnoughVoteOrCreditError do
       credit_log = FchkCredits::Vote << {user: user, entity: entity}
     end
-*** user agent
+** user agent
 - 参考: http://stackoverflow.com/questions/7650799/is-there-a-way-to-detect-user-agent-in-rails-3-1
 request.env["HTTP_USER_AGENT"]
 #or
 request.user_agent
+
+** current absolute url
+- 参考: http://stackoverflow.com/questions/2165665/how-do-i-get-the-current-url-in-ruby-on-rails
+For Rails 3.2 or Rails 4 you should use request.original_url to get the current URL. More detail.
+
+For Rails 3: You want "#{request.protocol}#{request.host_with_port}#{request.fullpath}", since request.url is now deprecated.
+
+For Rails 2: You want request.url instead of request.request_uri. This combines the protocol (usually http://) with the host, and request_uri to give you the full address.
