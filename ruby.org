@@ -1505,6 +1505,7 @@ a,b,c,d = *0...4
 ** push ios and android notifications
 - 参考: http://blog.wellwith.me/how-to-send-ios-and-android-notifications-from-your-rails-backend
 - 参考: http://blog.csdn.net/lifengzhong/article/details/7737028
+- 参考: http://tanqisen.github.io/blog/2013/02/27/ios-push-apns/
 *** 检查连接是否正确
 penssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert certs/ios/push_development.pem -key certs/ios/push_development.pem 
 *** gems

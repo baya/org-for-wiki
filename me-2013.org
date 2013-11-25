@@ -3755,21 +3755,25 @@
 *** DONE 自由泳: 500米
 ** 11-25
 *** 非常好看:规范文档
-**** getContest
+**** DONE deviceCreate 创建设备
+**** DONE getContest
 **** 用户注册
 **** 注册短信验证
 **** heatCreate
 **** mainContestRank
 *** 非常好看
-**** 分享: 短链接服务
-**** 推送: 存储设备token
-**** 推送: ios 生产环境
+**** DONE 彩票: 补追漏追彩票
+**** DONE 推送: 创建devices表
+**** DONE 推送: 存储设备token
+**** DONE bug: 赞助商比赛不显示目录赞助
+**** DONE 后台: 现有用户和qq账号绑定
+**** 后台: 现有用户和weibo账号绑定
 **** bug: 赞助商比赛没有生成用户
-**** bug: 赞助商比赛不显示目录赞助
+**** 推送: ios 生产环境
 **** 抽奖: 产生中奖名单 
 **** 分享: 获取平台信息weibo-app
 **** 分享: 根据平台生成对应的url链接和页面信息 weibo-app
-**** 后台: 研究ios的消息推送技术
+**** DONE 后台: 研究ios的消息推送技术
 ***** 获取ios device token
 ***** 将消息发送到ios device
 **** 后台: 研究android的消息推送技术
