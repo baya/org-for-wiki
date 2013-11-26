@@ -3837,9 +3837,11 @@
 **** heatCreate
 **** mainContestRank
 *** 非常好看
-**** 后台: 现有用户和weibo账号绑定
+**** DONE 后台: 现有用户和weibo账号绑定
+**** DONE 分享: 分享页面包含ios, android app 下载链接
+- https://itunes.apple.com/cn/app/fchk.it/id530059583?mt=8
+**** TODO 推送: 使用 http://docs.arrownock.com/guides/anpush/android
 **** bug: 赞助商比赛没有生成用户
-**** 推送: ios 生产环境
 **** 抽奖: 产生中奖名单 
 **** 分享: 获取平台信息weibo-app
 **** 分享: 根据平台生成对应的url链接和页面信息 weibo-app
