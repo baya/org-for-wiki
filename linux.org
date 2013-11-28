@@ -73,6 +73,8 @@ curl --upload-file uploadfile http://www.example.com/receive.cgi
 *** curl post
 实例:
 curl -d "user_sn=7ef7a96c-ab63-46f1-a476-3b3ada5979d1&contest_sn=83acaf89-c80a-4489-b384-f49343b750e7&share_to=短信" http://fchk.funguide.com.cn/createContestShare
+curl -b cookies.txt -c cookies.txt -F 'payload={"android":{"alert":"abc1","sound":"default"}}' -F 'anids=["3V9dF4nGXiRiKaybjC4AOqUo7vCwnjbf", "3V9dF4nGXiRiKaybjC4AOqUo7vCwnjbf"]' http://localhost:3000
+curl -b cookies.txt -c cookies.txt -F 'payload={"android":{"alert":"abc1","sound":"default"}}' -F 'channel=[ddd, aaa]' http://api.arrownock.com/v1/push_notification/send.json\?key\=pfWtXedjnvQLFbAGavtEFoFVauI8J1Qe
 *** 资源
 http://curl.haxx.se/docs/httpscripting.html
 
