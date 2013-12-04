@@ -1516,3 +1516,39 @@ openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert certs/ios/pu
 ** unicorn
 unicorn_rails -c config/unicorn.rb -D
 unicorn_rails -c config/unicorn.rb -D -E staging
+** ruby 2.0
+- 参考: http://blog.marc-andre.ca/2013/02/23/ruby-2-by-example/
+*** __dir__
+# Ruby 1.8:
+require File.dirname(__FILE__) + "/lib"
+File.read(File.dirname(__FILE__) + "/.Gemfile")
+
+# Ruby 1.9:
+require_relative 'lib'
+File.read(File.dirname(__FILE__) + '/.config')
+
+# Ruby 2.0
+require_relative 'lib' # no need to use __dir__ for this!
+File.read(__dir__ + '/.config')
+
+*** bsearch
+# Ruby 2.0:
+ary = [0, 4, 7, 10, 12]
+ary.bsearch {|x| x >=   6 } #=> 7
+ary.bsearch {|x| x >= 100 } #=> nil
+
+# Also on ranges, including ranges of floats:
+(Math::PI * 6 .. Math::PI * 6.5).bsearch{|f| Math.cos(f) <= 0.5}
+
+*** to_h
+# Ruby 2.0:
+Car = Struct.new(:make, :model, :year) do
+  def build
+    #...
+  end
+end
+car = Car.new('Toyota', 'Prius', 2014)
+car.to_h # => {:make=>"Toyota", :model=>"Prius", :year=>2014}
+nil.to_h # => {}
+
+
