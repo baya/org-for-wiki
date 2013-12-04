@@ -1,0 +1,135 @@
+* DSL
+** dsl实践
+class CreditAllocation
+  class NonSurveyContest < self
+
+    set :name, '非调查类比赛积分分配'
+
+    credit_at less_than: 25_000, 0
+    credit_at between: [50_000, 25_000], 100
+    credit_at more_than: [50_000], 200 
+
+    def credit
+      get_or_set :credit do
+        if view_count < 25_000
+          0
+        elsif view_count  < 50_000 and view_count >= 25_000
+          100
+        elsif view_count >= 50_000
+          200
+        end
+      end
+    end
+
+    def rates
+      get_or_set :rates do
+        if view_count < 25_000
+          [0.10, 0.45, 0.30, 0.15]
+        elsif view_count < 50_000 and view_count >= 25_000
+          [0.10, 0.35, 0.25, 0.30]
+        elsif view_count >= 50_000
+          [0.10, 0.25, 0.18, 0.47]
+        end
+      end
+    end
+
+  end
+end
+
+
+class CreditAllocation
+  class SurveyContest < self
+
+    set :name, '调查类比赛积分分配'
+
+    def credit
+      get_or_set :credit do
+        if view_count < 50_00
+          0
+        elsif view_count < 50_00 and view_count >= 10_000
+          50
+        elsif view_count >= 10_000 and view_count <= 50_000
+          200
+        elsif view_count >= 50_000 and view_count < 100_000
+          300
+        end
+      end
+    end
+
+    def rates
+      get_or_set :rates do
+        [1.0, 0.0]
+      end
+    end
+
+  end
+end
+
+class CreditAllocation < Dun::Activity
+
+  data_reader :contest
+
+  def call
+    if credit <= 0
+      Rails.logger.info("--#{name}:#{credit}--退出积分分配--")
+      return
+    end
+
+    Rails.logger.info("获得积分分配表:#{allocate_mapper.inspect}")
+
+    allocate_mapper.each {|mapper| allocate_credit mapper }
+
+  end
+
+  private
+  
+  def allocate_credit(mapper)
+    rate, user = mapper
+    num = credit * rate
+    remark = "获得#{rate}积分: #{num}"
+    user.increment!(:point_count, num)
+    CreditLog.create(user_id: user.id, name: name, remark: remark, num: num)
+  end
+
+  # 积分分配映射
+  def allocate_mapper
+    get_or_set :allocate_mapper do
+      mapper = []
+      rates[0...-1].each_with_index {|rate, index|
+        mapper << [rate, top_user(index)]
+      }
+      
+      rest_count = entities_top.offset(mapper.size - 1).count
+      rest_rate = rest_count > 0 ? rates[-1] / rest_count : 0
+
+      if rest_rate > 0
+        entities_top.offset(mapper.size - 1).each {|entity|
+          mapper << [rest_rate, entity.try(:user)]
+        }
+      end
+
+      mapper.delete_if {|m| m[0].nil? or m[0] <= 0 or m[1].nil? }
+
+      mapper
+      
+    end
+    
+  end
+
+  def top_user(num)
+    num == 0 ? creator : entities_top[num - 1].try(:user)
+  end
+  
+  def entities_top
+    contest.entities.order('score desc')
+  end
+
+  def creator
+    @creator ||= contest.user
+  end
+
+  def view_count
+    contest.view_count
+  end
+
+end
