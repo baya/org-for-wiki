@@ -1552,3 +1552,11 @@ car.to_h # => {:make=>"Toyota", :model=>"Prius", :year=>2014}
 nil.to_h # => {}
 
 
+
+** ruby版本管理工具
+- rvm
+- rbenv  https://github.com/sstephenson/rbenv
+- chruby https://github.com/postmodern/chruby
+- rbfu
+- ry
+- ruby-version
