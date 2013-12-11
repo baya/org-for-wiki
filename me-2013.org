@@ -4424,4 +4424,8 @@ api: 用户花费一个积分直接查看图片
 - 查看比赛结果
   发现问题: 有一个为零分的图片没有被淘汰，而分数比它高的图片反而被淘汰了
 **** 积分规则: 邀请朋友
+*** DONE dun: Activity改为Land
+*** DONE dun: 0.2.0发布
+*** 阅读: http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/
+*** 阅读: Ruby设计模式
 *** 自由泳: 600米
