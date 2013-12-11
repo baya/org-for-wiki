@@ -1552,7 +1552,6 @@ car.to_h # => {:make=>"Toyota", :model=>"Prius", :year=>2014}
 nil.to_h # => {}
 
 
-
 ** ruby版本管理工具
 - rvm
 - rbenv  https://github.com/sstephenson/rbenv
@@ -1560,3 +1559,43 @@ nil.to_h # => {}
 - rbfu
 - ry
 - ruby-version
+** inject
+- http://www.gabekoss.com/blog/2013/12/why_i_love_ruby_enumerable_inject
+*** sum
+def sum(arr)
+  arr.inject(:+)
+end
+
+sum([1,2,3])
+#=> 6
+*** Counting
+def count_of_words(str)
+  str.split(' ').inject(Hash.new(0)) do |count_hash, word|
+    count_hash[word] += 1
+    count_hash
+  end
+end
+
+count_of_words('ruby is awesome and ruby is great')
+# => {"ruby"=>2, "is"=>2, "awesome"=>1, "and"=>1, "great"=>1} 
+
+*** Inverted Index
+# Assumes an input format like: 
+#
+#    { "/path/to/file" => "contents of file" }
+#
+#  
+# #  Edit: Thanks to reddit users jhawthorn and treetrouble for suggesting the
+# #  improvement of using `Hash.new{|h,k| h[k] = []}` instead of `Hash.new([])` to
+# #  greatly improve the readability of this example.
+# 
+def inverted_index_for(file_hash)
+  h = Hash.new { |h,k| h[k] = [] }
+
+  file_hash.inject(h) do |index_array,(filename,contents)|
+    contents.split(' ').uniq.each do |word|
+      index_array[word] << filename
+    end
+    index_array
+  end
+end

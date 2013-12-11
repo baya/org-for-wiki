@@ -733,6 +733,113 @@ class PostsControllerTest < ActionController::TestCase
 end
 
 *** 断言
+** Function Test Example 01
+require 'test_helper'
+
+class PlayHeatControllerTest < ActionController::TestCase
+
+  def setup
+    @user = CreateUser << {name: 'jim', email: 'jim@mail.com'}
+    @contest = CreateContest << {title: 'Title', user: @user, mode: 0}
+    @entities = []
+    8.times do
+      entity = CreateEntity << {user: @user, contest: @contest}
+      @entities << entity
+    end
+    GroupingContestEntities << {contest: @contest}
+    @round = @contest.rounds.where(level: 1).first
+    @heat = CreateHeat << {round: @round}
+  end
+
+  test '要扣积分等于0，无确认' do
+    vote_num, credit_num = init_user 50, 100
+    
+    get :index, {user_sn: @user.sn, heat_sn: @heat.sn, choices: choices}
+    res = JSON.parse @response.body
+    @user.reload
+    assert_equal res["status"]["resp_code"], 0
+    assert_equal @user.vote_count, vote_num - 1
+    assert_equal @user.point_count, credit_num
+  end
+
+  test '要扣积分大于0, 无确认' do
+    init_user 50, 100
+    duplicate_vote_entity
+    vote_num, credit_num = init_user 50, 100
+
+    get :index, {user_sn: @user.sn, heat_sn: @heat.sn, choices: choices}
+
+    res = JSON.parse @response.body
+    @user.reload
+    puts res.inspect
+    assert_equal res["status"]["resp_code"], -47
+    assert_equal @user.vote_count, vote_num
+    assert_equal @user.point_count, credit_num
+  end
+
+  test '要扣积分等于0, 有确认' do
+    vote_num, credit_num = init_user 50, 100
+    
+    get :index, {user_sn: @user.sn, heat_sn: @heat.sn, choices: choices, confirmed: 't'}
+    res = JSON.parse @response.body
+    @user.reload
+    assert_equal res["status"]["resp_code"], 0
+    assert_equal @user.vote_count, vote_num - 1
+    assert_equal @user.point_count, credit_num
+  end
+
+  test '要扣积分大于0, 有确认' do
+    init_user 50, 100
+    duplicate_vote_entity
+    vote_num, credit_num = init_user 50, 100
+
+    get :index, {user_sn: @user.sn, heat_sn: @heat.sn, choices: choices, confirmed: 't'}
+
+    res = JSON.parse @response.body
+    @user.reload
+    puts res.inspect
+    assert_equal res["status"]["resp_code"], 0
+    assert_equal @user.vote_count, vote_num - 1
+    assert_equal @user.point_count, credit_num - 1
+  end
+
+  private
+  
+  def choices
+    choice_index_maps = [[0, 1], [3, 2], [7, 5], [6, 4], [1, 3], [5, 6], [6, 3]]
+    choice_index_maps.map {|mapper|
+      l, r = mapper
+      [@entities.fetch(l).sn, @entities.fetch(r).sn]
+    }
+  end
+
+  def duplicate_vote_entity num = 1
+    entity = Entity.where(sn: choices.last.last).first
+    num.times do
+      CreateVote << {entity: entity, user: @user}
+      consume_credit = CalCreditForVote << {user: @user, entity: entity}
+      FchkCreditsVote << {user: @user, entity: entity, consume_credit: consume_credit}
+    end
+  end
+
+  def init_user(vote_num, credit_num)
+    set_user_vote_count vote_num
+    set_user_credit_count credit_num
+    return vote_num, credit_num
+  end
+
+  def set_user_vote_count(num)
+    @user.vote_count = num
+    @user.save
+  end
+
+  def set_user_credit_count(num)
+    @user.point_count = num
+    @user.save
+  end
+
+end
+
 ** 开发环境下让应用跑在80端口下
 sudo ssh devuser@localhost -L 80:localhost:3000 -N
 - 参考: http://ruby-china.org/topics/16094
