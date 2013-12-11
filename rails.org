@@ -733,3 +733,6 @@ class PostsControllerTest < ActionController::TestCase
 end
 
 *** 断言
+** 开发环境下让应用跑在80端口下
+sudo ssh devuser@localhost -L 80:localhost:3000 -N
+- 参考: http://ruby-china.org/topics/16094
