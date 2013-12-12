@@ -1506,8 +1506,11 @@ a,b,c,d = *0...4
 - 参考: http://blog.wellwith.me/how-to-send-ios-and-android-notifications-from-your-rails-backend
 - 参考: http://blog.csdn.net/lifengzhong/article/details/7737028
 - 参考: http://tanqisen.github.io/blog/2013/02/27/ios-push-apns/
-*** 检查连接是否正确
+*** 生成证书
+openssl pkcs12 -in exported_certificate.p12 -out certificate.pem -nodes -clcerts
+*** 检查连接和证书是否正确
 openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert certs/ios/push_development.pem -key certs/ios/push_development.pem 
+openssl s_client -connect gateway.push.apple.com:2195 -cert certs/ios/push_staging.pem -key certs/ios/push_staging.pem 
 *** gems
 - grocer https://github.com/grocer/grocer
 - GCM https://github.com/spacialdb/gcm
