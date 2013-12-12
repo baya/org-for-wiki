@@ -4464,6 +4464,7 @@ api: 用户花费一个积分直接查看图片
 - 查看比赛结果
   发现问题: 有一个为零分的图片没有被淘汰，而分数比它高的图片反而被淘汰了
 **** 积分规则: 邀请朋友
-*** 阅读: http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/
-*** TODO dun: README.md使用7 Patterns to Refactor Fat ActiveRecord Models的例子
-*** 自由泳: 600米
+*** DONE 阅读: http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/
+*** DONE dun: README.md使用7 Patterns to Refactor Fat ActiveRecord Models的例子
+*** DONE 自由泳: 600米
+*** 博客: 一步一步DSL, 增加DSL常用实现技术汇总这个小节
