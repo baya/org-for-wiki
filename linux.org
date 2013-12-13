@@ -7,7 +7,8 @@
 -rw-rw-r-- 1   hope 123   Feb 03 15:36   file.txt
 -	rw	rw-	r--	    1	hope	123	Feb 03 15:36	file.txt
 File  owner   group everyone else links	owner	size	mod date	file name
-
+- 例子:
+sudo chmod -R go=rwx upload
 ** 创建软链接
 ln -s source-file target-file
 实际用例

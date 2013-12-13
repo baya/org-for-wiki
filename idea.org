@@ -7,9 +7,10 @@
 - 项目地址: https://github.com/baya/Gstar
 - 对github上标过星号的项目进行标签标记，以便于自己能够搜索到合适的代码
 - github api http://developer.github.com/
-** 写一篇介绍dsl的博客
+** TODO 写一篇介绍dsl的博客
 将你所面对的问题域抽象化为一个类
 *** 题目暂定为: 一步一步dsl
+** 写一篇介绍session和cookie的博客
 ** docX: 制作一款文档收集工具类似于dash
 - 基于浏览器
 - 用户可以自己写插件，收集管理相应的文档
@@ -31,7 +32,6 @@
 试着参考brew的代码
 - 用于快速搭建外部测试api
 
-** api文档服务
 ** 学习python
 ** log error
 - 人不能犯相同的错误
@@ -45,7 +45,6 @@
 - 帮助人们记帐
 - 集成自己的记帐语言
 
-** 用ruby写一个 https://github.com/jdan/cleaver
 ** 做一个中小型网站的搜索解决方案
 ** 研究搜索技术
 *** sphinx http://sphinxsearch.com/

@@ -1,0 +1,15 @@
+* PHP
+** Mac OS X 使用内置的PHP (OS X 10.8.5)
+- http://www.php.net/manual/zh/install.macosx.bundled.php
+1. sudo nano /private/etc/apache2/httpd.conf
+2. 将下面两行的注释去掉
+# LoadModule php5_module libexec/httpd/libphp5.so
+# AddModule mod_php5.c
+3. 确保将所需要的文件扩展名解析为 PHP (mac 已经做好了)
+4. 确保 DirectoryIndex 加载了所需的默认索引文件 (mac 已经做好了)
+5. 设置 php.ini 的位置或者使用默认的位置 (mac 已经做好了)
+6. 定位或者设置 DocumentRoot 通常情况下默认的路径是 /Library/WebServer/Documents 但是可以根据需要在 httpd.conf中设置为任何其他目录
+7. 在DocumentRoot下创建一个phpinfo()文件, 代码: <?php phpinfo(); ?>
+8. 重启 Apache, sudo apachectl graceful
+php -v 可以检查当前运行的 PHP 的版本
+9. 用浏览器访问 http://localhost/info.php

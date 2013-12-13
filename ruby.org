@@ -1605,3 +1605,87 @@ end
 
 ** tips
 - http://globaldev.co.uk/2013/09/ruby-tips-part-1/
+*** Exceptions
+def safe_fetch(array, index)
+  array[index] rescue nil
+end
+
+def safe_fetch(array, index)
+  array[index]
+rescue NoMethodError
+  nil
+end
+
+def safe_fetch(array, index)
+  array[index]
+rescue => e
+  @logger.debug(e) if @logger
+  nil
+end
+
+module MyProject
+  class Error < StandardError
+  end
+
+  class NotFoundError < Error
+  end
+
+  class PermissionError < Error
+  end
+end
+
+rescue MyProject::Error
+
+module MyProject
+  Error = Module.new
+
+  class NotFoundError < StandardError
+    include Error
+  end
+
+  class PermissionError < StandardError
+    include Error
+  end
+
+  def get(path)
+    response = do_get(path)
+    raise NotFoundError, "#{path} not found" if response.code == "404"
+    response.body
+  rescue SocketError => e
+    e.extend(Error)
+    raise e
+  end
+end
+
+begin
+  get("/example")
+rescue MyProject::Error => e
+  e   #=> MyProject::NotFoundError or SocketError
+end
+
+*** Modules
+module Mod
+  def one
+    "This is one"
+  end
+  module_function :one
+end
+
+require "net/http"
+module APIClient
+  @http = Net:HTTP.new("example.com", 80)
+  @user = "user"
+  @pass = "pass"
+
+  def self.get(path)
+    request = Net::HTTP::Get.new(path)
+    request.basic_auth(@user, @pass)
+    @http.request
+  end
+end
+
+response = APIClient.get("/api/examples")
+
+** rubyconf
+*** confreaks
+- 2013: http://www.confreaks.com/events/rubyconf2013
