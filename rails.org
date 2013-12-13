@@ -843,3 +843,41 @@ end
 ** 开发环境下让应用跑在80端口下
 sudo ssh devuser@localhost -L 80:localhost:3000 -N
 - 参考: http://ruby-china.org/topics/16094
+
+** assets
+- https://rails-assets.org
+*** Getting started
+Gemfile
+source 'https://rubygems.org'
++source 'https://rails-assets.org'
+
+ gem 'rails'
+
+ group :assets do
+   gem 'sass-rails'
+   gem 'uglifier'
+   gem 'coffee-rails'
++  gem 'rails-assets-bootstrap'
++  gem 'rails-assets-angular'
++  gem 'rails-assets-leaflet'
+ end
+
+application.js
+
+ //= require_self
++//= require bootstrap
++//= require angular
++//= require leaflet
+ //= require_tree .
+ //= require_tree shared
+application.css
+
+ /*
+  *= require_self
++ *= require bootstrap
++ *= require leaflet
+  *= require_tree .
+  *= require_tree shared
+  */
+
+

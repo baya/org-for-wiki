@@ -1602,3 +1602,6 @@ def inverted_index_for(file_hash)
     index_array
   end
 end
+
+** tips
+- http://globaldev.co.uk/2013/09/ruby-tips-part-1/
