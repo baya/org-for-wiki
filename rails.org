@@ -881,3 +881,182 @@ application.css
   */
 
 
+
+** asset pipeline
+- http://guides.rubyonrails.org/asset_pipeline.html
+*** disable asset pipeline
+- config.assets.enabled = false
+或者
+- rails new appname --skip-sprockets
+  
+*** cache
+- Fingerprinting is a technique that makes the name of a file dependent on the contents of the file
+global-908e25f4bf641868d8683022a5b62f54.css
+- Fingerprinting is enabled by default for production and disabled for all other environments
+config.assets.digest
+
+*** app/assets
+此文件下的所有文件由Sprockets处理，并且在production环境下这些文件从来不会直接发给客户端
+如果文件需要预处理，那么应该把文件放到app/assets下
+public下的文件都将作为静态文件对待
+
+*** disable controller asset
+## config/application.rb
+config.generators do |g|
+  g.assets false
+end
+
+*** asset organization
+- app/assets owned by the application
+- lib/assets developer own libraries' code 不会被预编译
+- vendor/assets owned by outside entities, such as code for JavaScript plugins and CSS frameworks 不会被预编译
+
+*** search paths
+
+app/assets/javascripts/home.js
+lib/assets/javascripts/moovinator.js
+vendor/assets/javascripts/slider.js
+vendor/assets/somepackage/phonebox.js
+
+would be referenced in a manifest like this:
+
+//= require home
+//= require moovinator
+//= require slider
+//= require phonebox
+
+Assets inside subdirectories can also be accessed.
+
+//= require sub/something
+
+- view the search path: Rails.application.config.assets.paths 
+
+- add additional asset paths:
+  # config/application.rb
+  config.assets.paths << Rails.root.join("lib", "videoplayer", "flash")
+
+*** index files
+
+lib/assets/library_name, the file lib/assets/library_name/index.js
+
+//= require library_name
+
+*** link to assets
+<%= stylesheet_link_tag "application" %>
+<%= javascript_include_tag "application" %>
+<%= image_tag "rails.png" %>
+<%= image_tag "icons/rails.png" %>
+
+*** css and erb
+.class { background-image: url(<%= asset_path 'image.png' %>) }
+#logo { background: url(<%= asset_data_uri 'logo.png' %>) }
+
+*** css and Sass
+image-url("rails.png") becomes url(/assets/rails.png)
+image-path("rails.png") becomes "/assets/rails.png".
+
+*** JavaScript/CoffeeScript and ERB
+$('#logo').attr({
+  src: "<%= asset_path('logo.png') %>"
+});
+
+$('#logo').attr src: "<%= asset_path('logo.png') %>"
+
+*** manifest files and directives
+- compresses: Rails.application.config.assets.compress = true
+- You can have as many manifest files as you need. For example the admin.css and admin.js manifest could contain the JS and CSS files that are used for the admin section of an application.
+
+**** js manifest
+// ...
+//= require jquery
+//= require jquery_ujs
+//= require_tree .
+
+- The require_tree directive tells Sprockets to recursively include all JavaScript files in the specified directory into the output
+
+require_tree 加载文件时没有特定的顺序，所以要限定顺序加载文件时，可以使用require
+
+**** css manifest
+/* ...
+*= require_self
+*= require_tree .
+*/
+
+/* ...
+*= require reset
+*= require layout
+*= require chrome
+*/
+
+*** preprocessing
+- app/assets/stylesheets/projects.css.scss.erb is first processed as ERB, then SCSS, and finally served as CSS
+- app/assets/javascripts/projects.js.coffee.erb is processed as ERB, then CoffeeScript, and served as JavaScript
+
+*** in development
+
+//= require core
+//= require projects
+//= require tickets
+
+将生成下面的html
+
+<script src="/assets/core.js?body=1"></script>
+<script src="/assets/projects.js?body=1"></script>
+<script src="/assets/tickets.js?body=1"></script>
+
+若关闭调试: config.assets.debug = false，则生成，
+
+<script src="/assets/application.js"></script>
+
+*** in production
+
+<%= javascript_include_tag "application" %>
+<%= stylesheet_link_tag "application" %>
+
+将生成与下面类似的html
+
+<script src="/assets/application-908e25f4bf641868d8683022a5b62f54.js"></script>
+<link href="/assets/application-4dd5b109ee3439da54f5bdfd78a80473.css" media="screen" rel="stylesheet" />
+
+*** precompiling assets
+Compiled assets are written to the location specified in config.assets.prefix. By default, this is the public/assets directory
+
+$ RAILS_ENV=production bundle exec rake assets:precompile
+
+If you have other manifests or individual stylesheets and JavaScript files to include, you can add them to the precompile array in config/application.rb:
+
+- config.assets.precompile += ['admin.js', 'admin.css', 'swfObject.js']
+
+*** local precompilation
+
+There are several reasons why you might want to precompile your assets locally. Among them are:
+
+You may not have write access to your production file system.
+You may be deploying to more than one server, and want to avoid the duplication of work.
+You may be doing frequent deploys that do not include asset changes.
+
+In config/environments/development.rb, place the following line:
+
+config.assets.prefix = "/dev-assets"
+You will also need this in application.rb:
+
+config.assets.initialize_on_precompile = false
+
+*** css compression
+- config.assets.css_compressor = :yui
+
+*** javascript compression
+- config.assets.js_compressor = :uglifier
+
+Note that config.assets.compress must be set to true to enable JavaScript compression
+
+*** changing the assets path
+
+The public path that Sprockets uses by default is /assets.
+
+This can be changed to something else:
+
+config.assets.prefix = "/some_other_path"
+
+
+

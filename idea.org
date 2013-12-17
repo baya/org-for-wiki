@@ -10,6 +10,18 @@
 ** TODO 写一篇介绍dsl的博客
 将你所面对的问题域抽象化为一个类
 *** 题目暂定为: 一步一步dsl
+** 研究gem
+- 比如研究bundler，然后写几篇相关的博客，和一个简化的bundler
+*** sprockets
+**** 熟悉代码
+**** 写相关博客
+**** 做试验
+**** 写一个简化版本的sprockets
+*** bundler
+*** rake
+*** devise
+*** sinatra
+*** rails
 ** 写一篇介绍session和cookie的博客
 ** docX: 制作一款文档收集工具类似于dash
 - 基于浏览器
