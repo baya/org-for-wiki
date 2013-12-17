@@ -4552,11 +4552,11 @@ api: 用户花费一个积分直接查看图片
 *** DONE 博客: 一步一步DSL, 增加DSL常用实现技术汇总这个小节
 <<<<<<< HEAD
 ** 12-17
-*** TODO 学习: [asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
+*** DONE 学习: [asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
 *** 非常好看
 **** DONE 开发例会
-**** 抽奖: 返回中奖机率
-**** UGC比赛只能有一个类别
+**** TODO 抽奖: 返回进入奖池的机率
+**** DONE UGC比赛只能有一个类别
 **** 赞助商注册
 **** 赞助商登录
 **** 赞助商创建比赛
