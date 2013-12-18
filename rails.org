@@ -376,7 +376,9 @@ Rails.logger.auto_flushing = true
 
 ** form_tag
 - form_tag('/upload', multipart: true)
-
+<%= form_tag('/posts') do -%>
+  <div><%= submit_tag 'Save' %></div>
+<% end -%>
 ** helper_method
 #application_controller.rb
 def current_user
@@ -1060,3 +1062,6 @@ config.assets.prefix = "/some_other_path"
 
 
 
+
+** ActiveRecord::Base.attribte_names
+Pa::Prebet.attribute_names
