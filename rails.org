@@ -1065,3 +1065,13 @@ config.assets.prefix = "/some_other_path"
 
 ** ActiveRecord::Base.attribte_names
 Pa::Prebet.attribute_names
+
+** html escape
+ps = "terms: 要追期数<br/>" +
+     "termeds: 已追期数<br/>" +
+     "status: 0 可追, 1 终止追号"
+
+<p><%=raw ps %></p>
+<p><%= ps.html_safe %></p>
+
+
