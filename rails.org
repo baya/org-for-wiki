@@ -1073,5 +1073,10 @@ ps = "terms: 要追期数<br/>" +
 
 <p><%=raw ps %></p>
 <p><%= ps.html_safe %></p>
-
+** spring preloader
+- https://github.com/jonleighton/spring
+*** 常用命令
+- spring rake test test/functional/posts_controller_test.rb
+- spring status
+- bundle exec spring binstub --all
 
