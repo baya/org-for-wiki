@@ -396,7 +396,7 @@ background-image:url(<%=asset_path "admin/logo.png"%>);
 
 ** autoload_path
 - config.autoload_paths += Dir[Rails.root.join('app', 'lib')]
-** rename_column						  :migration:
+** rename_column						  
 rename_column :table_name, :old_column, :new_column
 ** Bug
 *** rails4.0好像无法加载有定义Protocol常量的文件
@@ -883,7 +883,6 @@ application.css
   */
 
 
-
 ** asset pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
 *** disable asset pipeline
@@ -1062,7 +1061,6 @@ config.assets.prefix = "/some_other_path"
 
 
 
-
 ** ActiveRecord::Base.attribte_names
 Pa::Prebet.attribute_names
 
@@ -1080,3 +1078,15 @@ ps = "terms: 要追期数<br/>" +
 - spring status
 - bundle exec spring binstub --all
 
+** Avoiding duplicate results when you do a join
+   users = User.find(:all, 
+  :conditions => ['users.id = lists.user_id'], 
+  :joins => [:lists], 
+  :order => 'users.username')
+You can cause each found user to appear only once by using the :select option with “DISTINCT”:
+
+users = User.find(:all, 
+  :conditions => ['users.id = lists.user_id'], 
+  :joins => [:lists], 
+  :select => 'DISTINCT users.*'
+  :order => 'users.username')
