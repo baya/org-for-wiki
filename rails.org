@@ -882,7 +882,6 @@ application.css
   *= require_tree shared
   */
 
-
 ** asset pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
 *** disable asset pipeline
@@ -1060,7 +1059,6 @@ This can be changed to something else:
 config.assets.prefix = "/some_other_path"
 
 
-
 ** ActiveRecord::Base.attribte_names
 Pa::Prebet.attribute_names
 
@@ -1090,3 +1088,10 @@ users = User.find(:all,
   :joins => [:lists], 
   :select => 'DISTINCT users.*'
   :order => 'users.username')
+** 反模式
+*** http://devblog.reverb.com/post/70344683203/5-architecture-anti-patterns-and-solutions-for-large
+1. Service objects with many responsibilities
+2. Un-namespaced classes in the domain layer
+3. Including modules to share functionality
+4. Any kind of dynamic method invocation
+5. Do Not User Rails Helpers

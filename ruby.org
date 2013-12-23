@@ -1711,3 +1711,10 @@ new_gem.gemspec
 gem build new_gem.gemspec
 4. 发布
 gem push new_gem-0.0.1.gem
+
+** 查看父类
+class A
+end
+A.superclass  # Object
+A.superclass.superclass # BaseObject
+A.superclass.superclass.superclass # nil
