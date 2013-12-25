@@ -14,7 +14,9 @@
 
 ** 基础教程
 - http://rogerdudler.github.io/git-guide/index.zh.html
-
+- http://git-scm.com/book/zh/
+*** 彩色的git输出
+- git config color.ui true
 ** 建立git服务
 - git init --bare
 ** git log
@@ -78,3 +80,13 @@ end
 .Trashes
 ehthumbs.db
 Thumbs.db   
+
+** git init --bare 创建一个裸仓库
+- 参考: http://git-scm.com/book/zh/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2-Git
+mkdir fchk-api-doc.git
+cd fchk-api-doc.git
+git init --bare --shared
+
+# 推送代码到远程裸仓库
+git remote add fchk-staging ssh://staging.fchk.com/home/jgm/git/fchk-api-doc.git/
+git push fchk-staging master

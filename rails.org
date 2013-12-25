@@ -735,6 +735,55 @@ class PostsControllerTest < ActionController::TestCase
 end
 
 *** 断言
+*** Integration Testing 集成测试
+- http://guides.rubyonrails.org/testing.html#integration-testing     
+- generate integration test: rails generate integration_test user_flows
+**** 例子
+require 'test_helper'
+ 
+class UserFlowsTest < ActionDispatch::IntegrationTest
+  fixtures :users
+ 
+  test "login and browse site" do
+ 
+    # User david logs in
+    david = login(:david)
+    # User guest logs in
+    guest = login(:guest)
+ 
+    # Both are now available in different sessions
+    assert_equal 'Welcome david!', david.flash[:notice]
+    assert_equal 'Welcome guest!', guest.flash[:notice]
+ 
+    # User david can browse site
+    david.browses_site
+    # User guest can browse site as well
+    guest.browses_site
+ 
+    # Continue with other assertions
+  end
+ 
+  private
+ 
+  module CustomDsl
+    def browses_site
+      get "/products/all"
+      assert_response :success
+      assert assigns(:products)
+    end
+  end
+ 
+  def login(user)
+    open_session do |sess|
+      sess.extend(CustomDsl)
+      u = users(user)
+      sess.https!
+      sess.post "/login", username: u.username, password: u.password
+      assert_equal '/welcome', path
+      sess.https!(false)
+    end
+  end
+end
 ** Function Test Example 01
 require 'test_helper'
 

@@ -1718,3 +1718,15 @@ end
 A.superclass  # Object
 A.superclass.superclass # BaseObject
 A.superclass.superclass.superclass # nil
+
+** gem 安装错误
+*** charlock_holmes
+ubuntu charlock_holmes (0.6.9.4) Failed to build gem native extension
+ref: http://stackoverflow.com/questions/15553792/error-installing-charlock-holmes-error-installing-gitlab 
+fix: sudo apt-get install libicu-dev
+
+** 使用slate生成api doc
+1. cd slate_project
+2. rake build
+3. cp -r build /path/to/rails_app/public/apidoc
+4. visit http://localhost:3000/apidoc/build/index.html
