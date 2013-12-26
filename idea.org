@@ -44,12 +44,10 @@
 试着参考brew的代码
 - 用于快速搭建外部测试api
 
-** 学习python
 ** log error
 - 人不能犯相同的错误
 - 记录你的错误 
 
-** 生成review diff文件的脚本
 ** 使用ground + angularJS写一个通用的web后台
 *** 参考
 - http://jsfiddle.net/SAWsA/11/
@@ -76,11 +74,22 @@
 - Earley algorithm
 - Hiero
 
-** 内部搜索引擎
-- 内部爬虫
-- 倒排序
-- 相关算法
-- 中文分词
+** DONE 生成review diff文件的脚本
+namespace :git do
+  task :diff do
+    tt = Time.now
+    yt = Time.now - (60 * 60 * 24)
+    ys = "\"#{yt.strftime('%F')} 23:59:59\""
+    ts = tt.strftime('%Y%m%d')
+    log = `git log --until=#{ys} -1`
+    commit = log.split("\n")[0].split(' ')[1]
+    diff = `git diff #{commit}`
+    puts diff
+    File.open("code_review_#{ts}.diff", 'w+') {|f| f.write diff }
+  end
+end
+执行 rake git:diff就能对今天的代码进行review了
+    
 ** rails amout 其他rack应用甚至本身
 ** ruby-china智能筛选帖子的工具
 ** 研究eventmachine
@@ -130,3 +139,5 @@ echo -e '\a'
 ** 对dun做一个并发性能测试
 ** 用程序模拟下红眼，蓝眼问题
 - http://www.zhihu.com/question/21262930
+
+** 基于git的个人管理工具，即PM工具
