@@ -196,6 +196,20 @@ loop do
   puts "Processing #{enum.next}..."
 end
 
+*** loop & break
+
+def hope_rounds_level num
+  level = 1
+
+  loop do
+    level += 1
+    num /= 4 
+    break if num < count_for_next_round
+  end
+
+  level
+end
+
 *** Easiest Database
 require 'pstore'
 require 'yaml/store'
