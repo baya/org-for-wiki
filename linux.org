@@ -240,3 +240,6 @@ $ vi /etc/ssh/sshd_config
 $ sudo service ssh reload
 ** link
 ln -s .emacs.d/emacs.profile .emacs
+
+** killall
+$ killall rake
