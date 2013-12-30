@@ -7,9 +7,12 @@
 - 项目地址: https://github.com/baya/Gstar
 - 对github上标过星号的项目进行标签标记，以便于自己能够搜索到合适的代码
 - github api http://developer.github.com/
-** TODO 写一篇介绍dsl的博客
+** DONE 写一篇介绍dsl的博客
 将你所面对的问题域抽象化为一个类
 *** 题目暂定为: 一步一步dsl
+** 写一个应用iCheck
+** 完善ground文档
+** ground发布1.0版本
 ** 研究gem
 - 比如研究bundler，然后写几篇相关的博客，和一个简化的bundler
 *** sprockets
