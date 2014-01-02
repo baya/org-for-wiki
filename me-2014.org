@@ -1,3 +1,12 @@
 * 2014
 ** 01-01
 *** DONE my-ios-tech: https://github.com/baya/my-tech-ios/issues/1 Tutorial: Basics
+** 01-02
+*** 非常好看比赛平台web:
+**** 创建比赛
+***** TODO 基本表单: 创建类型, 标题, 描述, 所属分类, 开始日期, 比赛时长，规则
+***** 高级表单: 比赛logo, 宣传logo, 自定义图，比赛图片, 奖品
+**** 将api文档迁移到slate
+***** 比赛预览
+*** dun: 增加 << 用法的说明
+*** my-tech-ios: https://github.com/baya/my-tech-ios/issues/2
