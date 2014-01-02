@@ -1107,7 +1107,6 @@ This can be changed to something else:
 
 config.assets.prefix = "/some_other_path"
 
-
 ** ActiveRecord::Base.attribte_names
 Pa::Prebet.attribute_names
 
@@ -1124,7 +1123,7 @@ ps = "terms: 要追期数<br/>" +
 - spring rake test test/functional/posts_controller_test.rb
 - spring status
 - bundle exec spring binstub --all
-
+- spring rails g controller partner/contests
 ** Avoiding duplicate results when you do a join
    users = User.find(:all, 
   :conditions => ['users.id = lists.user_id'], 
@@ -1144,3 +1143,53 @@ users = User.find(:all,
 3. Including modules to share functionality
 4. Any kind of dynamic method invocation
 5. Do Not User Rails Helpers
+** turn off automatic stylesheet/javascript generation
+config.generators.stylesheets = false
+config.generators.javascripts = false
+
+** content_for, layout
+- 参考: http://guides.rubyonrails.org/layouts_and_rendering.html
+<html>
+  <head>
+  <%= yield :head %>
+  </head>
+  <body>
+  <%= yield %>
+  </body>
+</html>
+
+<% content_for :head do %>
+  <title>A simple page</title>
+<% end %>
+ 
+<p>Hello, Rails!</p>
+
+*** 实例
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= yield :head_title %>
+    <%= yield :head_meta %>
+    <%= stylesheet_link_tag    "application", media: "all"%>
+    <%= javascript_include_tag "application"%>
+    <%= csrf_meta_tags %>
+    <meta charset='utf-8' />
+  </head>
+  
+  <body>
+    
+    <%= yield %>
+    
+  </body>
+</html>
+
+<% content_for :head_title do %>
+  <title>创建赞助商比赛</title>
+<% end %>
+
+
+
+** xxx_field_tag
+<%= text_field_tag 'contest[title]' %>
+<%= text_area_tag 'contest[description]' %>

@@ -110,6 +110,10 @@ find ~/sed_test -type d -print | sed 's;/Users/kkjgm/sed_test;/Users/kkjgm/sed_t
 sed '/^#/d' quotas | sort > quotas.sorted
 以'='为分隔符
 sed -e 's=/.*==' -e 's=^\([^:]*\):\(.*\) \([^ ]*\)=\1:\3, \2='
+
+将(../images/pic_bg2.jpg) 替换成 (<%= asset_path "pic_bg2.jpg"%>)
+sed 's/(..\/images\/\(.*\))/(<%= asset_path "\1" %>)/' < common.css > common.css.erb
+  
 ** 标准输入
 - 可以用于表示标准输入
 ** cut

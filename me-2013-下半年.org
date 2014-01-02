@@ -3654,3 +3654,20 @@ a在group_1属于高分被保留, b在group_2属于低分被淘汰，所以会�
 *** dun: 增加 << 用法的说明
 *** my-ios-tech: https://github.com/baya/my-tech-ios/issues/1 Tutorial: Basics
 *** DONE 将彩票追号的cucumber feature打包成一个项目
+** 12-31
+*** 非常好看
+**** DONE 比赛QA测试脚本
+***** DONE 产生200个heat后，增加500张图，依次循环10次 
+**** DONE 研究微博app流程图
+**** DONE 抽奖模拟测试
+**** bug: 赞助商比赛没有生成用户
+**** 写一个简单的赞助商管理界面
+**** 将api文档迁移到slate
+*** 非常好看比赛平台web:
+**** 创建比赛
+***** TODO 基本表单: 创建类型, 标题, 描述, 所属分类, 开始日期, 比赛时长，规则
+***** 高级表单: 比赛logo, 宣传logo, 自定义图，比赛图片, 奖品
+***** 比赛预览
+*** 游泳: 1000米
+*** dun: 增加 << 用法的说明
+*** my-ios-tech: https://github.com/baya/my-tech-ios/issues/1 Tutorial: Basics
