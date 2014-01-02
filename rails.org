@@ -674,7 +674,7 @@ end
 - 实例
     assert_raise NoEnoughVoteOrCreditError do
       credit_log = FchkCredits::Vote << {user: user, entity: entity}
-    end
+      end
 ** user agent
 - 参考: http://stackoverflow.com/questions/7650799/is-there-a-way-to-detect-user-agent-in-rails-3-1
 request.env["HTTP_USER_AGENT"]
@@ -895,6 +895,42 @@ end
 sudo ssh devuser@localhost -L 80:localhost:3000 -N
 - 参考: http://ruby-china.org/topics/16094
 
+** Test Controllers
+*** assert_redirected_to
+class Partner::PreviewContestsControllerTest < ActionController::TestCase
+
+  def setup
+    @title = "比赛预览01"
+    @description = "比赛预览01 500个字以内"
+  end
+
+  test "比赛预览" do
+    post :create, {contest: {title: @title, description: @description}}
+    preview_contest = PreviewContest.order('created_at DESC').first
+
+    assert_redirected_to partner_preview_contest_landing_path(preview_contest)
+  end
+  
+end
+
+*** assert_response, assigns
+class Partner::PreviewContestLandingControllerTest < ActionController::TestCase
+
+  def setup
+    @title = "比赛推广预览测试01"
+    @description = "description"
+    @preview_contest = CreatePreviewContest << {title: @title, description: @description}
+  end
+
+  test "比赛推广预览" do
+    get :show, {id: @preview_contest.id}
+    
+    assert_response :success
+    assert_not_nil assigns(:preview_contest)
+  end
+  
+end
+
 ** assets
 - https://rails-assets.org
 *** Getting started
@@ -948,7 +984,6 @@ config.assets.digest
 此文件下的所有文件由Sprockets处理，并且在production环境下这些文件从来不会直接发给客户端
 如果文件需要预处理，那么应该把文件放到app/assets下
 public下的文件都将作为静态文件对待
-
 *** disable controller asset
 ## config/application.rb
 config.generators do |g|

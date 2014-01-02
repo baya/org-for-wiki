@@ -2,11 +2,21 @@
 ** 01-01
 *** DONE my-ios-tech: https://github.com/baya/my-tech-ios/issues/1 Tutorial: Basics
 ** 01-02
+*** 非常好看api:
+**** DONE bug: 没有group可供分配
 *** 非常好看比赛平台web:
+**** 研究微博app设计规范: http://open.weibo.com/wiki/应用设计规范
 **** 创建比赛
-***** TODO 基本表单: 创建类型, 标题, 描述, 所属分类, 开始日期, 比赛时长，规则
+***** 基本表单: 创建类型, 标题, 描述, 所属分类, 开始日期, 比赛时长，规则
 ***** 高级表单: 比赛logo, 宣传logo, 自定义图，比赛图片, 奖品
+***** 预览
+****** DONE 创建一个比赛预览表，此表的包含那些需要预览的字段
+****** DONE 预览记录创建后，进入比赛推广预览
+****** TODO 点击下一页进入比赛内容预览
+****** 加密记录的数字id
+****** 预览确认后，将比赛预览记录转变成正式的比赛
 **** 将api文档迁移到slate
 ***** 比赛预览
 *** dun: 增加 << 用法的说明
 *** my-tech-ios: https://github.com/baya/my-tech-ios/issues/2
+*** css: http://www.cnblogs.com/winter-cn/archive/2013/05/11/3072929.html

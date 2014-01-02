@@ -918,6 +918,9 @@ whenever --set 'environment=development' --update-crontab
 不加--update-conrtab选项的话，仅仅查看生成的crontab语法
 whenever --set 'environment=development' 
 
+**** detect environment
+@environment
+
 ** tempfile
 - good practice
 require 'tempfile'
