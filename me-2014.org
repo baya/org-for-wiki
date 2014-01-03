@@ -20,3 +20,18 @@
 *** dun: 增加 << 用法的说明
 *** my-tech-ios: https://github.com/baya/my-tech-ios/issues/2
 *** css: http://www.cnblogs.com/winter-cn/archive/2013/05/11/3072929.html
+** 01-03
+*** 非常好看比赛平台web:
+**** DONE 研究微博app设计规范: http://open.weibo.com/wiki/应用设计规范
+**** 创建比赛
+***** 基本表单: 创建类型, 标题, 描述, 所属分类, 开始日期, 比赛时长，规则
+***** 高级表单: 比赛logo, 宣传logo, 自定义图，比赛图片, 奖品
+***** 预览
+****** TODO 点击下一页进入比赛内容预览
+****** 加密记录的数字id
+****** 预览确认后，将比赛预览记录转变成正式的比赛
+**** 将api文档迁移到slate
+***** 比赛预览
+*** dun: 增加 << 用法的说明
+*** my-tech-ios: https://github.com/baya/my-tech-ios/issues/2
+*** DONE css: http://www.cnblogs.com/winter-cn/archive/2013/05/11/3072929.html
