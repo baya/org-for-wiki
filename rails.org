@@ -1228,3 +1228,4 @@ config.generators.javascripts = false
 ** xxx_field_tag
 <%= text_field_tag 'contest[title]', @preview_contest.title %>
 <%= text_area_tag 'contest[description]', @preview_contest.description %>
+<%= hidden_field_tag "preview_contest_id", @preview_contest.id %>
