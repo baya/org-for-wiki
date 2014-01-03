@@ -39,5 +39,5 @@
 **** 部署一套CI系统
 *** 将api文档迁移到slate
 *** dun: 增加 << 用法的说明
-*** my-tech-ios: https://github.com/baya/my-tech-ios/issues/2
+*** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/2
 *** DONE css: http://www.cnblogs.com/winter-cn/archive/2013/05/11/3072929.html
