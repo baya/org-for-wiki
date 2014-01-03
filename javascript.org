@@ -177,3 +177,127 @@ var intvalue = Math.round( floatvalue );
 ** jsonp
 *** 资源
 - http://json-p.org/
+
+** DRY技术
+*** 复用其他对象的方法
+
+var ContestForm = {
+    
+    form_methods: ['POST', 'GET'],
+    
+    init: function(data){
+	this.path = data.path;
+	this.btn  = data.btn;
+	this.form = data.form;
+	this.method = data.method.toUpperCase();
+	return this;
+    }
+}
+
+
+// ContestPreview.init({
+//   path: "/contest/preview",
+//   btn: $btn,
+//   form: $form,
+//   method: 'POST'
+// }).call();
+var ContestPreview = {
+
+    form_methods: ContestForm.form_methods,
+
+    init: ContestForm.init,
+
+    call: function(){
+	var $form = this.form,
+	path = this.path,
+	method = this.method,
+	form_methods = this.form_methods,
+	scope = this;
+	
+	this.btn.bind('click', function(event){
+	    event.preventDefault();
+	    $form.attr('action', path);
+	    if (form_methods.indexOf(method) != -1)
+	    {
+		$form.attr('method', method);
+	    } else if (method) {
+		$form.append(scope.buildExtraFormMethod())
+	    }
+	    $form.submit();
+	})
+    },
+
+    buildExtraFormMethod: function(){
+	return "<input name=\"_method\" type=\"hidden\" value=\"" + this.method + "\" />";
+    }
+
+};
+
+
+var ContestConfirm = {
+
+    form_methods: ContestForm.form_methods,
+
+    init: ContestForm.init,
+
+    call: function(){
+	console.dir(data);
+    }
+};    
+
+** extend
+参考: http://www.crossyou.cn/javascript-extend-collected-in-several-versions-of-custom-functions.htm
+1.
+function extend(destination, source) {
+    var value	 = null;
+    var property = null;
+    if (destination && source) {
+        for (property in source) {
+            value = source[property];
+            if (value !== undefined) {
+                destination[property] = value;
+            }
+        }
+        if (source.hasOwnProperty && source.hasOwnProperty('toString')) {
+            destination.toString = source.toString;
+        }
+    }
+    return destination;
+}
+
+2.
+function extend(destination, source){
+    var value 	 = null;
+    var property = null;
+    if (destination && source) {
+	    for (property in source) {
+		   value = source[property];
+		   if (value !== undefined) {
+			   destination[property] = (typeof(value) == 'object' && !(value.nodeType) && !(value instanceof Array)) ? extend({}, value) : value;
+		   }
+	    }
+	    if (source.hasOwnProperty && source.hasOwnProperty('toString')) {
+	    	destination.toString = source.toString;
+	    }
+    }
+    return destination;
+}  
+
+3.
+function extend(destination, source) {
+    var value	 = null;
+    var property = null;
+    if (destination && source) {
+        for (property in source) {
+            value = source[property];
+            if (value !== undefined) {
+                destination[property] = value;
+            }
+        }
+        var sourceIsEvt = typeof window.Event == "function" && source instanceof window.Event;
+        if (!sourceIsEvt && source.hasOwnProperty && source.hasOwnProperty('toString')) {
+            destination.toString = source.toString;
+        }
+    }
+    return destination;
+}

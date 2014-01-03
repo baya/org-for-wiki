@@ -1226,5 +1226,5 @@ config.generators.javascripts = false
 
 
 ** xxx_field_tag
-<%= text_field_tag 'contest[title]' %>
-<%= text_area_tag 'contest[description]' %>
+<%= text_field_tag 'contest[title]', @preview_contest.title %>
+<%= text_area_tag 'contest[description]', @preview_contest.description %>
