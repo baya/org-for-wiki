@@ -41,3 +41,9 @@
 *** dun: 增加 << 用法的说明
 *** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/2
 *** DONE css: http://www.cnblogs.com/winter-cn/archive/2013/05/11/3072929.html
+** 01-04
+*** DONE dun: 增加 << 用法的说明
+*** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/3
+*** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/4
+*** TODO my-tech-ios: https://github.com/baya/my-tech-ios/issues/5
+*** 游泳: 1000米
