@@ -45,6 +45,6 @@
 *** DONE dun: 增加 << 用法的说明
 *** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/3
 *** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/4
-*** TODO my-tech-ios: https://github.com/baya/my-tech-ios/issues/5
+*** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/5
 *** 给一步一步dsl写个大纲
-*** 游泳: 1000米
+*** DONE 游泳: 1000米
