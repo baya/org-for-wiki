@@ -49,8 +49,8 @@
 *** 给一步一步dsl写个大纲
 *** DONE 游泳: 1000米
 ** 01-05
-*** 给一步一步dsl写个大纲
+*** DONE 给一步一步dsl写个大纲
 *** my-tech-ios: https://github.com/baya/my-tech-ios/issues/7
-*** 读gem: spring
+*** 读gem: spring @
 *** 做一个简化版本的spring
-*** 游泳: 1000米
+*** DONE 游泳: 1000米
