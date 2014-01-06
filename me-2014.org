@@ -56,7 +56,6 @@
 *** DONE 游泳: 1000米
 ** 01-06
 *** 非常好看比赛平台web:
-**** 清理错误的测试
 **** 创建类型
 **** 所属分类
 **** 比赛开始日期和比赛时长
@@ -65,8 +64,10 @@
 **** 上传比赛图片
 **** 上传奖品信息
 **** 上传奖品图片
+*** 非常好看
+**** 清理错误的测试
 **** 部署一套CI系统
-*** 将api文档迁移到slate
+**** 将api文档迁移到slate
 *** my-tech-ios: https://github.com/baya/my-tech-ios/issues/7
 *** dun: 增加 << 用法的说明
 *** 阅读: http://blog.groupbuddies.com/posts/20-clean-architecture
