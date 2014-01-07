@@ -68,7 +68,7 @@
 **** 清理错误的测试
 **** 部署一套CI系统
 **** 将api文档迁移到slate
-*** my-tech-ios: https://github.com/baya/my-tech-ios/issues/7
-*** dun: 增加 << 用法的说明
-*** 阅读: http://blog.groupbuddies.com/posts/20-clean-architecture
-*** 游泳: 1000米
+*** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/7
+*** DONE dun: 增加 << 用法的说明
+*** DONE 阅读: http://blog.groupbuddies.com/posts/20-clean-architecture
+*** DONE 游泳: 1000米
