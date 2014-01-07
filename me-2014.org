@@ -72,3 +72,18 @@
 *** DONE dun: 增加 << 用法的说明
 *** DONE 阅读: http://blog.groupbuddies.com/posts/20-clean-architecture
 *** DONE 游泳: 1000米
+** 01-07
+*** 非常好看比赛平台web:
+**** TODO 所属分类
+**** 比赛开始日期和比赛时长
+**** 上传比赛封面
+**** 上传活动宣传
+**** 上传比赛图片
+**** 上传奖品信息
+**** 上传奖品图片
+*** 非常好看
+**** 清理错误的测试
+**** 部署一套CI系统
+**** 将api文档迁移到slate
+*** my-tech-ios: https://github.com/baya/my-tech-ios/issues/7
+*** 游泳: 500米
