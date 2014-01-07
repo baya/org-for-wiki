@@ -1250,3 +1250,77 @@ preview_contest.categories #=> ['汽车', '娱乐']
 
 ** 本地化
 *** rails-i18n
+** assets, sprockets实例
+- 加入一个第三方插件My97DatePicker
+
+插件的目录结构:
+├── WdatePicker.js
+├── calendar.js
+├── index.css
+├── lang
+│   ├── en.js
+│   ├── zh-cn.js
+│   └── zh-tw.js
+├── skin
+│   ├── Calendar_Icon_Button_u180_normal.png
+│   ├── Thumbs.db
+│   ├── WdatePicker.css
+│   ├── datePicker.gif
+│   ├── default
+│   │   ├── datepicker.css
+│   │   └── img.gif
+│   └── whyGreen
+│       ├── bg.jpg
+│       ├── datepicker.css
+│       └── img.gif
+└── ?\200?\217\221?\214\205
+    ├── lang
+    │   ├── en.js
+    │   ├── zh-cn.js
+    │   └── zh-tw.js
+    ├── readme.txt
+    └── skin
+        ├── WdatePicker.css
+        ├── datePicker.gif
+        ├── default
+        │   ├── datepicker.css
+        │   └── img.gif
+        └── whyGreen
+            ├── bg.jpg
+            ├── datepicker.css
+            └── img.gif
+
+1. 在vender/assets目录下创建一个文件夹date ps: 其实可以起任意一个合法的名字
+2. 将My97DatePicker这个插件拷贝到 date 目录下
+3. 在app/assets/javascripts/application.js加入 //=require My97DatePicker,
+此时application.js文件类似于:   
+//= require jquery
+//= require jquery_ujs
+//= require My97DatePicker
+//= require_tree .
+4. 在app/assets/stylesheets/application.css加入 *=require My97DatePicker,
+此时application.css文件类似于:
+/*
+ *= require_self
+ *= require_tree .
+ *= require My97DatePicker
+ */
+
+5. 在vender/assets/date/My97DatePicker 目录下加入 index.js, index.css两个文件, 内容分别为:
+//
+//
+//
+//= require_tree .
+
+和
+
+/*
+ *
+ *
+ *
+ *= require_tree ./skin
+ */
+   
+   
+
+
