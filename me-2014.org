@@ -86,5 +86,5 @@
 **** 修复失败的测试
 **** 部署一套CI系统
 **** 将api文档迁移到slate
-*** my-tech-ios: https://github.com/baya/my-tech-ios/issues/7
-*** 游泳: 500米
+*** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/7
+*** DONE 游泳: 500米

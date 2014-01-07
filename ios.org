@@ -4,8 +4,25 @@
 - http://www.shinobicontrols.com/blog/posts/2013/09/19/introducing-ios7-day-by-day/
 *** iPhone Tutorials
 - http://www.raywenderlich.com/tutorials
-
 *** http://www.raywenderlich.com
 *** http://iosdevelopertips.com
 *** 苹果官方教程
 - https://developer.apple.com/library/ios/navigation/
+
+** storyboard modal segue
+- 参考: http://stackoverflow.com/questions/9732499/how-to-dismiss-a-modal-that-was-presented-in-a-uistoryboard-with-a-modal-segue
+- 参考: http://stackoverflow.com/questions/12561735/what-are-unwind-segues-for-and-how-to-use-them
+两个button，一个Cancel, 另一个Done
+点击Cancel，放弃当前操作，返回到前面的view
+点击Done, 保存当前操作，返回到前面的view
+
+When you perform an unwind segue, you need to specify an action, which is an action method of the view controller you want to unwind to.
+
+// 在目标view controller实现下面的方法
+- (IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue
+{
+}
+
+然后在storyboard里建立Cancel到unwindbyCancelToThisViewController的一个segue
+
+
