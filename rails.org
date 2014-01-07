@@ -1229,3 +1229,24 @@ config.generators.javascripts = false
 <%= text_field_tag 'contest[title]', @preview_contest.title %>
 <%= text_area_tag 'contest[description]', @preview_contest.description %>
 <%= hidden_field_tag "preview_contest_id", @preview_contest.id %>
+
+** saving arrays, hashes, and other non-mappable objects in text columns
+- 参考: http://api.rubyonrails.org/classes/ActiveRecord/Base.html
+class AddCategoriesToPreviewContests < ActiveRecord::Migration
+  def change
+    add_column :preview_contests, :categories, :text  # 用于保存序列化后的比赛类别数组
+  end
+end
+
+class PreviewContest < ActiveRecord::Base
+  serialize :categories
+
+end
+
+preview_contest = PreviewContest.create(categories: ['汽车', '娱乐'], title: '比赛')
+preview_contest.categories #=> ['汽车', '娱乐']
+
+
+
+** 本地化
+*** rails-i18n
