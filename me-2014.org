@@ -103,5 +103,7 @@
 **** 修复失败的测试
 **** 部署一套CI系统
 **** 将api文档迁移到slate
-*** my-tech-ios: https://github.com/baya/my-tech-ios/issues/8
+**** 给前端搭建vagrant
+*** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/8
+*** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/9
 *** 游泳: 500米
