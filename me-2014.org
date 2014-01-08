@@ -88,3 +88,20 @@
 **** 将api文档迁移到slate
 *** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/7
 *** DONE 游泳: 500米
+** 01-08
+*** 非常好看比赛平台web:
+**** TODO 上传比赛封面
+***** DONE 图片预览
+***** DONE 每次上传只允许上传一张
+***** 图片上传时的动态效果
+***** 组件化
+**** 上传活动宣传
+**** 上传比赛图片
+**** 上传奖品信息
+**** 上传奖品图片
+*** 非常好看
+**** 修复失败的测试
+**** 部署一套CI系统
+**** 将api文档迁移到slate
+*** my-tech-ios: https://github.com/baya/my-tech-ios/issues/8
+*** 游泳: 500米

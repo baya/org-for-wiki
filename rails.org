@@ -1321,6 +1321,6 @@ preview_contest.categories #=> ['汽车', '娱乐']
  *= require_tree ./skin
  */
    
-   
+*** 加入swfupload   
 
 

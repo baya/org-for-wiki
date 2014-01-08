@@ -3,10 +3,44 @@
 - usermod -a -G ftp tony
 
 ** chmod
+*** 基本结构
+    mode         ::= clause [, clause ...]
+    clause       ::= [who ...] [action ...] action
+    action       ::= op [perm ...]
+    who          ::= a | u | g | o
+    op           ::= + | - | =
+    perm         ::= r | s | t | w | x | X | u | g | o
+    
+The who symbols ``u'', ``g'', and ``o'' specify the user, group, and other parts of the mode bits, respectively.  The who symbol ``a'' is equivalent to
+     ``ugo''.
+
+The perm symbols represent the portions of the mode bits as follows:
+
+           r       The read bits.
+           s       The set-user-ID-on-execution and set-group-ID-on-execution bits.
+           t       The sticky bit.
+           w       The write bits.
+           x       The execute/search bits.
+           X       The execute/search bits if the file is a directory or any of the execute/search bits are set in the original (unmodified) mode.  Operations
+                   with the perm symbol ``X'' are only meaningful in conjunction with the op symbol ``+'', and are ignored in all other cases.
+           u       The user permission bits in the original mode of the file.
+           g       The group permission bits in the original mode of the file.
+           o       The other permission bits in the original mode of the file.
+
+755
+     u=rwx,go=rx
+     u=rwx,go=u-w  make a file readable/executable by everyone and writable by the owner only.
+     
 *** 文件权限属性
 -rw-rw-r-- 1   hope 123   Feb 03 15:36   file.txt
--	rw	rw-	r--	    1	hope	123	Feb 03 15:36	file.txt
+-	rw-	rw-	r--	    1	hope	123	Feb 03 15:36	file.txt
 File  owner   group everyone else links	owner	size	mod date	file name
+
+第一个符号: -，表示这是个文件，如果此符号是d则表示这是个目录
+第二个符号: rw-,  表示用户对此文件有读写权限
+第三个符号: rw-, 表示用户所在的组对此文件有读写权限
+第四个符号: r--, 表示所有的人对此文件有读权限
+
 - 例子:
 sudo chmod -R go=rwx upload
 ** 创建软链接

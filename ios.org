@@ -9,6 +9,8 @@
 *** 苹果官方教程
 - https://developer.apple.com/library/ios/navigation/
 
+** 博客
+*** http://yangfei.me/
 ** storyboard modal segue
 - 参考: http://stackoverflow.com/questions/9732499/how-to-dismiss-a-modal-that-was-presented-in-a-uistoryboard-with-a-modal-segue
 - 参考: http://stackoverflow.com/questions/12561735/what-are-unwind-segues-for-and-how-to-use-them
