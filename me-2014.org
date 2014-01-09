@@ -107,3 +107,19 @@
 *** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/8
 *** DONE my-tech-ios: https://github.com/baya/my-tech-ios/issues/9
 *** 游泳: 500米
+** 01-09
+*** 彩票追号: 新彩种上线
+*** 非常好看比赛平台web:
+**** 上传比赛封面
+***** 图片上传时的动态效果
+***** 组件化
+**** 上传活动宣传
+**** 上传比赛图片
+**** 上传奖品信息
+**** 上传奖品图片
+*** 非常好看
+**** 修复失败的测试
+**** 部署一套CI系统
+**** 将api文档迁移到slate
+**** 给前端搭建vagrant
+*** 游泳: 500米
