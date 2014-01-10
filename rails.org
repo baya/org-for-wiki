@@ -1224,7 +1224,6 @@ config.generators.javascripts = false
 <% end %>
 
 
-
 ** xxx_field_tag
 <%= text_field_tag 'contest[title]', @preview_contest.title %>
 <%= text_area_tag 'contest[description]', @preview_contest.description %>
@@ -1245,7 +1244,6 @@ end
 
 preview_contest = PreviewContest.create(categories: ['汽车', '娱乐'], title: '比赛')
 preview_contest.categories #=> ['汽车', '娱乐']
-
 
 
 ** 本地化
@@ -1322,5 +1320,6 @@ preview_contest.categories #=> ['汽车', '娱乐']
  */
    
 *** 加入swfupload   
-
+** 复杂的form表单参数
+<input type='text' name='contest[entities[][image_url]]' />
 
