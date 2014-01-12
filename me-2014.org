@@ -156,5 +156,4 @@
 *** 读gem: spring
 ** 01-12
 *** DONE 游泳: 1000米
-*** 读gem: spring
 *** DONE 学习ios开发
