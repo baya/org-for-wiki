@@ -27,4 +27,8 @@ When you perform an unwind segue, you need to specify an action, which is an act
 
 然后在storyboard里建立Cancel到unwindbyCancelToThisViewController的一个segue
 
-
+** NSLog format
+- %i, %d signed integer
+- %u unsigned integer
+- %f float
+- %@ object
