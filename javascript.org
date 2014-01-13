@@ -301,3 +301,6 @@ function extend(destination, source) {
     }
     return destination;
 }
+
+** string convert to integer
+var a = parseInt("10");   
