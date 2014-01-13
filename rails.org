@@ -1321,37 +1321,13 @@ preview_contest.categories #=> ['汽车', '娱乐']
    
 *** 加入swfupload   
 ** 复杂的form表单参数
-<input type='text' name='contest[entities[][image_url]]' />
+- 参考: http://codecampo.com/topics/388
+- 参考: http://blog.twoalex.com/2010/11/21/can-an-html-form-generate-an-ordered-array-of-hashes-with-rails/
+"prizes"=>[{"description"=>"abc", "sponsor_logo_url"=>"", "image_url"=>"", "detail_url"=>""}, {"description"=>"efg", "sponsor_logo_url"=>"", "image_url"=>"", "detail_url"=>""}]}
 
-<% sponsoring.prizes.each do |prize| %>
-<input type='hiden' name='contest[prizes[][id]]' value='<%= prize.id %>'>
-<p>
-<span>奖品类型:</span>
-<%= select '', 'contest[prizes[][itype]]', options_for_contest_prize_itype, selected: prize.itype %>
-</p>
-<p>
-<span>奖品概述:</span>
-<input type='text' name='contest[prizes[][summary]]' value='<%= prize.summary%>' />
-</p>
-<p>
-<span>奖品描述:</span>
-<textarea name='contest[prizes[][description]]'><%= prize.description %></textarea>
-</p>
-<p>
-<span>奖品数量:</span>
-<input type='text' name='contest[prizes[][quantity]]' value='<%= prize.quantity%>' />
-</p>
-<p>
-<span>奖品价值:</span>
-<input type='text' name='contest[prizes[][value]]' value='<%= prize.value%>' />
-</p>
-<p>
-<span>奖品图片:</span>
-<input type='file' name='contest[prizes[][image]]' />
-<span><%= image_tag prize.image_url %></span>
-</p>
-
-<% end %>
-
-
-
+<div class='description'>
+  <%= text_area_tag "contest[prizes][][description]" %>
+</div>
+<div class='description'>
+  <%= text_area_tag "contest[prizes][][description]" %>
+</div>

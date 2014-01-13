@@ -1747,3 +1747,11 @@ fix: sudo apt-get install libicu-dev
 2. rake build
 3. cp -r build /path/to/rails_app/public/apidoc
 4. visit http://localhost:3000/apidoc/build/index.html
+** each_slice
+
+(1..10).each_slice(3) { |a| p a }
+# outputs below
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
+[10]
