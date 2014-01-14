@@ -11,6 +11,10 @@
 将你所面对的问题域抽象化为一个类
 *** 题目暂定为: 一步一步dsl
 ** 博客: spring你这么叼，坛子里的人都知道吗?
+每次我使用spring，生成controller, model，migration时，或者运行测试时，我都会被感动一次
+spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数太多，所以我
+不得不去研究一下spring到底为何这么有用。
+
 ** 写一个应用iCheck
 打卡: 跑步打卡，游泳打卡等各种打卡，帮助你养成好习惯，需要收费的哦   
 ** 完善ground文档
