@@ -3,7 +3,10 @@
 - w3scholls: http://www.w3schools.com/js/default.asp
 ** underscore.js
 http://underscorejs.org
-
+*** template
+*** 在rails中引入underscore.js
+** mustache.js
+- https://github.com/janl/mustache.js
 ** 图形
 jgraph: http://jsplumb.org
 orxy:  http://code.google.com/p/oryx-editor/
@@ -304,3 +307,11 @@ function extend(destination, source) {
 
 ** string convert to integer
 var a = parseInt("10");   
+
+** JavaScript模板引擎
+- 参考: http://www.csdn.net/article/2013-09-16/2816951-top-five-javascript-templating-engines
+- Mustache
+- Underscore http://underscorejs.org/
+- EJS
+- HandleBarsJS
+- Jade
