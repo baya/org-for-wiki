@@ -1331,3 +1331,8 @@ preview_contest.categories #=> ['汽车', '娱乐']
 <div class='description'>
   <%= text_area_tag "contest[prizes][][description]" %>
 </div>
+** sanitize
+<script>
+  console.dir(<%=sanitize @contest.to_json %>);
+</script>
+

@@ -1,5 +1,7 @@
 * Vagrant
 ** vagrant 搭建步骤
+参考: http://blog.segmentfault.com/fenbox/1190000000264347
+*** 实践01
 - cd fchk-project
 - vagrant init fchk-vm /Volumes/tools/VM/rails.box 添加一台box
 - vagrant up   启动box
@@ -14,3 +16,28 @@
 - 生成fchk.box文件，给前端人员使用 vagrant package --vagrantfile Vagrantfile --output fchk.box
 - 前端人员, vagrant box add fchk-vm /path/to/fchk.box
 - 将rails development环境的config.assets.debug设置为false，以提高box的访问速度
+
+假设我们已经有一个叫rails.box的box，使用命令 vagrant box add feichanghaokan rails.box
+将在~/.vagrant.d/boxes/ 目录下增加一个叫feichanghaokan的文件夹
+
+特别要注意~/.vagrant.d/boxes/feichanghaokan/virtualbox/include/_Vagrantfile这个文件，
+
+$ vagrant init feichanghaokan  # 这个命令会在当前目录下生成一个Vagrantfile配置文件
+
+$ vagrant up # 这个命令会启动vagrant机器，先读取当前目录下的Vagrantfile, 后读取~/.vagrant.d/boxes/feichanghaokan/virtualbox/include/_Vagrantfile
+
+*** 实践02
+
+$ cd ~/workspace/magus-soft
+
+$ vagrant box add magus-soft ~/VM-Boxes/fchk.box
+
+$ vagrant init magus-soft
+
+$ vagrant up
+
+$ vagran ssh
+
+$ cd /vagrant  # /vagrant目录下的文件和主机上~/workspace/magus-soft的文件一样，也就是说~/workspace/magus-soft目录如果有修改会立即在/vagrant目录下同步出现
+
+$ vagrant package --output magus-soft.box # 打包
