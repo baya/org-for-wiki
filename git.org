@@ -90,3 +90,10 @@ git init --bare --shared
 # 推送代码到远程裸仓库
 git remote add fchk-staging ssh://staging.fchk.com/home/jgm/git/fchk-api-doc.git/
 git push fchk-staging master
+
+** setting username 
+$ git config --global user.name "Billy Everyteen"
+# Set a new name
+$ git config --global user.name
+# Verify the setting
+# Billy Everyteen
