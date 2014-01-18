@@ -32,3 +32,55 @@ When you perform an unwind segue, you need to specify an action, which is an act
 - %u unsigned integer
 - %f float
 - %@ object
+
+*** 实例
+
+NSLog(@"dddddd");
+NSLog(@"%d", item.completed);
+
+** Selections in Table View
+- 参考: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/tableview_iphone/ManageSelections/ManageSelections.html
+
+- method:  tableView:didSelectRowAtIndexPath:
+
+*** 实例
+点击cell时，出现一个勾或者勾消失
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    GrdToDoItem *item = [self.toDoItems objectAtIndex:indexPath.row];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    item.completed = !item.completed;
+    NSLog(@"%d", item.completed);
+    if (item.completed) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+
+}
+
+** 比较两个字符串是否相等
+- 参考: http://getsetgames.com/2009/12/10/iphonedev-advent-tip-10-string-comparison-using-nsstring/
+  
+NSString * str = @"oranges";
+BOOL res = [str isEqualToString:@"apples"]
+
+** 去掉空白字符
+
+itemName = [itemName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ];
+
+ 
+if ([itemName length] > 0) {
+    GrdToDoItem* item = [[GrdToDoItem alloc] init];
+    [self.toDoItems addObject:item];
+    item.itemName = itemName;
+}
+
+** 控制器中的视图更新数据
+
+[self.tableView reloadData];
+
+
