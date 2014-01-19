@@ -282,3 +282,8 @@
 **** 部署一套CI系统
 **** TODO 将api文档迁移到slate  following
 *** DONE 游泳: 1000米
+** 01-19
+*** 游泳: 2000米
+*** 学习ios开发: iOS App Programming Guide
+*** 学习ios开发: iOS Human Interface Guidelines
+*** 学习ios开发: About the iOS Technologies
