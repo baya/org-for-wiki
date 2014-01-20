@@ -331,3 +331,25 @@ toString()	  把数组转换为字符串，并返回结果。	1	4
 toLocaleString()  把数组转换为本地数组，并返回结果。	1	4
 unshift()	  向数组的开头添加一个或更多元素，并返回新的长度。	1	6
 valueOf()	  返回数组对象的原始值	1	4
+
+*** slice实例
+var a = [1,2,3,4];
+a.slice(0, 2) // [1,2]
+
+*** 将数组里的元素两两组合
+var entities = [1,2,3,4];
+var pk_entities = [];
+var j = 0;
+for(var i = 0; i < entities.length; i=i+2){
+    pk_entities[j] = [entities[i], entities[i+1]]
+    j++;
+}
+
+pk_entities // [[1,2], [3,4]]
+
+
+** 条件语句
+if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码
+if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码
+if...else if....else 语句 - 使用该语句来选择多个代码块之一来执行
+switch 语句 - 使用该语句来选择多个代码块之一来执行

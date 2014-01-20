@@ -1335,4 +1335,16 @@ preview_contest.categories #=> ['汽车', '娱乐']
 <script>
   console.dir(<%=sanitize @contest.to_json %>);
 </script>
+** partials
+- 参考: http://guides.rubyonrails.org/layouts_and_rendering.html  3.4.1
 
+<%= render "menu" %>
+<%= render "shared/menu" %>
+
+app/views/shared/_menu.html.erb
+
+*** 实例
+
+<%= render "partner/shared/contest_form" %>
+
+app/views/partner/shared/_contest_form.html.erb
