@@ -333,4 +333,3 @@
 **** Advanced App Tricks
 **** Perfomance Tuning
 **** Appendix: The iOS Environment
-*** 游泳: 1000米
