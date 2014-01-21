@@ -312,3 +312,25 @@
 **** Perfomance Tuning
 **** Appendix: The iOS Environment
 *** DONE 游泳: 1000米
+** 01-21
+*** 非常好看比赛平台web:
+**** 图片举报
+**** 选择奖品
+*** 非常好看
+**** Bug List
+***** DONE 时长的选择
+***** DONE 活动宣传，高度自适应
+***** DONE 按钮"编辑信息"的文字显示为蓝色
+***** DONE 比赛预览，奖品的图片去掉赞助商和奖品两个文字
+***** DONE 先预览比赛，后创建比赛时会造成比赛图片和奖品无法保存
+**** 部署一套CI系统
+**** 将api文档迁移到slate  following
+*** 学习ios开发: iOS App Programming Guide
+**** Core App Objects
+**** App States and Multitasking
+**** State Preservation and Restoration
+**** App-Related Resources
+**** Advanced App Tricks
+**** Perfomance Tuning
+**** Appendix: The iOS Environment
+*** 游泳: 1000米

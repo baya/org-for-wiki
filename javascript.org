@@ -1,6 +1,7 @@
 * JavaScript
 ** 学习网站
 - w3scholls: http://www.w3schools.com/js/default.asp
+- JavaScript The Right Way: http://www.jstherightway.org/
 ** underscore.js
 http://underscorejs.org
 *** template
@@ -347,9 +348,9 @@ for(var i = 0; i < entities.length; i=i+2){
 
 pk_entities // [[1,2], [3,4]]
 
-
 ** 条件语句
 if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码
 if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码
 if...else if....else 语句 - 使用该语句来选择多个代码块之一来执行
 switch 语句 - 使用该语句来选择多个代码块之一来执行
+

@@ -11,3 +11,9 @@
 
 ** 阅读清单
 - http://www.cnblogs.com/coffeedeveloper/p/3145790.html
+
+** remove default link color of 'A' tag
+- 参考: http://stackoverflow.com/questions/6722467/how-to-remove-the-default-link-color-of-the-html-a-tag
+  
+a{color:inherit;}
+
