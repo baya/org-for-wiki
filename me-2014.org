@@ -326,7 +326,25 @@
 **** 部署一套CI系统
 **** 将api文档迁移到slate  following
 *** 学习ios开发: iOS App Programming Guide
-**** Core App Objects
+**** DONE Core App Objects
+**** App States and Multitasking
+**** State Preservation and Restoration
+**** App-Related Resources
+**** Advanced App Tricks
+**** Perfomance Tuning
+**** Appendix: The iOS Environment
+** 01-22
+*** 非常好看比赛平台web:
+**** 抽奖份数，比赛奖品份数，从第几名开始发
+**** 赞助商logo文字说明，奖品图片文字说明
+**** 创建比赛规则
+**** 玩比赛
+**** 图片举报
+**** 选择奖品
+*** 非常好看
+**** 部署一套CI系统
+**** 将api文档迁移到slate  following
+*** 学习ios开发: iOS App Programming Guide
 **** App States and Multitasking
 **** State Preservation and Restoration
 **** App-Related Resources
