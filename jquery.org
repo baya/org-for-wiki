@@ -77,3 +77,19 @@ var ContestFormPrizeStyle = {
 
 ** parents 获取祖先元素
 - 实例
+  
+var ContestFormPrizeCancel = {
+
+    init: function(data){
+	this.$ele = $(data.ele);
+
+	return this;
+    },
+
+    call: function(){
+	this.$ele.on('click', function(){
+	    $(this).parents('.prize_info').remove();
+	})
+    }
+    
+}
