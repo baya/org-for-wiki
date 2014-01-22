@@ -41,3 +41,39 @@ function moveCursorToEnd(el) {
     }
 }
 
+** 按类遍历DOM
+<div class="a">
+  <div class="b">
+  </div>
+</div>
+
+$(".a .b") 或者 $(".a > .b")
+
+
+** each
+- 实例
+var ContestFormPrizeStyle = {
+    
+    init: function(data){
+	this.$ele = $(data.ele);
+	this.css_data = data.css_data;
+
+	return this;
+    },
+
+    call: function(){
+	var _scope = this;
+	
+	this.$ele.each(function(i){
+	    var img = $(this).attr('src');
+
+	    if(img){
+		$(this).css(_scope.css_data);
+	    }
+	})
+    }
+}
+
+
+** parents 获取祖先元素
+- 实例

@@ -1348,3 +1348,5 @@ app/views/shared/_menu.html.erb
 <%= render "partner/shared/contest_form" %>
 
 app/views/partner/shared/_contest_form.html.erb
+
+<%= render partial: "partner/shared/prize_info", locals: {prize: PreviewPrize.new}%>
