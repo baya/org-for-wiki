@@ -93,3 +93,8 @@ var ContestFormPrizeCancel = {
     }
     
 }
+
+** remove event handler
+.off
+- 实例
+
