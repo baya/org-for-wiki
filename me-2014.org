@@ -327,10 +327,52 @@
 **** 将api文档迁移到slate  following
 *** 学习ios开发: iOS App Programming Guide
 **** DONE Core App Objects
+<<<<<<< HEAD
+=======
 **** App States and Multitasking
 **** State Preservation and Restoration
 **** App-Related Resources
 **** Advanced App Tricks
 **** Perfomance Tuning
 **** Appendix: The iOS Environment
-*** DONE ground: 在应用清单里增加一个应用
+** 01-22
+*** 非常好看比赛平台web:
+**** DONE 抽奖份数，比赛奖品份数，从第几名开始发
+**** DONE 增加奖品
+**** DONE 赞助商logo文字说明，奖品图片文字说明
+**** DONE 删除奖品
+**** 创建比赛规则
+**** 玩比赛
+**** 图片举报
+**** 选择奖品
+*** 非常好看
+**** Bug List
+***** 选择创建类型时，不应该出现只能选择三个类别的提示
+**** 部署一套CI系统
+**** 将api文档迁移到slate  following
+*** 学习ios开发: iOS App Programming Guide
+**** App States and Multitasking
+**** State Preservation and Restoration
+**** App-Related Resources
+**** Advanced App Tricks
+**** Perfomance Tuning
+**** Appendix: The iOS Environment
+** 01-23
+*** 非常好看比赛平台web:
+**** 创建比赛规则
+**** 玩比赛
+**** 图片举报
+**** 选择奖品
+*** 非常好看
+**** Bug List
+***** 选择创建类型时，不应该出现只能选择三个类别的提示
+**** 部署一套CI系统
+**** 将api文档迁移到slate  following
+*** 学习ios开发: iOS App Programming Guide
+**** App States and Multitasking
+**** State Preservation and Restoration
+**** App-Related Resources
+**** Advanced App Tricks
+**** Perfomance Tuning
+**** Appendix: The iOS Environment
+*** DONE 游泳:1000米
