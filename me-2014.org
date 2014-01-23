@@ -326,10 +326,11 @@
 **** 部署一套CI系统
 **** 将api文档迁移到slate  following
 *** 学习ios开发: iOS App Programming Guide
-**** Core App Objects
+**** DONE Core App Objects
 **** App States and Multitasking
 **** State Preservation and Restoration
 **** App-Related Resources
 **** Advanced App Tricks
 **** Perfomance Tuning
 **** Appendix: The iOS Environment
+*** DONE ground: 在应用清单里增加一个应用
