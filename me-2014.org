@@ -355,3 +355,22 @@
 **** Advanced App Tricks
 **** Perfomance Tuning
 **** Appendix: The iOS Environment
+** 01-23
+*** 非常好看比赛平台web:
+**** 创建比赛规则
+**** 玩比赛
+**** 图片举报
+**** 选择奖品
+*** 非常好看
+**** Bug List
+***** 选择创建类型时，不应该出现只能选择三个类别的提示
+**** 部署一套CI系统
+**** 将api文档迁移到slate  following
+*** 学习ios开发: iOS App Programming Guide
+**** App States and Multitasking
+**** State Preservation and Restoration
+**** App-Related Resources
+**** Advanced App Tricks
+**** Perfomance Tuning
+**** Appendix: The iOS Environment
+*** 游泳:1000米
