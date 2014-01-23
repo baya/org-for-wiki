@@ -354,8 +354,12 @@ if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执
 if...else if....else 语句 - 使用该语句来选择多个代码块之一来执行
 switch 语句 - 使用该语句来选择多个代码块之一来执行
 
-
 ** How to move an element into another element?
 - 参考: http://stackoverflow.com/questions/1279957/how-to-move-an-element-into-another-element
 $("#source")
     .appendTo("#destination");
+
+** redirect
+- 实例
+var url = window.location.href + "/vote_result";
+window.location.href = url;

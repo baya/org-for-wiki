@@ -358,16 +358,22 @@
 ** 01-23
 *** 非常好看比赛平台web:
 **** DONE 玩比赛
-**** 玩比赛跳转到比赛结果页
+**** DONE 玩比赛跳转到比赛结果页
+**** 比赛结果页
+***** 全部排名
+***** 我的排名
+***** 最近分享
+**** 上传图片参赛
 **** 图片举报
 **** 选择奖品
+**** 图片管理
 *** 非常好看
 **** Bug List
 ***** DONE 选择创建类型时，不应该出现只能选择三个类别的提示
 **** 部署一套CI系统
 **** 将api文档迁移到slate  following
 *** 学习ios开发: iOS App Programming Guide
-**** App States and Multitasking
+**** TODO App States and Multitasking
 **** State Preservation and Restoration
 **** App-Related Resources
 **** Advanced App Tricks
