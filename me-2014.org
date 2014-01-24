@@ -382,3 +382,25 @@
 **** Perfomance Tuning
 **** Appendix: The iOS Environment
 *** DONE 游泳:1000米
+** 01-24
+*** 非常好看比赛平台web:
+**** 比赛结果页
+***** 全部排名
+***** 我的排名
+***** 最近分享
+**** 上传图片参赛
+**** 图片举报
+**** 选择奖品
+**** 图片管理
+*** 非常好看
+**** Bug List
+**** 部署一套CI系统
+**** 将api文档迁移到slate  following
+*** 学习ios开发: iOS App Programming Guide
+**** App States and Multitasking
+**** State Preservation and Restoration
+**** App-Related Resources
+**** Advanced App Tricks
+**** Perfomance Tuning
+**** Appendix: The iOS Environment
+*** 游泳:1000米
