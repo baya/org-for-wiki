@@ -74,7 +74,60 @@ var ContestFormPrizeStyle = {
     }
 }
 
+** ajax
+*** 同步调用实例
+var VoteResult = {
 
+    init: function(data){
+	this.user_sn = data.user_sn;
+	this.heat_sn = data.heat_sn
+
+	return this;
+    },
+
+    call: function(){
+	var vote_result = this.getVoteResult();
+	console.log(vote_result);
+	
+	if(vote_result.status.resp_code == 0){
+	    this.renderVoteResult(vote_result.result);
+	    this.fixFit();
+	} else {
+	    alert(vote_result.resp_msg);
+	}
+    },
+
+    getVoteResult: function(){
+	var vote_result = null;
+	var url = '/userVoteResult';
+	
+	$.ajax({
+	    type: 'GET',
+	    url: url,
+	    data: {heat_sn: this.heat_sn, user_sn: this.user_sn},
+	    async: false,
+	    success: function(msg){
+		vote_result = msg;
+	    }
+	});
+
+	return vote_result;
+    },
+
+    renderVoteResult: function(vote_result){
+	var temp = $("#vote-result-template").html();
+	var html = Mustache.render(temp, vote_result);
+
+	$("#vote-result-template").parent().html(html);
+    },
+
+    fixFit: function(){
+	$(".vote_entities .entity").each(function(i){
+	    if((i+1) % 4 == 0)
+		$(this).addClass('All_Rank_con1');
+	})
+    }
+}
 ** parents 获取祖先元素
 - 实例
   

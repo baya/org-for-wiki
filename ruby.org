@@ -1755,3 +1755,25 @@ fix: sudo apt-get install libicu-dev
 [4, 5, 6]
 [7, 8, 9]
 [10]
+** flip-flop
+- 参考: http://stackoverflow.com/questions/14456634/what-is-a-flip-flop-operator
+（1..10).each { |x| print x if x==3..x==0}
+输出 3 4 5
+
+对于某个flip-flop表达式: op1..op2, 从op1为true开始, 表达式op1..op2的值保持为true,一直持续到op2为true结束
+
+```ruby
+  (1..10).each { |x| print x if x==3..x==0}
+```
+这个的结果是345678910，因为从3开始x==3..x==0为true，x==0一直为false
+
+```ruby
+  (1..10).each { |x| print x if x==0..x==10}
+```
+这个的结果是不输出任何数字，因为x==0一直为false
+
+```ruby
+  ['a', 'e', '美食', '运动', 'd', 'g'].each {|x| print x if x=='e'..x='d'}
+```
+这个的结果输出:
+e美食运动d
