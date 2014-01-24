@@ -327,6 +327,8 @@
 **** 将api文档迁移到slate  following
 *** 学习ios开发: iOS App Programming Guide
 **** DONE Core App Objects
+<<<<<<< HEAD
+=======
 **** App States and Multitasking
 **** State Preservation and Restoration
 **** App-Related Resources
@@ -379,4 +381,4 @@
 **** Advanced App Tricks
 **** Perfomance Tuning
 **** Appendix: The iOS Environment
-*** 游泳:1000米
+*** DONE 游泳:1000米
