@@ -415,4 +415,8 @@
 **** Advanced App Tricks
 **** Perfomance Tuning
 **** Appendix: The iOS Environment
-*** 游泳:1000米
+*** DONE 游泳:1000米
+** 01-25
+*** 学习iOS开发: iOS App Programming Guide
+*** DONE 游泳: 1000米
+    

@@ -184,7 +184,7 @@ http://www.51know.info/system_base/openssl.html
    +------------- min (0 - 59)
 
 *** 实际案例
-
+*/3 * * * * /home/jim/ppj/baya/Durex-Tink/lib/tasks/rsynch.rb > /home/jim/rsynch.log
 ** 自动加载~/.bashrc
 在~/.bash_profile文件加入
 
