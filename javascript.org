@@ -363,3 +363,10 @@ $("#source")
 - 实例
 var url = window.location.href + "/vote_result";
 window.location.href = url;
+
+** 三元运算符
+*** 实例
+function(){
+  var img_count = $(".up_pic").length;
+  return img_count >= 8 ? true : false;
+}

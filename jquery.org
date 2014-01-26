@@ -151,3 +151,23 @@ var ContestFormPrizeCancel = {
 .off
 - 实例
 
+
+** hover
+*** 实例01
+function($img){
+	$img.hover(function(){
+	    $(this).parent().css({border: '2px #f73d4b solid'});
+	    $(this).siblings('span').hide();
+	}, function(){
+	    $(this).parent().css({border: 'none'});
+	    $(this).siblings('span').hide();
+	})
+    }
+
+** form
+*** 序列化表单参数
+$form.serialize();
+- 实例
+** attributes selector 属性选择器
+- 实例
+var selected_img_count = $form.find("input[name='images[]']").length;
