@@ -438,3 +438,5 @@
 **** Bug List
 **** 部署一套CI系统
 **** 将api文档迁移到slate  following
+** 02-09
+*** 游泳3000米
