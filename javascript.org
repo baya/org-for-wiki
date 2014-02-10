@@ -370,3 +370,72 @@ function(){
   var img_count = $(".up_pic").length;
   return img_count >= 8 ? true : false;
 }
+
+** mustache.js常用用例
+*** list
+  <script type="text/x-mustchache" id="pk-template">
+    <div class="Pic_com_con">
+      <input type="hidden" value={{heat_sn}} id="data-heat-sn"/>
+	{{#pk_entities}}
+	  <div class="Pic_com fresh_pic_com">
+	  <div class='InGame_con entity'>
+	    <div class='InGamea'>
+	      <img src={{0.image_url}} />
+	      <span class='report'></span>
+	      <em class='cover'></em>
+	      <input type="hidden" value={{0.sn}} />
+	    </div>
+	    <span class='InGame_title'>{{0.name}}</span>
+	  </div>
+
+	  <div class='InGame_con entity'>
+	    <div class='InGamea'>
+	      <img src={{1.image_url}} />
+	      <span class='report'></span>
+	      <em class='cover'></em>
+	      <input type="hidden" value={{1.sn}} />
+	    </div>
+	    <span class='InGame_title'>{{1.name}}</span>
+	  </div>
+	</div>
+	{{/pk_entities}}
+  </script>
+
+
+<script type="text/x-mustchache" id="prize-pk-template">
+  <div class="main_bg_con">
+    <div class="main_bg_cn">
+      <div class="main_bg_cn1">
+	<div class="main_bg_con1">
+	  <h2>你想要得到哪个礼物？</h2>
+	  <div class="main_bg_Prize">
+	    <span></span>
+	    <div class="main_bg_Prize_left">
+	      <img src={{0.image}} alt="">
+	      <p>{{0.description}}</p>
+	    </div>
+	    <div class="main_bg_Prize_left main_bg_Prize_right">
+	      <img src={{1.image}} alt="">
+	      <p>{{1.description}}</p>
+	    </div>
+	  </div>
+	</div>
+	
+	<div class="main_bg_con1 main_bg_con2">
+	  <div class="rl_1">
+	    <%= image_tag "zi_1.png" %>
+	  </div>
+	  <div class="rl_1 rl_2">
+	    <%= image_tag "zi_2.png" %>
+	  </div>
+	  <div class="rl_3">
+	    <%= image_tag "img_zan.png" %>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</script>
+
+var prizes = [{image: "aa", description: "bb"}, {image: "bb", description: "cc"}];
+var html = Mustache.render(str, prizes);
