@@ -1350,3 +1350,7 @@ app/views/shared/_menu.html.erb
 app/views/partner/shared/_contest_form.html.erb
 
 <%= render partial: "partner/shared/prize_info", locals: {prize: PreviewPrize.new}%>
+
+<%= render partial: "partner/shared/red_report_list", locals: {red_reports: @porn_red_reports, kind_txt: '含有色情内容'} %>
+<%= render partial: "partner/shared/red_report_list", locals: {red_reports: @illegal_red_reports, kind_txt: '不符合比赛主题'} %>
+<%= render partial: "partner/shared/red_report_list", locals: {red_reports: @false_red_reports, kind_txt: '虚假的陈述'} %>
