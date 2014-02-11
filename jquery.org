@@ -49,7 +49,6 @@ function moveCursorToEnd(el) {
 
 $(".a .b") 或者 $(".a > .b")
 
-
 ** each
 - 实例
 var ContestFormPrizeStyle = {
@@ -151,7 +150,6 @@ var ContestFormPrizeCancel = {
 .off
 - 实例
 
-
 ** hover
 *** 实例01
 function($img){
@@ -171,3 +169,6 @@ $form.serialize();
 ** attributes selector 属性选择器
 - 实例
 var selected_img_count = $form.find("input[name='images[]']").length;
+** 如何编写jQuery插件
+- http://ruby-china.org/topics/17159
+- http://i5ting.github.io/How-to-write-jQuery-plugin/
