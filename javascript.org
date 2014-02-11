@@ -439,3 +439,12 @@ function(){
 
 var prizes = [{image: "aa", description: "bb"}, {image: "bb", description: "cc"}];
 var html = Mustache.render(str, prizes);
+
+** typeof
+typeof 运算符把类型信息当作字符串返回。typeof 返回值有六种可能： "number," "string," "boolean," "object," "function," 和 "undefined." 
+*** 实际用例
+	if(typeof(data.ele) == "string"){
+	    this.$ele = $(data.ele);
+	} else {
+	    this.$ele = data.ele;
+	}
