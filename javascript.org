@@ -448,3 +448,96 @@ typeof 运算符把类型信息当作字符串返回。typeof 返回值有六种
 	} else {
 	    this.$ele = data.ele;
 	}
+** 我的service object 模式
+
+*** 代码实例
+
+var PicArrange_SetOpBtn = function(data){
+    
+    return {
+
+	ele: $(data.ele),
+	confirm_url: data.confirm_url,
+	delete_url: data.delete_url,
+	
+	call: function(){
+	    this.onOff();
+	    this.setConfirmBtn();
+	    this.setDeleteBtn();
+
+	    return this;
+	},
+
+	onOff: function(){
+	    this.ele.parent().hover(function(){
+		$(this).find('.opb').show();
+	    }, function(){
+		$(this).find('.opb').hide();
+	    })
+	},
+
+	setConfirmBtn: function(){
+	    var _scope = this;
+	    
+	    this.ele.parent().find('.op-confirm').on('click', function(){
+		var $e = $(this).parent().siblings('.e');
+
+		_scope.reqForConfirm($e);
+	    })
+	},
+
+	reqForConfirm: function($e){
+	    var url = this.confirm_url;
+
+	    this.reqForOp(url, $e);
+	    
+	},
+
+	setDeleteBtn: function(){
+	    var _scope = this;
+
+	    this.ele.parent().find('.op-delete').on('click', function(){
+		var $e = $(this).parent().siblings('.e');
+
+		_scope.reqForDelete($e);
+	    })
+
+	},
+
+	reqForDelete: function($e){
+	    var url = this.delete_url;
+
+	    this.reqForOp(url, $e);
+	},
+
+	reqForOp: function(url, $e){
+	    $.ajax({
+		type: 'POST',
+		url: url,
+		data: {id: $e.attr('data_sn')}
+	    }).
+		done(function(data){
+		    if(data.status.resp_code != 0){
+			alert(data.status.resp_msg);
+		    } else {
+			$e.parent().remove();
+		    }
+		})
+	}
+    }.call();
+};
+
+ $(document).ready(function(){
+
+   new PicArrange_SetOpBtn({
+     ele: '.report_entity',
+     confirm_url: '/entityConfirm',
+     delete_url: '/entityDelete'
+   });
+
+   new PicArrange_SetOpBtn({
+     ele: '.non_report_entity',
+     delete_url: '/nonReportEntityDelete'
+   });
+   
+ })
