@@ -449,7 +449,6 @@ typeof 运算符把类型信息当作字符串返回。typeof 返回值有六种
 	    this.$ele = data.ele;
 	}
 ** 我的service object 模式
-
 *** 代码实例
 
 var PicArrange_SetOpBtn = function(data){
