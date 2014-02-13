@@ -311,7 +311,7 @@ var a = parseInt("10");
 
 ** JavaScript模板引擎
 - 参考: http://www.csdn.net/article/2013-09-16/2816951-top-five-javascript-templating-engines
-- Mustache
+- Mustache https://github.com/janl/mustache.js
 - Underscore http://underscorejs.org/
 - EJS
 - HandleBarsJS
@@ -440,6 +440,26 @@ function(){
 var prizes = [{image: "aa", description: "bb"}, {image: "bb", description: "cc"}];
 var html = Mustache.render(str, prizes);
 
+*** Non-Empty Lists
+View:
+
+{
+  "stooges": [
+    { "name": "Moe" },
+    { "name": "Larry" },
+    { "name": "Curly" }
+  ]
+}
+Template:
+
+{{#stooges}}
+<b>{{name}}</b>
+{{/stooges}}
+Output:
+
+<b>Moe</b>
+<b>Larry</b>
+<b>Curly</b>
 ** typeof
 typeof 运算符把类型信息当作字符串返回。typeof 返回值有六种可能： "number," "string," "boolean," "object," "function," 和 "undefined." 
 *** 实际用例

@@ -309,7 +309,7 @@ end
 ** 移动web
 http://aulara.cn/m/users/login/?next=/m/
 
-** cycle helper
+** cycle helper 单双循环
 <tr class=<%= cycle('even', 'odd') %>>
 
 ** http basic auth
