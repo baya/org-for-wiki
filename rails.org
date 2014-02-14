@@ -1357,3 +1357,12 @@ app/views/partner/shared/_contest_form.html.erb
 ** 删除一个对象
 
 @red_report.destroy
+** staging app 部署时在本地预先生成资源
+RAILS_ENV=production spring rake assets:precompile
+
+git add public/assets
+
+git ci -am 'update'
+
+git push fg staging
+
