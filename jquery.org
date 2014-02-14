@@ -74,6 +74,18 @@ var ContestFormPrizeStyle = {
 }
 
 ** ajax
+*** 同步请求
+    
+	$.ajax({
+	    type: 'GET',
+	    url: url,
+	    data: {heat_sn: this.heat_sn, user_sn: this.user_sn},
+	    async: false,
+	    success: function(msg){
+		vote_result = msg;
+	    }
+	});
+    
 *** 同步调用实例
 var VoteResult = {
 

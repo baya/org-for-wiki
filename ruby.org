@@ -1571,7 +1571,6 @@ car = Car.new('Toyota', 'Prius', 2014)
 car.to_h # => {:make=>"Toyota", :model=>"Prius", :year=>2014}
 nil.to_h # => {}
 
-
 ** ruby版本管理工具
 - rvm
 - rbenv  https://github.com/sstephenson/rbenv
@@ -1777,3 +1776,11 @@ fix: sudo apt-get install libicu-dev
 ```
 这个的结果输出:
 e美食运动d
+** 打印当前方法名
+__callee__
+
+def f
+  puts __callee__
+end
+
+f() #=> f
