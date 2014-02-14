@@ -505,4 +505,4 @@
 **** Bug List
 **** 部署一套CI系统
 **** 将api文档迁移到slate following
-*** 游泳: 2000米
+*** DONE 游泳: 2000米
