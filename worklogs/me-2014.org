@@ -531,6 +531,7 @@
 ** 02-16
 *** DONE 游泳: 1000米
 ** 02-17
+*** DONE 处理彩票重复投单的问题
 *** 非常好看比赛平台web:
 **** DONE 部署到QA环境
 **** 玩比赛
@@ -545,6 +546,14 @@
 **** 普通用户登录
 *** 非常好看
 **** Bug List
+***** DONE 1. Need to limit the Title to 30 Chinese Characters – Don’t let people write more than that
+***** DONE 2. Need to limit the Description to 250 character – don’t let people write more than that
+***** 3. What happens when people upload a logo that is NOT the right ratio? Need to make it clear when the image is off
+***** 4. Can’t delete images
+***** 5. Let user know that they can change images by simply uploading a new image
+***** 6. Suggest we center all images and show a frame on how it would appear
+***** 7. Should tell a user how many images they can upload
+***** 8. The preview and upload more should not appear until there are images already uploaded
 **** 部署一套CI系统
 **** 将api文档迁移到slate following
 *** 博客: 和前端人员合作: 使用Vagrant

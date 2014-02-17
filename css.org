@@ -17,3 +17,8 @@
   
 a{color:inherit;}
 
+** 绝对定位 absolute
+- 参考: http://www.w3school.com.cn/css/pr_class_position.asp
+*** 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+*** 实例

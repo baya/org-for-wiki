@@ -1,4 +1,11 @@
-
 * Html
 ** comment tag
 <!--...--> Tag
+** <input> maxlength
+- 参考: http://www.w3schools.com/tags/att_input_maxlength.asp
+<form action="demo_form.asp">
+  Username: <input type="text" name="usrname" maxlength="10"><br>
+  <input type="submit" value="Submit">
+</form>
+
+
