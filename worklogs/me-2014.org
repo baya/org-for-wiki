@@ -557,5 +557,5 @@
 **** 部署一套CI系统
 **** 将api文档迁移到slate following
 *** 博客: 和前端人员合作: 使用Vagrant
-*** 博客: 理解Asset pipeline和实践
+*** TODO 博客: 理解Asset pipeline和实践
 *** DONE 游泳: 1000米
