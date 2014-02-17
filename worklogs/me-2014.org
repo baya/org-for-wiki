@@ -558,4 +558,4 @@
 **** 将api文档迁移到slate following
 *** 博客: 和前端人员合作: 使用Vagrant
 *** 博客: 理解Asset pipeline和实践
-*** 游泳: 2000米
+*** DONE 游泳: 1000米
