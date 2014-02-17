@@ -1784,3 +1784,16 @@ def f
 end
 
 f() #=> f
+
+** 使用Enumerator::Lazy处理大型csv
+- 参考: http://www.reinteractive.net/posts/154-improving-csv-processing-code-with-laziness
+
+require 'csv'
+
+rows = CSV.new(File.open('input.csv','r'), :headers => true).lazy.select do |row|
+  row['MANUFACTURER'] == "Foobar Shoes"
+end.map do |row|
+  "#{row['SKU ID']} - #{row['NAME']}"
+end.take(5).force
+
+p rows
