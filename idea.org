@@ -10,6 +10,10 @@
 ** DONE 写一篇介绍dsl的博客
 将你所面对的问题域抽象化为一个类
 *** 题目暂定为: 一步一步dsl
+** 博客: 理解Asset pipeline和实践
+- 参考: http://railsapps.github.io/rails-javascript-include-external.html
+
+** 博客: 和前端人员合作: 使用Vagrant
 ** 博客: spring你这么叼，坛子里的人都知道吗?
 每次我使用spring，生成controller, model，migration时，或者运行测试时，我都会被感动一次
 spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数太多，所以我
@@ -20,7 +24,6 @@ spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数�
 ** 完善ground文档
 ** 使用ground写一个论坛
 ** ground发布1.0版本
-** 写一套简历系统: 简要介绍 + 非常详细的个人介绍
 ** 研究gem
 - 比如研究bundler，然后写几篇相关的博客，和一个简化的bundler
 *** sprockets
@@ -54,10 +57,6 @@ spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数�
 试着参考brew的代码
 - 用于快速搭建外部测试api
 
-** log error
-- 人不能犯相同的错误
-- 记录你的错误 
-
 ** 使用ground + angularJS写一个通用的web后台
 *** 参考
 - http://jsfiddle.net/SAWsA/11/
@@ -65,9 +64,6 @@ spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数�
 - 帮助人们记帐
 - 集成自己的记帐语言
 
-** 做一个中小型网站的搜索解决方案
-** 研究搜索技术
-*** sphinx http://sphinxsearch.com/
 ** 可以了解下的东西
 - 自然语言处理 Natural Language Processing
 - 机器翻译 Machine Translation
@@ -100,11 +96,6 @@ namespace :git do
 end
 执行 rake git:diff就能对今天的代码进行review了
     
-** rails amount 其他rack应用甚至本身
-** 研究eventmachine
-** 研究goliath
-** 研究celluloid
-** 对dun做一个并发性能测试
 ** 用程序模拟下红眼，蓝眼问题
 - http://www.zhihu.com/question/21262930
 

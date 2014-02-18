@@ -184,3 +184,6 @@ var selected_img_count = $form.find("input[name='images[]']").length;
 ** 如何编写jQuery插件
 - http://ruby-china.org/topics/17159
 - http://i5ting.github.io/How-to-write-jQuery-plugin/
+
+** jquery css
+$("div").css('width')  #=> 500px
