@@ -327,8 +327,6 @@
 **** 将api文档迁移到slate  following
 *** 学习ios开发: iOS App Programming Guide
 **** DONE Core App Objects
-<<<<<<< HEAD
-=======
 **** App States and Multitasking
 **** State Preservation and Restoration
 **** App-Related Resources
@@ -582,5 +580,8 @@
 **** 部署一套CI系统
 **** 将api文档迁移到slate following
 *** 博客: 和前端人员合作: 使用Vagrant
+*** 博客: 理解Asset pipeline和实践
+*** 游泳: 1000米
+=======
 *** 博客: 理解Asset pipeline和实践
 *** 游泳: 1000米
