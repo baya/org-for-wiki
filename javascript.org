@@ -560,3 +560,6 @@ var PicArrange_SetOpBtn = function(data){
    });
    
  })
+
+** 将图片从剪切板粘贴到网页的库
+- https://github.com/Puffant/paste.js
