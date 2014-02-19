@@ -618,4 +618,4 @@
 ***** 8. The preview and upload more should not appear until there are images already uploaded
 **** 部署一套CI系统
 **** 将api文档迁移到slate following
-*** 游泳: 1000米
+*** DONE 游泳: 1000米
