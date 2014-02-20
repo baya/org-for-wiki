@@ -10,10 +10,16 @@
 ** DONE 写一篇介绍dsl的博客
 将你所面对的问题域抽象化为一个类
 *** 题目暂定为: 一步一步dsl
-** 博客: 理解Asset pipeline和实践
+** DONE 博客: 理解Asset pipeline和实践
 - 参考: http://railsapps.github.io/rails-javascript-include-external.html
 
+** DONE rails-guide复习: The Asset Pipeline
+- http://guides.rubyonrails.org/asset_pipeline.html
+
 ** 博客: 和前端人员合作: 使用Vagrant
+
+** 学习W3School教程: HTML/CSS http://www.w3school.com.cn/h.asp
+** 学习W3School教程: JavaScript http://www.w3school.com.cn/b.asp   
 ** 博客: spring你这么叼，坛子里的人都知道吗?
 每次我使用spring，生成controller, model，migration时，或者运行测试时，我都会被感动一次
 spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数太多，所以我
@@ -42,9 +48,6 @@ spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数�
 - 用户可以自己写插件，收集管理相应的文档
 - http://doks.io/#/api
 ** Description升级: 图形化各模型之间的关系
-** DONE rails-guide复习: The Asset Pipeline
-- http://guides.rubyonrails.org/asset_pipeline.html
-
 ** 将第三方登录写成一个rack中间件
 ** 第三方支付是否可以写成一个rack中间件
 ** 写一篇介绍rack的博客

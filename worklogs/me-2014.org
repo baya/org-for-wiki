@@ -619,3 +619,25 @@
 **** 部署一套CI系统
 **** 将api文档迁移到slate following
 *** DONE 游泳: 1000米
+** 02-20
+*** 非常好看比赛平台web:
+**** TODO 非常好看虚拟机迁移
+**** 创建比赛: 图片删除按钮
+**** DONE 创建比赛: 上传新的规则
+**** DONE 创建比赛: 默认规则详情的链接
+**** TODO 创建比赛: 使用默认规则
+**** 创建比赛: 使用默认活动图
+**** 创建比赛: 图片预览
+**** 创建比赛: 抽奖日期默认为比赛结束时
+**** 部署到weibo app
+**** 赞助商登录
+**** 普通用户登录
+*** 非常好看
+**** Bug List
+***** 3. What happens when people upload a logo that is NOT the right ratio? Need to make it clear when the image is off
+***** 4. Can’t delete images
+***** 5. Let user know that they can change images by simply uploading a new image
+***** 6. Suggest we center all images and show a frame on how it would appear
+***** 7. Should tell a user how many images they can upload
+***** 8. The preview and upload more should not appear until there are images already uploaded
+**** 将api文档迁移到slate following

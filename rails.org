@@ -283,6 +283,8 @@ select '', 'contest[sponsoring[][sponsor]]', options_for_contest_sponsors, selec
 
 *** radio button
 radio_button '', 'u_depoted', true, checked: @pre_term.depoted
+*** check box
+<%= check_box_tag 'contest[use_default_rule]', @preview_contest.use_default_rule, @preview_contest.use_default_rule, style: 'display:none;' %>
 ** API设计
 *** Versioned Controller
 Applications.routes.draw do
@@ -1223,12 +1225,14 @@ config.generators.javascripts = false
   <title>创建赞助商比赛</title>
 <% end %>
 
-
 ** xxx_field_tag
 <%= text_field_tag 'contest[title]', @preview_contest.title %>
 <%= text_area_tag 'contest[description]', @preview_contest.description %>
 <%= hidden_field_tag "preview_contest_id", @preview_contest.id %>
-
+<%= file_field_tag 'contest[rule_file]', class: 'upload', value: 'a.pdf' %>
+file_field_tag 'file', accept: 'text/html', class: 'upload', value: 'index.html'
+# => <input accept="text/html" class="upload" id="file" name="file" type="file" value="index.html" />
+<%= file_field_tag "contest[rule_file]", value: @preview_contest.rule_file, class: 'file' %>
 ** saving arrays, hashes, and other non-mappable objects in text columns
 - 参考: http://api.rubyonrails.org/classes/ActiveRecord/Base.html
 class AddCategoriesToPreviewContests < ActiveRecord::Migration
@@ -1244,7 +1248,6 @@ end
 
 preview_contest = PreviewContest.create(categories: ['汽车', '娱乐'], title: '比赛')
 preview_contest.categories #=> ['汽车', '娱乐']
-
 
 ** 本地化
 *** rails-i18n
@@ -1365,4 +1368,25 @@ git add public/assets
 git ci -am 'update'
 
 git push fg staging
+
+
+** 文件上传 carrierwave
+*** 实例01
+$ spring rails generate uploader RuleFile  #=> create app/uploaders/rule_file_uploader.rb
+$ spring rails g migration add_rule_file_to_contests
+$ rake db:migrate
+
+class Contest < ActiveRecord::Base
+  mount_uploader :rule_file, RuleFileUploader
+end
+
+contest = Contest.new
+contest.rule_file = params[:rule_file]
+contest.save!
+contest.rule_file.url
+contest.rule_file.current_path
+contest.rule_file.identifier
+
+
+
 
