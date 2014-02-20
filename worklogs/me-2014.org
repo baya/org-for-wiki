@@ -621,9 +621,11 @@
 *** DONE 游泳: 1000米
 ** 02-20
 *** 非常好看比赛平台web:
-**** TODO 创建比赛: 图片删除按钮
-**** 创建比赛: 上传新的规则
-**** 创建比赛: 使用默认规则
+**** TODO 非常好看虚拟机迁移
+**** 创建比赛: 图片删除按钮
+**** DONE 创建比赛: 上传新的规则
+**** DONE 创建比赛: 默认规则详情的链接
+**** TODO 创建比赛: 使用默认规则
 **** 创建比赛: 使用默认活动图
 **** 创建比赛: 图片预览
 **** 创建比赛: 抽奖日期默认为比赛结束时
@@ -638,5 +640,4 @@
 ***** 6. Suggest we center all images and show a frame on how it would appear
 ***** 7. Should tell a user how many images they can upload
 ***** 8. The preview and upload more should not appear until there are images already uploaded
-**** 部署一套CI系统
 **** 将api文档迁移到slate following

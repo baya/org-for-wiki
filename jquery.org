@@ -187,3 +187,66 @@ var selected_img_count = $form.find("input[name='images[]']").length;
 
 ** jquery css
 $("div").css('width')  #=> 500px
+** checkbox
+
+	    this.$btn.on('click', function(){
+		if(_scope.$chk.attr('checked') == "checked"){
+		    _scope.$chk.attr('checked', null);
+		} else {
+		    _scope.$chk.attr('checked', 'checked');
+		}
+
+		_scope.setIfDefaultRuleChecked();
+	    })
+
+
+ContestForm.SetRuleField = function(data){
+
+    return {
+
+	$ele: $(data.ele),
+
+	init: function(){
+	    this.$btn = this.$ele.find('.btnpan');
+	    this.$chk = this.$ele.find("input[type='checkbox']");
+
+	    return this;
+	},
+
+	call: function(){
+	    this.setIfDefaultRuleChecked();
+	    this.activeDefaultRuleCheck();
+	    return this;
+	},
+
+	setIfDefaultRuleChecked: function(){
+	    var flag = "create_con_typeon";
+
+	    if(this.$chk.attr("checked") == "checked"){
+		if(!this.$btn.hasClass(flag)){
+		    this.$btn.addClass(flag);
+		}
+	    } else {
+		if(this.$btn.hasClass(flag)){
+		    this.$btn.removeClass(flag);
+		}
+	    }
+	},
+
+	activeDefaultRuleCheck: function(){
+	    var _scope = this;
+	    
+	    this.$btn.on('click', function(){
+		if(_scope.$chk.attr('checked') == "checked"){
+		    _scope.$chk.attr('checked', null);
+		} else {
+		    _scope.$chk.attr('checked', 'checked');
+		}
+
+		_scope.setIfDefaultRuleChecked();
+	    })
+	}
+	
+    }.init().call();
+}
+
