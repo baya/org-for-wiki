@@ -659,7 +659,7 @@
 **** 部署到weibo app
 *** 非常好看
 **** Bug List
-***** TODO staging环境下上传文件的js库失效
+***** DONE staging环境下上传文件的js库失效
 ***** 3. What happens when people upload a logo that is NOT the right ratio? Need to make it clear when the image is off
 ***** 4. Can’t delete images
 ***** 5. Let user know that they can change images by simply uploading a new image
