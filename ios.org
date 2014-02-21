@@ -25,7 +25,9 @@ When you perform an unwind segue, you need to specify an action, which is an act
 {
 }
 
-然后在storyboard里建立Cancel到unwindbyCancelToThisViewController的一个segue
+然后在storyboard里建立Cancel到unwindbyCancelToThisViewController的一个segue，实现这个segue的方法是: 将Cancel连接到Exit，然后选择unwindToThisViewController action。
+
+*** UIStoryboardSegue
 
 ** NSLog format
 - %i, %d signed integer
@@ -37,6 +39,7 @@ When you perform an unwind segue, you need to specify an action, which is an act
 
 NSLog(@"dddddd");
 NSLog(@"%d", item.completed);
+NSLog(@"%@", segue.identifier);
 
 ** Selections in Table View
 - 参考: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/tableview_iphone/ManageSelections/ManageSelections.html
@@ -83,5 +86,40 @@ if ([itemName length] > 0) {
 
 [self.tableView reloadData];
 
-
 ** Navigation Controller
+我们可以在Navigation Controller中加入Cancel, Done等导航button
+
+** public property for data
+
+@interface XYZPerson : NSObject
+@property NSString *firstName;
+@property NSString *lastName;
+@end
+
+** create object by class
+
+[[cls alloc] init]
+
+** Table View Cell Prototype Cells
+1. 在storyboard选择Table View
+2. 选择attributes inspector
+3. content 设置为Dynamic Prototypes
+4. 将某个cell的identifier设置为Cell
+5. 在TableViewController就可以使用prototye cell了，代码类似
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    NSLog(@"%@", cell);
+    NSLog(@"%ld", indexPath.row);
+    
+    GrdToDoItem *toDoItem = [self.toDoItemList objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = toDoItem.name;
+    
+    return cell;
+}
+
+
+
