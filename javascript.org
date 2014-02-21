@@ -563,3 +563,12 @@ var PicArrange_SetOpBtn = function(data){
 
 ** 将图片从剪切板粘贴到网页的库
 - https://github.com/Puffant/paste.js
+** 逻辑运算符
+运算符	描述	例子
+&&	and	(x < 10 && y > 1) 为 true
+||	or	(x==5 || y==5) 为 false
+!	not	!(x==y) 为 true
+
+** String 字符串
+*** 转换为大写
+'a'.toUpperCase()

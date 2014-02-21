@@ -250,3 +250,10 @@ ContestForm.SetRuleField = function(data){
     }.init().call();
 }
 
+** 获取object本身的html内容
+$(".foo").context.outerHTML
+
+** get tag name 获取标签名
+- 参考: http://www.mkyong.com/jquery/jquery-how-to-get-the-tag-name/
+$('.classTag1').get(0).tagName;
+$('.classTag1')[0].tagName;

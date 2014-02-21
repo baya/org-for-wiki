@@ -1,6 +1,7 @@
 * Unicorn
 ** 启动
 - unicorn_rails -c config/unicorn.rb -E staging
+- unicorn_rails -c config/unicorn.rb -E staging -D # 以后台进程的方式启动应用
 ** 实际配置 
 - fchk config/unicorn.rb， 参考 http://ruby-china.org/topics/12033
 worker_processes 6

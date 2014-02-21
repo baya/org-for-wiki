@@ -6,4 +6,19 @@ User jiangguimin
 ProxyCommand ssh -p port vostunnel@ip -W %h:%p
 #ProxyCommand ssh -p port vostunnel@ip nc %h %p
 
+*** 实际例子
+    
+- .ssh/config 内容
+Host staging.fchk.com
+HostName 10.121.xx.xx
+User jiangguimin
+ProxyCommand ssh -p 2222 vostunnel@211.xx.79.xx -W %h:%p
+
+- .git/config 内容
+[remote "fchk-staging"]
+        url = ssh://staging.fchk.com/home/jiangguimin/git/fchk-web.git/
+        fetch = +refs/heads/*:refs/remotes/fchk-staging/*
+
+此时staging.fchk.com和ip 10.121.xx.xx 互为映射
+
 ** 远程登录

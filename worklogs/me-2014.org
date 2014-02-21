@@ -641,3 +641,29 @@
 ***** 7. Should tell a user how many images they can upload
 ***** 8. The preview and upload more should not appear until there are images already uploaded
 **** 将api文档迁移到slate following
+** 02-21
+*** 非常好看比赛平台web:
+**** 创建比赛: 图片删除按钮
+**** DONE 创建比赛: 使用默认规则
+**** DONE 创建比赛: 继续上传图片
+**** DONE 创建比赛: 数据验证非法时，禁止提交表单
+**** 创建比赛: 禁止使用enter键提交表单
+**** 创建比赛: 使用默认活动图
+**** 创建比赛: 抽奖日期默认为比赛结束时w
+**** 创建比赛: 图片预览
+**** 创建比赛: 调查类不可以设置比赛奖品份数
+**** 创建比赛: 提示用户一次性最多上传8张图
+**** 比赛规则: 点击查看自定义规则
+**** 赞助商登录
+**** 普通用户登录
+**** 部署到weibo app
+*** 非常好看
+**** Bug List
+***** TODO staging环境下上传文件的js库失效
+***** 3. What happens when people upload a logo that is NOT the right ratio? Need to make it clear when the image is off
+***** 4. Can’t delete images
+***** 5. Let user know that they can change images by simply uploading a new image
+***** 6. Suggest we center all images and show a frame on how it would appear
+***** 7. Should tell a user how many images they can upload
+***** 8. The preview and upload more should not appear until there are images already uploaded
+**** 将api文档迁移到slate following

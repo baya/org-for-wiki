@@ -283,6 +283,10 @@ select '', 'contest[sponsoring[][sponsor]]', options_for_contest_sponsors, selec
 
 *** radio button
 radio_button '', 'u_depoted', true, checked: @pre_term.depoted
+
+<%= radio_button 'contest', 'use_default_rule', true, checked: @preview_contest.use_default_rule, style: 'display:none;', class: 't' %>
+<%= radio_button 'contest', 'use_default_rule', false, checked: !@preview_contest.use_default_rule, style: 'display:none;', class: 'f' %>
+
 *** check box
 <%= check_box_tag 'contest[use_default_rule]', @preview_contest.use_default_rule, @preview_contest.use_default_rule, style: 'display:none;' %>
 ** API设计
@@ -1390,3 +1394,6 @@ contest.rule_file.identifier
 
 
 
+
+** 解析客户端gzip压缩数据
+ActiveSupport::Gzip.decompress(request.raw_post)

@@ -1,0 +1,3 @@
+* Mac OS
+** edit local hosts file
+/private/etc/hosts
