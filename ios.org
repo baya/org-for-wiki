@@ -41,7 +41,12 @@ NSLog(@"dddddd");
 NSLog(@"%d", item.completed);
 NSLog(@"%@", segue.identifier);
 
-** Selections in Table View
+** Selections in Table View 选择cell
+[SDTVTViewController tableView:willSelectRowAtIndexPath:]    
+[SDTVTViewController tableView:willDeselectRowAtIndexPath:]    
+[SDTVTViewController tableView:didDeselectRowAtIndexPath:] 取消选择    
+[SDTVTViewController tableView:didSelectRowAtIndexPath:]   
+
 - 参考: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/tableview_iphone/ManageSelections/ManageSelections.html
 
 - method:  tableView:didSelectRowAtIndexPath:
@@ -105,7 +110,7 @@ if ([itemName length] > 0) {
 ** Navigation Controller
 我们可以在Navigation Controller中加入Cancel, Done等导航button
 
-** public property for data
+** public property for data 属性声明
 
 @interface XYZPerson : NSObject
 @property NSString *firstName;
@@ -137,5 +142,17 @@ if ([itemName length] > 0) {
     return cell;
 }
 
+** 嵌入Navigation Controller Embed
+Editor > Embed In > Navigation Controller
 
+** 建立带有navigation的modal segue
+首先建立出发控制器到目标控制器的segue
+然后给目标控制器嵌入navigation controller
 
+** 给对象属性设置默认值
+-(id)init {
+     if (self = [super init])  {
+       self.someProperty = 10;
+     }
+     return self;
+}

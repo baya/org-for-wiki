@@ -668,5 +668,5 @@
 ***** 8. The preview and upload more should not appear until there are images already uploaded
 **** 将api文档迁移到slate following
 ** 02-22
-*** 游泳: 2000米
-*** ios开发: ToDoList06
+*** DONE 游泳: 2000米
+*** DONE ios开发: ToDoList06
