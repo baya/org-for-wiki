@@ -1,0 +1,4 @@
+* BTC
+** bitpay: https://bitpay.com/
+** https://github.com/bitpay/bitcore
+** 钱包: https://bitcoin.org/en/choose-your-wallet

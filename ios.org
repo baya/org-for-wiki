@@ -46,6 +46,22 @@ NSLog(@"%@", segue.identifier);
 
 - method:  tableView:didSelectRowAtIndexPath:
 
+*** 代码实例
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    GrdToDoItem *toDoItem = [self.toDoItemList objectAtIndex:indexPath.row];
+    
+    toDoItem.checked = !toDoItem.checked;
+    if(toDoItem.checked){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+}
+
 *** 实例
 点击cell时，出现一个勾或者勾消失
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
