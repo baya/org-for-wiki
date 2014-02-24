@@ -16,15 +16,14 @@
 ** DONE rails-guide复习: The Asset Pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
 
-** 博客: 和前端人员合作: 使用Vagrant
-
+** 写书: 百分之二十的Rails
+*** 参考: http://ihower.tw/rails3/
 ** 学习W3School教程: HTML/CSS http://www.w3school.com.cn/h.asp
 ** 学习W3School教程: JavaScript http://www.w3school.com.cn/b.asp   
 ** 博客: spring你这么叼，坛子里的人都知道吗?
 每次我使用spring，生成controller, model，migration时，或者运行测试时，我都会被感动一次
 spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数太多，所以我
 不得不去研究一下spring到底为何这么有用。
-
 ** 写一个应用iCheck
 打卡: 跑步打卡，游泳打卡等各种打卡，帮助你养成好习惯，需要收费的哦   
 ** 完善ground文档
@@ -47,7 +46,6 @@ spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数�
 - 基于浏览器
 - 用户可以自己写插件，收集管理相应的文档
 - http://doks.io/#/api
-** Description升级: 图形化各模型之间的关系
 ** 将第三方登录写成一个rack中间件
 ** 第三方支付是否可以写成一个rack中间件
 ** 写一篇介绍rack的博客
@@ -56,10 +54,6 @@ spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数�
 - rack应用的图解
 - 怎么使用rack构造大型复杂应用
 ** 研究brew的源代码
-** magpie
-试着参考brew的代码
-- 用于快速搭建外部测试api
-
 ** 使用ground + angularJS写一个通用的web后台
 *** 参考
 - http://jsfiddle.net/SAWsA/11/

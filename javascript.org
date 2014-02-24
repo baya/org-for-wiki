@@ -572,6 +572,8 @@ var PicArrange_SetOpBtn = function(data){
 ** String 字符串
 *** 转换为大写
 'a'.toUpperCase()
+*** 转换为整型
+parseInt('0')
 ** 函数中this的四种情况
 - 参考: http://jjyr.github.io/2014/02/18/javascript-tips-during-my-studying-2/
 //1. 函数绑定到对象上时, this为对象
@@ -614,3 +616,6 @@ b.__proto__ == a
 //所有对象都隐含链接自Object.prototype(相当于new Object())
 //没有类型，又能随意的改变原型的键，结果就是可以很方便的动态更改代码
 //通过函数和对象的任意组合，可以做到同一个原型对象具有多个“构造器”，可以任意的链接原型等等。比基于面向对象的语言要灵活许多
+
+** top、clientTop、scrollTop、offsetTop
+- 参考: http://www.cnblogs.com/seven_cheng/archive/2009/11/16/1603787.html

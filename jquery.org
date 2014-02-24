@@ -257,3 +257,13 @@ $(".foo").context.outerHTML
 - 参考: http://www.mkyong.com/jquery/jquery-how-to-get-the-tag-name/
 $('.classTag1').get(0).tagName;
 $('.classTag1')[0].tagName;
+** 文档操作方法
+- 参考: http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp
+*** append
+$("button").click(function(){
+  $("p").append(" <b>Hello world!</b>");
+});
+*** appendTo
+$("button").click(function(){
+  $("<b>Hello World!</b>").appendTo("p");
+});
