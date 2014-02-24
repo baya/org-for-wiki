@@ -673,9 +673,9 @@
 ** 02-23
 *** DONE 游泳: 1000米
 *** DONE ios开发: ToDoList07
-** 02-21
+** 02-24
 *** 非常好看比赛平台web:
-**** to do list标记完成项目
+**** DONE to do list标记完成项目
 **** DONE 比赛验证: 参赛图片不能为空
 **** 创建比赛: 图片预览
 ***** DONE 弹出框
@@ -707,3 +707,4 @@
 ***** 7. Should tell a user how many images they can upload
 ***** 8. The preview and upload more should not appear until there are images already uploaded
 **** 将api文档迁移到slate following
+*** TODO ios开发: ToDoList07
