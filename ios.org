@@ -1,4 +1,6 @@
-z* ios
+* ios
+** 好的论坛，博客
+- http://www.cocoachina.com/
 ** 教程
 *** 每天学一点ios开发
 - http://www.shinobicontrols.com/blog/posts/2013/09/19/introducing-ios7-day-by-day/
@@ -156,3 +158,7 @@ Editor > Embed In > Navigation Controller
      }
      return self;
 }
+
+** pod
+*** 遇到问题: pod setup --verbose 一直卡在 Setting up CocoaPods master repo
+
