@@ -619,3 +619,19 @@ b.__proto__ == a
 
 ** top、clientTop、scrollTop、offsetTop
 - 参考: http://www.cnblogs.com/seven_cheng/archive/2009/11/16/1603787.html
+
+document.body.offsetWidth;
+$("body")[0].offsetWidth;
+
+** 视口 viewport 宽高
+- 参考: http://www.cnblogs.com/liszt/archive/2012/01/15/2322692.html
+document.documentElement.clientWidth/clientHeight 视口Viewport宽高(CSS像素)
+
+$(window).height();   // returns height of browser viewport
+$(document).height(); // returns height of HTML document
+** window resize
+- 参考: http://www.w3school.com.cn/jquery/event_resize.asp
+*** 实例
+$(window).on('resize', function(){
+ _scope.resizePreviewModal($modal_content);
+});
