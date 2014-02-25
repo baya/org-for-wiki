@@ -741,5 +741,5 @@
 ***** 7. Should tell a user how many images they can upload
 ***** 8. The preview and upload more should not appear until there are images already uploaded
 **** 将api文档迁移到slate following
-*** ios开发: ToDoList09
+*** DONE ios开发: ToDoList09
 *** 游泳: 2000米
