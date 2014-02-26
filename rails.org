@@ -271,7 +271,7 @@ config.time_zone = 'Beijing'
 config.active_record.default_timezone = :local
 Rails stores at +0000 Time zone by default
 
-** HTML标签辅助方法
+** HTML标签辅助方法 helper method
 *** select
 select '', 'lot_name', ['重庆时时彩', '双色球'], include_blank: false
 select '', 'terminal_no', [['任意', nil]\]

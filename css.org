@@ -73,3 +73,7 @@ div
   height:150px;
   overflow:scroll;
   }
+
+** img标签的一个奇怪属性
+如果给img标签设定了宽，高后，它会自动有一个border边框。
+$(img).css({width: 0, height: 0})，这段代码能消除img的自带边框。
