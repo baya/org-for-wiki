@@ -36,7 +36,6 @@ When you perform an unwind segue, you need to specify an action, which is an act
 - %u unsigned integer
 - %f float
 - %@ object
-
 *** 实例
 
 NSLog(@"dddddd");
@@ -161,4 +160,12 @@ Editor > Embed In > Navigation Controller
 
 ** pod
 *** 遇到问题: pod setup --verbose 一直卡在 Setting up CocoaPods master repo
-
+** 坐标轴
+o|---------->x
+ |
+ |
+ |
+ |
+ |
+ +
+ y
