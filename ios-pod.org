@@ -1,3 +1,6 @@
 * iOS Pod
 ** [RPFloatingPlaceholders](https://github.com/iwasrobbed/RPFloatingPlaceholders)
+- 浮动的文字占位符，这样用户不必记忆她要输入的数据是什么
 ** [JVFloatLabeledTextField](https://github.com/jverdi/JVFloatLabeledTextField)
+- 浮动的文字占位符
+** [FontAwesomeKit](https://github.com/PrideChung/FontAwesomeKit)
