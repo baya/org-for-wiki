@@ -160,6 +160,11 @@ Editor > Embed In > Navigation Controller
 
 ** pod
 *** 遇到问题: pod setup --verbose 一直卡在 Setting up CocoaPods master repo
+解决办法:
+1. cd ~/.cocoapods/repos/
+2. git clone 'https://github.com/CocoaPods/Specs.git' master
+这样就可以跳过 pod setup这个命令了
+
 ** 坐标轴
 o|---------->x
  |

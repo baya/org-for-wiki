@@ -1,4 +1,7 @@
 * Git
+** 代码托管
+*** https://bitbucket.org/
+*** github
 ** alias
 - https://git.wiki.kernel.org/index.php/Aliases#Aliases
 - 在~/.gitconfig加入,
