@@ -635,3 +635,9 @@ $(document).height(); // returns height of HTML document
 $(window).on('resize', function(){
  _scope.resizePreviewModal($modal_content);
 });
+
+** NaN, undefined
+NaN == NaN // false
+isNaN(NaN) // true
+
+undefined == undefined // true
