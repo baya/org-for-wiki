@@ -333,3 +333,15 @@ $( '.js-float-label-wrapper' ).FloatLabel();
   $.fn.xxx = function(){
   };
 })(jQuery);
+
+** 刷新页面, refresh page
+- 参考: http://stackoverflow.com/questions/5404839/how-can-i-refresh-a-page-with-jquery
+$('#something').click(function() {
+    location.reload();
+});
+
+location.reload(true);
+location.reload(false);
+true: reload from the server
+false: reload from the browser's cache
+default is false
