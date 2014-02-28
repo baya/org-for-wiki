@@ -267,3 +267,7 @@ $("button").click(function(){
 $("button").click(function(){
   $("<b>Hello World!</b>").appendTo("p");
 });
+** 动态的开关类 toggleClass
+$(".check-btn").on('click', function(){
+   $this.toggleClass('Porb2').toggleClass('checked');
+ })
