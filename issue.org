@@ -1,0 +1,4 @@
+* Issue
+记录一些奇怪的问题
+** jquery.FloatLabel
+在require_tree . 之前写  require jquery.FloatLabel会导致FloatLabel方法未定义

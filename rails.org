@@ -289,6 +289,7 @@ radio_button '', 'u_depoted', true, checked: @pre_term.depoted
 
 *** check box
 <%= check_box_tag 'contest[use_default_rule]', @preview_contest.use_default_rule, @preview_contest.use_default_rule, style: 'display:none;' %>
+*** text_area_tag
 ** API设计
 *** Versioned Controller
 Applications.routes.draw do
@@ -1373,7 +1374,6 @@ git ci -am 'update'
 
 git push fg staging
 
-
 ** 文件上传 carrierwave
 *** 实例01
 $ spring rails generate uploader RuleFile  #=> create app/uploaders/rule_file_uploader.rb
@@ -1394,6 +1394,9 @@ contest.rule_file.identifier
 
 
 
-
 ** 解析客户端gzip压缩数据
 ActiveSupport::Gzip.decompress(request.raw_post)
+
+** 截取中文字符 truncate
+truncate("Once upon a time in a world far far away")
+# => "Once upon a time in a world..."

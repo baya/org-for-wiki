@@ -1,0 +1,7 @@
+* Erlang
+** 官网 http://www.erlang.org/
+** 书籍
+- [Learn You Some Erlang for Great Good!](http://learnyousomeerlang.com/)
+- Concurrent Programming in Erlang Part I
+- Programming Erlang, 2nd
+- Études for Erlang
