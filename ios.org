@@ -174,3 +174,20 @@ o|---------->x
  |
  +
  y
+
+** diff: /../Podfile.lock: No such file or directory
+   diff: /Manifest.lock: No such file or directory
+*** 解决办法
+- 参考: http://stackoverflow.com/questions/17072396/cocoapods-errors-on-project-build
+
+去掉一些Build Phases引入的sh脚本，即可解决问题
+选择JLRubyChina -> 选择JlRubyChian Target -> 选择Build Phases -> 去掉 Check Pods Manifest.lock
+其他的此类错误可以这样类似解决
+
+** JLRubyChina-iPhone Build
+git submodule init 
+git submodule update
+pod install
+
+用Vendor/JSONKit_fixerror/JSONKit.m文件替换  Pods/JSONKit/JSONKit.m
+
