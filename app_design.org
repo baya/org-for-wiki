@@ -11,3 +11,59 @@
 - http://ruby-china.org/topics/14005
 - http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/
 - http://www.google.com/fonts
+** 设计类的网站
+- http://ui4app.com/
+** ps教程
+*** ios app design set up photoshop
+- http://davidmckinney.com/blog/2013/12/31/designing-iphone-apps-how-to-setup-photoshop
+1 File -> New
+width: 640px;
+height: 1136px; 4 inch iPhone device
+Resolution: 72px (分辨率)
+Color Mode: RGB Color
+Background Contents: White (optional)
+Color Profile: Don't Color Manage This Document (more on color settings later)
+Pixel Aspect Ratio: Square Pixels
+2. Snap Settings
+3. Snap Settings - Snap Vector Tools and Transforms to Pixel Grid
+4. Text Settings
+- Select some text → Anti-aliasing selector (aa) → “Mac”
+5. Lighting Settings
+- Close Photoshop Files → Layer → Layer Style → Global Light → 90°
+Following the Apple iOS Human Interface Guidelines you should set all lighting in your app to 90°
+6. Grid Settings
+- Photoshop → Preferences → Guides, Grid & Slices →
+7. Export Settings
+Photoshop → File → Save for Web → 
+
+Preset: PNG-24
+Transparency: Checked
+Interlaced: Unchecked
+Embed Color Profile: Unchecked
+Convert to sRGB: Unchecked
+Quality: Bicubic
+8. Retina Display Settings
+9. Color Settings
+10. Performance Settings
+
+** 设计原则
+- http://davidmckinney.com/blog/2013/12/16/design-principles
+Make it easy
+Make it clear
+Make it friendly
+Make it focused
+Make it simple
+Make it helpful
+Make it obvious
+Make it safe
+Make it familiar
+Make it talk
+Make it unfold
+Make it special
+Make it again
+** 设计工具
+*** https://www.fluidui.com
+** 设计练习
+- http://sc.chinaz.com/info/140212394741.htm
+*** How to Design an iPhone Music Player App Interface With Photoshop CS6 
+- http://design.tutsplus.com/tutorials/iphone-music-player-app--psd-21825

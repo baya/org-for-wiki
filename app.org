@@ -1,5 +1,5 @@
 * APP
-** TODO 场景(Scene)
+** DONE 场景(Scene)
 - 帮助人们掌控对话
 - https://github.com/baya/SceneMaster
 ** TODO 远程(Remote)
@@ -20,3 +20,4 @@
 - 记录你每天吃的食物，帮助分析你的营养状况
 ** 独木舟(Kayak)
 - 帮助人们玩户外
+

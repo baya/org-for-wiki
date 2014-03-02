@@ -2,3 +2,7 @@
 ** 快捷键
 - Command + /  comment selection 注释
 - Ctrl + i     Re-indent 对齐
+
+** 使用Xcode作为设计工具
+- http://www.cocoachina.com/applenews/devnews/2014/0212/7803.html
+*** 预览设计
