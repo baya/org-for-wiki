@@ -1,3 +1,4 @@
 * Mac OS
+** http://www.macdang.com/ 有些下载资源
 ** edit local hosts file
 /private/etc/hosts
