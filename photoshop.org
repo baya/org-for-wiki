@@ -7,3 +7,7 @@
 ** 中文界面改为英文界面
 假设photoshop已经安装好，进入到photoshop的包里，然后到Locals/zh_CN/Support Files目录，你会发现一个叫tw10428.dat的文件，将此文件名改为tw10428.dat.bak即可
 如果想变为中文界面，将tw10428.dat.bak文件改回tw10428.dat即可
+
+** 练习教程
+*** http://design.tutsplus.com/tutorials/iphone-music-player-app--psd-21825
+*** http://sc.chinaz.com/info/140212394741.htm
