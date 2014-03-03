@@ -63,6 +63,7 @@ Make it special
 Make it again
 ** 设计工具
 *** https://www.fluidui.com
+*** mockup mac http://balsamiq.com/products/mockups/
 ** 设计练习
 - http://sc.chinaz.com/info/140212394741.htm
 *** How to Design an iPhone Music Player App Interface With Photoshop CS6 
