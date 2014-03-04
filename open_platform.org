@@ -1,0 +1,3 @@
+* 开放平台
+** 新浪微博站内应用
+- http://open.weibo.com/development/canvas
