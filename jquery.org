@@ -345,3 +345,32 @@ location.reload(false);
 true: reload from the server
 false: reload from the browser's cache
 default is false
+** 监测input事件
+- http://stackoverflow.com/questions/6458840/on-input-change-event
+$('#someInput').bind('input', function() { 
+    $(this).val() // get the current value of the input field.
+});
+keyup, keydown
+- http://stackoverflow.com/questions/8282266/how-to-prevent-invalid-characters-from-being-typed-into-input-fields
+
+    $("#contest_title").on('keydown', function(e){
+	var inputed_str = $(this).val();
+	var len = Fchk.Tool.getLengthInBytes(inputed_str);
+        // which为8的时候，说明按下的是del键
+	if(e.which == 8){return true;}
+	
+	return(len < length);
+    })
+
+
+keypress
+- http://stackoverflow.com/questions/633876/setting-maxlength-using-javascript
+
+
+** 文件输入框的change input file
+- http://stackoverflow.com/questions/11860721/how-to-handle-onchange-event-on-input-type-file-in-jquery
+$("document").ready(function(){
+    $("#upload").change(function() {
+                alert('changed!');
+            });
+});
