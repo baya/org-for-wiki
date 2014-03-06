@@ -374,3 +374,30 @@ $("document").ready(function(){
                 alert('changed!');
             });
 });
+
+** live 匹配选择器的当前及未来的元素
+- http://www.w3school.com.cn/jquery/event_live.asp
+$(selector).live(event,data,function)   
+*** live方法对hover事件的处理
+- http://www.oschina.net/code/snippet_54100_3136
+*** 代码实例
+	    this.$ele.live({
+		mouseenter: function(){
+		    var $img = $(this).children('img.swf_target');
+		    
+		    if(!$img.attr('src')){
+		    } else {
+			$(close_btn_html).appendTo(this).on('click', function(){
+			    $img.css({width: 0, height: 0});
+			    $img.attr('src', '');
+			    $(this).siblings('input').val('');
+			    $(this).siblings('p').show();
+			    $(this).remove();
+			});
+		    }
+
+		},
+		mouseleave: function(){
+		    $(this).children('.board-btn').remove();
+		}
+	    })
