@@ -1,6 +1,18 @@
 * Html
 ** comment tag
-<!--...--> Tag
+   <!--...--> Tag
+*** 实例
+  <body id=<%= "#{params[:controller]}-#{params[:action]}" %>>
+    <!--
+      When uploading a image, it should appear a wait gif during the uploading process, but sometimes we will
+    not see the wait gif when we upload image in the first time, i am not clear how about this issue happened,
+    so in order to ensuer the wait gif to appear, i add the following var tag.
+    //-->
+    <var class="wait" style="display:none"></var>
+    <%= yield %>
+    
+  </body>
+
 ** <input> maxlength
 - 参考: http://www.w3schools.com/tags/att_input_maxlength.asp
 <form action="demo_form.asp">

@@ -627,6 +627,44 @@ $("body")[0].offsetWidth;
 - 参考: http://www.cnblogs.com/liszt/archive/2012/01/15/2322692.html
 document.documentElement.clientWidth/clientHeight 视口Viewport宽高(CSS像素)
 
+示例代码:
+var Browser = {
+ 
+};
+ 
+//页面
+Browser.Page = (function () {
+ 
+    return {
+        scrollTop: function () {
+            return Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+        },
+        scrollLeft: function () {
+            return Math.max(document.body.scrollLeft, document.documentElement.scrollLeft);
+        },
+        height: function () {
+            var _height;
+            if (document.compatMode == "CSS1Compat") {
+                _height = document.documentElement.scrollHeight;
+            } else {
+                _height = document.body.scrollHeight;
+            }
+            return _height;
+        },
+        width: function () {
+            var _width;
+            if (document.compatMode == "CSS1Compat") {
+                _width = document.documentElement.scrollWidth;
+            } else {
+                _width = document.body.scrollWidth;
+            }
+            return _width;
+        }
+ 
+    };
+ 
+})();
+
 $(window).height();   // returns height of browser viewport
 $(document).height(); // returns height of HTML document
 ** window resize
@@ -656,3 +694,19 @@ Javascript刷新页面的几种方法：
 6    window.navigate(location) 
 7    location.replace(location) 
 8    document.URL=location.href
+** 汉字两个字符长，英文字一个字符长，汉英混合
+- http://stackoverflow.com/questions/5515869/string-length-in-bytes-in-javascript
+function getLengthInBytes(str) {
+  var b = str.match(/[^\x00-\xff]/g);
+  return (str.length + (!b ? 0: b.length)); 
+}
+
+getLengthInBytes("我我a") // 5
+
+** sleep方法，暂停
+- http://www.oschina.net/question/141209_21625
+function (d){
+  for(var t = Date.now();Date.now() - t <= d;);
+}
+** 生成wait gif的网站
+- http://www.ajaxload.info/

@@ -345,3 +345,109 @@ location.reload(false);
 true: reload from the server
 false: reload from the browser's cache
 default is false
+** 监测input事件
+- http://stackoverflow.com/questions/6458840/on-input-change-event
+$('#someInput').bind('input', function() { 
+    $(this).val() // get the current value of the input field.
+});
+keyup, keydown
+- http://stackoverflow.com/questions/8282266/how-to-prevent-invalid-characters-from-being-typed-into-input-fields
+
+    $("#contest_title").on('keydown', function(e){
+	var inputed_str = $(this).val();
+	var len = Fchk.Tool.getLengthInBytes(inputed_str);
+        // which为8的时候，说明按下的是del键
+	if(e.which == 8){return true;}
+	
+	return(len < length);
+    })
+
+
+keypress
+- http://stackoverflow.com/questions/633876/setting-maxlength-using-javascript
+
+
+** 文件输入框的change input file
+- http://stackoverflow.com/questions/11860721/how-to-handle-onchange-event-on-input-type-file-in-jquery
+$("document").ready(function(){
+    $("#upload").change(function() {
+                alert('changed!');
+            });
+});
+
+** live 匹配选择器的当前及未来的元素
+- http://www.w3school.com.cn/jquery/event_live.asp
+$(selector).live(event,data,function)   
+*** live方法对hover事件的处理
+- http://www.oschina.net/code/snippet_54100_3136
+*** 代码实例
+	    this.$ele.live({
+		mouseenter: function(){
+		    var $img = $(this).children('img.swf_target');
+		    
+		    if(!$img.attr('src')){
+		    } else {
+			$(close_btn_html).appendTo(this).on('click', function(){
+			    $img.css({width: 0, height: 0});
+			    $img.attr('src', '');
+			    $(this).siblings('input').val('');
+			    $(this).siblings('p').show();
+			    $(this).remove();
+			});
+		    }
+
+		},
+		mouseleave: function(){
+		    $(this).children('.board-btn').remove();
+		}
+	    })
+
+** cookie
+- https://github.com/carhartl/jquery-cookie
+Create session cookie:
+
+$.cookie('the_cookie', 'the_value');
+Create expiring cookie, 7 days from then:
+
+$.cookie('the_cookie', 'the_value', { expires: 7 });
+Create expiring cookie, valid across entire site:
+
+$.cookie('the_cookie', 'the_value', { expires: 7, path: '/' });
+Read cookie:
+
+$.cookie('the_cookie'); // => "the_value"
+$.cookie('not_existing'); // => undefined
+Read all available cookies:
+
+$.cookie(); // => { "the_cookie": "the_value", "...remaining": "cookies" }
+Delete cookie:
+
+// Returns true when cookie was found, false when no cookie was found...
+$.removeCookie('the_cookie');
+
+// Same path as when the cookie was written...
+$.removeCookie('the_cookie', { path: '/' });
+
+Delete cookie:
+
+// Returns true when cookie was found, false when no cookie was found...
+$.removeCookie('the_cookie');
+
+// Same path as when the cookie was written...
+$.removeCookie('the_cookie', { path: '/' });
+
+*** 实例
+
+{
+	rememberNoNoticeChecked: function(){
+	    var no_notice_checked = $("#no_notice_replay_heat").attr('checked');
+	    if(no_notice_checked){
+		$.cookie('no_notice_checked', true, { expires: 7, path: '/'});
+	    }
+	},
+
+	withoutNotice: function(){
+	    return $.cookie('no_notice_checked', Boolean);
+	}
+
+}
