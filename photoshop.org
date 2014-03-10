@@ -9,7 +9,7 @@
 如果想变为中文界面，将tw10428.dat.bak文件改回tw10428.dat即可
 
 ** 练习教程
-*** http://design.tutsplus.com/tutorials/iphone-music-player-app--psd-21825
+*** TODO http://design.tutsplus.com/tutorials/iphone-music-player-app--psd-21825
 *** http://design.tutsplus.com/tutorials/mobile-calendar-app--psd-15058
 *** http://design.tutsplus.com/tutorials/create-a-mobile-weather-app-interface-in-photoshop--psd-33332
 *** http://design.tutsplus.com/tutorials/create-a-mobile-shopping-app-design-in-photoshop--psd-32372
@@ -19,3 +19,35 @@
 *** http://design.tutsplus.com/tutorials/create-a-mobile-task-manager-app-in-photoshop--psd-14983
 *** http://design.tutsplus.com/tutorials/mobile-ui-how-to-redesign-the-spendometer-iphone-app-part-1--psd-10162
 *** http://sc.chinaz.com/info/140212394741.htm
+** 图片资源
+- http://www.sxc.hu/
+** create group
+- http://helpx.adobe.com/en/photoshop/using/create-layers-groups.html
+Choose Layer > New > Layer or choose Layer > New > Group
+** import group from another psd file
+- http://answers.yahoo.com/question/index?qid=20090521185703AAxqb2C
+
+right click on the layer -> select Duplicate Laye -> select the other file as the destination
+
+** layer的上下关系
++ Status Bar
+ - Bars
+ - 7:30 Bar
+ - Alarm 
+ - Battery
+ - Background
++ Navigation Bar
+ - Nav Bg
++ Background
+ - Background
++ Layer1
+
+Status Bar 在 Navigation Bar 上 在 Background上 在 Layer1上
+Bars 在 7:30 Bar 上 在 Battery 上 在 Background上 在 Nav Bg上 在 Background上
+
+** cc版本 Path/Direct Selection Tool
+按住Cmd，然后在目标图形上单击，就可以在Path和Direct之间切换 
+** 教程网站
+- http://simplephotoshop.com/
+** Align To Selection 在选择的区域里对齐
+使用Rectangular Marquee Tool选择你需要对齐参照的区域，然后使用Moove Tool选择需要移动的对象
