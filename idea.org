@@ -17,6 +17,7 @@
 - http://guides.rubyonrails.org/asset_pipeline.html
 
 ** dun: 去掉default方法
+** 博客: 新浪微博专业版应用开发
 ** 阅读: http://guides.rubyonrails.org/security.html
 ** 写书: 百分之二十的Rails
 *** 参考: http://ihower.tw/rails3/
