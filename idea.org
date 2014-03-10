@@ -16,6 +16,8 @@
 ** DONE rails-guide复习: The Asset Pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
 
+** dun: 去掉default方法
+** 阅读: http://guides.rubyonrails.org/security.html
 ** 写书: 百分之二十的Rails
 *** 参考: http://ihower.tw/rails3/
 ** 学习W3School教程: HTML/CSS http://www.w3school.com.cn/h.asp

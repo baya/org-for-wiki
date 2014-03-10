@@ -281,3 +281,10 @@ ln -s .emacs.d/emacs.profile .emacs
 
 ** killall
 $ killall rake
+** pow
+$ cd ~/.pow
+$ ln -s /path/to/myapp
+$ open http://myapp.dev/
+
+*** 实例:
+ln -s ~/workspace/magus-soft/fchk-app weibopage.fchk

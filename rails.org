@@ -1393,10 +1393,21 @@ contest.rule_file.identifier
 
 
 
-
 ** 解析客户端gzip压缩数据
 ActiveSupport::Gzip.decompress(request.raw_post)
 
 ** 截取中文字符 truncate
 truncate("Once upon a time in a world far far away")
 # => "Once upon a time in a world..."
+** 以非 root 用户将应用绑定到 80 端口 ssh 80
+- http://ruby-china.org/topics/16094
+- http://stackoverflow.com/questions/413807/is-there-a-way-for-non-root-processes-to-bind-to-privileged-ports-1024-on-l
+具体方法，如 rails应用正常跑在 3000端口，终端输入：
+
+sudo ssh devuser@localhost -L 80:localhost:3000 -N
+sudo ssh jiangguimin@localhost -L 80:localhost:3000 -N
+sudo ssh jiangguimin@weibopage.local.fchk.com -L 80:localhost:3000 -N
+
+** 微博专业版本 page app 开发
+*** issue: applications over the unaudited use restrictions
+- http://open.weibo.com/qa/index.php?qa=159&qa_1=%E7%94%A8%E6%88%B7%E6%8E%88%E6%9D%83%E5%90%8E%E5%87%BA%E7%8E%B0applications-over-unaudited-restrictions%E9%94%99%E8%AF%AF%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%EF%BC%9F

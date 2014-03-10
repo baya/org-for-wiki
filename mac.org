@@ -2,3 +2,11 @@
 ** http://www.macdang.com/ 有些下载资源
 ** edit local hosts file
 /private/etc/hosts
+** enable ssh in mac osx
+- http://stackoverflow.com/questions/6313929/how-do-i-open-port-22-in-osx-10-6-7
+
+系统偏好设置 -> 共享 -> 打开远程管理
+
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+ssh localhost

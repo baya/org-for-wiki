@@ -574,6 +574,9 @@ var PicArrange_SetOpBtn = function(data){
 'a'.toUpperCase()
 *** 转换为整型
 parseInt('0')
+*** 截取字符串 replace
+- http://www.w3school.com.cn/jsref/jsref_replace.asp
+str.replace(/Microsoft/, "W3School")
 ** 函数中this的四种情况
 - 参考: http://jjyr.github.io/2014/02/18/javascript-tips-during-my-studying-2/
 //1. 函数绑定到对象上时, this为对象
