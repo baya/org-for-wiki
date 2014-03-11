@@ -952,29 +952,39 @@
 ***** 非常好看应用在weibo那边需要加一个overflow:scroll属性
 ***** 比赛全部排名第二组显示
 ** 03-11
+*** 处理大乐透追号失败
 *** 非常好看比赛平台web:
 **** 创建比赛: 图片上传按钮统一为上传奖品的样式
-**** 部署到weibo app专业应用 page service
+**** DONE 部署到weibo app专业应用 page service dev 环境
 - http://open.weibo.com/wiki/新手指南
 - http://open.weibo.com/wiki/专业版应用开发者红宝书
 - http://open.weibo.com/wiki/站内应用
 - 第三方站内应用页面以Iframe的形式嵌入到微博页面中，Iframe的宽度为760px，高度为600-2000px
 - 站内应用调用应用授权弹层: http://open.weibo.com/wiki/站内应用开发指南#.E8.B0.83.E7.94.A8.E5.BA.94.E7.94.A8.E6.8E.88.E6.9D.83.E5.BC.B9.E5.B1.82
 - 微博专业版应用开发: http://july-12.github.io/blog/2014/03/07/wei-bo-zhuan-ye-ban-ying-yong-kai-fa-shi-lu/
-**** TODO weibo 用户授权
-***** TODO 判断赞助商是否登录
-***** 赞助商登录
-***** 赞助商授权的过期时间
-***** 判断普通用户是否登录
-***** 普通用户登录
-***** 根据cid，即赞助商在微博的id, 跳转到与赞助商对应的比赛页面
-**** 赞助商登录
-**** 普通用户登录
+**** 部署到weibo app专业应用 page service staging 环境
+***** 部署
+***** 增加测试账号
+***** 邀请产品试用
+**** DONE weibo 用户授权
+***** DONE 判断赞助商是否登录
+***** DONE 赞助商登录
+***** DONE 赞助商授权的过期时间
+****** DONE 将用户的uid存储在cookie里
+****** DONE 在cookie里存储微博授权的过期时间
+***** DONE 判断普通用户是否登录
+***** DONE 普通用户登录
+***** DONE 根据cid，即赞助商在微博的id, 跳转到与赞助商对应的比赛页面
+**** DONE 赞助商登录
+**** DONE 普通用户登录
+**** DONE 显示比赛的创建者
 *** 非常好看
 **** Bug List
 ***** Playing the PK：顶部有个加关注按钮
 ***** 如果用户积分数不够，不应该让用户重玩heat
-***** 非常好看应用在weibo那边需要加一个overflow:scroll属性
+***** DONE 非常好看应用在weibo的高度自适应
+- http://open.weibo.com/wiki/%E4%B8%93%E4%B8%9A%E7%89%88%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97
+- <script src="http://js.t.sinajs.cn/t4/enterprise/js/public/appframe/client.js" type="text/javascript"></script>
 ***** 比赛全部排名第二组显示
 ***** 比赛结果页，我的排名第四张图样式有问题
-
+***** TODO 比赛描述和比赛标题的字体样式不一致

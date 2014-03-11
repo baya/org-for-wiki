@@ -1411,3 +1411,56 @@ sudo ssh jiangguimin@weibopage.local.fchk.com -L 80:localhost:3000 -N
 ** 微博专业版本 page app 开发
 *** issue: applications over the unaudited use restrictions
 - http://open.weibo.com/qa/index.php?qa=159&qa_1=%E7%94%A8%E6%88%B7%E6%8E%88%E6%9D%83%E5%90%8E%E5%87%BA%E7%8E%B0applications-over-unaudited-restrictions%E9%94%99%E8%AF%AF%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%EF%BC%9F
+
+*** issue: 自适应高度, http://open.weibo.com/wiki/%E4%B8%93%E4%B8%9A%E7%89%88%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97
+** cookie
+- http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html
+Examples of writing:
+
+# Sets a simple session cookie.
+# This cookie will be deleted when the user's browser is closed.
+cookies[:user_name] = "david"
+
+# Assign an array of values to a cookie.
+cookies[:lat_lon] = [47.68, -122.37]
+
+# Sets a cookie that expires in 1 hour.
+cookies[:login] = { value: "XJ-122", expires: 1.hour.from_now }
+
+# Sets a signed cookie, which prevents users from tampering with its value.
+# The cookie is signed by your app's <tt>config.secret_key_base</tt> value.
+# It can be read using the signed method <tt>cookies.signed[:name]</tt>
+cookies.signed[:user_id] = current_user.id
+
+# Sets a "permanent" cookie (which expires in 20 years from now).
+cookies.permanent[:login] = "XJ-122"
+
+# You can also chain these methods:
+cookies.permanent.signed[:login] = "XJ-122"
+Examples of reading:
+
+cookies[:user_name]    # => "david"
+cookies.size           # => 2
+cookies[:lat_lon]      # => [47.68, -122.37]
+cookies.signed[:login] # => "XJ-122"
+Example for deleting:
+
+cookies.delete :user_name
+
+*** 代码实例:
+# 写cookie
+  def do_login(user, tp_account)
+    cookies[:login] = {
+      value: {uid: tp_account.uid, user_id: user.id}.to_json,
+      expires: tp_account.expires_at
+    }
+  end
+
+# 读cookie
+
+  def login_cookie(key)
+    if cookies[:login]
+      @login = JSON.parse cookies[:login]
+      @login[key]
+    end
+  end

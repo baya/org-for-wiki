@@ -1797,3 +1797,9 @@ end.map do |row|
 end.take(5).force
 
 p rows
+
+** Time
+- http://www.ruby-doc.org/core-2.1.1/Time.html
+*** at
+Time.at(628232400) #=> 1989-11-28 00:00:00 -0500
+Time.at(access_token.expires_at)  #=> 2014-03-13 03:00:02 +0800
