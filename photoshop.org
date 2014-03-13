@@ -51,3 +51,8 @@ Bars 在 7:30 Bar 上 在 Battery 上 在 Background上 在 Nav Bg上 在 Backgr
 - http://simplephotoshop.com/
 ** Align To Selection 在选择的区域里对齐
 使用Rectangular Marquee Tool选择你需要对齐参照的区域，然后使用Moove Tool选择需要移动的对象
+
+** Toolbox 工具箱
+- http://simplephotoshop.com/photoshop_tools/
+** 消除虚线框
+cmd + d
