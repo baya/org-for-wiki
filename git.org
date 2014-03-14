@@ -100,3 +100,9 @@ $ git config --global user.name "Billy Everyteen"
 $ git config --global user.name
 # Verify the setting
 # Billy Everyteen
+** utf-8支持
+- http://stackoverflow.com/questions/5854967/git-msysgit-accents-utf-8-the-definitive-answers
+git config [--global] core.quotepath off
+git config [--global] i18n.logoutputencoding utf8
+git config [--global] i18n.commitencoding utf8
+git config [--global] --unset svn.pathnameencoding
