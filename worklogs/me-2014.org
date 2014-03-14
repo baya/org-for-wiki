@@ -1053,3 +1053,27 @@
 ***** DONE 比赛页：无法继续，一致在无线弹出扣除积分弹窗
 ***** 比赛的查看次数，图片数，点击数，不正确
 ***** DONE 结果页：再玩一次应该显示相同的图片，再玩一组应该显示不同的图片
+** 03-14
+*** 非常好看比赛平台web:
+**** 创建比赛: 图片上传按钮统一为上传奖品的样式
+**** 部署到weibo app专业应用 page service staging 环境
+- http://open.weibo.com/wiki/新手指南
+- http://open.weibo.com/wiki/专业版应用开发者红宝书
+- http://open.weibo.com/wiki/站内应用
+- 第三方站内应用页面以Iframe的形式嵌入到微博页面中，Iframe的宽度为760px，高度为600-2000px
+- 站内应用调用应用授权弹层: http://open.weibo.com/wiki/站内应用开发指南#.E8.B0.83.E7.94.A8.E5.BA.94.E7.94.A8.E6.8E.88.E6.9D.83.E5.BC.B9.E5.B1.82
+- 微博专业版应用开发: http://july-12.github.io/blog/2014/03/07/wei-bo-zhuan-ye-ban-ying-yong-kai-fa-shi-lu/
+***** 部署
+***** 增加测试账号
+***** 邀请产品试用
+**** 比赛结果: 图片评论
+**** 比赛结果: 比赛结束后发奖功能
+**** TODO 比赛全部排名: 图片分享
+- http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI#.E7.9F.AD.E9.93.BE
+**** 比赛结果页面: 比赛分享
+**** 比赛结果页面: 显示"最近分享"
+*** 非常好看
+**** Bug List
+***** Playing the PK：顶部有个加关注按钮
+***** 比赛全部排名第二组显示
+***** 比赛的查看次数，图片数，点击数，不正确
