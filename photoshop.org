@@ -9,7 +9,7 @@
 如果想变为中文界面，将tw10428.dat.bak文件改回tw10428.dat即可
 
 ** 练习教程
-*** TODO http://design.tutsplus.com/tutorials/iphone-music-player-app--psd-21825
+*** DONE http://design.tutsplus.com/tutorials/iphone-music-player-app--psd-21825
 *** http://design.tutsplus.com/tutorials/mobile-calendar-app--psd-15058
 *** http://design.tutsplus.com/tutorials/create-a-mobile-weather-app-interface-in-photoshop--psd-33332
 *** http://design.tutsplus.com/tutorials/create-a-mobile-shopping-app-design-in-photoshop--psd-32372
@@ -61,3 +61,17 @@ cmd + d
 - http://forums.adobe.com/thread/1010598
 Photoshop > Preferences > Units & Rulers 
 then change rules to pixels
+
+** grid, guides, 网格
+- http://helpx.adobe.com/en/photoshop/using/grid-guides.html
+Choose View > Show > Grid.
+
+Choose View > Show > Guides.
+
+View > Show > Smart Guides.
+
+Choose View > Extras. This command also shows or hides layer edges, selection edges, target paths, and slices.
+
+创建guide
+
+View > New Guide
