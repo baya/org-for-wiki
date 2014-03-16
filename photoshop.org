@@ -57,3 +57,7 @@ Bars 在 7:30 Bar 上 在 Battery 上 在 Background上 在 Nav Bg上 在 Backgr
 cmd + d
 
 ** 讲锚点的两个圈集中到锚点上，然后用Direct Selection Tool (A) 工具拖动锚点，这时候以锚点为角的两个边是直线而不是曲线
+** Change 'pop up' measurement to pixels instead of inches or cm
+- http://forums.adobe.com/thread/1010598
+Photoshop > Preferences > Units & Rulers 
+then change rules to pixels
