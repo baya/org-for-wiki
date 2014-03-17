@@ -738,3 +738,17 @@ sayColor.apply(obj, new Array("The color is ", "a very nice color indeed."));
   },
 
 }
+
+** 弹出框居中显示
+- http://stackoverflow.com/questions/13343063/how-to-position-a-dialog-box-to-the-centre-of-a-window
+*** 我的代码
+{
+	adjustDialogPosition: function($dialog){
+	    $dialog.css({
+		position: 'fixed',
+		top: ((window.innerHeight/2) - ($dialog.height()/2))+'px',
+		left: ((window.innerWidth/2) - ($dialog.width()/2))+'px'
+	    })
+	}
+
+}
