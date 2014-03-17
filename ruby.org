@@ -1803,3 +1803,11 @@ p rows
 *** at
 Time.at(628232400) #=> 1989-11-28 00:00:00 -0500
 Time.at(access_token.expires_at)  #=> 2014-03-13 03:00:02 +0800
+
+** 时区转换
+t = DateTime.parse('2014-03-17 16:00:00 -05:00')
+# EST: Mon, 17 Mar 2014 16:00:00 -0500
+# Beijing: Tue, 18 Mar 2014 05:00:00 CST +08:00
+t = DateTime.parse('2014-03-17 9:00:00 -05:00')
+# EST: Mon, 17 Mar 2014 09:00:00 -0500
+# Beijing: Mon, 17 Mar 2014 22:00:00 CST +08:00
