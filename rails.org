@@ -1464,3 +1464,10 @@ cookies.delete :user_name
       @login[key]
     end
   end
+** request
+- request.url
+http://weibopage.fchk.dev/appPage?cid=2791328227&ifmID=ifm&url=http%3A%2F%2Fe.weibo.com%2Fproxy.html&key=&sub_appkey=3007443837&viewer=2696072061&tokenString=QAaa68UHDDSlXZUvGLmGE5CC1Da-qNLfmVGXAnn4zF0.eyJ1c2VyIjp7ImNvdW50cnkiOiJjbiIsImxvY2FsZSI6IiJ9LCJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImlzc3VlZF9hdCI6MTM5NTAyNDY0NH0
+- request.GET
+{"cid"=>"2791328227", "ifmID"=>"ifm", "url"=>"http://e.weibo.com/proxy.html", "key"=>"", "sub_appkey"=>"3007443837", "viewer"=>"2696072061", "tokenString"=>"QAaa68UHDDSlXZUvGLmGE5CC1Da-qNLfmVGXAnn4zF0.eyJ1c2VyIjp7ImNvdW50cnkiOiJjbiIsImxvY2FsZSI6IiJ9LCJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImlzc3VlZF9hdCI6MTM5NTAyNDY0NH0"}
+- request.query_string
+cid=2791328227&ifmID=ifm&url=http%3A%2F%2Fe.weibo.com%2Fproxy.html&key=&sub_appkey=3007443837&viewer=2696072061&tokenString=QAaa68UHDDSlXZUvGLmGE5CC1Da-qNLfmVGXAnn4zF0.eyJ1c2VyIjp7ImNvdW50cnkiOiJjbiIsImxvY2FsZSI6IiJ9LCJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImlzc3VlZF9hdCI6MTM5NTAyNDY0NH0

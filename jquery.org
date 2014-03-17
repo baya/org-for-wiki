@@ -20,7 +20,7 @@ $(textareaElement).val('aaa')
 input.focus(); //sets focus to element
 var val = this.input.value; //store the value of the element
 this.input.value = ''; //clear the value of the element
-this.input.value = val; //set that value back. 
+this.input.value = val; //set that value back.
 
 我的做法:
 inputElement.on('focus', function(){
@@ -52,7 +52,7 @@ $(".a .b") 或者 $(".a > .b")
 ** each
 - 实例
 var ContestFormPrizeStyle = {
-    
+
     init: function(data){
 	this.$ele = $(data.ele);
 	this.css_data = data.css_data;
@@ -62,7 +62,7 @@ var ContestFormPrizeStyle = {
 
     call: function(){
 	var _scope = this;
-	
+
 	this.$ele.each(function(i){
 	    var img = $(this).attr('src');
 
@@ -75,7 +75,7 @@ var ContestFormPrizeStyle = {
 
 ** ajax
 *** 同步请求
-    
+
 	$.ajax({
 	    type: 'GET',
 	    url: url,
@@ -85,7 +85,7 @@ var ContestFormPrizeStyle = {
 		vote_result = msg;
 	    }
 	});
-    
+
 *** 同步调用实例
 var VoteResult = {
 
@@ -99,7 +99,7 @@ var VoteResult = {
     call: function(){
 	var vote_result = this.getVoteResult();
 	console.log(vote_result);
-	
+
 	if(vote_result.status.resp_code == 0){
 	    this.renderVoteResult(vote_result.result);
 	    this.fixFit();
@@ -111,7 +111,7 @@ var VoteResult = {
     getVoteResult: function(){
 	var vote_result = null;
 	var url = '/userVoteResult';
-	
+
 	$.ajax({
 	    type: 'GET',
 	    url: url,
@@ -141,7 +141,7 @@ var VoteResult = {
 }
 ** parents 获取祖先元素
 - 实例
-  
+
 var ContestFormPrizeCancel = {
 
     init: function(data){
@@ -155,7 +155,7 @@ var ContestFormPrizeCancel = {
 	    $(this).parents('.prize_info').remove();
 	})
     }
-    
+
 }
 
 ** remove event handler
@@ -235,7 +235,7 @@ ContestForm.SetRuleField = function(data){
 
 	activeDefaultRuleCheck: function(){
 	    var _scope = this;
-	    
+
 	    this.$btn.on('click', function(){
 		if(_scope.$chk.attr('checked') == "checked"){
 		    _scope.$chk.attr('checked', null);
@@ -246,7 +246,7 @@ ContestForm.SetRuleField = function(data){
 		_scope.setIfDefaultRuleChecked();
 	    })
 	}
-	
+
     }.init().call();
 }
 
@@ -297,7 +297,7 @@ $(".check-btn").on('click', function(){
 
 			input.on( 'focus', function(){
 				element.addClass( settings.focusedClass );
-				
+
 				if( input.val() === label.text() ){
 					input.val('');
 				} else {
@@ -308,7 +308,7 @@ $(".check-btn").on('click', function(){
 
 			input.on( 'blur', function(){
 				element.removeClass( settings.focusedClass );
-				
+
 				if( !input.val() ){
 					input.val( label.text() );
 					element.removeClass( settings.populatedClass );
@@ -347,7 +347,7 @@ false: reload from the browser's cache
 default is false
 ** 监测input事件
 - http://stackoverflow.com/questions/6458840/on-input-change-event
-$('#someInput').bind('input', function() { 
+$('#someInput').bind('input', function() {
     $(this).val() // get the current value of the input field.
 });
 keyup, keydown
@@ -358,7 +358,7 @@ keyup, keydown
 	var len = Fchk.Tool.getLengthInBytes(inputed_str);
         // which为8的时候，说明按下的是del键
 	if(e.which == 8){return true;}
-	
+
 	return(len < length);
     })
 
@@ -377,14 +377,14 @@ $("document").ready(function(){
 
 ** live 匹配选择器的当前及未来的元素
 - http://www.w3school.com.cn/jquery/event_live.asp
-$(selector).live(event,data,function)   
+$(selector).live(event,data,function)
 *** live方法对hover事件的处理
 - http://www.oschina.net/code/snippet_54100_3136
 *** 代码实例
 	    this.$ele.live({
 		mouseenter: function(){
 		    var $img = $(this).children('img.swf_target');
-		    
+
 		    if(!$img.attr('src')){
 		    } else {
 			$(close_btn_html).appendTo(this).on('click', function(){

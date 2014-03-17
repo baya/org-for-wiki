@@ -6,3 +6,59 @@
 *** vim 查找
 n 继续朝同一方向查找
 N 反方向进行搜索
+*** buffer 切换
+:bn 与 :bp
+** vim form rails
+*** rails.vim
+- http://jianshu.io/p/Exo4yJ
+:Rake      :Rake db:migrate,  :Rake db:create, ......
+  :Rmodel     :Rmodel info (查找model名称为info的文件)
+  :Rview      :Rview  infos/new (查找infos控制器下的new视图文件)
+  :Rcontroller     :Rcontroller infos(查找控制器名称为infos的文件)
+  :find       :Rfind infos_controller(查找infos_controller.rb文件)
+  :Rails       :Rails console 或  :Rails generate model info age:integer或........
+  :Rscript     :Rscript console 或 :Rscript generate model info age:integer或......(注意Rscript相当于script/rails命令)
+  :Redit       :Redit 相对路径
+  :Rlog        :Rlog development  打开development.log日志文件
+  :Rpreview     打开一个浏览器，http://localhost:3000
+  :Rrefresh     刷新
+  R             在目录下直接shift+r，可以刷新目录
+  gf            根据当前光标处内容跳转到文件
+  :Rmigration   查找migration文件
+  :Rlayout      查找layout文件
+  :Rhelper      查找helper文件
+  :Rstylesheet
+  :Rjavascript
+  :Rplugin
+  :Rlib
+  :Rtask
+  :Rserver
+*** janus
+- https://github.com/carlhuda/janus
+模糊查找:
+ CtrlP
+
+buffer:
+
+[b to go to the previous buffer
+]b to go to the next buffer
+
+
+
+** 在窗口间移动光标
+Vi中的光标键是h, j, k, l，要在各个屏间切换，只需要先按一下Ctrl+W
+
+把光标移到右边的屏。
+Ctrl+W l
+把光标移到左边的屏中。
+Ctrl+W h
+把光标移到上边的屏中。
+Ctrl+W k
+把光标移到下边的屏中。
+Ctrl+W j
+把光标移到下一个的屏中。.
+Ctrl+W w
+
+** zencoding
+- https://raw.github.com/mattn/emmet-vim/master/TUTORIAL
+type '<c-y>,'
