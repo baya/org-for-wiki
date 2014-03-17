@@ -18,6 +18,13 @@
 
 ** dun: 去掉default方法
 ** 博客: 新浪微博专业版应用开发
+- http://open.weibo.com/wiki/新手指南
+- http://open.weibo.com/wiki/专业版应用开发者红宝书
+- http://open.weibo.com/wiki/站内应用
+- 第三方站内应用页面以Iframe的形式嵌入到微博页面中，Iframe的宽度为760px，高度为600-2000px
+- 站内应用调用应用授权弹层: http://open.weibo.com/wiki/站内应用开发指南#.E8.B0.83.E7.94.A8.E5.BA.94.E7.94.A8.E6.8E.88.E6.9D.83.E5.BC.B9.E5.B1.82
+- 微博专业版应用开发: http://july-12.github.io/blog/2014/03/07/wei-bo-zhuan-ye-ban-ying-yong-kai-fa-shi-lu/
+- 如果app已经部署到线上，那么微博page不支持此app应用地址的子路径
 ** 阅读: http://guides.rubyonrails.org/security.html
 ** 写书: 百分之二十的Rails
 *** 参考: http://ihower.tw/rails3/
