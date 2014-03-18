@@ -75,3 +75,6 @@ Choose View > Extras. This command also shows or hides layer edges, selection ed
 创建guide
 
 View > New Guide
+
+** clipping mask 剪贴蒙版
+mask the image to the opaque pixels of the bottommost layers
