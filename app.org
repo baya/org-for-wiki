@@ -1,4 +1,9 @@
 * APP
+** 移动前端框架
+*** ionic http://ionicframework.com/
+*** gmu http://gmu.baidu.com/
+*** http://app-framework-software.intel.com/
+*** jQTouch
 ** DONE 场景(Scene)
 - 帮助人们掌控对话
 - https://github.com/baya/SceneMaster
