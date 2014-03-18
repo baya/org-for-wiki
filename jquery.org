@@ -139,6 +139,44 @@ var VoteResult = {
 	})
     }
 }
+*** 异步请求实例, done, fail, always
+	    $dialog.find('button').on('click', function(){
+		var $btn = $(this);
+		var $form = $btn.parents('form');
+		var url = $form.attr('action');
+		var data = $form.serialize();
+		var $content = $btn.parents('.Content_Bg');
+
+		_scope.showWait($content);
+		_scope.disableBtn($btn);
+
+		$.ajax({
+		    type: $form.attr('method') || 'POST',
+		    url:   url,
+		    data: data
+		})
+		    .done( function(msg){
+			if(msg.status.resp_code != 0){
+			    alert(msg.status.resp_msg);
+			} else {
+			    _scope.removeMainBg();
+			    $dialog.parent().remove();
+			    // _scope.activeBtn($btn);
+			    alert('分享成功');
+			    res = msg.result;
+			}
+		    })
+		    .fail(function(msg){
+			alert(msg.status + ' 分享失败');
+			_scope.activeBtn($btn);
+		    })
+		    .always(function(){
+			_scope.removeWait($content);
+		    });
+
+		return false;
+	    });
+
 ** parents 获取祖先元素
 - 实例
 
@@ -366,7 +404,6 @@ keyup, keydown
 keypress
 - http://stackoverflow.com/questions/633876/setting-maxlength-using-javascript
 
-
 ** 文件输入框的change input file
 - http://stackoverflow.com/questions/11860721/how-to-handle-onchange-event-on-input-type-file-in-jquery
 $("document").ready(function(){
@@ -451,3 +488,5 @@ $.removeCookie('the_cookie', { path: '/' });
 	}
 
 }
+
+** event.stoppropagation

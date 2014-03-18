@@ -14,7 +14,7 @@
 
 ** remove default link color of 'A' tag
 - 参考: http://stackoverflow.com/questions/6722467/how-to-remove-the-default-link-color-of-the-html-a-tag
-  
+
 a{color:inherit;}
 
 ** 绝对定位 absolute
@@ -79,13 +79,13 @@ div
 $(img).css({width: 0, height: 0})，这段代码能消除img的自带边框。
 ** position 属性
 - http://www.w3school.com.cn/css/pr_class_position.asp
-absolute	
+absolute
 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
 元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
-fixed	
+fixed
 生成绝对定位的元素，相对于浏览器窗口进行定位。
 元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
-relative	
+relative
 生成相对定位的元素，相对于其正常位置进行定位。
 因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。
 static	默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。
@@ -106,3 +106,46 @@ filter:alpha(opacity=40); /* 针对 IE8 以及更早的版本 */
 - http://stackoverflow.com/questions/2874813/why-textarea-and-textfield-not-taking-font-family-and-font-size-from-body
 
 body, input, select, textarea { font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#000000; }
+** 书写规范
+- http://www.shejidaren.com/css-written-specifications.html
+*** 书写顺序
+1.位置属性(position, top, right, z-index, display, float等)
+2.大小(width, height, padding, margin)
+3.文字系列(font, line-height, letter-spacing, color- text-align等)
+4.背景(background, border等)
+5.其他(animation, transition等)
+*** 使用CSS缩写属性
+padding,margin,font
+*** 去掉小数点前的“0”
+*** 简写命名
+*** 16进制颜色代码缩写
+*** 连字符CSS选择器命名规范
+1.长名称或词组可以使用中横线来为选择器命名。
+
+2.不建议使用“_”下划线来命名CSS选择器，为什么呢？
+
+输入的时候少按一个shift键；
+浏览器兼容问题 （比如使用_tips的选择器命名，在IE6是无效的）
+能良好区分JavaScript变量命名（JS变量命名是用“_”）
+*** 不要随意使用id
+*** 为选择器添加状态前缀
+*** 注意事项
+1.一律小写;
+2.尽量用英文;
+3.不加中槓和下划线;
+4.尽量不缩写，除非一看就明白的单词。
+*** CSS样式表文件命名
+主要的 master.css
+模块 module.css
+基本共用 base.css
+布局、版面 layout.css
+主题 themes.css
+专栏 columns.css
+文字 font.css
+表单 forms.css
+补丁 mend.css
+打印 print.css
+
+
+** 响应式设计
+- http://www.alloyteam.com/2014/01/responsive-design/

@@ -34,7 +34,7 @@ Following the Apple iOS Human Interface Guidelines you should set all lighting i
 6. Grid Settings
 - Photoshop → Preferences → Guides, Grid & Slices →
 7. Export Settings
-Photoshop → File → Save for Web → 
+Photoshop → File → Save for Web →
 
 Preset: PNG-24
 Transparency: Checked
@@ -66,5 +66,9 @@ Make it again
 *** mockup mac http://balsamiq.com/products/mockups/
 ** 设计练习
 - http://sc.chinaz.com/info/140212394741.htm
-*** How to Design an iPhone Music Player App Interface With Photoshop CS6 
+*** How to Design an iPhone Music Player App Interface With Photoshop CS6
 - http://design.tutsplus.com/tutorials/iphone-music-player-app--psd-21825
+
+** 设计网站
+- http://www.shejidaren.com
+
