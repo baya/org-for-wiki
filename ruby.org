@@ -83,7 +83,7 @@ when 21..64
   puts "You are the right age"
 when 65..Float::INFINITY
   puts "You're too old"
-end  
+end
 
 *** inject() a Symbol
    p (1..10).inject(:*)
@@ -203,7 +203,7 @@ def hope_rounds_level num
 
   loop do
     level += 1
-    num /= 4 
+    num /= 4
     break if num < count_for_next_round
   end
 
@@ -230,7 +230,7 @@ YAML.load_file(config_file)[environment]
     Rake::Task['staging:stat_zhuihao'].reenable
     Rake::Task['staging:stat_zhuihao'].invoke('排列三[组三]', args['num'])
   end
-  
+
 *** use argument in rake task
 - 参考: http://robots.thoughtbot.com/post/18129303042/how-to-use-arguments-in-a-rake-task
 - 参考: https://github.com/robbyrussell/oh-my-zsh/issues/433
@@ -246,7 +246,7 @@ rake tweets:send[cpytel]
 rake tweets:send\[cpytel\]
 or
 rake 'tweets:send[cpytel]'
-or 
+or
 Add alias rake='noglob rake' in your .zshrc
 ** 用rvm升级ruby
 参考: http://stackoverflow.com/questions/3360277/how-do-i-update-ruby-interpreters-with-rvm
@@ -289,14 +289,14 @@ end
       <Result>1</Result>
       <ErrCode>000</ErrCode>
    </Response>
-  EOF   
+  EOF
 
 ** DSL
 treetop
 
 ** DCI
 ** 常用的文件加载技巧
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')   
+require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 ** 动态定义方法
 1. 支持1.9
 define_method :m do |a = false|
@@ -370,7 +370,7 @@ site: http://rubyhitsquad.com/
 
 ** Gem
 *** kaminari
-site: https://github.com/amatsuda/kaminari    
+site: https://github.com/amatsuda/kaminari
 
 ** Proc
 Just a small addition to the standard library:
@@ -495,13 +495,13 @@ end
 def foo
   f = Proc.new { return "return from foo from inside proc" }
   f.call # control leaves foo here
-  return "return from foo" 
+  return "return from foo"
 end
 
 def bar
   f = lambda { return "return from lambda" }
   f.call # control does not leave bar here
-  return "return from bar" 
+  return "return from bar"
 end
 - http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/
 
@@ -586,7 +586,7 @@ puts PgDatabase.all_databases.each{|db_name|
 menu.to_s.encode('UTF-8', {:invalid => :replace, :undef => :replace, :replace => '?'})
 
 ** binding
-- http://onestepback.org/index.cgi/Tech/Ruby/RubyBindings.rdoc   
+- http://onestepback.org/index.cgi/Tech/Ruby/RubyBindings.rdoc
 def value_of_a(vars)
   eval "a", vars
 end
@@ -733,7 +733,7 @@ class ParseCommandOptions < Dun::Activity
   def call
     options = {}
     opt_parser = OptionParser.new do |opts|
-      
+
       opts.on("-m", "--migrations DIR", "specify migration file dir") {|dir|
         options[:migration_dir] = dir
       }
@@ -746,15 +746,15 @@ class ParseCommandOptions < Dun::Activity
       opts.on("-s", "--server SERVER", "server using SERVER") {|server|
         options[:server] = server
       }
-      
+
     end
 
     opt_parser.parse! args
 
     options
-    
+
   end
-  
+
 end
 - http://ruby.about.com/od/advancedruby/a/optionparser2.htm
 
@@ -857,7 +857,7 @@ Sequel.migration do
     alter_table(:dics) do
       add_index :word
     end
-    
+
   end
 
   down do
@@ -886,7 +886,7 @@ Sequel.migration do
     alter_table(:dics) do
       drop_index :word
     end
-    
+
   end
 end
 
@@ -895,7 +895,7 @@ end
 "我们的生活".scan(/\w/mu) #=> %w(我 们 的 生 活)
 ** 正则
 *** 匹配汉字
-- 参考: http://www.ruby-doc.org/core-1.9.3/Regexp.html 
+- 参考: http://www.ruby-doc.org/core-1.9.3/Regexp.html
 - 参考: http://ruby-china.org/topics/5680
 - "word cool 我们的生活".scan(/\p{Han}+|\w+/)
 - "word cool 我们的生活 走去".scan(/\p{Han}+|\w+/)
@@ -916,7 +916,7 @@ end
 whenever --set 'environment=development' --update-crontab
 
 不加--update-conrtab选项的话，仅仅查看生成的crontab语法
-whenever --set 'environment=development' 
+whenever --set 'environment=development'
 
 **** detect environment
 @environment
@@ -1163,7 +1163,7 @@ Socket.getifaddrs.each do |i|
   puts "#{i.name}: #{i.addr.ip_address}" if i.addr.ip?
 end
 ** *args
-*** 
+***
 def a(*names, opt)
   puts names.inspect
 end
@@ -1210,7 +1210,7 @@ def net_try(title, options = { }, &p)
      if (tried_times += 1) < max_times
        Rails.logger.info("开始重试#{title}--第#{etried_times}次重试")
        sleep 10
-       retry 
+       retry
      end
      raise e
    end
@@ -1375,7 +1375,7 @@ puts BusDriver.new.can_drive_from
 # searching from left to right
 full_path = [Module.nesting + Module.ancestors].uniq
 
-** dsl例子 
+** dsl例子
 - 积分规则
 class FchkCredits < Dun::Activity
 
@@ -1419,7 +1419,7 @@ class FchkCredits
   class Signup < self
     add points: 10, votes: 50
   end
-  
+
 end
 
 ** devise
@@ -1477,7 +1477,7 @@ class PkVoteController < ServiceApiController
     voted_entity = Entity.where(sn: params[:voted_entity_sn]).first
     lose_entity = Entity.where(sn: params[:lose_entity_sn]).first
     vote = Vote.new
-    
+
     begin
       transaction do
         vote = CreateVote << {user: @user, entity: voted_entity, heat: @heat}
@@ -1500,7 +1500,7 @@ class PkVoteController < ServiceApiController
     end
 
   end
-  
+
 end
 
 ** 并行赋值
@@ -1526,8 +1526,8 @@ a,b,c,d = *0...4
 *** 生成证书
 openssl pkcs12 -in exported_certificate.p12 -out certificate.pem -nodes -clcerts
 *** 检查连接和证书是否正确
-openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert certs/ios/push_development.pem -key certs/ios/push_development.pem 
-openssl s_client -connect gateway.push.apple.com:2195 -cert certs/ios/push_staging.pem -key certs/ios/push_staging.pem 
+openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert certs/ios/push_development.pem -key certs/ios/push_development.pem
+openssl s_client -connect gateway.push.apple.com:2195 -cert certs/ios/push_staging.pem -key certs/ios/push_staging.pem
 *** gems
 - grocer https://github.com/grocer/grocer
 - GCM https://github.com/spacialdb/gcm
@@ -1596,18 +1596,18 @@ def count_of_words(str)
 end
 
 count_of_words('ruby is awesome and ruby is great')
-# => {"ruby"=>2, "is"=>2, "awesome"=>1, "and"=>1, "great"=>1} 
+# => {"ruby"=>2, "is"=>2, "awesome"=>1, "and"=>1, "great"=>1}
 
 *** Inverted Index
-# Assumes an input format like: 
+# Assumes an input format like:
 #
 #    { "/path/to/file" => "contents of file" }
 #
-#  
+#
 # #  Edit: Thanks to reddit users jhawthorn and treetrouble for suggesting the
 # #  improvement of using `Hash.new{|h,k| h[k] = []}` instead of `Hash.new([])` to
 # #  greatly improve the readability of this example.
-# 
+#
 def inverted_index_for(file_hash)
   h = Hash.new { |h,k| h[k] = [] }
 
@@ -1738,7 +1738,7 @@ A.superclass.superclass.superclass # nil
 ** gem 安装错误
 *** charlock_holmes
 ubuntu charlock_holmes (0.6.9.4) Failed to build gem native extension
-ref: http://stackoverflow.com/questions/15553792/error-installing-charlock-holmes-error-installing-gitlab 
+ref: http://stackoverflow.com/questions/15553792/error-installing-charlock-holmes-error-installing-gitlab
 fix: sudo apt-get install libicu-dev
 
 ** 使用slate生成api doc
@@ -1811,3 +1811,8 @@ t = DateTime.parse('2014-03-17 16:00:00 -05:00')
 t = DateTime.parse('2014-03-17 9:00:00 -05:00')
 # EST: Mon, 17 Mar 2014 09:00:00 -0500
 # Beijing: Mon, 17 Mar 2014 22:00:00 CST +08:00
+** make a tempfile from url
+require 'open-uri'
+file = Tempfile.new
+file.binmode
+open(url, headers) { |data| file.write data.read }

@@ -1364,7 +1364,7 @@ app/views/partner/shared/_contest_form.html.erb
 <%= render partial: "partner/shared/red_report_list", locals: {red_reports: @false_red_reports, kind_txt: '虚假的陈述'} %>
 ** 删除一个对象
 
-@red_report.destroy
+   @red_report.destroy
 ** staging app 部署时在本地预先生成资源
 RAILS_ENV=production spring rake assets:precompile
 
