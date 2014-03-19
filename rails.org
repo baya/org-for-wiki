@@ -76,7 +76,7 @@ https://github.com/cucumber/cucumber/wiki/Scenario-Outlines
 *** Tags
 cucumber --tags @debug
 参考:
-ohttps://github.com/cucumber/cucumber/wiki/Tags   
+ohttps://github.com/cucumber/cucumber/wiki/Tags
 
 *** 错误记录
 使用"功能"这个关键词会导致Gherkin::Lexer::LexingError错误
@@ -101,7 +101,7 @@ bin/rails g model LotFarm --no-fixture --no-migration
 bin/rails g model sls/activity_verify_charge --no-fixture --no-migration
 bin/rails g business sls/business_commit_charge --no-fixture --no-migration
 bin/rails g activity sls/activity_verify_charge --no-fixture --no-migration
-zeus generate model pa/bb_job --fixture-replacement=fabrication 
+zeus generate model pa/bb_job --fixture-replacement=fabrication
 ** Building APIs With Rails
 参考:
 http://code.alexreisner.com/articles/building-apis-with-rails.html
@@ -321,9 +321,9 @@ http://aulara.cn/m/users/login/?next=/m/
 
 ** http basic auth
 class Admin::ApplicationController < ApplicationController
-  
+
   USER_NAME, PASSWORD = "zhou", "dashiyebushuo"
-  
+
   before_filter :admin_authenticate
 
 
@@ -394,7 +394,7 @@ end
 helper_method :current_user
 
 ** asset_path
-.css.erb   
+.css.erb
 background-image:url(<%=asset_path "admin/logo.png"%>);
 - 实例
 首先将美工给的common.css文件改名为common.css.erb
@@ -403,7 +403,7 @@ background-image:url(<%=asset_path "admin/logo.png"%>);
 
 ** autoload_path
 - config.autoload_paths += Dir[Rails.root.join('app', 'lib')]
-** rename_column						  
+** rename_column
 rename_column :table_name, :old_column, :new_column
 ** Bug
 *** rails4.0好像无法加载有定义Protocol常量的文件
@@ -427,21 +427,21 @@ end
 ** rails mime types
 "*/*"                      => :all
 "text/plain"               => :text
-"text/html"                => :html 
+"text/html"                => :html
 "application/xhtml+xml"    => :html
-"text/javascript"          => :js 
-"application/javascript"   => :js 
-"application/x-javascript" => :js 
-"text/calendar"            => :ics   
-"text/csv"                 => :csv   
-"application/xml"          => :xml 
-"text/xml"                 => :xml 
-"application/x-xml"        => :xml 
-"text/yaml"                => :yaml 
-"application/x-yaml"       => :yaml 
-"application/rss+xml"      => :rss   
-"application/atom+xml"     => :atom  
-"application/json"         => :json 
+"text/javascript"          => :js
+"application/javascript"   => :js
+"application/x-javascript" => :js
+"text/calendar"            => :ics
+"text/csv"                 => :csv
+"application/xml"          => :xml
+"text/xml"                 => :xml
+"application/x-xml"        => :xml
+"text/yaml"                => :yaml
+"application/x-yaml"       => :yaml
+"application/rss+xml"      => :rss
+"application/atom+xml"     => :atom
+"application/json"         => :json
 "text/x-json"              => :json
 ** belongs_to
 *** 实例01
@@ -464,7 +464,7 @@ end
 class ContestGroup < ActiveRecord::Base
   has_many :heats, class_name: 'ContestHeat'
 end
-   
+
 ** many-to-many
 *** 实例
 class HeatEntity < ActiveRecord::Base
@@ -533,13 +533,13 @@ validates :name, presence: true, uniqueness: true
 validates :email, format: /@/, if: ->(sponsor) { sponsor.email.present? }
 
 validates :email, presence: {if: ->(user){ user.email.nil?} }, uniqueness: true
-validates :mobile, presence: {if: ->(user){ user.mobile.nil?} }, uniqueness: true  
+validates :mobile, presence: {if: ->(user){ user.mobile.nil?} }, uniqueness: true
 
   validates :email,
   presence: {if: ->(user){ user.mobile.nil?} },
   uniqueness: {if: ->(user){user.email.present?}},
   if: ->(user){ not user.created_ref == UserCreatedRef['后台赞助商'].code}
-      
+
   validates :mobile,
   presence: {if: ->(user){ user.email.nil?} },
   uniqueness: {if: ->(user){user.mobile.present?}},
@@ -622,26 +622,26 @@ user.errors.to_a #=>
  "Email has already been taken",
  "Mobile can't be blank",
  "Mobile has already been taken"]
- 
+
 user.errors.keys #=>
 [:email, :mobile]
 
 ** 用户，关注，粉丝的三者关系的在activerecord中的快速实现
 *** 表结构
 follows
-Column       | Type     | Modifiers | Comment 
+Column       | Type     | Modifiers | Comment
 ------------ | -------- | --------- | --------
 following_id | integer  |           |  被关注者的id
-follower_id  | integer  |           |  关注者的id 
-created_at   | datetime |           |         
-updated_at   | datetime |           |         
+follower_id  | integer  |           |  关注者的id
+created_at   | datetime |           |
+updated_at   | datetime |           |
 
 users
-Column        | Type     | Modifiers    | Comment                                                                                                
+Column        | Type     | Modifiers    | Comment
 ------------- | -------- | ------------ |------------------
 id            | integer  |              |
-sn            | string   |              |                                                                                                        
-gender        | integer  |              |  性别, 0 女, 1 男 
+sn            | string   |              |
+gender        | integer  |              |  性别, 0 女, 1 男
 
 *** 模型
 class Follow < ActiveRecord::Base
@@ -704,74 +704,74 @@ For Rails 2: You want request.url instead of request.request_uri. This combines 
 - ruby -Itest test/models/credit_allocation/non_survey_contest_test.rb
 *** Setup and Teardown
 require 'test_helper'
- 
+
 class PostsControllerTest < ActionController::TestCase
- 
+
   # called before every single test
   setup :initialize_post
- 
+
   # called after every single test
   def teardown
     @post = nil
   end
- 
+
   test "should show post" do
     get :show, id: @post.id
     assert_response :success
   end
- 
+
   test "should update post" do
     patch :update, id: @post.id, post: {}
     assert_redirected_to post_path(assigns(:post))
   end
- 
+
   test "should destroy post" do
     assert_difference('Post.count', -1) do
       delete :destroy, id: @post.id
     end
- 
+
     assert_redirected_to posts_path
   end
- 
+
   private
- 
+
   def initialize_post
     @post = posts(:one)
   end
- 
+
 end
 
 *** 断言
 *** Integration Testing 集成测试
-- http://guides.rubyonrails.org/testing.html#integration-testing     
+- http://guides.rubyonrails.org/testing.html#integration-testing
 - generate integration test: rails generate integration_test user_flows
 **** 例子
 require 'test_helper'
- 
+
 class UserFlowsTest < ActionDispatch::IntegrationTest
   fixtures :users
- 
+
   test "login and browse site" do
- 
+
     # User david logs in
     david = login(:david)
     # User guest logs in
     guest = login(:guest)
- 
+
     # Both are now available in different sessions
     assert_equal 'Welcome david!', david.flash[:notice]
     assert_equal 'Welcome guest!', guest.flash[:notice]
- 
+
     # User david can browse site
     david.browses_site
     # User guest can browse site as well
     guest.browses_site
- 
+
     # Continue with other assertions
   end
- 
+
   private
- 
+
   module CustomDsl
     def browses_site
       get "/products/all"
@@ -779,7 +779,7 @@ class UserFlowsTest < ActionDispatch::IntegrationTest
       assert assigns(:products)
     end
   end
- 
+
   def login(user)
     open_session do |sess|
       sess.extend(CustomDsl)
@@ -811,7 +811,7 @@ class PlayHeatControllerTest < ActionController::TestCase
 
   test '要扣积分等于0，无确认' do
     vote_num, credit_num = init_user 50, 100
-    
+
     get :index, {user_sn: @user.sn, heat_sn: @heat.sn, choices: choices}
     res = JSON.parse @response.body
     @user.reload
@@ -837,7 +837,7 @@ class PlayHeatControllerTest < ActionController::TestCase
 
   test '要扣积分等于0, 有确认' do
     vote_num, credit_num = init_user 50, 100
-    
+
     get :index, {user_sn: @user.sn, heat_sn: @heat.sn, choices: choices, confirmed: 't'}
     res = JSON.parse @response.body
     @user.reload
@@ -862,7 +862,7 @@ class PlayHeatControllerTest < ActionController::TestCase
   end
 
   private
-  
+
   def choices
     choice_index_maps = [[0, 1], [3, 2], [7, 5], [6, 4], [1, 3], [5, 6], [6, 3]]
     choice_index_maps.map {|mapper|
@@ -917,7 +917,7 @@ class Partner::PreviewContestsControllerTest < ActionController::TestCase
 
     assert_redirected_to partner_preview_contest_landing_path(preview_contest)
   end
-  
+
 end
 
 *** assert_response, assigns
@@ -931,11 +931,11 @@ class Partner::PreviewContestLandingControllerTest < ActionController::TestCase
 
   test "比赛推广预览" do
     get :show, {id: @preview_contest.id}
-    
+
     assert_response :success
     assert_not_nil assigns(:preview_contest)
   end
-  
+
 end
 
 ** assets
@@ -980,7 +980,7 @@ application.css
 - config.assets.enabled = false
 或者
 - rails new appname --skip-sprockets
-  
+
 *** cache
 - Fingerprinting is a technique that makes the name of a file dependent on the contents of the file
 global-908e25f4bf641868d8683022a5b62f54.css
@@ -1020,7 +1020,7 @@ Assets inside subdirectories can also be accessed.
 
 //= require sub/something
 
-- view the search path: Rails.application.config.assets.paths 
+- view the search path: Rails.application.config.assets.paths
 
 - add additional asset paths:
   # config/application.rb
@@ -1167,15 +1167,15 @@ ps = "terms: 要追期数<br/>" +
 - bundle exec spring binstub --all
 - spring rails g controller partner/contests
 ** Avoiding duplicate results when you do a join
-   users = User.find(:all, 
-  :conditions => ['users.id = lists.user_id'], 
-  :joins => [:lists], 
+   users = User.find(:all,
+  :conditions => ['users.id = lists.user_id'],
+  :joins => [:lists],
   :order => 'users.username')
 You can cause each found user to appear only once by using the :select option with “DISTINCT”:
 
-users = User.find(:all, 
-  :conditions => ['users.id = lists.user_id'], 
-  :joins => [:lists], 
+users = User.find(:all,
+  :conditions => ['users.id = lists.user_id'],
+  :joins => [:lists],
   :select => 'DISTINCT users.*'
   :order => 'users.username')
 ** 反模式
@@ -1203,7 +1203,7 @@ config.generators.javascripts = false
 <% content_for :head do %>
   <title>A simple page</title>
 <% end %>
- 
+
 <p>Hello, Rails!</p>
 
 *** 实例
@@ -1218,11 +1218,11 @@ config.generators.javascripts = false
     <%= csrf_meta_tags %>
     <meta charset='utf-8' />
   </head>
-  
+
   <body>
-    
+
     <%= yield %>
-    
+
   </body>
 </html>
 
@@ -1299,7 +1299,7 @@ preview_contest.categories #=> ['汽车', '娱乐']
 1. 在vender/assets目录下创建一个文件夹date ps: 其实可以起任意一个合法的名字
 2. 将My97DatePicker这个插件拷贝到 date 目录下
 3. 在app/assets/javascripts/application.js加入 //=require My97DatePicker,
-此时application.js文件类似于:   
+此时application.js文件类似于:
 //= require jquery
 //= require jquery_ujs
 //= require My97DatePicker
@@ -1326,8 +1326,8 @@ preview_contest.categories #=> ['汽车', '娱乐']
  *
  *= require_tree ./skin
  */
-   
-*** 加入swfupload   
+
+*** 加入swfupload
 ** 复杂的form表单参数
 - 参考: http://codecampo.com/topics/388
 - 参考: http://blog.twoalex.com/2010/11/21/can-an-html-form-generate-an-ordered-array-of-hashes-with-rails/
@@ -1471,3 +1471,67 @@ http://weibopage.fchk.dev/appPage?cid=2791328227&ifmID=ifm&url=http%3A%2F%2Fe.we
 {"cid"=>"2791328227", "ifmID"=>"ifm", "url"=>"http://e.weibo.com/proxy.html", "key"=>"", "sub_appkey"=>"3007443837", "viewer"=>"2696072061", "tokenString"=>"QAaa68UHDDSlXZUvGLmGE5CC1Da-qNLfmVGXAnn4zF0.eyJ1c2VyIjp7ImNvdW50cnkiOiJjbiIsImxvY2FsZSI6IiJ9LCJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImlzc3VlZF9hdCI6MTM5NTAyNDY0NH0"}
 - request.query_string
 cid=2791328227&ifmID=ifm&url=http%3A%2F%2Fe.weibo.com%2Fproxy.html&key=&sub_appkey=3007443837&viewer=2696072061&tokenString=QAaa68UHDDSlXZUvGLmGE5CC1Da-qNLfmVGXAnn4zF0.eyJ1c2VyIjp7ImNvdW50cnkiOiJjbiIsImxvY2FsZSI6IiJ9LCJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImlzc3VlZF9hdCI6MTM5NTAyNDY0NH0
+
+** render status
+render status: 500
+render status: :forbidden
+** http status code
+Response Class	HTTP Status Code	Symbol
+Informational	100	:continue
+101	:switching_protocols
+102	:processing
+Success	200	:ok
+201	:created
+202	:accepted
+203	:non_authoritative_information
+204	:no_content
+205	:reset_content
+206	:partial_content
+207	:multi_status
+208	:already_reported
+226	:im_used
+Redirection	300	:multiple_choices
+301	:moved_permanently
+302	:found
+303	:see_other
+304	:not_modified
+305	:use_proxy
+306	:reserved
+307	:temporary_redirect
+308	:permanent_redirect
+Client Error	400	:bad_request
+401	:unauthorized
+402	:payment_required
+403	:forbidden
+404	:not_found
+405	:method_not_allowed
+406	:not_acceptable
+407	:proxy_authentication_required
+408	:request_timeout
+409	:conflict
+410	:gone
+411	:length_required
+412	:precondition_failed
+413	:request_entity_too_large
+414	:request_uri_too_long
+415	:unsupported_media_type
+416	:requested_range_not_satisfiable
+417	:expectation_failed
+422	:unprocessable_entity
+423	:locked
+424	:failed_dependency
+426	:upgrade_required
+423	:precondition_required
+424	:too_many_requests
+426	:request_header_fields_too_large
+Server Error	500	:internal_server_error
+501	:not_implemented
+502	:bad_gateway
+503	:service_unavailable
+504	:gateway_timeout
+505	:http_version_not_supported
+506	:variant_also_negotiates
+507	:insufficient_storage
+508	:loop_detected
+510	:not_extended
+511	:network_authentication_required
