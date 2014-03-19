@@ -10,6 +10,7 @@
 
 ** 练习教程
 *** DONE http://design.tutsplus.com/tutorials/iphone-music-player-app--psd-21825
+*** http://www.1stwebdesigner.com/wordpress/psd-to-html-tutorial-code-photoshop/
 *** http://design.tutsplus.com/tutorials/mobile-calendar-app--psd-15058
 *** http://design.tutsplus.com/tutorials/create-a-mobile-weather-app-interface-in-photoshop--psd-33332
 *** http://design.tutsplus.com/tutorials/create-a-mobile-shopping-app-design-in-photoshop--psd-32372
@@ -18,6 +19,7 @@
 *** http://design.tutsplus.com/tutorials/how-to-make-a-menu-interface-for-a-fantasy-themed-iphone-game--psd-3920
 *** http://design.tutsplus.com/tutorials/create-a-mobile-task-manager-app-in-photoshop--psd-14983
 *** http://design.tutsplus.com/tutorials/mobile-ui-how-to-redesign-the-spendometer-iphone-app-part-1--psd-10162
+*** http://code.tutsplus.com/tutorials/from-psd-to-html-building-a-set-of-website-designs-step-by-step--net-37
 *** http://sc.chinaz.com/info/140212394741.htm
 ** 图片资源
 - http://www.sxc.hu/
