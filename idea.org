@@ -1,6 +1,6 @@
 * Idea
 记录自己的一些想法和灵感
-** DONE Description: migration-doc  
+** DONE Description: migration-doc
 - 项目地址: https://github.com/baya/description
 - 从migration脚本中提取数据库文档
 ** DONE Gstar
@@ -25,17 +25,18 @@
 - 站内应用调用应用授权弹层: http://open.weibo.com/wiki/站内应用开发指南#.E8.B0.83.E7.94.A8.E5.BA.94.E7.94.A8.E6.8E.88.E6.9D.83.E5.BC.B9.E5.B1.82
 - 微博专业版应用开发: http://july-12.github.io/blog/2014/03/07/wei-bo-zhuan-ye-ban-ying-yong-kai-fa-shi-lu/
 - 如果app已经部署到线上，那么微博page不支持此app应用地址的子路径
+** 博客: 新浪微博图片分享
 ** 阅读: http://guides.rubyonrails.org/security.html
 ** 写书: 百分之二十的Rails
 *** 参考: http://ihower.tw/rails3/
 ** 学习W3School教程: HTML/CSS http://www.w3school.com.cn/h.asp
-** 学习W3School教程: JavaScript http://www.w3school.com.cn/b.asp   
+** 学习W3School教程: JavaScript http://www.w3school.com.cn/b.asp
 ** 博客: spring你这么叼，坛子里的人都知道吗?
 每次我使用spring，生成controller, model，migration时，或者运行测试时，我都会被感动一次
 spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数太多，所以我
 不得不去研究一下spring到底为何这么有用。
 ** 写一个应用iCheck
-打卡: 跑步打卡，游泳打卡等各种打卡，帮助你养成好习惯，需要收费的哦   
+打卡: 跑步打卡，游泳打卡等各种打卡，帮助你养成好习惯，需要收费的哦
 ** 完善ground文档
 ** 使用ground写一个论坛
 ** ground发布1.0版本
@@ -102,7 +103,7 @@ namespace :git do
   end
 end
 执行 rake git:diff就能对今天的代码进行review了
-    
+
 ** 用程序模拟下红眼，蓝眼问题
 - http://www.zhihu.com/question/21262930
 

@@ -84,7 +84,7 @@ http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-en
 cd path/to/auto-complete/dict
 ln -s javascript-mode js-mode
 ** javascript code folding
-- 参考: http://blog.deadpansincerity.com/2011/05/setting-up-emacs-as-a-javascript-editing-environment-for-fun-and-profit/   
+- 参考: http://blog.deadpansincerity.com/2011/05/setting-up-emacs-as-a-javascript-editing-environment-for-fun-and-profit/
 (add-hook 'js-mode-hook
           (lambda ()
             ;; Scan the file for nested code blocks
@@ -92,13 +92,13 @@ ln -s javascript-mode js-mode
             ;; Activate the folding mode
             (hs-minor-mode t)))
 
-M-x hs-hide-block 
+M-x hs-hide-block
 M-x hs-show-block
 
 ** web-mode
 - http://web-mode.org/
 *** Shortcuts
-**** General 
+**** General
 C-c C-; comment / uncomment line(s)
 C-c C-f toggle folding on a tag/block
 C-c C-i indent entire buffer
@@ -145,3 +145,8 @@ C-c C-b p previous block
 C-c C-b n next block
 C-c C-b k block kill
 C-c C-b s block select
+
+** org mode image
+#+CAPTION: This is the caption for the next figure link (or table)
+#+NAME:   fig:SED-HR4049
+[\[./img/a.jpg]]
