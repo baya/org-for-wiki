@@ -1812,7 +1812,16 @@ t = DateTime.parse('2014-03-17 9:00:00 -05:00')
 # EST: Mon, 17 Mar 2014 09:00:00 -0500
 # Beijing: Mon, 17 Mar 2014 22:00:00 CST +08:00
 ** make a tempfile from url
+- https://www.ruby-forum.com/topic/216906
 require 'open-uri'
 file = Tempfile.new
 file.binmode
 open(url, headers) { |data| file.write data.read }
+
+*** 代码实例
+def make_a_pic(image_url)
+  tempfile = Tempfile.new('t_share_pic')
+  tempfile.binmode
+  open(image_url) { |data| tempfile.write data.read }
+  File.new(tempfile.path, 'rb')
+end
