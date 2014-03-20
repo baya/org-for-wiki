@@ -1825,3 +1825,84 @@ def make_a_pic(image_url)
   open(image_url) { |data| tempfile.write data.read }
   File.new(tempfile.path, 'rb')
 end
+** uninstall rvm 删除rvm
+- http://stackoverflow.com/questions/3558656/how-can-i-remove-rvm-ruby-version-manager-from-my-system
+rvm implode
+sudo rvm -rf ~/.rvm
+将 .bashrc, .profile, .bash_profile中有关rvm的代码都删除
+
+** 搭建rbenv
+*** 使用brew
+- https://github.com/sstephenson/rbenv
+$ brew update
+$ brew install rbenv ruby-build
+
+rbenv init
+
+通过命令 rbenv init - 可以查看 rbenv init 的具体操作内容:
+
+export PATH="/Users/jiangguimin/.rbenv/shims:${PATH}"
+source "/usr/local/Cellar/rbenv/0.4.0/libexec/../completions/rbenv.zsh"
+rbenv rehash 2>/dev/null
+rbenv() {
+  typeset command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval `rbenv "sh-$command" "$@"`;;
+  *)
+    command rbenv "$command" "$@";;
+  esac
+}
+
+*** installing ruby versions
+# list all available versions:
+$ rbenv install -l
+
+# install a Ruby version:
+$ rbenv install 2.0.0-p247
+
+*** Uninstalling Ruby Versions
+$ rbenv prefix 1.8.7-p357 # 找到ruby的安装目录
+$ rm -rf the directory of the version
+
+*** 常用命令
+rbenv global 1.9.3-p392 # 默认使用 1.9.3-p392
+rbenv shell 1.9.3-p392       # 当前的 shell 使用 1.9.3-p392, 会设置一个 `RBENV_VERSION` 环境变量
+rbenv local jruby-1.7.3      # 当前目录使用 jruby-1.7.3, 会生成一个 `.rbenv-version` 文件
+rbenv rehash                 # 每当切换 ruby 版本和执行 bundle install 之后必须执行这个命令
+*** 手动安装
+- https://github.com/sstephenson/rbenv#basic-github-checkout
+Basic GitHub Checkout
+
+This will get you going with the latest version of rbenv and make it easy to fork and contribute any changes back upstream.
+
+Check out rbenv into ~/.rbenv.
+
+$ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+Add ~/.rbenv/bin to your $PATH for access to the rbenv command-line utility.
+
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+Ubuntu Desktop note: Modify your ~/.bashrc instead of ~/.bash_profile.
+
+Zsh note: Modify your ~/.zshrc file instead of ~/.bash_profile.
+
+Add rbenv init to your shell to enable shims and autocompletion.
+
+$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+Same as in previous step, use ~/.bashrc on Ubuntu, or ~/.zshrc for Zsh.
+
+Restart your shell so that PATH changes take effect. (Opening a new terminal tab will usually do it.) Now check if rbenv was set up:
+
+$ type rbenv
+#=> "rbenv is a function"
+(Optional) Install ruby-build, which provides the rbenv install command that simplifies the process of installing new Ruby versions.
+
+** 解决 MacOSX 下编译 Ruby 无法在 irb 中输入中文的方法
+- http://ruby-china.org/wiki/rbenv-guide
+brew install readline
+CONFIGURE_OPTS="--disable-install-doc --with-readline-dir=$(brew --prefix readline)" rbenv install 1.9.3-p392
