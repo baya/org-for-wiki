@@ -1391,7 +1391,6 @@ contest.rule_file.url
 contest.rule_file.current_path
 contest.rule_file.identifier
 
-
 ** 解析客户端gzip压缩数据
 ActiveSupport::Gzip.decompress(request.raw_post)
 
@@ -1541,3 +1540,24 @@ Server Error	500	:internal_server_error
 $ mina init
 $ mina setup
 $ mina deploy
+** 批量更新数据 update_all
+- http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-update_all
+*** Example
+    # Update all customers with the given attributes
+Customer.update_all wants_email: true
+
+# Update all books with 'Rails' in their title
+Book.where('title LIKE ?', '%Rails%').update_all(author: 'David')
+
+# Update all books that match conditions, but limit it to 5 ordered by date
+Book.where('title LIKE ?', '%Rails%').order(:created_at).limit(5).update_all(author: 'David')
+*** 实例
+contest.lotteries.where(user_id: win_lottery.user_id).update_all(status: LotterySt['未中奖'].code)
+
+** rbenv支持whenever
+- http://stackoverflow.com/questions/8434922/ruby-script-using-rbenv-in-cron
+whenever 是通过 bash shell来执行定时脚本的， /bin/bash -lc
+所以我们在~/.bashrc中加入代码
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+即可让bash识别rbenv，从而使rbenv支持whenever
