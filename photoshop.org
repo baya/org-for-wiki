@@ -81,3 +81,7 @@ View > New Guide
 
 ** clipping mask 剪贴蒙版
 mask the image to the opaque pixels of the bottommost layers
+** 安装pat
+1. 打开 photoshop cc > presets > patterns
+2. 将要安装的pad文件拷贝到 patterns目录中
+[[./images/install-pat.png]]
