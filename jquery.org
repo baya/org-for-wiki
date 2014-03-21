@@ -490,3 +490,4 @@ $.removeCookie('the_cookie', { path: '/' });
 }
 
 ** event.stoppropagation
+** e.preventDefault(); 阻止默认事件的发生

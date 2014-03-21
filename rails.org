@@ -1392,7 +1392,6 @@ contest.rule_file.current_path
 contest.rule_file.identifier
 
 
-
 ** 解析客户端gzip压缩数据
 ActiveSupport::Gzip.decompress(request.raw_post)
 
@@ -1536,4 +1535,9 @@ Server Error	500	:internal_server_error
 510	:not_extended
 511	:network_authentication_required
 ** deploy 部署工具
-- mina http://nadarei.co/mina/
+*** mina http://nadarei.co/mina/
+**** 基本命令
+- http://nadarei.co/mina/setting_up_a_project.html
+$ mina init
+$ mina setup
+$ mina deploy

@@ -1906,3 +1906,14 @@ $ type rbenv
 - http://ruby-china.org/wiki/rbenv-guide
 brew install readline
 CONFIGURE_OPTS="--disable-install-doc --with-readline-dir=$(brew --prefix readline)" rbenv install 1.9.3-p392
+
+** LoadError: no such file to load -- bundler/setup or LoadError: cannot load such file -- bundler/setup rbenv
+- https://github.com/basecamp/pow/wiki/Troubleshooting
+- http://stackoverflow.com/questions/12785478/error-with-pow-and-rbenv-cannot-load-such-file-bundler-setup
+
+Solution:
+
+Add this to your ~/.powconfig
+
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+touch ~/.pow/restart.txt
