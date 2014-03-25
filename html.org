@@ -20,8 +20,6 @@
   <input type="submit" value="Submit">
 </form>
 
-
-
 ** a标签 link, active, hover, visited
 -http://www.jz123.cn/text/066399.html
 <style type="text/css">
@@ -41,3 +39,147 @@
 　　text-decoration是文字修饰效果的意思；
 　　none参数表示超链接文字不显示下划线；
 　　underline参数表示超链接的文字有下划线
+** 快速参考
+*** html basic document
+<html>
+<head>
+<title>Document name goes here</title>
+</head>
+<body>
+Visible text goes here
+</body>
+</html>
+
+*** Text Elements
+<p>This is a paragraph</p>
+<br> (line break)
+<hr> (horizontal rule)
+<pre>This text is preformatted</pre>
+
+*** Logical Styles
+<em>This text is emphasized</em>
+<strong>This text is strong</strong>
+<code>This is some computer code</code>
+
+*** Physical Styles
+<b>This text is bold</b>
+<i>This text is italic</i>
+
+*** Links, Anchors, and Image Elements
+<a href="http://www.example.com/">This is a Link</a>
+<a href="http://www.example.com/"><img src="URL"
+alt="Alternate Text"></a>
+<a href="mailto:webmaster@example.com">Send e-mail</a>A named anchor:
+<a name="tips">Useful Tips Section</a>
+<a href="#tips">Jump to the Useful Tips Section</a>
+
+*** Unordered list
+<ul>
+<li>First item</li>
+<li>Next item</li>
+</ul>
+
+*** Ordered list
+<ol>
+<li>First item</li>
+<li>Next item</li>
+</ol>
+
+*** Definition list
+<dl>
+<dt>First term</dt>
+<dd>Definition</dd>
+<dt>Next term</dt>
+<dd>Definition</dd>
+</dl>
+
+*** Tables
+<table border="1">
+<tr>
+  <th>someheader</th>
+  <th>someheader</th>
+</tr>
+<tr>
+  <td>sometext</td>
+  <td>sometext</td>
+</tr>
+</table>
+
+*** Frames
+
+<frameset cols="25%,75%">
+  <frame src="page1.htm">
+  <frame src="page2.htm">
+</frameset>
+
+*** Forms
+
+<form action="http://www.example.com/test.asp" method="post/get">
+<input type="text" name="lastname"
+value="Nixon" size="30" maxlength="50">
+<input type="password">
+<input type="checkbox" checked="checked">
+<input type="radio" checked="checked">
+<input type="submit">
+<input type="reset">
+<input type="hidden">
+<select>
+<option>Apples
+<option selected>Bananas
+<option>Cherries
+</select>
+<textarea name="Comment" rows="60"
+cols="20"></textarea>
+</form>
+
+*** Entities
+
+&lt; is the same as <
+&gt; is the same as >
+&#169; is the same as ©
+
+*** Other Elements
+
+<!-- This is a comment -->
+<blockquote>
+Text quoted from some source.
+</blockquote>
+<address>
+Address 1<br>
+Address 2<br>
+City<br>
+</address>
+
+** html5 doctype
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+The content of the document......
+</body>
+
+</html>
+
+** 符号实体参考手册
+- http://www.w3school.com.cn/tags/html_ref_entities.html
+显示结果	描述	实体名称	实体编号
+ 	空格	&nbsp;	&#160;
+<	小于号	&lt;	&#60;
+>	大于号	&gt;	&#62;
+&	和号	&amp;	&#38;
+"	引号	&quot;	&#34;
+'	撇号 	&apos; (IE不支持)	&#39;
+￠	分	&cent;	&#162;
+£	镑	&pound;	&#163;
+¥	日圆	&yen;	&#165;
+€	欧元	&euro;	&#8364;
+§	小节	&sect;	&#167;
+©	版权	&copy;	&#169;
+®	注册商标	&reg;	&#174;
+™	商标	&trade;	&#8482;
+×	乘号	&times;	&#215;
+÷	除号	&divide;	&#247;
+

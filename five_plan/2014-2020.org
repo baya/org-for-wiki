@@ -1,10 +1,20 @@
 * 五年计划 2014年-2020年
-** w3school
-- http://www.w3school.com.cn/index.html
-** photoshop设计
-*** 2014年3月至9月 每天练习1小时photoshop
-** 网页切图
-*** 2014年10月至12月 每天练习1小时切页面
+** w3school http://www.w3school.com.cn/index.html
+*** HTML
+*** HTML5
+*** CSS
+*** CSS3
+*** TCP/IP
+*** JavaScript
+*** HTML DOM
+*** jQuery
+*** jQuery Mobile
+*** AJAX
+*** DHTML
+*** E4X
+*** VMLScript
+** photoshop设计 2014年3月至9月 每天练习1小时
+** 网页切图 2014年10月至12月 每天练习1小时
 ** ios开发
 *** 惯性(Inertia)
 - 帮助人们培养好习惯，改掉坏习惯
@@ -20,4 +30,3 @@
 *** 独木舟(Kayak)
 - 帮助人们玩户外
 ** 游泳3000公里 每天游2公里
-** 滑雪
