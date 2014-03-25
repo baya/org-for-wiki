@@ -1,3 +1,3 @@
 * 2014年 w3shool
-** TODO 1小时 <2014-03-24 Mon>
+** 1小时 <2014-03-24 Mon>
 - HTML图像 http://www.w3school.com.cn/html/html_images.asp
