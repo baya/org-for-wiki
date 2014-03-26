@@ -183,3 +183,20 @@ The content of the document......
 ×	乘号	&times;	&#215;
 ÷	除号	&divide;	&#247;
 
+
+** embed 播放声音
+- http://www.w3school.com.cn/html/html_audio.asp
+<object height="100" width="100" data="song.mp3"></object>
+<embed height="100" width="100" src="song.mp3" />
+
+<audio controls="controls">
+  <source src="song.mp3" type="audio/mp3" />
+  <source src="song.ogg" type="audio/ogg" />
+Your browser does not support this audio format.
+</audio>
+
+<audio controls="controls" height="100" width="100">
+  <source src="song.mp3" type="audio/mp3" />
+  <source src="song.ogg" type="audio/ogg" />
+<embed height="100" width="100" src="song.mp3" />
+</audio>
