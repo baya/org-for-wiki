@@ -3,3 +3,13 @@
 *** http://www.shejibox.com/convert-a-slick-psd-design-to-xhtmlcss/
 *** http://www.cnblogs.com/lhb25/archive/2011/04/22/2016584.html
 *** http://www.cnblogs.com/lhb25/archive/2012/10/19/10-free-html-admin-templates.html
+** 流程
+- http://www.tuicool.com/articles/y6rAze
+1. 拿到 psd 后，先不要做别的，直接在文本编辑器中将网页的框架写出来，不要假设这块将来 css 要去怎么渲染，完全自然化的标签，不加任何的 css。
+2. 写完之后在各个浏览器运行之后确保大体定位都没有问题。
+3. 书写总体 css，这里的 css 只负责大块的定位及样式。
+4. 切出需要的图片资源，在写好的框架中一点点的去构造，不断的调试，最终为成品。
+5. 最后，为自己的代码添加注释，在 css，html 中都要合适的为自己的代码添加注释。
+
+** 练习
+*** http://www.shejibox.com/convert-a-slick-psd-design-to-xhtmlcss/

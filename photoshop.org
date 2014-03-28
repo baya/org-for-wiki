@@ -36,7 +36,7 @@ right click on the layer -> select Duplicate Laye -> select the other file as th
 + Status Bar
  - Bars
  - 7:30 Bar
- - Alarm 
+ - Alarm
  - Battery
  - Background
 + Navigation Bar
@@ -49,7 +49,7 @@ Status Bar 在 Navigation Bar 上 在 Background上 在 Layer1上
 Bars 在 7:30 Bar 上 在 Battery 上 在 Background上 在 Nav Bg上 在 Background上
 
 ** cc版本 Path/Direct Selection Tool
-按住Cmd，然后在目标图形上单击，就可以在Path和Direct之间切换 
+按住Cmd，然后在目标图形上单击，就可以在Path和Direct之间切换
 ** 教程网站
 - http://simplephotoshop.com/
 ** Align To Selection 在选择的区域里对齐
@@ -62,7 +62,7 @@ cmd + d
 ** 讲锚点的两个圈集中到锚点上，然后用Direct Selection Tool (A) 工具拖动锚点，这时候以锚点为角的两个边是直线而不是曲线
 ** Change 'pop up' measurement to pixels instead of inches or cm
 - http://forums.adobe.com/thread/1010598
-Photoshop > Preferences > Units & Rulers 
+Photoshop > Preferences > Units & Rulers
 then change rules to pixels
 
 ** grid, guides, 网格
@@ -85,3 +85,14 @@ mask the image to the opaque pixels of the bottommost layers
 1. 打开 photoshop cc > presets > patterns
 2. 将要安装的pad文件拷贝到 patterns目录中
 [[./images/install-pat.png]]
+
+** photoshop cc切图
+-
+- http://gdc.qq.com/?p=4445
+在crop tool图标上单击右键
+- http://my.safaribooksonline.com/book/photo-and-graphic-manipulation/9781118643617/chapter-4-making-selections/a24_06_9781118643617_ch04_ef_html
+1. Click and hold the Crop tool
+
+2. Click the Slice tool in the list that appears.
+
+3. Click and drag inside the image to create a slice.
