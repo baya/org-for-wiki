@@ -1,3 +1,6 @@
 * PSD2HTML 2014
-** TODO 1小时 <2014-03-28 Fri>
+** 1小时 <2014-03-28 Fri>
 - http://www.shejibox.com/convert-a-slick-psd-design-to-xhtmlcss/
+
+** TODO 1小时 <2014-03-29 Sat>
+- - http://www.shejibox.com/convert-a-slick-psd-design-to-xhtmlcss/
