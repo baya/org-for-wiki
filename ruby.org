@@ -1917,3 +1917,48 @@ Add this to your ~/.powconfig
 
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 touch ~/.pow/restart.txt
+
+** Pathname
+- http://www.sitepoint.com/rubys-pathname-api 
+CONFIG_PATH = Pathname.new(__FILE__).dirname.join('..', 'config.yml')
+*** File Type and Permission Checks
+pn = Pathname.new('/usr/bin/ruby')
+pn.file?       # => true
+pn.directory?  # => false
+ 
+pn.absolute?   # => true
+pn.relative?   # => false
+ 
+pn.executable? # => true
+pn.readable?   # => true
+pn.writable?   # => false
+ 
+pn.root?       # => false
+
+*** File System Navigation and Querying
+pn = Pathname.getwd # current working directory
+pn.children   # => [ #<Pathname...>, ... ]
+pn.each_child {|ch| ... }
+pn = pn.parent
+ 
+Pathname.glob('**/*.rb') # like Dir['**/*.rb'] but returns Pathnames
+
+*** Pathname Manipulation
+
+pn = Pathname.new('lib/mylib/awesome.rb')
+pn.dirname                   # => #<Pathname:lib/mylib>
+pn.basename                  # => #<Pathname:awesome.rb>
+pn.extname                   # => ".rb"
+pn.expand_path('/home/arne') # => #<Pathname:/home/arne/lib/mylib/awesome.rb>
+
+*** Working with the Actual File
+
+pn = Pathname.new(ENV['HOME']).join('.bashrc')
+pn.size
+pn.read
+pn.open {|io| ... }
+pn.each_line {|line| ... }
+pn.rename('/tmp/foo')
+pn.delete
+
+
