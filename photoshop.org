@@ -87,7 +87,13 @@ mask the image to the opaque pixels of the bottommost layers
 [[./images/install-pat.png]]
 
 ** photoshop cc切图
--
+- http://www.mediacollege.com/adobe/photoshop/tool/slice.html
+1. Select the slice tool in the toolbox.
+2. Click and drag over the area you wish to make into a slice.
+3. Release the mouse button - Photoshop automatically creates the necessary number of slices, with the active slice highlighted.
+4. Using the slice select tool, you can move and resize slices by dragging inside a s
+lice, or by dragging the handles.
+5. To export the separate images, choose File > Save for Web from the Photoshop menu. When you save the file you will have the option to save the images and/or a new HTML page to contain the images.
 - http://gdc.qq.com/?p=4445
 在crop tool图标上单击右键
 - http://my.safaribooksonline.com/book/photo-and-graphic-manipulation/9781118643617/chapter-4-making-selections/a24_06_9781118643617_ch04_ef_html
@@ -96,3 +102,7 @@ mask the image to the opaque pixels of the bottommost layers
 2. Click the Slice tool in the list that appears.
 
 3. Click and drag inside the image to create a slice.
+
+** remove slice 清除slice
+- http://www.photoshopgurus.com/forum/general-photoshop-board/492-removing-slices.html
+Try View/Clear Slices
