@@ -16,6 +16,7 @@
 ** DONE rails-guide复习: The Asset Pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
 
+** TODO ground: 发布0.0.1版本
 ** dun: 去掉default方法
 ** 博客: 新浪微博专业版应用开发
 - http://open.weibo.com/wiki/新手指南
