@@ -4,6 +4,7 @@
 *** gmu http://gmu.baidu.com/
 *** http://app-framework-software.intel.com/
 *** jQTouch
+*** ratchet http://goratchet.com
 ** DONE 场景(Scene)
 - 帮助人们掌控对话
 - https://github.com/baya/SceneMaster
