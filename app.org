@@ -7,7 +7,9 @@
 ** DONE 场景(Scene)
 - 帮助人们掌控对话
 - https://github.com/baya/SceneMaster
-** TODO 远程(Remote)
+** 签到(CheckIn)
+- - 帮助人们培养好习惯，改掉坏习惯
+** 远程(Remote)
 - 帮助人们进行远程工作
 ** 选择(Choice)
 - 帮助人们做出选择
@@ -17,8 +19,6 @@
 - 帮助人们记帐
 ** 彩票(Lottery)
 - 帮助彩民选彩票
-** 惯性(Inertia)
-- 帮助人们培养好习惯，改掉坏习惯
 ** 论坛(Forum)
 - 帮助人们讨论
 ** 营养(Nutrition)
