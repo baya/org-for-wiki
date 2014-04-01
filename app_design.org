@@ -13,6 +13,7 @@
 - http://www.google.com/fonts
 ** 设计类的网站
 - http://ui4app.com/
+- http://dribbble.com/
 ** ps教程
 *** ios app design set up photoshop
 - http://davidmckinney.com/blog/2013/12/31/designing-iphone-apps-how-to-setup-photoshop
