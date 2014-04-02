@@ -202,3 +202,7 @@ table {
 }
 
 ** 导航栏 navigation bar
+** :last-child selector
+#activity-tongji ul li:last-child{
+    border: 1px solid #dfdfdf;
+}
