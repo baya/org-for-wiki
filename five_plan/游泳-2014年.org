@@ -17,3 +17,4 @@
 ** DONE 4km <2014-03-30 Sun>
 ** DONE 1km <2014-03-31 Mon>
 ** DONE 2km <2014-04-01 Tue>
+** DONE 1km <2014-04-02 Wed>
