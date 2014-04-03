@@ -200,3 +200,9 @@ Your browser does not support this audio format.
   <source src="song.ogg" type="audio/ogg" />
 <embed height="100" width="100" src="song.mp3" />
 </audio>
+
+** textarea resize
+- http://stackoverflow.com/questions/11401605/turn-off-textarea-resizing
+textarea {
+    resize: none;
+}
