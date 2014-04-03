@@ -1561,3 +1561,13 @@ whenever 是通过 bash shell来执行定时脚本的， /bin/bash -lc
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 即可让bash识别rbenv，从而使rbenv支持whenever
+
+** Preload、 Eagerload、 Includes 和 Joins
+- http://ruby-china.org/topics/17866
+
+** distinct
+- http://ruby-china.org/topics/17866
+User.joins(:posts).select('distinct users.*').to_a
+*** 代码实例
+contest.votes.select('distinct votes.user_id').count
+

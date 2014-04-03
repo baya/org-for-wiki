@@ -1919,20 +1919,20 @@ export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 touch ~/.pow/restart.txt
 
 ** Pathname
-- http://www.sitepoint.com/rubys-pathname-api 
+- http://www.sitepoint.com/rubys-pathname-api
 CONFIG_PATH = Pathname.new(__FILE__).dirname.join('..', 'config.yml')
 *** File Type and Permission Checks
 pn = Pathname.new('/usr/bin/ruby')
 pn.file?       # => true
 pn.directory?  # => false
- 
+
 pn.absolute?   # => true
 pn.relative?   # => false
- 
+
 pn.executable? # => true
 pn.readable?   # => true
 pn.writable?   # => false
- 
+
 pn.root?       # => false
 
 *** File System Navigation and Querying
@@ -1940,7 +1940,7 @@ pn = Pathname.getwd # current working directory
 pn.children   # => [ #<Pathname...>, ... ]
 pn.each_child {|ch| ... }
 pn = pn.parent
- 
+
 Pathname.glob('**/*.rb') # like Dir['**/*.rb'] but returns Pathnames
 
 *** Pathname Manipulation
@@ -1962,3 +1962,5 @@ pn.rename('/tmp/foo')
 pn.delete
 
 
+** Preload、 Eagerload、 Includes 和 Joins
+- http://ruby-china.org/topics/17866

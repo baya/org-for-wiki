@@ -15,7 +15,7 @@ sigma: http://sigmajs.org
 Envision.js: http://www.humblesoftware.com/
 Morris.js: https://github.com/oesmith/morris.js
 Paper.js http://paperjs.org
-Processing.js 
+Processing.js
 Raphael.js http://raphaeljs.com
 ** 业务处理
 BPMN
@@ -92,7 +92,7 @@ http://sporto.github.com/blog/2013/02/22/a-plain-english-guide-to-javascript-pro
 - 易移植
 *** 表单参数验证
 - https://gist.github.com/baya/6387182
-  
+
 ** 快捷var声明
 var addEvent = 'addEventListener',
   	    type = 'gesturestart',
@@ -175,7 +175,7 @@ theSprite = SpriteFactory.getSprite(1);
 ** convert float to an int
 - 参考: http://stackoverflow.com/questions/596467/how-do-i-convert-a-float-to-an-int-in-javascript
 var intvalue = Math.floor( floatvalue );
-var intvalue = Math.ceil( floatvalue ); 
+var intvalue = Math.ceil( floatvalue );
 var intvalue = Math.round( floatvalue );
 ~~2.9 #=> 2
 ** jsonp
@@ -186,9 +186,9 @@ var intvalue = Math.round( floatvalue );
 *** 复用其他对象的方法
 
 var ContestForm = {
-    
+
     form_methods: ['POST', 'GET'],
-    
+
     init: function(data){
 	this.path = data.path;
 	this.btn  = data.btn;
@@ -217,7 +217,7 @@ var ContestPreview = {
 	method = this.method,
 	form_methods = this.form_methods,
 	scope = this;
-	
+
 	this.btn.bind('click', function(event){
 	    event.preventDefault();
 	    $form.attr('action', path);
@@ -247,7 +247,7 @@ var ContestConfirm = {
     call: function(){
 	console.dir(data);
     }
-};    
+};
 
 ** extend
 参考: http://www.crossyou.cn/javascript-extend-collected-in-several-versions-of-custom-functions.htm
@@ -285,7 +285,7 @@ function extend(destination, source){
 	    }
     }
     return destination;
-}  
+}
 
 3.
 function extend(destination, source) {
@@ -307,7 +307,7 @@ function extend(destination, source) {
 }
 
 ** string convert to integer
-var a = parseInt("10");   
+var a = parseInt("10");
 
 ** JavaScript模板引擎
 - 参考: http://www.csdn.net/article/2013-09-16/2816951-top-five-javascript-templating-engines
@@ -420,7 +420,7 @@ function(){
 	    </div>
 	  </div>
 	</div>
-	
+
 	<div class="main_bg_con1 main_bg_con2">
 	  <div class="rl_1">
 	    <%= image_tag "zi_1.png" %>
@@ -461,7 +461,7 @@ Output:
 <b>Larry</b>
 <b>Curly</b>
 ** typeof
-typeof 运算符把类型信息当作字符串返回。typeof 返回值有六种可能： "number," "string," "boolean," "object," "function," 和 "undefined." 
+typeof 运算符把类型信息当作字符串返回。typeof 返回值有六种可能： "number," "string," "boolean," "object," "function," 和 "undefined."
 *** 实际用例
 	if(typeof(data.ele) == "string"){
 	    this.$ele = $(data.ele);
@@ -472,13 +472,13 @@ typeof 运算符把类型信息当作字符串返回。typeof 返回值有六种
 *** 代码实例
 
 var PicArrange_SetOpBtn = function(data){
-    
+
     return {
 
 	ele: $(data.ele),
 	confirm_url: data.confirm_url,
 	delete_url: data.delete_url,
-	
+
 	call: function(){
 	    this.onOff();
 	    this.setConfirmBtn();
@@ -497,7 +497,7 @@ var PicArrange_SetOpBtn = function(data){
 
 	setConfirmBtn: function(){
 	    var _scope = this;
-	    
+
 	    this.ele.parent().find('.op-confirm').on('click', function(){
 		var $e = $(this).parent().siblings('.e');
 
@@ -509,7 +509,7 @@ var PicArrange_SetOpBtn = function(data){
 	    var url = this.confirm_url;
 
 	    this.reqForOp(url, $e);
-	    
+
 	},
 
 	setDeleteBtn: function(){
@@ -558,7 +558,7 @@ var PicArrange_SetOpBtn = function(data){
      ele: '.non_report_entity',
      delete_url: '/nonReportEntityDelete'
    });
-   
+
  })
 
 ** 将图片从剪切板粘贴到网页的库
@@ -632,12 +632,12 @@ document.documentElement.clientWidth/clientHeight 视口Viewport宽高(CSS像素
 
 示例代码:
 var Browser = {
- 
+
 };
- 
+
 //页面
 Browser.Page = (function () {
- 
+
     return {
         scrollTop: function () {
             return Math.max(document.body.scrollTop, document.documentElement.scrollTop);
@@ -663,9 +663,9 @@ Browser.Page = (function () {
             }
             return _width;
         }
- 
+
     };
- 
+
 })();
 
 $(window).height();   // returns height of browser viewport
@@ -689,19 +689,19 @@ $('#something').click(function() {
 });
 
 Javascript刷新页面的几种方法：
-1    history.go(0) 
-2    location.reload() 
-3    location=location 
-4    location.assign(location) 
-5    document.execCommand('Refresh') 
-6    window.navigate(location) 
-7    location.replace(location) 
+1    history.go(0)
+2    location.reload()
+3    location=location
+4    location.assign(location)
+5    document.execCommand('Refresh')
+6    window.navigate(location)
+7    location.replace(location)
 8    document.URL=location.href
 ** 汉字两个字符长，英文字一个字符长，汉英混合
 - http://stackoverflow.com/questions/5515869/string-length-in-bytes-in-javascript
 function getLengthInBytes(str) {
   var b = str.match(/[^\x00-\xff]/g);
-  return (str.length + (!b ? 0: b.length)); 
+  return (str.length + (!b ? 0: b.length));
 }
 
 getLengthInBytes("我我a") // 5
@@ -731,7 +731,7 @@ sayColor.apply(obj, new Array("The color is ", "a very nice color indeed."));
 
   handle: function(f, _scope){
     var _scope = _scope || this;
-	    
+
       return function(){
 	f.apply(_scope)
       }
@@ -752,3 +752,5 @@ sayColor.apply(obj, new Array("The color is ", "a very nice color indeed."));
 	}
 
 }
+** D3
+- https://github.com/mbostock/d3/wiki/Gallery
