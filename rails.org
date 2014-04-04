@@ -1571,3 +1571,8 @@ User.joins(:posts).select('distinct users.*').to_a
 *** 代码实例
 contest.votes.select('distinct votes.user_id').count
 
+
+** config.assets.precompile
+*** 实例
+lib/assets/images目录下有alert子目录，alert子目录有各种图片文件
+config.assets.precompile += ['swfupload/swfupload.swf', 'alert/*.png']
