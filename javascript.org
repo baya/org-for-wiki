@@ -757,3 +757,6 @@ sayColor.apply(obj, new Array("The color is ", "a very nice color indeed."));
 
 ** javascript garden 花园
 - http://bonsaiden.github.io/JavaScript-Garden/
+
+** document.getElementByID("some id")
+document.getElementByID("some id")

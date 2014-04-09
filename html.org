@@ -206,3 +206,23 @@ Your browser does not support this audio format.
 textarea {
     resize: none;
 }
+
+** table 简单的table html表格
+- http://www.w3school.com.cn/tags/tag_table.asp
+<table border="1">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+** table 布局算法 table-layout
+- http://www.w3school.com.cn/cssref/pr_tab_table-layout.asp
+table
+  {
+  table-layout:fixed;
+  }

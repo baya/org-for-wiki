@@ -266,7 +266,6 @@ CSS 框模型 (Box Model) 规定了元素框处理元素内容、内边距、边
 外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。
 合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
 
-
 ** CSS 多类选择器
 .important {font-weight:bold;}
 .warning {font-style:italic;}
@@ -300,3 +299,48 @@ a.red : visited {color: #FF0000}
 ** CSS2 - :first-child 伪类
 - http://www.w3school.com.cn/css/css_pseudo_classes.asp
 
+
+** 注释 comment
+/* ... */
+
+** @font-face 使用自己的字体文件，定义自己的font-family
+- http://www.w3school.com.cn/css3/css3_font.asp
+
+<style>
+@font-face
+{
+font-family: myFirstFont;
+src: url('Sansation_Light.ttf'),
+     url('Sansation_Light.eot'); /* IE9+ */
+}
+
+div
+{
+font-family:myFirstFont;
+}
+</style>
+
+** 2D 转换
+- http://www.w3school.com.cn/css3/css3_2dtransform.asp
+
+*** 实例
+**** rotate
+div
+{
+transform: rotate(30deg);
+-ms-transform: rotate(30deg);		/* IE 9 */
+-webkit-transform: rotate(30deg);	/* Safari and Chrome */
+-o-transform: rotate(30deg);		/* Opera */
+-moz-transform: rotate(30deg);		/* Firefox */
+}
+
+**** translate 位移
+
+div
+{
+transform: translate(50px,100px);
+-ms-transform: translate(50px,100px);		/* IE 9 */
+-webkit-transform: translate(50px,100px);	/* Safari and Chrome */
+-o-transform: translate(50px,100px);		/* Opera */
+-moz-transform: translate(50px,100px);		/* Firefox */
+}
