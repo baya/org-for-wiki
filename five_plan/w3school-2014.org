@@ -9,4 +9,5 @@
 - http://www.w3school.com.cn/css3/css3_background.asp
 ** DONE 1小时 <2014-04-09 Wed>
 - http://www.w3school.com.cn/js/js_whereto.asp
-** TODO 1小时 <2014-04-14 Mon>
+** DONE 1小时 <2014-04-14 Mon>
+- http://www.w3school.com.cn/htmldom/index.asp

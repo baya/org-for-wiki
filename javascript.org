@@ -760,3 +760,214 @@ sayColor.apply(obj, new Array("The color is ", "a very nice color indeed."));
 
 ** document.getElementByID("some id")
 document.getElementByID("some id")
+
+** DOM操作 原生js
+- http://www.w3school.com.cn/js/js_htmldom_html.asp
+*** document.getElementById(id)
+*** innerHTML
+- document.getElementById("demo").innerHTML="My First JavaScript";
+
+*** document.getElementsByTagName
+var x = document.getElementById("main");
+var y = x.getElementsByTagName("p");
+*** 改变 HTML 属性
+document.getElementById(id).attribute=new value
+*** 改变 HTML 样式
+document.getElementById(id).style.property=new style
+document.getElementById("p2").style.color="blue";
+*** HTML 事件属性
+onclick
+onload
+onunload
+onchange
+onmouseover
+onmouseout
+onmousedown
+onmouseup
+*** document.createTextNode
+var node=document.createTextNode("这是新段落。");
+*** document.createElement
+var para=document.createElement("p");
+*** element.appendChild
+var para=document.createElement("p");
+var node=document.createTextNode("这是新段落。");
+para.appendChild(node);
+*** parent.removeChild(child)
+var child=document.getElementById("p1");
+child.parentNode.removeChild(child);
+** JavaScript 数据类型 原生
+- 字符串、数字、布尔、数组、对象、Null、Undefined
+Undefined 和 Null
+Undefined 这个值表示变量不含有值。
+可以通过将变量的值设置为 null 来清空变量。
+
+var carname = new String;
+var x=      new Number;
+var y=      new Boolean;
+var cars=   new Array;
+var person= new Object;
+
+** 条件语句
+- http://www.w3school.com.cn/js/js_if_else.asp
+*** if
+if (条件)
+  {
+  只有当条件为 true 时执行的代码
+  }
+*** If...else 语句
+if (条件)
+  {
+  当条件为 true 时执行的代码
+  }
+else
+  {
+  当条件不为 true 时执行的代码
+  }
+
+*** If...else if...else 语句
+if (条件 1)
+  {
+  当条件 1 为 true 时执行的代码
+  }
+else if (条件 2)
+  {
+  当条件 2 为 true 时执行的代码
+  }
+else
+  {
+  当条件 1 和 条件 2 都不为 true 时执行的代码
+  }
+
+** JavaScript Switch 语句
+switch(n)
+{
+case 1:
+  执行代码块 1
+  break;
+case 2:
+  执行代码块 2
+  break;
+default:
+  n 与 case 1 和 case 2 不同时执行的代码
+}
+
+例子:
+
+var day=new Date().getDay();
+switch (day)
+{
+case 0:
+  x="Today it's Sunday";
+  break;
+case 1:
+  x="Today it's Monday";
+  break;
+case 2:
+  x="Today it's Tuesday";
+  break;
+case 3:
+  x="Today it's Wednesday";
+  break;
+case 4:
+  x="Today it's Thursday";
+  break;
+case 5:
+  x="Today it's Friday";
+  break;
+case 6:
+  x="Today it's Saturday";
+  break;
+}
+
+** JavaScript For 循环
+for (var i=0;i<cars.length;i++)
+{
+  document.write(cars[i] + "<br>");
+}
+
+var person={fname:"John",lname:"Doe",age:25};
+for (x in person)
+{
+  txt=txt + person[x];
+}
+
+** JavaScript While 循环
+while (条件)
+  {
+  需要执行的代码
+  }
+
+do
+  {
+  需要执行的代码
+  }
+while (条件);
+
+** JavaScript 错误 - Throw、Try 和 Catch
+try
+  {
+  //在这里运行代码
+  }
+catch(err)
+  {
+  //在这里处理错误
+  }
+
+try
+  {
+  var x=document.getElementById("demo").value;
+  if(x=="")    throw "empty";
+  if(isNaN(x)) throw "not a number";
+  if(x>10)     throw "too high";
+  if(x<5)      throw "too low";
+  }
+catch(err)
+  {
+  var y=document.getElementById("mess");
+  y.innerHTML="Error: " + err + ".";
+  }
+
+** JavaScript Boolean（逻辑）对象
+如果逻辑对象无初始值或者其值为 0、-0、null、""、false、undefined 或者 NaN，那么对象的值为 false。否则，其值为 true（即使当自变量为字符串 "false" 时）！
+
+下面的所有的代码行均会创建初始值为 false 的 Boolean 对象。
+var myBoolean=new Boolean();
+var myBoolean=new Boolean(0);
+var myBoolean=new Boolean(null);
+var myBoolean=new Boolean("");
+var myBoolean=new Boolean(false);
+var myBoolean=new Boolean(NaN);
+** RegExp
+- http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp
+直接量语法:
+/pattern/attributes
+创建 RegExp 对象的语法：
+new RegExp(pattern, attributes);
+** BOM window
+*** Window 尺寸
+有三种方法能够确定浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）。
+对于Internet Explorer、Chrome、Firefox、Opera 以及 Safari：
+window.innerHeight - 浏览器窗口的内部高度
+window.innerWidth - 浏览器窗口的内部宽度
+对于 Internet Explorer 8、7、6、5：
+document.documentElement.clientHeight
+document.documentElement.clientWidth
+或者
+document.body.clientHeight
+document.body.clientWidth
+实用的 JavaScript 方案（涵盖所有浏览器）：
+实例
+var w=window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h=window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+*** Window Location
+window.location 对象在编写时可不使用 window 这个前缀。
+一些例子：
+location.hostname 返回 web 主机的域名
+location.pathname 返回当前页面的路径和文件名
+location.port 返回 web 主机的端口 （80 或 443）
+location.protocol 返回所使用的 web 协议（http:// 或 https://）
