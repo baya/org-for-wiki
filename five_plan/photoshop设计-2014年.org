@@ -13,3 +13,5 @@
 ** DONE 1小时 <2014-03-21 Fri>
 ** DONE 2小时 <2014-04-13 Sun>
 - http://design.tutsplus.com/tutorials/create-a-mobile-weather-app-interface-in-photoshop--psd-33332
+** DONE 1小时 <2014-04-14 Mon>
+- http://design.tutsplus.com/tutorials/create-a-mobile-weather-app-interface-in-photoshop--psd-33332
