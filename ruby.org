@@ -1961,6 +1961,8 @@ pn.each_line {|line| ... }
 pn.rename('/tmp/foo')
 pn.delete
 
-
 ** Preload、 Eagerload、 Includes 和 Joins
 - http://ruby-china.org/topics/17866
+** 数据构造
+*** fabricate
+- http://www.fabricationgem.org/
