@@ -7,7 +7,7 @@ ProxyCommand ssh -p port vostunnel@ip -W %h:%p
 #ProxyCommand ssh -p port vostunnel@ip nc %h %p
 
 *** 实际例子
-    
+
 - .ssh/config 内容
 Host staging.fchk.com
 HostName 10.121.xx.xx
@@ -20,5 +20,13 @@ ProxyCommand ssh -p 2222 vostunnel@211.xx.79.xx -W %h:%p
         fetch = +refs/heads/*:refs/remotes/fchk-staging/*
 
 此时staging.fchk.com和ip 10.121.xx.xx 互为映射
+
+ssh staging.fchk.com
+
+Host lotdb
+ HostName 10.214.0.101
+ User dev
+ LocalForward 6433 192.168.0.132:6435
+ ProxyCommand ssh -p 2222  vostunnel@211.95.79.121 -o ServerAliveInterval=30 -W %h:%p
 
 ** 远程登录
