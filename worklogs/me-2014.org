@@ -1664,3 +1664,10 @@
 **** 排行榜-更多获奖名单, 返回
 *** 非常好看 Bug List
 **** 一些图片在ie下无法显示
+** 04-19
+*** 取钱，交房租
+*** 游泳
+*** 洗衣服
+*** 收拾房间
+*** 博客: cucumber实战
+- https://github.com/cucumber/cucumber/wiki/tutorials-and-related-blog-posts
