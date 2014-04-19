@@ -53,7 +53,7 @@ https://github.com/cucumber/cucumber/wiki/Scenario-Outlines
 ** Tags
 cucumber --tags @debug
 参考:
-ohttps://github.com/cucumber/cucumber/wiki/Tags   
+ohttps://github.com/cucumber/cucumber/wiki/Tags
 
 ** 错误记录
 使用"功能"这个关键词会导致Gherkin::Lexer::LexingError错误
@@ -69,9 +69,19 @@ http://stackoverflow.com/questions/1722153/http-post-xml-content-from-cucumber
 
 ** 文档资源
     http://cukes.info/step-definitions.html
-    
+
 ** 验收测试资源
 http://alindeman.github.com/acceptance_testing/?utm_source=rubyweekly&utm_medium=email#/32
 ** 技巧
 运行所有feature文件
 cucumber features/*.feature
+
+** i18n locale
+Given /^I am a registered user$/ do
+  # Call a remote API to create a randomly generated user
+  user = create_user(:type => :free,
+                     :locale => ENV['CUCUMBER_LOCALE'] || 'en')
+
+  # Hold onto this user object for future steps
+  current_user = user
+end
