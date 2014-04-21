@@ -29,4 +29,30 @@ Host lotdb
  LocalForward 6433 192.168.0.132:6435
  ProxyCommand ssh -p 2222  vostunnel@211.95.79.121 -o ServerAliveInterval=30 -W %h:%p
 
+
+Host staging.fchk.com
+   HostName 10.121.0.102
+   User jiangguimin
+   ProxyCommand ssh -p 2222 vostunnel@211.95.79.121 -W %h:%p
+   ProxyCommand ssh -p 2222 vostunnel@211.95.79.61 nc %h %p
+
+  Host lotdb
+    HostName 10.214.0.101
+    User dev
+    LocalForward 6433 192.168.0.132:6435
+    ProxyCommand ssh -p 2222  vostunnel@211.95.79.121 -o ServerAliveInterval=30 -W %h:%p
+
+  Host fchk
+    HostName 10.121.0.102
+    User jiangguimin
+    ProxyCommand ssh -p 2222 vostunnel@211.95.79.121 -o ServerAliveInterval=30 -W %h:%p
+    ProxyCommand ssh -p 2222 vostunnel@211.95.79.61 nc %h %p
+
+ Host bitbucket.org
+    HostName bitbucket.org
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/workid
+
 ** 远程登录
+** 在一台电脑上配置多个ssh pubkey
+- https://confluence.atlassian.com/pages/viewpage.action?pageId=270827678
