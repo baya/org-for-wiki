@@ -1966,3 +1966,6 @@ pn.delete
 ** 数据构造
 *** fabricate
 - http://www.fabricationgem.org/
+
+** jekyll
+- 启动 jekyll serve --watch --port 4000
