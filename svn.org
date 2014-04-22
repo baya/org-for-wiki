@@ -35,7 +35,7 @@ svn checkout --revision {20020217T1530Z}
 svn checkout --revision {20020217T1530-0500}
 
 ** 解决冲突
-svn resolved sandwich.txt 
+svn resolved sandwich.txt
 ** 提交代码
 svn commit --message "Correct some fatal problems"
 ** 检查日志
@@ -55,11 +55,11 @@ svn commit -m "Creating a private branch of /calc/trunk."
 *** 方法2,直接远程拷贝
 svn copy http://svn.example.com/repos/calc/trunk
 建立分支后，你可以把分支checkout并继续你的开发。
-svn checkout http://svn.example.com/repos/calc/branches/my-calc-branch 
+svn checkout http://svn.example.com/repos/calc/branches/my-calc-branch
 假设你已经checkout了主干，现在想切换到某个分支开发，可做如下的操作：
 cd calc
 svn info | grep URL
-svn switch http://svn.example.com/repos/calc/branches/my-calc-branch 
+svn switch http://svn.example.com/repos/calc/branches/my-calc-branch
 *** 创建分支实际用例
 svn copy http://svn.magus-soft.com:8080/svn/magus/2010/server/huafei2/branch/review http://svn.magus-soft.com:8080/svn/magus/2010/server/huafei2/branch/features/wlts_channel -m '创建沃伦特斯渠道分支'
 ** 找出不在版本控制下的文件
@@ -70,7 +70,7 @@ svn propset svn:ignore "*.jpg" .
 svn propedit svn:ignore . (会打开一个编辑器)
 svn propedit svn:ignore log
 ** find ignored files
-svn status -u -v --no-ignore |grep "^I"|awk "{print \$2}" 
+svn status -u -v --no-ignore |grep "^I"|awk "{print \$2}"
 ** remove
 svn rm log/test.log --keep-local
 
@@ -98,5 +98,6 @@ svn ls http://svn.magus-soft.com:8080/svn/2011/server/fgcc/branches/features/
 ** 403Error解决方法
 svn up --username jiangguimin
 ** 代码review
+svn update
 svn log --stop-on-copy -l 9
 svn diff -r 5382:HEAD > diff.rb

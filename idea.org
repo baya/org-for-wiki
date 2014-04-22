@@ -16,14 +16,11 @@
 ** DONE rails-guide复习: The Asset Pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
 
-** 写一篇介绍cucumber测试的文章
+** TODO 写一篇介绍cucumber测试的文章
 - https://github.com/cucumber/cucumber/wiki
 - http://benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories.html
 我们可以将cucumber作为一款侧写(profile)工具，如果你看过美剧汉力拔，一定会被威尔的侧写(profile)能力所倾倒，不但是你，连我们的
 的拔叔也为之倾倒，一心想和威尔这个土豪做朋友。
-** ground: 发布0.0.1版本
-** dun: 去掉default方法
-** 写书全栈开发
 ** 博客: 新浪微博专业版应用开发
 - http://open.weibo.com/wiki/新手指南
 - http://open.weibo.com/wiki/专业版应用开发者红宝书
@@ -33,19 +30,18 @@
 - 微博专业版应用开发: http://july-12.github.io/blog/2014/03/07/wei-bo-zhuan-ye-ban-ying-yong-kai-fa-shi-lu/
 - 如果app已经部署到线上，那么微博page不支持此app应用地址的子路径
 ** 阅读: http://guides.rubyonrails.org/security.html
+** 书:  全栈开发
+** 写一篇介绍session和cookie的博客
+** ground: 发布0.0.1版本
+** dun: 去掉default方法
 ** 写书: 百分之二十的Rails
 *** 参考: http://ihower.tw/rails3/
 ** 学习W3School教程: HTML/CSS http://www.w3school.com.cn/h.asp
 ** 学习W3School教程: JavaScript http://www.w3school.com.cn/b.asp
-** 博客: spring你这么叼，坛子里的人都知道吗?
-每次我使用spring，生成controller, model，migration时，或者运行测试时，我都会被感动一次
-spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数太多，所以我
-不得不去研究一下spring到底为何这么有用。
 ** 写一个应用iCheck
 打卡: 跑步打卡，游泳打卡等各种打卡，帮助你养成好习惯，需要收费的哦
 ** 完善ground文档
 ** 使用ground写一个论坛
-** ground发布1.0版本
 ** 研究gem
 - 比如研究bundler，然后写几篇相关的博客，和一个简化的bundler
 *** sprockets
@@ -58,13 +54,10 @@ spring rails g migration add_sponsor_logo_to_prizes，由于被感动的次数�
 *** devise
 *** sinatra
 *** rails
-** 写一篇介绍session和cookie的博客
 ** docX: 制作一款文档收集工具类似于dash
 - 基于浏览器
 - 用户可以自己写插件，收集管理相应的文档
 - http://doks.io/#/api
-** 将第三方登录写成一个rack中间件
-** 第三方支付是否可以写成一个rack中间件
 ** 写一篇介绍rack的博客
 - 龙虾
 - Rack::Builder
@@ -113,5 +106,3 @@ end
 ** 用程序模拟下红眼，蓝眼问题
 - http://www.zhihu.com/question/21262930
 
-** 基于git的个人项目管理工具，即PPM工具(Personal Project Manager)
-gitppm
