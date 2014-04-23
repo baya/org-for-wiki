@@ -183,7 +183,6 @@ The content of the document......
 ×	乘号	&times;	&#215;
 ÷	除号	&divide;	&#247;
 
-
 ** embed 播放声音
 - http://www.w3school.com.cn/html/html_audio.asp
 <object height="100" width="100" data="song.mp3"></object>
@@ -226,3 +225,14 @@ table
   {
   table-layout:fixed;
   }
+** HTML DOM 对象 - 方法和属性
+一些常用的 HTML DOM 方法：
+getElementById(id) - 获取带有指定 id 的节点（元素）
+appendChild(node) - 插入新的子节点（元素）
+removeChild(node) - 删除子节点（元素）
+一些常用的 HTML DOM 属性：
+innerHTML - 节点（元素）的文本值
+parentNode - 节点（元素）的父节点
+childNodes - 节点（元素）的子节点
+attributes - 节点（元素）的属性节点
+document.getElementById("p2").style.color="blue" - 改变 HTML 样式

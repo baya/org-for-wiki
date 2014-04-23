@@ -310,6 +310,10 @@ $(".check-btn").on('click', function(){
    $this.toggleClass('Porb2').toggleClass('checked');
  })
 
+** toggle
+$("button").click(function(){
+  $("p").toggle();
+});
 ** 怎么写jquery插件
 (function( $ ){
 
@@ -703,3 +707,25 @@ jQuery获取Select元素，并选择的Text和Value:
 3. var checkValue=$("#select_id").val();  //获取Select选择的Value
 4. var checkIndex=$("#select_id ").get(0).selectedIndex;  //获取Select选择的索引值
 5. var maxIndex=$("#select_id option:last").attr("index");  //获取Select最大的索引值
+
+** 属性选择器
+- http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp
+jQuery 使用 XPath 表达式来选择带有给定属性的元素。
+$("[href]") 选取所有带有 href 属性的元素。
+$("[href='#']") 选取所有带有 href 值等于 "#" 的元素。
+$("[href!='#']") 选取所有带有 href 值不等于 "#" 的元素。
+$("[href$='.jpg']") 选取所有 href 值以 ".jpg" 结尾的元素。
+
+** 选择器参考手册
+- http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp
+
+** jQuery 名称冲突
+var jq=jQuery.noConflict()，帮助您使用自己的名称（比如 jq）来代替 $ 符号。
+
+** jQuery 尺寸 方法
+width()         - 方法设置或返回元素的宽度（不包括内边距、边框或外边距
+height()        - 方法设置或返回元素的高度（不包括内边距、边框或外边距）
+innerWidth()    - 方法返回元素的宽度（包括内边距）
+innerHeight()   - 方法返回元素的高度（包括内边距)
+outerWidth()    - 方法返回元素的宽度（包括内边距和边框）
+outerHeight()   - 方法返回元素的高度（包括内边距和边框）
