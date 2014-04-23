@@ -1571,8 +1571,24 @@ User.joins(:posts).select('distinct users.*').to_a
 *** 代码实例
 contest.votes.select('distinct votes.user_id').count
 
-
 ** config.assets.precompile
 *** 实例
 lib/assets/images目录下有alert子目录，alert子目录有各种图片文件
 config.assets.precompile += ['swfupload/swfupload.swf', 'alert/*.png']
+** assets precompile
+- https://gist.github.com/afeld/5704079
+config.assets.precompile.shift
+
+# Explicitly register the extensions we are interested in compiling
+config.assets.precompile.push(Proc.new do |path|
+  File.extname(path).in? [
+    '.html', '.erb', '.haml',                 # Templates
+    '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
+    '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+  ]
+end)
+
+** polymorphic_url
+- http://api.rubyonrails.org/classes/ActionDispatch/Routing/PolymorphicRoutes.html
+polymorphic_url([:admin, @article, @comment])
+=> admin_article_comment_url(@article, @comment)

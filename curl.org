@@ -1,2 +1,4 @@
 * Curl
 ** curl -i http://example.com
+** 设置请求头
+curl --header "Accept: application/javascript" http://localhost:3003/ -i
