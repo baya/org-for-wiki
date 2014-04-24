@@ -1967,5 +1967,5 @@ pn.delete
 *** fabricate
 - http://www.fabricationgem.org/
 
-** jekyll
+** 博客 blog jekyll
 - 启动 jekyll serve --watch --port 4000
