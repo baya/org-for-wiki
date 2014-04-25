@@ -720,8 +720,14 @@ $("[href$='.jpg']") 选取所有 href 值以 ".jpg" 结尾的元素。
 - http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp
 
 ** jQuery 名称冲突
-var jq=jQuery.noConflict()，帮助您使用自己的名称（比如 jq）来代替 $ 符号。
-
+var jq=jQuery.noConflict()，帮助您使用自己的名称（比如 jq）来代替 $ 符号
+或者
+$.noConflict();
+jQuery(document).ready(function($){
+  $("button").click(function(){
+    $("p").text("jQuery 仍在运行！");
+  });
+});
 ** jQuery 尺寸 方法
 width()         - 方法设置或返回元素的宽度（不包括内边距、边框或外边距
 height()        - 方法设置或返回元素的高度（不包括内边距、边框或外边距）
@@ -729,3 +735,38 @@ innerWidth()    - 方法返回元素的宽度（包括内边距）
 innerHeight()   - 方法返回元素的高度（包括内边距)
 outerWidth()    - 方法返回元素的宽度（包括内边距和边框）
 outerHeight()   - 方法返回元素的高度（包括内边距和边框）
+
+** 在 DOM 树中水平遍历
+- http://www.w3school.com.cn/jquery/jquery_traversing_siblings.asp
+
+siblings()
+next()
+nextAll()
+nextUntil()
+prev()
+prevAll()
+prevUntil()
+
+** 使用 delegate() 方法向尚未创建的元素添加事件处理程序
+- http://www.w3school.com.cn/jquery/event_delegate.asp
+
+** jQuery 数据操作函数
+- http://www.w3school.com.cn/jquery/jquery_ref_data.asp
+.clearQueue() 	        从队列中删除所有未运行的项目。
+.data()	                存储与匹配元素相关的任意数据。
+jQuery.data()	        存储与指定元素相关的任意数据。
+.dequeue()	        从队列最前端移除一个队列函数，并执行它。
+jQuery.dequeue()	从队列最前端移除一个队列函数，并执行它。
+jQuery.hasData()	存储与匹配元素相关的任意数据。
+.queue()	        显示或操作匹配元素所执行函数的队列。
+jQuery.queue()	        显示或操作匹配元素所执行函数的队列。
+.removeData()	        移除之前存放的数据。
+jQuery.removeData()	移除之前存放的数据。
+
+** DOM 元素方法
+- http://www.w3school.com.cn/jquery/jquery_ref_dom_element_methods.asp
+
+.get()	    获得由选择器指定的 DOM 元素。
+.index()    返回指定元素相对于其他指定元素的 index 位置。
+.size()	    返回被 jQuery 选择器匹配的元素的数量。
+.toArray()  以数组的形式返回 jQuery 选择器匹配的元素。
