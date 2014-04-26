@@ -236,3 +236,5 @@ parentNode - 节点（元素）的父节点
 childNodes - 节点（元素）的子节点
 attributes - 节点（元素）的属性节点
 document.getElementById("p2").style.color="blue" - 改变 HTML 样式
+** 响应式设计
+- http://www.geekplux.com/grid/

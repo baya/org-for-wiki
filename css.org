@@ -344,3 +344,5 @@ transform: translate(50px,100px);
 -o-transform: translate(50px,100px);		/* Opera */
 -moz-transform: translate(50px,100px);		/* Firefox */
 }
+** 响应式设计
+- http://www.geekplux.com/grid/
