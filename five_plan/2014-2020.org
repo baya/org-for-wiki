@@ -6,8 +6,8 @@
 *** DONE CSS3
 *** DONE TCP/IP
 *** DONE JavaScript
-*** HTML DOM
-*** jQuery
+*** DONE HTML DOM
+*** DONE jQuery
 *** jQuery Mobile
 *** AJAX
 *** DHTML
