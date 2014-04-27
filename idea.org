@@ -16,7 +16,7 @@
 ** DONE rails-guide复习: The Asset Pipeline
 - http://guides.rubyonrails.org/asset_pipeline.html
 
-** TODO 写一篇介绍cucumber测试的文章
+** DONE 写一篇介绍cucumber测试的文章
 - https://github.com/cucumber/cucumber/wiki
 - http://benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories.html
 我们可以将cucumber作为一款侧写(profile)工具，如果你看过美剧汉力拔，一定会被威尔的侧写(profile)能力所倾倒，不但是你，连我们的
