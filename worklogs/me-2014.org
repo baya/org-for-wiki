@@ -1758,4 +1758,4 @@ svn diff -r 6270:6315
 *** 博客: cucumber实战
 ** 04-27
 *** DONE 博客: cucumber实战
-*** TODO 洗衣服
+*** DONE 洗衣服
