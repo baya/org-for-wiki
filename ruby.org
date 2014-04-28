@@ -1969,3 +1969,5 @@ pn.delete
 
 ** 博客 blog jekyll
 - 启动 jekyll serve --watch --port 4000
+** setup ruby on rails
+- https://gorails.com/setup/ubuntu/14.04
