@@ -9,12 +9,11 @@
 *** DONE HTML DOM
 *** DONE jQuery
 *** jQuery Mobile
-*** AJAX
-*** DHTML
-*** E4X
-*** VMLScript
+*** DONE AJAX
+*** DONE DHTML
+*** DONE E4X
+*** DONE VMLScript
 ** photoshop设计 2014年3月至9月 每天练习1小时
-** 网页切图 2014年10月至12月 每天练习1小时
 ** ios开发
 *** 签到(Checkin)
 - 帮助人们培养好习惯，改掉坏习惯

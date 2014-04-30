@@ -1592,3 +1592,6 @@ end)
 - http://api.rubyonrails.org/classes/ActionDispatch/Routing/PolymorphicRoutes.html
 polymorphic_url([:admin, @article, @comment])
 => admin_article_comment_url(@article, @comment)
+** ack
+*** 搜索时不包含某个目录
+ack 'tshare-success-dialog' --ignore-dir=public

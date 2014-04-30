@@ -569,3 +569,16 @@ Important
 
 c#3!+bdrs2!              color: #333 !important;
                          border-radius: 2px !important;
+** 字母大小写转换
+*** 从光标位置开始，处理单词后半部分
+capitalize-word (M-c) ;; 单词首字母转为大写
+upcase-word (M-u)     ;; 整个单词转为大写
+downcase-word (M-l)   ;; 整个单词转为小写（注意，这里是 META － l(* 小写字母 L)）
+*** 从光标位置开始，处理单词前半部分
+negtive-argument; capitalize-word (M-- M-c) ;; 单词首字母转为大写
+negtive-argument; upcase-word (M-- M-u)     ;; 整个单词转为大写
+negtive-argument; downcase-word (M-- M-l)   ;; 整个单词转为小写
+
+*** 改变选定区域的大小写
+downcase-region (C-x C-l) ;; 选定区域全部改为小写
+upcase-region (C-x C-u)   ;; 选定区域全部改为大写

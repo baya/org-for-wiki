@@ -10,3 +10,5 @@
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 ssh localhost
+** AirPlay
+http://www.airsquirrels.com/reflector/

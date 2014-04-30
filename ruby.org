@@ -1971,3 +1971,6 @@ pn.delete
 - 启动 jekyll serve --watch --port 4000
 ** setup ruby on rails
 - https://gorails.com/setup/ubuntu/14.04
+** ack
+*** 搜索时不包含某个目录
+ack 'tshare-success-dialog' --ignore-dir=public
