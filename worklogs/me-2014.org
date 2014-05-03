@@ -1828,6 +1828,12 @@ svn diff -r 6270:6315
 ** 05-01
 *** DONE 游泳 1km
 ** 05-02
-*** 游泳 1km
+*** DONE 游泳 1km
 *** 练习 photoshop 1小时
 - http://design.tutsplus.com/tutorials/create-a-mobile-weather-app-interface-in-photoshop--psd-33332
+
+** 05-03
+*** 游泳: 2km
+*** 练习 photoshop 1小时
+- http://design.tutsplus.com/tutorials/create-a-mobile-weather-app-interface-in-photoshop--psd-33332
+

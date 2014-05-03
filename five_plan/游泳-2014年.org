@@ -39,3 +39,4 @@
 ** DONE 1km <2014-04-29 Tue>
 ** DONE 1km <2014-04-30 Wed>
 ** DONE 1km <2014-05-01 Thu>
+** DONE 1km <2014-05-03 Sat>
