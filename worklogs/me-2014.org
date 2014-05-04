@@ -1838,3 +1838,17 @@ svn diff -r 6270:6315
 *** 练习 photoshop 1小时
 - http://design.tutsplus.com/tutorials/create-a-mobile-weather-app-interface-in-photoshop--psd-33332
 
+
+** 05-04
+*** TODO 追号: 双色球漏追
+*** 非常好看 Bug List
+**** 一些图片在ie下无法显示
+*** 非常好看 Feature List
+**** 管理后台：设置比赛到首页按钮
+- https://trello.com/c/nrfhQMA1/368--
+***** 截首页按钮图
+***** hover: 显示首页按钮图
+***** 设置比赛到首页api
+***** click: 设置比赛到首页
+***** migration: 设置比赛到首页标记
+***** 比如如果是首页显示，应该显示首页标签
