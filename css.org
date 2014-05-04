@@ -345,3 +345,20 @@ transform: translate(50px,100px);
 }
 ** 响应式设计
 - http://www.geekplux.com/grid/
+** border-radius 圆角
+- http://www.w3school.com.cn/css3/css3_border.asp
+div
+{
+border:2px solid;
+border-radius:25px;
+-moz-border-radius:25px; /* Old Firefox */
+-webkit-border-radius:25px;
+}
+** css background opacity without affecting text 背景透明但是不影响文字
+- http://stackoverflow.com/questions/5662178/opacity-of-divs-background-without-affecting-contained-element-in-ie-8
+
+使用rgba background colour
+
+.myelement {
+    background: rgba(200, 54, 54, 0.5);
+}

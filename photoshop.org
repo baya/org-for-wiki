@@ -107,3 +107,17 @@ lice, or by dragging the handles.
 - http://www.photoshopgurus.com/forum/general-photoshop-board/492-removing-slices.html
 Try View/Clear Slices
 ** Top Bar > Combine Shapes 这样就不会创建❤新层了
+** 隐藏 slice line hide slice line
+- http://www.ehow.com/how_8537012_hide-slices-photoshop.html
+
+1. Hide all "Slices" by choosing "View," "Show" and "Show Extras Options." Check the box next to "Slices" if necessary and click "OK."
+   You only need to do this once to include "Slices" with "Extras." Select "View," "Extras" or press "Ctrl" and "H" to hide or show all
+   "Extras" and "Slices." Alternatively, hide only slices by choosing "View," "Show" and select "Slices" to remove the check mark.
+
+2. Click on the "Slice Select" tool in the Tools panel to hide "Auto Slices." Click and hold the "Crop" tool or the "Slice" tool if it is
+   not visible. Look for the icon that is a pointed blade with a black arrowhead. Next, go to the Options bar and click the "Hide Auto Slices" button.
+
+3. Change a preference to hide "Slices" numbers and badges. Go to "Edit," "Preferences" and choose "Guides, Grid and Slices." Uncheck the box
+   next to "Show Slice Numbers" and then click "OK."
+
+
