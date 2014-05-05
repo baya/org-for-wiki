@@ -1595,3 +1595,7 @@ polymorphic_url([:admin, @article, @comment])
 ** ack
 *** 搜索时不包含某个目录
 ack 'tshare-success-dialog' --ignore-dir=public
+
+** order 排序
+*** 组合排序
+current_user.contests.order('homepage_flag desc, end_day desc')

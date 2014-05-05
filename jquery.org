@@ -770,3 +770,11 @@ jQuery.removeData()	移除之前存放的数据。
 .index()    返回指定元素相对于其他指定元素的 index 位置。
 .size()	    返回被 jQuery 选择器匹配的元素的数量。
 .toArray()  以数组的形式返回 jQuery 选择器匹配的元素。
+** 区分不同页面的特定代码
+- http://ruby-china.org/topics/9664
+$('body#topics-show').each(function(){
+  var scope = $(this);
+  var foo;
+});
+
+
