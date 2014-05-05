@@ -1838,7 +1838,6 @@ svn diff -r 6270:6315
 *** 练习 photoshop 1小时
 - http://design.tutsplus.com/tutorials/create-a-mobile-weather-app-interface-in-photoshop--psd-33332
 
-
 ** 05-04
 *** DONE 追号: 双色球漏追
 *** 非常好看 Bug List
@@ -1856,6 +1855,15 @@ svn diff -r 6270:6315
 ***** 比如如果是首页显示，应该显示首页标签
 ** 05-05
 *** 非常好看 Bug List
+**** DONE 用户登录后返回到ref url
+**** 定位问题：在后台管理--编辑比赛中，点击预览图片按钮图片放置在左上方，要滑动鼠标后才能看到
+- https://trello.com/c/6tXEMhzm/354--
+**** DONE 定位：在比赛和奖品界面，点击分享到微博按钮后，弹出的分享弹框到达界面的左上角了，要滑动滚动条才能看见该弹框
+- https://trello.com/c/bF57etIN/339--
+**** DONE 创建比赛界面的标签：活动宣传的提示框中最佳尺寸显示应该为最佳尺寸 W：760px H：470px
+- https://trello.com/c/CWim2O7o/350--
+**** DONE 比赛结果页：成功上传图片后，关闭弹窗页，会直接出现签到提示框
+- https://trello.com/b/YxLtCfPH/fchk
 *** 非常好看 Feature List
 **** DONE 管理后台：设置比赛到首页按钮
 - https://trello.com/c/nrfhQMA1/368--

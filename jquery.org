@@ -778,3 +778,5 @@ $('body#topics-show').each(function(){
 });
 
 
+** 获得相对body的偏移 offset
+$('div').offset();
