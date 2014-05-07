@@ -780,3 +780,20 @@ $('body#topics-show').each(function(){
 
 ** 获得相对body的偏移 offset
 $('div').offset();
+
+** 获得相对 document, body 的 scrollTop 偏移，这个在弹出提示框的时候比较有用
+
+	var renderAlertBox = function(){
+
+	   var $doc = $(document);
+
+	    this.$alert_box.appendTo('body').css({
+		'width': width,
+		'height': height,
+		'position': 'absolute'
+	    }).css({
+		'left': ($doc.innerWidth() - this.$alert_box.outerWidth()) / 2 + 'px',
+		'top' : $doc.scrollTop() + 100 + 'px'
+	    })
+	},
+
