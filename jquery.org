@@ -797,3 +797,13 @@ $('div').offset();
 	    })
 	},
 
+
+** eq() 方法将匹配元素集缩减值指定 index 上的一个
+- http://www.w3school.com.cn/jquery/traversing_eq.asp
+$("body").find("div").eq(2).addClass("blue");
+
+** index() 方法返回指定元素相对于其他指定元素的 index 位置
+- http://www.w3school.com.cn/jquery/dom_element_methods_index.asp
+$("li").click(function(){
+  alert($(this).index());
+});
