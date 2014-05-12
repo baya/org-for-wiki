@@ -1916,3 +1916,11 @@ svn diff -r 6270:6315
 **** DONE 分享成功后，ie下背景会变黑
 **** DONE 比赛分享后，积分数没有即刻增加
 *** 非常好看 Feature List
+** 05-12
+*** 非常好看 Bug List
+**** safri用户授权后不跳转
+- 把session挂在url后面
+**** DONE 举报图片后弹出的提示信息框应该停留一段时间自动消失
+- https://trello.com/b/YxLtCfPH/fchk
+**** DONE 微博分享后，提示框自动消失
+*** 非常好看 Feature List

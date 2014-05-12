@@ -1,5 +1,5 @@
 * 五年计划 2014年-2020年
-** w3school http://www.w3school.com.cn/index.html
+** DONE w3school http://www.w3school.com.cn/index.html
 *** DONE HTML
 *** DONE HTML5
 *** DONE CSS
@@ -8,7 +8,7 @@
 *** DONE JavaScript
 *** DONE HTML DOM
 *** DONE jQuery
-*** jQuery Mobile
+*** DONE jQuery Mobile
 *** DONE AJAX
 *** DONE DHTML
 *** DONE E4X
