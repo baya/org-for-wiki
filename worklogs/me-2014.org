@@ -1930,6 +1930,7 @@ svn diff -r 6270:6315
 **** DONE 对bug
 **** 在我的排名界面点击上传图片参数后，界面变为黑屏没有弹出提示框
 - https://trello.com/c/AxCAVhXX/407-ie8
+**** DONE ie8下src为空的img会显示成一个x
 **** safri用户授权后不跳转
 - 把session挂在url后面
 *** 非常好看 Feature List
