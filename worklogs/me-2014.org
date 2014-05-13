@@ -1924,3 +1924,9 @@ svn diff -r 6270:6315
 - https://trello.com/b/YxLtCfPH/fchk
 **** DONE 微博分享后，提示框自动消失
 *** 非常好看 Feature List
+** 05-13
+*** 非常好看 Bug List
+**** 对bug
+**** safri用户授权后不跳转
+- 把session挂在url后面
+*** 非常好看 Feature List
