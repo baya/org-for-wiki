@@ -1,0 +1,10 @@
+* iOS 2014
+- http://www.raywenderlich.com/tutorials
+- http://www.appcoda.com/tutorials/
+- http://onevcat.com/2012/06/arc-hand-by-hand/
+- http://objccn.io/
+- http://www.objc.io/
+** DONE 1小时 <2014-05-13 Tue>
+- http://www.raywenderlich.com/1797/ios-tutorial-how-to-create-a-simple-iphone-app-part-1
+** 1小时 <2014-05-14 Wed>
+- http://www.raywenderlich.com/1845/ios-tutorial-how-to-create-a-simple-iphone-app-tutorial-part-2
