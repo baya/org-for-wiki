@@ -43,10 +43,10 @@ NSLog(@"%d", item.completed);
 NSLog(@"%@", segue.identifier);
 
 ** Selections in Table View 选择cell
-[SDTVTViewController tableView:willSelectRowAtIndexPath:]    
-[SDTVTViewController tableView:willDeselectRowAtIndexPath:]    
-[SDTVTViewController tableView:didDeselectRowAtIndexPath:] 取消选择    
-[SDTVTViewController tableView:didSelectRowAtIndexPath:]   
+[SDTVTViewController tableView:willSelectRowAtIndexPath:]
+[SDTVTViewController tableView:willDeselectRowAtIndexPath:]
+[SDTVTViewController tableView:didDeselectRowAtIndexPath:] 取消选择
+[SDTVTViewController tableView:didSelectRowAtIndexPath:]
 
 - 参考: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/tableview_iphone/ManageSelections/ManageSelections.html
 
@@ -58,14 +58,14 @@ x
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     GrdToDoItem *toDoItem = [self.toDoItemList objectAtIndex:indexPath.row];
-    
+
     toDoItem.checked = !toDoItem.checked;
     if(toDoItem.checked){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
-    
+
 }
 
 *** 实例
@@ -74,9 +74,9 @@ x
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     GrdToDoItem *item = [self.toDoItems objectAtIndex:indexPath.row];
-    
+
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
+
     item.completed = !item.completed;
     NSLog(@"%d", item.completed);
     if (item.completed) {
@@ -89,7 +89,7 @@ x
 
 ** 比较两个字符串是否相等
 - 参考: http://getsetgames.com/2009/12/10/iphonedev-advent-tip-10-string-comparison-using-nsstring/
-  
+
 NSString * str = @"oranges";
 BOOL res = [str isEqualToString:@"apples"]
 
@@ -97,7 +97,7 @@ BOOL res = [str isEqualToString:@"apples"]
 
 itemName = [itemName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ];
 
- 
+
 if ([itemName length] > 0) {
     GrdToDoItem* item = [[GrdToDoItem alloc] init];
     [self.toDoItems addObject:item];
@@ -132,14 +132,14 @@ if ([itemName length] > 0) {
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+
     NSLog(@"%@", cell);
     NSLog(@"%ld", indexPath.row);
-    
+
     GrdToDoItem *toDoItem = [self.toDoItemList objectAtIndex:indexPath.row];
-    
+
     cell.textLabel.text = toDoItem.name;
-    
+
     return cell;
 }
 
@@ -185,10 +185,19 @@ o|---------->x
 其他的此类错误可以这样类似解决
 
 ** JLRubyChina-iPhone Build
-git submodule init 
+git submodule init
 git submodule update
 pod install
 
 用Vendor/JSONKit_fixerror/JSONKit.m文件替换  Pods/JSONKit/JSONKit.m
 
 
+** adopt auto layout 自动布局
+- https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOS/SecondTutorial.html#//apple_ref/doc/uid/TP40011343-CH8-SW1
+
+1. In the project navigator, select Main.storyboard.
+2. In your storyboard, select the text field.
+3. On the canvas, Control-drag from the text field toward the top of the scene, ending in the empty space around the text field. This space is the text field’s superview.
+A shortcut menu appears in the location where you release the drag.
+
+Control-drag

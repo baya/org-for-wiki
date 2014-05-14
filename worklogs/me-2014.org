@@ -1935,9 +1935,18 @@ svn diff -r 6270:6315
 - 把session挂在url后面
 *** 非常好看 Feature List
 ** 05-14
+*** DONE winxp安装virtualbox
+*** DONE winxp安装git
+*** DONE winxp上安装vagrant
+*** TODO winxp上搭建fchk开发环境
+*** DONE 安装ietester
 *** 非常好看 Bug List
 **** 在我的排名界面点击上传图片参数后，界面变为黑屏没有弹出提示框
 - https://trello.com/c/AxCAVhXX/407-ie8
 **** safri用户授权后不跳转
 - 把session挂在url后面
+**** DONE 非常好看后台，图片审核，谁是你心中的美国英雄比赛的图片审核页面不存在，其他的都有
+- https://trello.com/c/dZsXQ2X5/419--
+**** DONE 在后台--创建比赛界面，输入比赛项目的标题后，文字没有居中显示
+- https://trello.com/c/IXd9v77E/377--
 *** 非常好看 Feature List

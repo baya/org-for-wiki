@@ -30,14 +30,31 @@ $ vagrant up # 这个命令会启动vagrant机器，先读取当前目录下的V
 
 $ cd ~/workspace/magus-soft
 
-$ vagrant box add magus-soft ~/VM-Boxes/fchk.box
+$ vagrant box add magus-soft ~/VM-Boxes/fchk.box   # 将在~/.vagrant.d/boxes/ 目录下增加一个叫magus-soft的文件夹
 
 $ vagrant init magus-soft
 
 $ vagrant up
 
-$ vagran ssh
+$ vagrant ssh
 
 $ cd /vagrant  # /vagrant目录下的文件和主机上~/workspace/magus-soft的文件一样，也就是说~/workspace/magus-soft目录如果有修改会立即在/vagrant目录下同步出现
 
 $ vagrant package --output magus-soft.box # 打包
+
+*** 实践03 在winxp上使用vagrant搭建rails开发环境
+
+$ 安装 virtualbox
+$ 安装 vagrant (安装1.2.6版本,这个版本在 winxp 下能够顺利 box add)
+$ 安装 git
+$ 打开 git bash
+$ 生成 rsa public key
+- ssh-keygen.exe
+$ 将 public key 添加到我在gitlab的账号里
+$ git clone git@git.magus-soft.com:fchk/web.git
+$ mv web fchk
+$ 设置 vmware 能够访问 mac 上的 fchk.box (利用vmware的共享方法)
+$ 将fchk.box 拷贝到一个 windxp 可以访问到的地方，假设为 /c/Documents and Settings/Administrator
+$ cd /c/Documents and Settings/Administrator/fchk
+$ vagrant box add magus-soft ../magus-soft.box
+$ vagrant init magus-soft
