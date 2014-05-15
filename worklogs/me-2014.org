@@ -1957,6 +1957,7 @@ svn diff -r 6270:6315
 - https://trello.com/c/K8QI9NEJ/357--
 **** DONE 后台管理--创建比赛界面，什么操作都不做点击界面最下方的预览按钮，界面无反应没有任何提示信息
 - https://trello.com/c/001Z26uL/376--
+**** DONE ie8:在排行榜中点击分享按钮，界面无反应网页左下角提示：网页上有错误
 **** safri用户授权后不跳转
 - 把session挂在url后面
 *** 非常好看 Feature List
