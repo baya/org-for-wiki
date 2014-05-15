@@ -998,3 +998,7 @@ var that = this;
 if (this.options.destroyOnHide) {
      setTimeout(function(){that.tip.destroy()}, 1000);
 }
+
+** 在IE8下， js数组没有indexOf方法
+- http://www.cnblogs.com/JustRun1983/archive/2013/04/02/2996650.html
+- http://stackoverflow.com/questions/143847/best-way-to-find-an-item-in-a-javascript-array

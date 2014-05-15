@@ -291,3 +291,57 @@ ln -s ~/workspace/magus-soft/fchk-app weibopage.fchk
 ** ack
 *** 搜索时不包含某个目录
 ack 'tshare-success-dialog' --ignore-dir=public
+
+** 日志分割脚本
+*** splog.sh
+#!/bin/tcsh
+#分割rorapps日志
+
+set log_path = "/srv/rorapps/lot_zhuihao/log";
+set to_day = `date -d "yesterday" +"%Y%m%d"`;
+cd ${log_path}
+cp ${log_path}/production.log ${log_path}/production_${to_day}.log
+echo "" > ${log_path}/production.log
+chown www:www ${log_path}/production.log
+bzip2 ${log_path}/production_${to_day}.log
+
+*** logrogtate
+- http://linuxcommand.org/man_pages/logrotate8.html
+- http://huoding.com/2013/04/21/246
+/data/www/ruby-china/current/log/production.log {
+  weekly
+  missingok
+  rotate 12
+  compress
+  dateext
+  delaycompress
+  lastaction
+    pid=/data/www/ruby-china/current/tmp/pids/unicorn.pid
+    sudo test -s $pid && sudo kill -USR1 "$(cat $pid)"
+  endscript
+}
+
+*** logrotate 实际配置
+实际运行时，Logrotate会调用配置文件「/etc/logrotate.conf」
+
+1. 在 /etc/logrotage.d 目录下增加一个 fchk的配置文件，内容如下:
+compress
+
+/home/jiangguimin/rorapps/fchk_web/log/staging.log {
+  daily
+  rotate 1
+  missingok
+  dateext
+  lastaction
+     pid=/home/jiangguimin/rorapps/fchk_web/tmp/pids/unicorn.pid
+     sudo test -s $pid && sudo kill -USR1 "$(cat $pid)"
+  endscript
+}
+
+2. 执行 sudo logrotate -f /etc/logrotate.d/fchk 可以立即查看效果
+
+
+
+** 文件可执行
+- http://www.cnblogs.com/suyang/archive/2008/05/18/1201990.html
+chmod +x filename.sh
