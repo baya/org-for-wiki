@@ -1935,18 +1935,29 @@ svn diff -r 6270:6315
 - 把session挂在url后面
 *** 非常好看 Feature List
 ** 05-14
-*** DONE winxp安装virtualbox
-*** DONE winxp安装git
-*** DONE winxp上安装vagrant
-*** TODO winxp上搭建fchk开发环境
-*** DONE 安装ietester
 *** 非常好看 Bug List
 **** 在我的排名界面点击上传图片参数后，界面变为黑屏没有弹出提示框
 - https://trello.com/c/AxCAVhXX/407-ie8
 **** safri用户授权后不跳转
 - 把session挂在url后面
-**** DONE 非常好看后台，图片审核，谁是你心中的美国英雄比赛的图片审核页面不存在，其他的都有
-- https://trello.com/c/dZsXQ2X5/419--
-**** DONE 在后台--创建比赛界面，输入比赛项目的标题后，文字没有居中显示
-- https://trello.com/c/IXd9v77E/377--
+*** 非常好看 Feature List
+** 05-15
+*** DONE 非常好看部署: 日志分割脚本  logrotate
+- http://linuxcommand.org/man_pages/logrotate8.html
+*** 非常好看 Bug List
+**** DONE 在我的排名界面点击上传图片参数后，界面变为黑屏没有弹出提示框
+- https://trello.com/c/AxCAVhXX/407-ie8
+**** DONE ie8：在比赛和奖品界面点击上传图片参数按钮后，界面背景为透明黑框但是没有弹出上传参数的有关提示框
+- https://trello.com/c/w2ZlSyli/418-ie8
+**** DONE 选择已经结束的比赛项目编辑该比赛，修改该比赛的时长为2周和开始时间为今天后，点击界面最下方的预览按钮，界面没有任何反应，停留在原界面上，界面的最左下角提示信息：网页上有错误。如图所示
+- https://trello.com/c/qHPQRuqp/356-2
+**** DONE 在后台管理--创建比赛的界面，什么都不填写后点击完成创建按钮后没有任何的提示信息
+- https://trello.com/c/ZpqUJhod/375--
+**** DONE 选择已经结束的表项目编辑修改比赛时长和开始时间后，点击完成创建按钮，界面无变化：最左下角显示：网页上有错误
+- https://trello.com/c/K8QI9NEJ/357--
+**** DONE 后台管理--创建比赛界面，什么操作都不做点击界面最下方的预览按钮，界面无反应没有任何提示信息
+- https://trello.com/c/001Z26uL/376--
+**** DONE ie8:在排行榜中点击分享按钮，界面无反应网页左下角提示：网页上有错误
+**** safri用户授权后不跳转
+- 把session挂在url后面
 *** 非常好看 Feature List
