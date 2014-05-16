@@ -1961,3 +1961,9 @@ svn diff -r 6270:6315
 **** safri用户授权后不跳转
 - 把session挂在url后面
 *** 非常好看 Feature List
+** 05-16
+- http://linuxcommand.org/man_pages/logrotate8.html
+*** 非常好看 Bug List
+**** safri用户授权后不跳转
+- 把session挂在url后面
+*** 非常好看 Feature List
