@@ -1974,3 +1974,15 @@ pn.delete
 ** ack
 *** 搜索时不包含某个目录
 ack 'tshare-success-dialog' --ignore-dir=public
+** 数据构造, 测试
+*** Fabricator
+- 常用的构造user的fabricator
+Fabricator :user do
+  name { Faker::Name.name }
+  email { |attrs| "#{attrs[:name].parameterize}@example.com" }
+  gender {[0, 1].sample}
+  status 0
+  level 1
+  marry {[0, 1, 2, 3, 4, 5].sample}
+end
+

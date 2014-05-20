@@ -1985,4 +1985,7 @@ svn diff -r 6270:6315
 *** 非常好看 Bug List
 **** safri用户授权后不跳转
 - 把session挂在url后面
+**** DONE ie8下创建比赛时的错误信息样式
+**** DONE 未收到验证码的用户，设置为未注册状态
+**** DONE 未通过验证的手机号禁止登录
 *** 非常好看 Feature List
