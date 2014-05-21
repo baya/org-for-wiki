@@ -1989,3 +1989,16 @@ svn diff -r 6270:6315
 **** DONE 未收到验证码的用户，设置为未注册状态
 **** DONE 未通过验证的手机号禁止登录
 *** 非常好看 Feature List
+** 05-21
+*** 非常好看 Bug List
+**** safri用户授权后不跳转
+- 把session挂在url后面
+**** android: 在投票结果界面点击重玩或者下一组按钮后没有给出相应的积分消耗等相关提示信息
+- https://trello.com/c/XEhU03d0/364--
+**** android: 新创建1个比赛后，参加比赛到达投票结果界面中时，下一轮按钮可以点击。注：下一轮按钮可以点击的2中情况不满足
+- https://trello.com/c/UBTcfMrp/365-1-2
+**** android: 点击重玩一次后提示积分不足：实际用户有18个积分
+- https://trello.com/c/6rFAR185/428-18
+**** android: pk比赛完后用户的投票数没有发生变化
+- https://trello.com/c/AhW6ul3f/430-pk
+*** 非常好看 Feature List
